@@ -1,0 +1,38 @@
+{
+  "phase": "N.6",
+  "tool": "slither",
+  "selectedModel": "repository_local_python_virtual_environment",
+  "venvPath": ".security-tools/slither-0.10.4-py3.9",
+  "python": {
+    "expectedExecutable": "python3",
+    "minimumVersion": "3.9",
+    "maximumUntestedMajor": 3,
+    "maximumUntestedMinor": 12
+  },
+  "slither": {
+    "version": "0.10.4",
+    "requirements": "config/security/slither-requirements.txt",
+    "lockfile": "config/security/slither-requirements-lock.txt"
+  },
+  "solidity": {
+    "hardhatConfig": "hardhat.config.cjs",
+    "compilerVersion": "0.8.27",
+    "compilerScope": "all contracts/** Solidity sources, including V1 and V2, compiled by the single pinned Hardhat compiler",
+    "viaIR": true,
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "hardhatVersion": "2.28.4"
+  },
+  "commands": {
+    "setup": "npm run security:setup-slither",
+    "analyze": "npm run security:slither",
+    "invariants": "npm run security:philcore-contract-invariants",
+    "audit": "npm run security:npm-audit",
+    "full": "npm run security:full"
+  },
+  "ordinaryAnalysisAutoInstalls": false,
+  "globalInstallRequired": false,
+  "productionApprovalGranted": false
+}

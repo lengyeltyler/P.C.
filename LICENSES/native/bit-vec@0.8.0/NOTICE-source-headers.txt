@@ -1,0 +1,32 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/lib.rs
+// Copyright 2012-2023 The Rust Project Developers. See the COPYRIGHT
+// file at the top-level directory of this distribution and at
+// http://rust-lang.org/COPYRIGHT.
+//
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
+
+// FIXME(Gankro): BitVec and BitSet are very tightly coupled. Ideally (for
+// maintenance), they should be in separate files/modules, with BitSet only
+// using BitVec's public API. This will be hard for performance though, because
+// `BitVec` will not want to leak its internal representation while its internal
+// representation as `u32`s must be assumed for best performance.
+
+// (1) Be careful, most things can overflow here because the amount of bits in
+//     memory can overflow `usize`.
+// (2) Make sure that the underlying vector has no excess length:
+//     E. g. `nbits == 16`, `storage.len() == 2` would be excess length,
+//     because the last word isn't used at all. This is important because some
+//     methods rely on it (for *CORRECTNESS*).
+// (3) Make sure that the unused bits in the last word are zeroed out, again
+//     other methods rely on it for *CORRECTNESS*.
+// (4) `BitSet` is tightly coupled with `BitVec`, so any changes you make in
+// `BitVec` will need to be reflected in `BitSet`.
+
+

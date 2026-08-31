@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "philcore-o31-v2-implementation-architecture-v1",
+  "phase": "O.31",
+  "canonicalPhaseName": "O.31 V2 Account Implementation Architecture and Module Design",
+  "classification": "IMPLEMENTATION_ARCHITECTURE_COMPLETE_LOCAL_ONLY",
+  "sourceHeadAtPhaseStart": "978e6d1169d536d7b0a014338799d8abb2b43630",
+  "scope": "local_implementation_architecture_only",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repositoryRoot": "<repository-root>",
+    "branch": "codex/device-identity-v1",
+    "worktreeCleanAtStart": true,
+    "upstream": "origin/main",
+    "ahead": 76,
+    "behind": 0,
+    "canonicalIdentity": {
+      "identityId": "identity_abab9766da60_24afd015",
+      "label": "My Phil",
+      "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "validatorKeyId": "validator_key_3c5b2ebebc4f3f3b",
+      "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809"
+    },
+    "sourceBindings": {
+      "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+      "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+      "coreBoundarySha256": "5a5244232a3da1ebc9d6098ecfc3d39a768a49dde622e66322e54c9a1f0e3bfa",
+      "runtimeLifecycleSha256": "0880cfaceb80e38ec98cea8a8f7f0d76b4a2ff64e71cbaad8438fd850c5ff5e7",
+      "runtimeLocalProofAccountSha256": "6c06c86816a2188c4b328c5fe354ff8d1759ae929d924812dd23d799c5f484a7",
+      "deviceVaultCustodySha256": "edbf8d9fbced10fbde7bc2ab97ad705def80633909efdbaa9e4a838b6b49a118",
+      "webauthnProviderSha256": "7d3c56d0ebafdb44ba2e924e49fd3f0092984449319a461642e354bad0f833a9",
+      "o30SpecificationSha256": "111d0083f221fc826bac5e63ad41f2b5158915b6428f641a12dd5388dd263241",
+      "o30InterfaceSha256": "d612918a6cbb0821f03f65f044f64fdc7520ca7a1303e0c314d25686df2c52b6",
+      "o30ThreatModelSha256": "0a26647c48c5fd13ac545ad2331adb920adc5609f5bdd703b4beae3e05640c99"
+    },
+    "completedPhasesReviewed": [
+      "O.20",
+      "O.21.1",
+      "O.21.2",
+      "O.21.3",
+      "O.22",
+      "O.23R",
+      "O.24",
+      "O.25",
+      "O.26",
+      "O.26.1",
+      "O.27",
+      "O.28",
+      "O.29",
+      "O.30"
+    ],
+    "discrepancies": [
+      {
+        "id": "O22_GUARDED_SOURCE_BINDING_HISTORICAL_AFTER_O26_1",
+        "securityRelevant": true,
+        "observedBy": "full repository unit suite",
+        "detail": "O.22 records the pre-O.26.1 SHA-256 for localProofGatedDeploymentPreparation.ts; O.26.1 later changed the restricted RPC/bundler client source without regenerating the historical O.22 proposal.",
+        "effect": "the O.22 current-source assertion fails closed and the O.22 proposal must not be treated as current deployment authority",
+        "continuationSafe": true,
+        "continuationReason": "O.31 is local design only, creates no authority or deployable artifact, does not depend on O.22 readiness, and performs zero public mutations"
+      }
+    ],
+    "localEnvironment": {
+      "exists": true,
+      "ignoredByGit": true,
+      "mode": "0600",
+      "canonicalIdentityBindingValidatedWithoutValueOutput": true
+    }
+  },
+  "principles": {
+    "deviceFirstIdentity": true,
+    "explicitAuthorization": true,
+    "validatorEnforcement": true,
+    "intentBasedExecution": true,
+    "accountIsAuthorizationEnforcementLayer": true,
+    "accountIsProgrammableWallet": false,
+    "hiddenAdministrator": false,
+    "upgradeKey": false,
+    "arbitraryExecution": false,
+    "delegatecall": false,
+    "unrestrictedWithdrawal": false,
+    "singleFactorRecovery": false
+  },
+  "modules": {
+    "account": {
+      "stateOwner": true,
+      "nonUpgradeable": true,
+      "entryPointOnlyActions": true,
+      "responsibilities": [
+        "ERC-4337 v0.7 validation",
+        "typed intent enforcement",
+        "keyed nonce-lane enforcement",
+        "typed execution",
+        "validator and recovery state ownership",
+        "receiver interfaces"
+      ]
+    },
+    "intentValidation": {
+      "kind": "compiled_in_stateless_library_or_internal_unit",
+      "runtimeInstallable": false,
+      "responsibilities": [
+        "canonical O.30 EIP-712 hashing",
+        "selector and payload canonicalization",
+        "chain account EntryPoint nonce epoch time and fee binding"
+      ]
+    },
+    "validatorVerification": {
+      "kind": "fixed_compiled_in_verifier_unit",
+      "runtimeInstallable": false,
+      "calldataSelectedVerifierAllowed": false,
+      "delegatecallAllowed": false,
+      "responsibilities": [
+        "execution-validator signature verification",
+        "validator commitment and epoch binding",
+        "role-bound recovery factor verification"
+      ]
+    },
+    "recoveryStateMachine": {
+      "kind": "fixed_compiled_in_state_transition_unit",
+      "ownsStorage": false,
+      "externalCalls": false,
+      "valueMovement": false,
+      "responsibilities": [
+        "threshold verification",
+        "request delay cancellation expiry completion",
+        "freeze management",
+        "validator replacement",
+        "recovery-configuration rotation"
+      ]
+    },
+    "typedExecution": {
+      "kind": "fixed_private_or_internal_handlers",
+      "genericTargetValueDataPrimitive": false,
+      "actions": [
+        "typed confirmation",
+        "exact native transfer with empty calldata",
+        "exact ERC-20 transfer",
+        "exact ERC-721 safe transfer",
+        "exact single ERC-1155 safe transfer",
+        "exact EntryPoint deposit withdrawal"
+      ]
+    },
+    "factory": {
+      "newVersionRequired": true,
+      "postDeploymentAuthority": false,
+      "completeInitialConfigurationRequired": true,
+      "create2BindsAllSecurityInputs": true
+    },
+    "runtime": {
+      "onchain": false,
+      "responsibilities": [
+        "application capability and policy evaluation",
+        "proof generation and verification",
+        "trusted presentation approval and user presence",
+        "hardware step-up policy",
+        "intent and Runtime authorization construction",
+        "recovery ceremony",
+        "receipt and state reconciliation"
+      ]
+    },
+    "deviceVault": {
+      "onchain": false,
+      "responsibilities": [
+        "protected execution-validator signing",
+        "separate primary-device recovery credential",
+        "one-time non-serializable signing sessions",
+        "factor lifecycle coordination after verified state"
+      ]
+    }
+  },
+  "recoveryModel": {
+    "threshold": 2,
+    "registeredRoleCount": 3,
+    "roles": [
+      {
+        "index": 0,
+        "id": "PRIMARY_DEVICE",
+        "domain": "primary_device",
+        "purpose": "daily identity possession and recovery participation",
+        "dailyExecutionValidatorKeyMayBeReused": false,
+        "independentPurposeBoundCredentialRequired": true
+      },
+      {
+        "index": 1,
+        "id": "HARDWARE_SECURITY_KEY",
+        "domain": "separately_held_external_hardware",
+        "purpose": "independent step-up and recovery participation",
+        "synchronizedPasskeyAcceptedAsIndependentHardware": false
+      },
+      {
+        "index": 2,
+        "id": "RECOVERY_FACTOR",
+        "domain": "offline_or_secondary_recovery_custody",
+        "purpose": "emergency authority restoration",
+        "directAssetMovementAuthority": false
+      }
+    ],
+    "anySingleRoleSufficient": false,
+    "dailyValidatorCountsAsRecoveryRole": false,
+    "factorCommitmentsStoredOnchain": true,
+    "rawPrivateMaterialStoredOnchain": false,
+    "publicWitnessMayBecomeVisibleOnUse": true,
+    "delaySeconds": 172800,
+    "expirySecondsAfterRequest": 604800,
+    "requestMovesAssets": false,
+    "completionMovesAssets": false,
+    "postRecoveryAssetMovementRequiresFreshOrdinaryAuthorization": true
+  },
+  "hardwareIntegration": {
+    "preferredExternalFactor": "cross_platform_FIDO2_WebAuthn_security_key",
+    "primaryDeviceCandidate": "device_bound_platform_WebAuthn_or_hardware_backed_purpose_key",
+    "evaluation": {
+      "webauthnFido2": "preferred for user presence and external hardware independence, subject to accepted onchain P-256 verification backend",
+      "syncedPasskey": "not accepted as the independent hardware role",
+      "externalEthereumHardwareSigner": "acceptable if it provides purpose-bound secp256k1 signing and independent custody",
+      "secureEnclave": "appropriate primary-device factor, not independent external hardware factor"
+    },
+    "onchainP256VerificationMustBeAcceptedBeforeImplementation": true,
+    "fallbackToSameDeviceSoftwareKeyAllowed": false,
+    "registration": {
+      "explicitTrustedRuntimeCeremony": true,
+      "challengeAndOwnerCommitmentBound": true,
+      "rpOriginAndUserVerificationPolicyBound": true,
+      "attestationEvidenceStoredLocallyOnly": true
+    },
+    "lossHandling": "rotate the complete configuration with remaining threshold and current validator, or recover validator first; never bypass threshold"
+  },
+  "storage": {
+    "mappingsAllowed": false,
+    "moduleRegistryAllowed": false,
+    "proxyStorageSlotsAllowed": false,
+    "immutable": [
+      "EntryPoint",
+      "deployment chain ID",
+      "owner commitment",
+      "factory binding",
+      "account version ID",
+      "security model ID",
+      "confirmation target",
+      "recovery delay",
+      "recovery expiry"
+    ],
+    "mutableInOrder": [
+      "active validator reference verifier kind validator epoch frozen flag execution lock",
+      "validator key ID binding",
+      "validator commitment",
+      "security configuration hash",
+      "primary-device factor commitment",
+      "hardware-security-key commitment",
+      "recovery-factor commitment",
+      "recovery epoch and state",
+      "pending recovery request ID",
+      "pending validator reference and key ID binding",
+      "pending validator commitment and epoch",
+      "pending recovery timing and source epochs",
+      "pending recovery authorization evidence commitment",
+      "pending config request ID and proposed config hash",
+      "three proposed role commitments",
+      "pending config epoch timing and state"
+    ]
+  },
+  "nonceModel": {
+    "composition": "uint256 nonce = (uint256(uint192 key) << 64) | uint64(sequence)",
+    "entryPointOwnsSequence": true,
+    "lanes": {
+      "0": "ordinary typed execution",
+      "1": "validator maintenance",
+      "2": "recovery and recovery-configuration maintenance"
+    },
+    "activeRecoveryFreezes": [
+      0,
+      1
+    ],
+    "validatorEpochBoundToAllSignedActions": true,
+    "recoveryEpochBoundToAllSignedActions": true,
+    "recoveryCompletionIncrementsValidatorEpoch": true,
+    "recoveryCompletionIncrementsRecoveryEpoch": true,
+    "configCompletionIncrementsRecoveryEpoch": true,
+    "cancellationOrExpiryIncrementsEpoch": false
+  },
+  "conceptualInterfaces": {
+    "validation": [
+      "validateUserOperation",
+      "validateIntent",
+      "validateAuthorityEpoch",
+      "verifyExecutionAuthority",
+      "verifyRecoveryAuthority"
+    ],
+    "execution": [
+      "confirmIntent",
+      "transferNative",
+      "transferERC20",
+      "safeTransferERC721",
+      "safeTransferERC1155",
+      "withdrawEntryPointDeposit"
+    ],
+    "maintenance": [
+      "rotateValidator"
+    ],
+    "recovery": [
+      "requestRecovery",
+      "cancelRecovery",
+      "finalizeRecovery",
+      "expireRecovery",
+      "requestRecoveryConfigRotation",
+      "cancelRecoveryConfigRotation",
+      "finalizeRecoveryConfigRotation",
+      "expireRecoveryConfigRotation"
+    ],
+    "prohibited": [
+      "execute",
+      "executeBatch",
+      "delegatecall",
+      "upgradeTo",
+      "installModule",
+      "setOwner",
+      "setAdmin",
+      "sweep",
+      "withdrawAll",
+      "approveToken",
+      "setRecoveryThreshold",
+      "setRecoveryDelay"
+    ]
+  },
+  "implementationGates": {
+    "acceptedP256VerificationBackendRequired": true,
+    "canonicalHashVectorsRequired": true,
+    "compilerStorageLayoutRequired": true,
+    "localFullLifecycleRequiredBeforeFunding": true,
+    "forkFullLifecycleRequiredBeforeFunding": true,
+    "staticAnalysisRequired": true,
+    "externalAuditRequiredBeforePublicDeployment": true,
+    "meaningfulAssetsApproved": false
+  },
+  "testingArchitecture": {
+    "unit": [
+      "canonical EIP-712 and request hashes",
+      "canonical action decoding",
+      "execution-validator verification",
+      "role commitment and factor verification",
+      "nonce lane epoch validity fee and freeze behavior",
+      "recovery and recovery-config transitions",
+      "typed execution handlers and receivers",
+      "factory configuration and CREATE2 derivation"
+    ],
+    "security": [
+      "stolen primary device",
+      "stolen hardware key",
+      "stolen recovery factor",
+      "malicious application",
+      "malicious bundler relayer and RPC",
+      "replay stale signature and wrong epoch",
+      "wrong account chain EntryPoint recipient token amount and role",
+      "same-domain double counting",
+      "malformed WebAuthn and P-256 witness",
+      "generic call delegatecall upgrade module sweep and approval rejection",
+      "recovery value movement and external call rejection"
+    ],
+    "fullLifecycleInOrder": [
+      "Create Account",
+      "Register Device",
+      "Register Hardware Key",
+      "Register Recovery Factor",
+      "Fund Account",
+      "Execute Operation",
+      "Recover Authority",
+      "Release Residual Funds",
+      "Verify Final State"
+    ],
+    "localLifecycleRequiredBeforeFunding": true,
+    "forkLifecycleRequiredBeforeFunding": true,
+    "factorLossPermutationsRequired": true
+  },
+  "implementationRoadmap": {
+    "contractOrder": [
+      "freeze vectors and accept fixed verifier dependencies",
+      "types hashing and canonical decoding",
+      "fixed validator and factor verification",
+      "account state views and ERC-4337 validation",
+      "typed execution and receivers",
+      "recovery state machine",
+      "new V2 factory and deterministic creation"
+    ],
+    "runtimeOrder": [
+      "public factor descriptors and protected records",
+      "primary-device recovery-purpose custody",
+      "external hardware registration and assertion adapters",
+      "offline or secondary recovery-factor ceremony",
+      "trusted presentations and one-time factor sessions",
+      "verified state reconciliation and sanitized audit"
+    ],
+    "auditPreparationRequired": true,
+    "deploymentPreparationRequiresSeparatePhase": true,
+    "fundingRequiresSeparateExactApproval": true
+  },
+  "securityBoundary": {
+    "solidityImplemented": false,
+    "deployableBytecodeCreated": false,
+    "v1Modified": false,
+    "factoryImplemented": false,
+    "accountCreated": false,
+    "accountDeployed": false,
+    "factoryDeployed": false,
+    "fundingOccurred": false,
+    "liveContractCalled": false,
+    "proofGenerated": false,
+    "runtimeAuthorizationCreated": false,
+    "approvalRequested": false,
+    "userPresenceRequested": false,
+    "deviceVaultSigningUsed": false,
+    "userOperationCreated": false,
+    "userOperationSubmitted": false,
+    "publicMutationOccurred": false
+  }
+}

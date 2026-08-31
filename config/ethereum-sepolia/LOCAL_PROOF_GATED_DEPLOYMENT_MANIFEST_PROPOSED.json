@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "philcore-local-proof-gated-deployment-manifest-v1",
+  "status": "proposed",
+  "phase": "O.20",
+  "decisionStatus": "Proposed — Human Approval Required",
+  "sourceCommit": "13b28149f99c4fae261b96f56fb9ad2790b21e23",
+  "repositoryCleanlinessRequired": true,
+  "compiler": {
+    "solidity": "0.8.24",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "hardhat": "2.28.4"
+  },
+  "security": {
+    "securityModel": "local-proof-gated-v1",
+    "networkClass": "disposable-testnet",
+    "productionApproved": false,
+    "factEnforcedOnchain": false,
+    "starkVerifiedOnchain": false,
+    "localStwoVerificationRequiredBeforeSigning": true
+  },
+  "network": {
+    "profileId": "ethereum_sepolia",
+    "chainId": 11155111,
+    "entryPointVersion": "0.7",
+    "entryPointAddress": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "baseConfigurationInherited": false,
+    "mainnetAllowed": false
+  },
+  "execution": {
+    "method": "executeLocalProofAuthorization(bytes32,bytes32,uint64)",
+    "methodSelector": "0x44413cab",
+    "targetMethod": "confirmPhilCoreAction(bytes32,bytes32)",
+    "targetMethodSelector": "0x4e5a5da4",
+    "valueWei": "0",
+    "paymaster": "disabled",
+    "batching": "disabled",
+    "genericCalls": "disabled",
+    "tokenMovement": "disabled",
+    "upgradeability": "disabled"
+  },
+  "roles": {
+    "deployer": {
+      "reference": "0x17f2F9f2e0aaf90768c0f26579fba5043Ef0C903",
+      "classification": "disposable_sepolia_contract_deployer",
+      "accountExecutionAuthority": false,
+      "productionAuthority": false
+    },
+    "funder": {
+      "reference": null,
+      "classification": "disposable_sepolia_funder",
+      "mayEqualDeployerOnlyAfterIndependentApproval": true,
+      "meaningfulAssetsAllowed": false
+    },
+    "validator": {
+      "reference": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "classification": "device_vault_validator_public_reference",
+      "privateMaterialAvailableToDeploymentScripts": false
+    },
+    "recovery": {
+      "supported": false,
+      "authority": null,
+      "consequence": "validator key loss can permanently strand disposable Sepolia ETH"
+    },
+    "contractAdmin": "none",
+    "upgradeAdmin": "none",
+    "pauser": "none",
+    "withdrawalAdmin": "none"
+  },
+  "contracts": [
+    {
+      "id": "confirmationTarget",
+      "contract": "PhilCoreLocalProofConfirmationTargetV1",
+      "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+      "deployment": "ordinary",
+      "address": null,
+      "addressClassification": "unresolved_proposed",
+      "constructorArguments": [],
+      "creationBytecodeHash": "0x2d6acc0d004e51fed77a473beaba524a60a0a617667be36f064fbe3c4aea2127",
+      "deployedBytecodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+      "expectedRole": "zero-value confirmation evidence for one account/action/digest",
+      "privilege": "none",
+      "deploymentGasEstimate": null
+    },
+    {
+      "id": "accountFactory",
+      "contract": "PhilCore4337LocalProofAccountFactoryV1",
+      "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+      "deployment": "ordinary",
+      "address": null,
+      "addressClassification": "unresolved_proposed",
+      "constructorArguments": [
+        "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "<accepted PhilCoreLocalProofConfirmationTargetV1>",
+        11155111
+      ],
+      "createAccountSelector": "0x3e89ceab",
+      "creationBytecodeHash": "0x1bd6d5d0f49474af2dbc2630b25316cf0856c4ea4d1aee869efdce0fcd03e147",
+      "deployedBytecodeHash": "0x8a62bef9a075d1638a8ebed8030d39928f31adaf86cf11d850a16ed815dba5a0",
+      "expectedRole": "deterministic CREATE2 deployment of experimental accounts",
+      "privilege": "none",
+      "deploymentGasEstimate": null
+    },
+    {
+      "id": "account",
+      "contract": "PhilCore4337LocalProofAccountV1",
+      "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+      "deployment": "counterfactual_via_factory",
+      "address": null,
+      "addressClassification": "unresolved_proposed",
+      "constructorArguments": [
+        "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "<Device Vault execution validator>",
+        "<ownerCommitment>",
+        "<accepted PhilCoreLocalProofConfirmationTargetV1>",
+        "<validatorKeyId>",
+        11155111
+      ],
+      "creationBytecodeHash": "0xdfe8c94b7fa228961f3048c068a171778672e94650c1404eb8c345c1e5926881",
+      "deployedBytecodeHash": "0xbec05380e8225faa3f15b4b7894c90bc9e591a555839057ab71ceed5922ab76c",
+      "expectedRole": "single-action ERC-4337 v0.7 account",
+      "privilege": "owner may sign only the fixed local-proof action envelope",
+      "deploymentGasEstimate": null
+    }
+  ],
+  "excludedContracts": [
+    "standalone reusable account implementation deployment",
+    "STARK verifier",
+    "fact registry",
+    "fact relay",
+    "paymaster",
+    "token",
+    "World ID integration",
+    "upgrade admin"
+  ],
+  "deploymentOrder": [
+    {
+      "stage": 1,
+      "contract": "PhilCoreLocalProofConfirmationTargetV1",
+      "mutationGate": "PHILCORE_SEPOLIA_TARGET_DEPLOYMENT_APPROVED",
+      "independentStopRequired": true
+    },
+    {
+      "stage": 2,
+      "contract": "PhilCore4337LocalProofAccountFactoryV1",
+      "mutationGate": "PHILCORE_SEPOLIA_ACCOUNT_DEPLOYMENT_APPROVED",
+      "independentStopRequired": true
+    },
+    {
+      "stage": 3,
+      "contract": "PhilCore4337LocalProofAccountV1",
+      "deployment": "counterfactual directly from factory; no standalone implementation transaction",
+      "mutationGate": "PHILCORE_SEPOLIA_USEROP_SUBMISSION_APPROVED",
+      "independentStopRequired": true
+    }
+  ],
+  "proposedAddresses": {
+    "status": "calculated",
+    "target": "0x7e26405275C84c541e9f9aB68D1C6F7234a16345",
+    "factory": "0x7096565D191e664390b7041cCf297F443793e266",
+    "firstAccount": "0x30283Bfd6D65472d9f3b0A173382675b947C69d1",
+    "targetDeploymentNonce": "37",
+    "factoryDeploymentNonce": "38",
+    "liveEmptyAddressCheckPassed": true,
+    "deployed": false,
+    "verified": false,
+    "accepted": false
+  },
+  "gasAndFees": {
+    "estimateSource": "live_read_only_rpc",
+    "targetDeploymentGas": "307816",
+    "factoryDeploymentGas": "1050089",
+    "counterfactualAccountVerificationGas": null,
+    "firstActionCallGas": null,
+    "preVerificationGas": null,
+    "currentGasPriceWei": "1116416838",
+    "maxFeePerGasWei": null,
+    "maxPriorityFeePerGasWei": null,
+    "hardMaximumExposureWei": null,
+    "conservativeBufferBasisPoints": 2500,
+    "bundlerEstimateStatus": "BUNDLER_ESTIMATE_NOT_CONFIGURED"
+  },
+  "funding": {
+    "status": "estimates_unresolved",
+    "deployerMinimumWei": null,
+    "accountPrefundMinimumWei": null,
+    "conservativeRecommendedWei": null,
+    "entryPointDepositRequired": false,
+    "counterfactualAccountPreFundingRequired": true,
+    "fundingApproved": false
+  },
+  "requiredGates": {
+    "publicNetwork": "PHILCORE_PUBLIC_NETWORK_APPROVED",
+    "ethereumSepolia": "PHILCORE_ETHEREUM_SEPOLIA_APPROVED",
+    "securityModel": "PHILCORE_LOCAL_PROOF_ACCOUNT_MODEL_APPROVED",
+    "targetDeployment": "PHILCORE_SEPOLIA_TARGET_DEPLOYMENT_APPROVED",
+    "accountDeployment": "PHILCORE_SEPOLIA_ACCOUNT_DEPLOYMENT_APPROVED",
+    "funding": "PHILCORE_SEPOLIA_FUNDING_APPROVED",
+    "userOperationSubmission": "PHILCORE_SEPOLIA_USEROP_SUBMISSION_APPROVED"
+  },
+  "commands": {
+    "inspect": "npm run ethereum-sepolia:inspect-local-proof-account",
+    "readOnlyPreflight": "npm run ethereum-sepolia:local-proof-preflight",
+    "calculateAddresses": "npm run ethereum-sepolia:calculate-local-proof-addresses",
+    "manifestDiff": "npm run ethereum-sepolia:diff-local-proof-manifest",
+    "prepareEvidence": "npm run ethereum-sepolia:prepare-local-proof-evidence",
+    "deployTarget": "npm run ethereum-sepolia:deploy-local-proof-target",
+    "deployFactory": "npm run ethereum-sepolia:deploy-local-proof-factory",
+    "fundAccount": "npm run ethereum-sepolia:fund-local-proof-account",
+    "submitFirstUserOperation": "npm run ethereum-sepolia:submit-first-local-proof-userop"
+  },
+  "postDeploymentAssertions": [
+    "chain ID equals 11155111",
+    "EntryPoint equals canonical ERC-4337 v0.7 address",
+    "target and factory deployed-code hashes match accepted manifest",
+    "factory immutable EntryPoint, target, and chain bindings are exact",
+    "counterfactual account owner, ownerCommitment, target, validatorKeyId, chain, and EntryPoint are exact",
+    "first action selector is 0x44413cab and target selector is 0x4e5a5da4",
+    "value is zero and paymasterAndData is empty",
+    "no address is accepted merely because code is present"
+  ],
+  "verificationCommands": [
+    "npm run ethereum-sepolia:verify-local-proof-bytecode",
+    "npm run ethereum-sepolia:local-proof-preflight",
+    "npm run ethereum-sepolia:verify-local-proof-contracts"
+  ],
+  "rollbackLimitations": [
+    "confirmed public deployments and UserOperations cannot be rolled back by PhilCore",
+    "target and factory are non-upgradeable",
+    "factory EntryPoint, target, and chain configuration are immutable",
+    "counterfactual account address changes when any CREATE2 binding changes",
+    "validator-key loss has no recovery path in this disposable account"
+  ],
+  "approval": {
+    "acp0002Status": "Proposed",
+    "architectureApprovalStatus": "Conditionally Approved for Disposable Sepolia Preparation",
+    "architecturePreparationApproved": true,
+    "architectureApprovedForDeployment": false,
+    "deploymentApproved": false,
+    "targetDeploymentApproved": false,
+    "accountDeploymentApproved": false,
+    "fundingApproved": false,
+    "userOperationSubmissionApproved": false,
+    "externalTestingApproved": false,
+    "betaApproved": false,
+    "productionApproved": false,
+    "acceptedAddressesPresent": false
+  }
+}

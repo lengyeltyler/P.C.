@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.10",
+  "canonicalPhaseName": "O.37.10 V2 Minimal Account, Factory, and Local Lifecycle Implementation",
+  "classification": "LOCAL_ONLY_SOLIDITY_IMPLEMENTATION_AND_INTEGRATION",
+  "result": "COMPLETE_LOCAL_DEPLOYABLE_PACKAGE",
+  "sourceHeadAtPhaseStart": "b98acd6c3b81ea324c15a17e14d1dc7703a6bf5d",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repository": "<repository-root>",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+  },
+  "sourceBindings": {
+    "accountInterfaceSha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9",
+    "accountSha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9",
+    "factorySha256": "1a76877449939bc45323fbc4046c7039db54e323b70306508fb308e57f38ce51",
+    "unchangedVerifierSha256": "410638b556e08ed98deebb00b7375798ad3a3f13230230fbd93884232e7a23d8",
+    "lifecycleTestSha256": "04f24af602cc575e5eed77e4485b40b0ad9fdcd6f159ab36edff711bf232565f",
+    "op054TraceTestSha256": "10eda84f485d25fbf947797525df485cc81743dff361410edb0f62f7cfb0d4b2"
+  },
+  "fixtureBindings": {
+    "o37_2Sha256": "f24074efc3d1543457b4afa9a79530b77c9cd662d74c269cf2c576b5eb47b620",
+    "o37_4Sha256": "b9e0c3b4ab483a6e54b6533dedaddbb2690749f4f9cb68f8332f8f0235d91867"
+  },
+  "buildInfoFile": "0a2ad5a788904bc4d65d8113128b73b7.json",
+  "compilerSettings": {
+    "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "metadata": {
+      "appendCBOR": true,
+      "bytecodeHash": "ipfs",
+      "useLiteralContent": true
+    }
+  },
+  "dependencies": {
+    "openZeppelinContracts": "5.6.1",
+    "accountAbstractionContracts": "0.7.0",
+    "hardhat": "2.28.4",
+    "hardhatEthers": "3.0.8",
+    "ethers": "6.17.0",
+    "node": "26.0.0",
+    "npm": "11.12.1",
+    "packageLockVersion": 3
+  },
+  "accountVersionLabel": "philcore-v2-minimal-account-v3-consumer-recovery",
+  "factoryVersionLabel": "philcore-v2-minimal-factory-v2",
+  "ids": {
+    "accountVersionId": "0xa271e70f3c567c6a54a81e455de89f98cc067a931ac70816c6016e9b9ca1fd1f",
+    "factoryVersionId": "0x66e130d6512db6801362a672a59d58b9b6c16bb2ba76172808d6b5c21814d671",
+    "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44"
+  },
+  "artifacts": {
+    "sizeReport": "config/solidity/O37_10_SIZE_REPORT.json",
+    "abiReport": "config/solidity/O37_10_ABI_REPORT.json",
+    "storageReport": "config/solidity/O37_10_STORAGE_LAYOUT_REPORT.json",
+    "create2Report": "config/solidity/O37_10_CREATE2_VECTORS.json",
+    "staticAnalysisTriage": "config/solidity/O37_10_STATIC_ANALYSIS_TRIAGE.json"
+  },
+  "opcodeChecks": {
+    "methodology": "LINEAR_PUSH_AWARE_SCAN_EXCLUDING_TRAILING_CBOR; factory scan includes embedded account creation bytes",
+    "accountRuntime": {
+      "executableBytesScanned": 13226,
+      "metadataBytesExcluded": 53,
+      "sstore": 55,
+      "call": 4,
+      "staticcall": 2,
+      "delegatecall": 0,
+      "create": 0,
+      "create2": 0,
+      "selfdestruct": 0
+    },
+    "factoryRuntime": {
+      "executableBytesScanned": 17725,
+      "metadataBytesExcluded": 53,
+      "sstore": 61,
+      "call": 4,
+      "staticcall": 2,
+      "delegatecall": 0,
+      "create": 0,
+      "create2": 1,
+      "selfdestruct": 0
+    },
+    "unchangedVerifierValidatedByO37_7ReachabilityTest": true
+  },
+  "securityBoundary": {
+    "administrator": false,
+    "ownerOverride": false,
+    "proxy": false,
+    "upgrade": false,
+    "delegatecall": false,
+    "genericExecution": false,
+    "mutableVerifier": false,
+    "modulesOrPluginsOrSessions": false,
+    "paymasterOrAggregator": false,
+    "tokenSurface": false,
+    "duplicateNonceStorage": false,
+    "externalRpcUsed": false,
+    "publicDeployment": false,
+    "publicMutationCount": 0,
+    "pushPerformed": false
+  }
+}

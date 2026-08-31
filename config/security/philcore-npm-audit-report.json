@@ -1,0 +1,1443 @@
+{
+  "phase": "PUBLIC_SOURCE_PREPARATION",
+  "status": "completed",
+  "generatedAt": "2026-08-25T17:17:27.575Z",
+  "command": "npm audit --json",
+  "toolchain": {
+    "node": "v26.0.0",
+    "npm": "11.12.1"
+  },
+  "packageLockSha256": "030f8a95dc90b91d939da1c8d7735553320b2b3c3f0a4e0f0fac54c8114dc3ec",
+  "auditExitCode": 1,
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 10,
+      "moderate": 2,
+      "high": 8,
+      "critical": 0,
+      "total": 20
+    },
+    "dependencies": {
+      "prod": 60,
+      "dev": 264,
+      "optional": 35,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 323
+    }
+  },
+  "productionAudit": {
+    "command": "npm audit --omit=dev --json",
+    "auditExitCode": 0,
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 60,
+        "dev": 264,
+        "optional": 35,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 323
+      }
+    }
+  },
+  "inventory": [
+    {
+      "package": "@ethersproject/abi",
+      "installedRange": "5.0.10 - 5.8.0",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/abi"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/abi",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/hash"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@ethersproject/abstract-provider",
+      "installedRange": "*",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/abstract-provider"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/abstract-provider",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/transactions"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@ethersproject/abstract-signer",
+      "installedRange": "*",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/abstract-signer"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/abstract-signer",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/abstract-provider"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@ethersproject/hash",
+      "installedRange": "5.0.6 - 5.8.0",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/hash"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/hash",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/abstract-signer"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@ethersproject/signing-key",
+      "installedRange": "<=5.8.0",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/signing-key"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/signing-key",
+      "advisories": [],
+      "viaPackages": [
+        "elliptic"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@ethersproject/transactions",
+      "installedRange": "<=5.8.0",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@ethersproject/transactions"
+      ],
+      "dependencyPathSummary": "node_modules/@ethersproject/transactions",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/signing-key"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "@sentry/node",
+      "installedRange": "4.0.0-beta.0 - 7.74.2-alpha.1",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/@sentry/node"
+      ],
+      "dependencyPathSummary": "node_modules/@sentry/node",
+      "advisories": [],
+      "viaPackages": [
+        "cookie"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "adm-zip",
+      "installedRange": "<0.6.0",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/adm-zip"
+      ],
+      "dependencyPathSummary": "node_modules/adm-zip",
+      "advisories": [
+        {
+          "source": 1123686,
+          "title": "adm-zip: Crafted ZIP file triggers 4GB memory allocation",
+          "url": "https://github.com/advisories/GHSA-xcpc-8h2w-3j85",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-789"
+          ],
+          "range": "<0.6.0"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "brace-expansion",
+      "installedRange": "2.0.0 - 2.1.3",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/brace-expansion"
+      ],
+      "dependencyPathSummary": "node_modules/brace-expansion",
+      "advisories": [
+        {
+          "source": 1123896,
+          "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+          "url": "https://github.com/advisories/GHSA-3jxr-9vmj-r5cp",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "range": ">=2.0.0 <2.1.2"
+        },
+        {
+          "source": 1130589,
+          "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+          "url": "https://github.com/advisories/GHSA-mh99-v99m-4gvg",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "range": ">=2.0.0 <2.1.3"
+        },
+        {
+          "source": 1130736,
+          "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+          "url": "https://github.com/advisories/GHSA-rgw5-rvv9-x895",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "range": ">=2.0.0 <2.1.4"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": true,
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "cookie",
+      "installedRange": "<0.7.0",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/cookie"
+      ],
+      "dependencyPathSummary": "node_modules/cookie",
+      "advisories": [
+        {
+          "source": 1103907,
+          "title": "cookie accepts cookie name, path, and domain with out of bounds characters",
+          "url": "https://github.com/advisories/GHSA-pxg6-pf52-xh8x",
+          "severity": "low",
+          "cwe": [
+            "CWE-74"
+          ],
+          "range": "<0.7.0"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "elliptic",
+      "installedRange": "*",
+      "severity": "low",
+      "direct": false,
+      "nodes": [
+        "node_modules/elliptic"
+      ],
+      "dependencyPathSummary": "node_modules/elliptic",
+      "advisories": [
+        {
+          "source": 1112030,
+          "title": "Elliptic Uses a Cryptographic Primitive with a Risky Implementation",
+          "url": "https://github.com/advisories/GHSA-848j-6mx2-7j84",
+          "severity": "low",
+          "cwe": [
+            "CWE-1240"
+          ],
+          "range": "<=6.6.1"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "hardhat",
+      "installedRange": "0.1.0-rc.0 - 3.11.1",
+      "severity": "high",
+      "direct": true,
+      "nodes": [
+        "node_modules/hardhat"
+      ],
+      "dependencyPathSummary": "node_modules/hardhat",
+      "advisories": [],
+      "viaPackages": [
+        "@ethersproject/abi",
+        "@sentry/node",
+        "adm-zip",
+        "mocha",
+        "solc",
+        "undici",
+        "uuid"
+      ],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "build_development_exposure",
+      "exposureRationale": "Reached through Hardhat/Solidity local development tooling, not the shipped SDK runtime.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "immutable",
+      "installedRange": "<=4.3.8",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/immutable"
+      ],
+      "dependencyPathSummary": "node_modules/immutable",
+      "advisories": [
+        {
+          "source": 1124008,
+          "title": "Immutable.js `List` 32-bit trie overflow → unrecoverable DoS",
+          "url": "https://github.com/advisories/GHSA-v56q-mh7h-f735",
+          "severity": "high",
+          "cwe": [
+            "CWE-190",
+            "CWE-400",
+            "CWE-835",
+            "CWE-1284"
+          ],
+          "range": "<4.3.9"
+        },
+        {
+          "source": 1144965,
+          "title": "Immutable: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+          "url": "https://github.com/advisories/GHSA-xvcm-6775-5m9r",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "range": "<4.3.9"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": true,
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "js-yaml",
+      "installedRange": "4.0.0 - 4.3.0",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/js-yaml"
+      ],
+      "dependencyPathSummary": "node_modules/js-yaml",
+      "advisories": [
+        {
+          "source": 1138115,
+          "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+          "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+          "severity": "high",
+          "cwe": [
+            "CWE-407"
+          ],
+          "range": ">=4.0.0 <4.3.1"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": true,
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "mocha",
+      "installedRange": "8.2.0 - 12.0.0-beta-2",
+      "severity": "moderate",
+      "direct": false,
+      "nodes": [
+        "node_modules/mocha"
+      ],
+      "dependencyPathSummary": "node_modules/mocha",
+      "advisories": [],
+      "viaPackages": [
+        "serialize-javascript"
+      ],
+      "fixAvailable": true,
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "compatible_fix_available_pending_targeted_update_or_override",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "serialize-javascript",
+      "installedRange": "<=7.0.4",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/serialize-javascript"
+      ],
+      "dependencyPathSummary": "node_modules/serialize-javascript",
+      "advisories": [
+        {
+          "source": 1113686,
+          "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+          "url": "https://github.com/advisories/GHSA-5c6j-r48x-rmvq",
+          "severity": "high",
+          "cwe": [
+            "CWE-96"
+          ],
+          "range": "<=7.0.2"
+        },
+        {
+          "source": 1119440,
+          "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+          "url": "https://github.com/advisories/GHSA-qj8w-gfj5-8c6v",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-834"
+          ],
+          "range": ">=5.0.0 <7.0.5"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": true,
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "solc",
+      "installedRange": ">=0.5.1",
+      "severity": "low",
+      "direct": true,
+      "nodes": [
+        "node_modules/hardhat/node_modules/solc",
+        "node_modules/solc"
+      ],
+      "dependencyPathSummary": "node_modules/hardhat/node_modules/solc -> node_modules/solc",
+      "advisories": [],
+      "viaPackages": [
+        "tmp"
+      ],
+      "fixAvailable": {
+        "name": "solc",
+        "version": "0.5.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "build_development_exposure",
+      "exposureRationale": "Reached through Hardhat/Solidity local development tooling, not the shipped SDK runtime.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "tmp",
+      "installedRange": "<=0.2.5",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/tmp"
+      ],
+      "dependencyPathSummary": "node_modules/tmp",
+      "advisories": [
+        {
+          "source": 1109537,
+          "title": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter",
+          "url": "https://github.com/advisories/GHSA-52f5-9888-hmc6",
+          "severity": "low",
+          "cwe": [
+            "CWE-59"
+          ],
+          "range": "<=0.2.3"
+        },
+        {
+          "source": 1120654,
+          "title": "tmp has Path Traversal via unsanitized prefix/postfix that enables directory escape",
+          "url": "https://github.com/advisories/GHSA-ph9p-34f9-6g65",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "range": "<0.2.6"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "solc",
+        "version": "0.5.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "undici",
+      "installedRange": "<=6.27.0",
+      "severity": "high",
+      "direct": false,
+      "nodes": [
+        "node_modules/undici"
+      ],
+      "dependencyPathSummary": "node_modules/undici",
+      "advisories": [
+        {
+          "source": 1112496,
+          "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
+          "url": "https://github.com/advisories/GHSA-g9mf-h72j-4rw9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-770"
+          ],
+          "range": "<6.23.0"
+        },
+        {
+          "source": 1114594,
+          "title": "Undici has an HTTP Request/Response Smuggling issue",
+          "url": "https://github.com/advisories/GHSA-2mjp-6q6p-2qxm",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-444"
+          ],
+          "range": "<6.24.0"
+        },
+        {
+          "source": 1114638,
+          "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+          "url": "https://github.com/advisories/GHSA-vrm6-8vpv-qv8q",
+          "severity": "high",
+          "cwe": [
+            "CWE-409"
+          ],
+          "range": "<6.24.0"
+        },
+        {
+          "source": 1114640,
+          "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
+          "url": "https://github.com/advisories/GHSA-v9p9-hfj2-hcw8",
+          "severity": "high",
+          "cwe": [
+            "CWE-248"
+          ],
+          "range": "<6.24.0"
+        },
+        {
+          "source": 1114642,
+          "title": "Undici has CRLF Injection in undici via `upgrade` option",
+          "url": "https://github.com/advisories/GHSA-4992-7rv2-5pvq",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-93"
+          ],
+          "range": "<6.24.0"
+        },
+        {
+          "source": 1121242,
+          "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+          "url": "https://github.com/advisories/GHSA-p88m-4jfj-68fv",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-93"
+          ],
+          "range": "<6.27.0"
+        },
+        {
+          "source": 1121245,
+          "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+          "url": "https://github.com/advisories/GHSA-vxpw-j846-p89q",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "range": "<6.27.0"
+        },
+        {
+          "source": 1121255,
+          "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+          "url": "https://github.com/advisories/GHSA-g8m3-5g58-fq7m",
+          "severity": "low",
+          "cwe": [
+            "CWE-183"
+          ],
+          "range": "<6.27.0"
+        },
+        {
+          "source": 1130716,
+          "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+          "url": "https://github.com/advisories/GHSA-8xcm-r25x-g524",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-444"
+          ],
+          "range": "<6.28.0"
+        },
+        {
+          "source": 1130727,
+          "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+          "url": "https://github.com/advisories/GHSA-m8rv-5g2x-5cg5",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-93"
+          ],
+          "range": "<6.28.0"
+        },
+        {
+          "source": 1130732,
+          "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+          "url": "https://github.com/advisories/GHSA-v3r7-h72x-cjcm",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-74"
+          ],
+          "range": "<6.28.0"
+        },
+        {
+          "source": 1137243,
+          "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+          "url": "https://github.com/advisories/GHSA-35p6-xmwp-9g52",
+          "severity": "low",
+          "cwe": [
+            "CWE-367"
+          ],
+          "range": "<6.27.0"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "acceptedRisk": true,
+      "compensatingControls": [
+        "development_tooling_only",
+        "do_not_run_tooling_on_untrusted_repositories_or_configs",
+        "do_not_run_tooling_as_elevated_user",
+        "pin_package_lock",
+        "exclude_dev_dependencies_from_production_runtime_bundle",
+        "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+      ],
+      "betaBlocking": false,
+      "productionBlocking": false
+    },
+    {
+      "package": "uuid",
+      "installedRange": "<11.1.1",
+      "severity": "moderate",
+      "direct": false,
+      "nodes": [
+        "node_modules/uuid"
+      ],
+      "dependencyPathSummary": "node_modules/uuid",
+      "advisories": [
+        {
+          "source": 1119441,
+          "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+          "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-787",
+            "CWE-1285"
+          ],
+          "range": "<11.1.1"
+        }
+      ],
+      "viaPackages": [],
+      "fixAvailable": {
+        "name": "hardhat",
+        "version": "3.14.0",
+        "isSemVerMajor": true
+      },
+      "exposureCategory": "tooling_cli_exposure",
+      "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+      "remediationDecision": "blocked_requires_major_hardhat_review",
+      "acceptedRisk": false,
+      "compensatingControls": [],
+      "betaBlocking": false,
+      "productionBlocking": false
+    }
+  ],
+  "originalFiveHighAdvisoryGroups": [
+    {
+      "package": "lodash",
+      "currentStatus": "not_reported_after_n6_lockfile_update",
+      "severity": "remediated",
+      "exposureCategory": "build_development_exposure",
+      "remediationDecision": "remediated_by_non_forced_lockfile_update",
+      "betaBlocking": false
+    },
+    {
+      "package": "serialize-javascript",
+      "currentStatus": "still_reported",
+      "severity": "high",
+      "exposureCategory": "tooling_cli_exposure",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "betaBlocking": false
+    },
+    {
+      "package": "tmp",
+      "currentStatus": "still_reported",
+      "severity": "high",
+      "exposureCategory": "tooling_cli_exposure",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "betaBlocking": false
+    },
+    {
+      "package": "undici",
+      "currentStatus": "still_reported",
+      "severity": "high",
+      "exposureCategory": "tooling_cli_exposure",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "betaBlocking": false
+    },
+    {
+      "package": "ws",
+      "currentStatus": "not_reported_after_n6_lockfile_update",
+      "severity": "remediated",
+      "exposureCategory": "build_development_exposure",
+      "remediationDecision": "remediated_by_non_forced_lockfile_update",
+      "betaBlocking": false
+    }
+  ],
+  "highAdvisorySummary": {
+    "totalOriginalHighGroups": 5,
+    "remediatedByLockfile": [
+      "lodash",
+      "ws"
+    ],
+    "remainingHighGroups": [
+      "serialize-javascript",
+      "tmp",
+      "undici"
+    ],
+    "acceptedDevelopmentToolingHighGroups": [
+      "adm-zip",
+      "brace-expansion",
+      "hardhat",
+      "immutable",
+      "js-yaml",
+      "serialize-javascript",
+      "tmp",
+      "undici"
+    ],
+    "productionRuntimeHighAdvisories": [],
+    "buildOrToolingHighAdvisories": [
+      {
+        "package": "adm-zip",
+        "installedRange": "<0.6.0",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/adm-zip"
+        ],
+        "dependencyPathSummary": "node_modules/adm-zip",
+        "advisories": [
+          {
+            "source": 1123686,
+            "title": "adm-zip: Crafted ZIP file triggers 4GB memory allocation",
+            "url": "https://github.com/advisories/GHSA-xcpc-8h2w-3j85",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-789"
+            ],
+            "range": "<0.6.0"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": {
+          "name": "hardhat",
+          "version": "3.14.0",
+          "isSemVerMajor": true
+        },
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "brace-expansion",
+        "installedRange": "2.0.0 - 2.1.3",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/brace-expansion"
+        ],
+        "dependencyPathSummary": "node_modules/brace-expansion",
+        "advisories": [
+          {
+            "source": 1123896,
+            "title": "brace-expansion: DoS via exponential-time expansion of consecutive non-expanding {} groups",
+            "url": "https://github.com/advisories/GHSA-3jxr-9vmj-r5cp",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "range": ">=2.0.0 <2.1.2"
+          },
+          {
+            "source": 1130589,
+            "title": "brace-expansion: DoS via unbounded expansion length causing an out-of-memory process crash",
+            "url": "https://github.com/advisories/GHSA-mh99-v99m-4gvg",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "range": ">=2.0.0 <2.1.3"
+          },
+          {
+            "source": 1130736,
+            "title": "brace-expansion: DoS via unbounded intermediate arrays, bypassing the CVE-2026-14257 mitigation",
+            "url": "https://github.com/advisories/GHSA-rgw5-rvv9-x895",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "range": ">=2.0.0 <2.1.4"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": true,
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "hardhat",
+        "installedRange": "0.1.0-rc.0 - 3.11.1",
+        "severity": "high",
+        "direct": true,
+        "nodes": [
+          "node_modules/hardhat"
+        ],
+        "dependencyPathSummary": "node_modules/hardhat",
+        "advisories": [],
+        "viaPackages": [
+          "@ethersproject/abi",
+          "@sentry/node",
+          "adm-zip",
+          "mocha",
+          "solc",
+          "undici",
+          "uuid"
+        ],
+        "fixAvailable": {
+          "name": "hardhat",
+          "version": "3.14.0",
+          "isSemVerMajor": true
+        },
+        "exposureCategory": "build_development_exposure",
+        "exposureRationale": "Reached through Hardhat/Solidity local development tooling, not the shipped SDK runtime.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "immutable",
+        "installedRange": "<=4.3.8",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/immutable"
+        ],
+        "dependencyPathSummary": "node_modules/immutable",
+        "advisories": [
+          {
+            "source": 1124008,
+            "title": "Immutable.js `List` 32-bit trie overflow → unrecoverable DoS",
+            "url": "https://github.com/advisories/GHSA-v56q-mh7h-f735",
+            "severity": "high",
+            "cwe": [
+              "CWE-190",
+              "CWE-400",
+              "CWE-835",
+              "CWE-1284"
+            ],
+            "range": "<4.3.9"
+          },
+          {
+            "source": 1144965,
+            "title": "Immutable: Hash-collision algorithmic complexity denial of service in Immutable.Map/Set",
+            "url": "https://github.com/advisories/GHSA-xvcm-6775-5m9r",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "range": "<4.3.9"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": true,
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "js-yaml",
+        "installedRange": "4.0.0 - 4.3.0",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/js-yaml"
+        ],
+        "dependencyPathSummary": "node_modules/js-yaml",
+        "advisories": [
+          {
+            "source": 1138115,
+            "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+            "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "range": ">=4.0.0 <4.3.1"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": true,
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "serialize-javascript",
+        "installedRange": "<=7.0.4",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/serialize-javascript"
+        ],
+        "dependencyPathSummary": "node_modules/serialize-javascript",
+        "advisories": [
+          {
+            "source": 1113686,
+            "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+            "url": "https://github.com/advisories/GHSA-5c6j-r48x-rmvq",
+            "severity": "high",
+            "cwe": [
+              "CWE-96"
+            ],
+            "range": "<=7.0.2"
+          },
+          {
+            "source": 1119440,
+            "title": "Serialize JavaScript has CPU Exhaustion Denial of Service via crafted array-like objects",
+            "url": "https://github.com/advisories/GHSA-qj8w-gfj5-8c6v",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-400",
+              "CWE-834"
+            ],
+            "range": ">=5.0.0 <7.0.5"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": true,
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "tmp",
+        "installedRange": "<=0.2.5",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/tmp"
+        ],
+        "dependencyPathSummary": "node_modules/tmp",
+        "advisories": [
+          {
+            "source": 1109537,
+            "title": "tmp allows arbitrary temporary file / directory write via symbolic link `dir` parameter",
+            "url": "https://github.com/advisories/GHSA-52f5-9888-hmc6",
+            "severity": "low",
+            "cwe": [
+              "CWE-59"
+            ],
+            "range": "<=0.2.3"
+          },
+          {
+            "source": 1120654,
+            "title": "tmp has Path Traversal via unsanitized prefix/postfix that enables directory escape",
+            "url": "https://github.com/advisories/GHSA-ph9p-34f9-6g65",
+            "severity": "high",
+            "cwe": [
+              "CWE-22"
+            ],
+            "range": "<0.2.6"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": {
+          "name": "solc",
+          "version": "0.5.0",
+          "isSemVerMajor": true
+        },
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      },
+      {
+        "package": "undici",
+        "installedRange": "<=6.27.0",
+        "severity": "high",
+        "direct": false,
+        "nodes": [
+          "node_modules/undici"
+        ],
+        "dependencyPathSummary": "node_modules/undici",
+        "advisories": [
+          {
+            "source": 1112496,
+            "title": "Undici has an unbounded decompression chain in HTTP responses on Node.js Fetch API via Content-Encoding leads to resource exhaustion",
+            "url": "https://github.com/advisories/GHSA-g9mf-h72j-4rw9",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-770"
+            ],
+            "range": "<6.23.0"
+          },
+          {
+            "source": 1114594,
+            "title": "Undici has an HTTP Request/Response Smuggling issue",
+            "url": "https://github.com/advisories/GHSA-2mjp-6q6p-2qxm",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-444"
+            ],
+            "range": "<6.24.0"
+          },
+          {
+            "source": 1114638,
+            "title": "Undici has Unbounded Memory Consumption in WebSocket permessage-deflate Decompression",
+            "url": "https://github.com/advisories/GHSA-vrm6-8vpv-qv8q",
+            "severity": "high",
+            "cwe": [
+              "CWE-409"
+            ],
+            "range": "<6.24.0"
+          },
+          {
+            "source": 1114640,
+            "title": "Undici has Unhandled Exception in WebSocket Client Due to Invalid server_max_window_bits Validation",
+            "url": "https://github.com/advisories/GHSA-v9p9-hfj2-hcw8",
+            "severity": "high",
+            "cwe": [
+              "CWE-248"
+            ],
+            "range": "<6.24.0"
+          },
+          {
+            "source": 1114642,
+            "title": "Undici has CRLF Injection in undici via `upgrade` option",
+            "url": "https://github.com/advisories/GHSA-4992-7rv2-5pvq",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-93"
+            ],
+            "range": "<6.24.0"
+          },
+          {
+            "source": 1121242,
+            "title": "undici vulnerable to HTTP header injection via Set-Cookie percent-decoding",
+            "url": "https://github.com/advisories/GHSA-p88m-4jfj-68fv",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-93"
+            ],
+            "range": "<6.27.0"
+          },
+          {
+            "source": 1121245,
+            "title": "undici WebSocket client vulnerable to denial of service via fragment count bypass",
+            "url": "https://github.com/advisories/GHSA-vxpw-j846-p89q",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-770"
+            ],
+            "range": "<6.27.0"
+          },
+          {
+            "source": 1121255,
+            "title": "undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching",
+            "url": "https://github.com/advisories/GHSA-g8m3-5g58-fq7m",
+            "severity": "low",
+            "cwe": [
+              "CWE-183"
+            ],
+            "range": "<6.27.0"
+          },
+          {
+            "source": 1130716,
+            "title": "undici vulnerable to downstream response desynchronization via retry interceptor",
+            "url": "https://github.com/advisories/GHSA-8xcm-r25x-g524",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-444"
+            ],
+            "range": "<6.28.0"
+          },
+          {
+            "source": 1130727,
+            "title": "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+            "url": "https://github.com/advisories/GHSA-m8rv-5g2x-5cg5",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-93"
+            ],
+            "range": "<6.28.0"
+          },
+          {
+            "source": 1130732,
+            "title": "undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields",
+            "url": "https://github.com/advisories/GHSA-v3r7-h72x-cjcm",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-74"
+            ],
+            "range": "<6.28.0"
+          },
+          {
+            "source": 1137243,
+            "title": "undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse",
+            "url": "https://github.com/advisories/GHSA-35p6-xmwp-9g52",
+            "severity": "low",
+            "cwe": [
+              "CWE-367"
+            ],
+            "range": "<6.27.0"
+          }
+        ],
+        "viaPackages": [],
+        "fixAvailable": {
+          "name": "hardhat",
+          "version": "3.14.0",
+          "isSemVerMajor": true
+        },
+        "exposureCategory": "tooling_cli_exposure",
+        "exposureRationale": "Dependency is present for local CLI/test tooling. No evidence it is shipped as PhilCore runtime authority.",
+        "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+        "acceptedRisk": true,
+        "compensatingControls": [
+          "development_tooling_only",
+          "do_not_run_tooling_on_untrusted_repositories_or_configs",
+          "do_not_run_tooling_as_elevated_user",
+          "pin_package_lock",
+          "exclude_dev_dependencies_from_production_runtime_bundle",
+          "require_hardhat_major_upgrade_review_before_replacing_tooling_stack"
+        ],
+        "betaBlocking": false,
+        "productionBlocking": false
+      }
+    ]
+  },
+  "lockfileAndSupplyChainReview": {
+    "lockfilePresent": true,
+    "unexpectedGitDependencies": false,
+    "unpinnedRemoteTarballsObserved": false,
+    "multipleEthersVersionsObserved": false,
+    "multipleOpenZeppelinVersionsObserved": true,
+    "multipleOpenZeppelinRationale": "A transitive Uniswap package includes OpenZeppelin 3.4.2-solc-0.7 for tooling; PhilCore direct contracts use @openzeppelin/contracts 5.0.2.",
+    "multipleAccountAbstractionVersionsObserved": false,
+    "installScriptsReviewed": "npm audit inventory only; deeper package-provenance review remains recommended before Beta."
+  },
+  "betaGateImpact": "no_high_advisory_beta_blockers_detected"
+}

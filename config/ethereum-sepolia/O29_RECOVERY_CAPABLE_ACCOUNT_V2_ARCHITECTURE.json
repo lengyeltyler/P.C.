@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "philcore-o29-recovery-capable-account-v2-architecture-v1",
+  "phase": "O.29",
+  "canonicalPhaseName": "O.29 Recovery-Capable Account V2 Architecture Design",
+  "classification": "ARCHITECTURE_DESIGN_COMPLETE_LOCAL_ONLY",
+  "sourceHeadAtPhaseStart": "a7edd2eca1bd987dfcd993e58c485dce90e467d2",
+  "publicMutationCount": 0,
+  "canonicalIdentity": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "label": "My Phil",
+    "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyId": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "identityRemainsSeparateFromExecution": true
+  },
+  "v1Freeze": {
+    "accountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "factorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "deployedContractsModified": false,
+    "prefundRecoveryAttempted": false,
+    "existingPrefundTreatedAsHistoricalLearningData": true,
+    "existingCounterfactualAddressReusableForV2": false
+  },
+  "selectedAccountModel": {
+    "versionedNonUpgradeableImplementation": true,
+    "entryPointVersion": "0.7",
+    "entryPointOnlyExecution": true,
+    "directEoaExecution": false,
+    "genericArbitraryCall": false,
+    "delegatecall": false,
+    "selfdestruct": false,
+    "upgradeKey": false,
+    "hiddenAdministrator": false,
+    "typedIntentSelectors": true,
+    "boundedAtomicBatchingInitiallyEnabled": false,
+    "paymasterInitiallyEnabled": false,
+    "accountState": [
+      "identity owner commitment",
+      "active validator configuration hash and epoch",
+      "recovery configuration hash and epoch",
+      "recovery freeze and pending request state",
+      "reviewed capability-adapter policy root",
+      "version and security-model identifiers"
+    ]
+  },
+  "intentAuthorization": {
+    "requiredBindings": [
+      "security model version",
+      "action type",
+      "action identifier",
+      "authorization digest",
+      "chain id",
+      "EntryPoint",
+      "account",
+      "complete PackedUserOperation hash",
+      "EntryPoint nonce key and sequence",
+      "validator configuration epoch",
+      "recipient or target",
+      "native value",
+      "token contract",
+      "token identifier",
+      "token amount",
+      "calldata hash",
+      "batch root and item count",
+      "maximum total fee",
+      "expiry",
+      "purpose"
+    ],
+    "freshApprovalRequired": true,
+    "freshUserPresenceRequired": true,
+    "freshDeviceVaultSignatureRequired": true,
+    "freshRuntimeAuthorizationRequired": true,
+    "reusableAuthorityAllowed": false,
+    "onchainStarkVerificationRequiredForInitialV2Prototype": false,
+    "onchainStarkVerificationRequiredBeforeProductionMeaningfulAssets": true
+  },
+  "capabilities": {
+    "fixedConfirmation": {
+      "status": "required",
+      "route": "typed confirmation intent"
+    },
+    "nativeTransfer": {
+      "status": "required",
+      "route": "typed exact recipient and amount intent"
+    },
+    "erc20Transfer": {
+      "status": "required",
+      "route": "typed token, recipient, and amount intent"
+    },
+    "erc721Transfer": {
+      "status": "required",
+      "route": "typed collection, recipient, and token id intent"
+    },
+    "erc1155Transfer": {
+      "status": "required",
+      "route": "typed collection, recipient, token id, amount, and data hash intent"
+    },
+    "entryPointDepositWithdrawal": {
+      "status": "required",
+      "route": "typed exact recipient and amount maintenance intent"
+    },
+    "contractCall": {
+      "status": "adapter_gated",
+      "route": "reviewed capability adapter plus exact target, selector, value, and calldata hash"
+    },
+    "batch": {
+      "status": "deferred",
+      "route": "future bounded atomic batch root with per-item intent binding"
+    },
+    "paymaster": {
+      "status": "disabled_by_default",
+      "route": "future exact paymaster and sponsorship-policy binding"
+    }
+  },
+  "recovery": {
+    "normalFundReleaseUsesOrdinaryIntentAuthorization": true,
+    "authorityRecoveryMovesAssets": false,
+    "authorityRecoveryRotatesValidatorOnly": true,
+    "singleRecoveryEoaAcceptedForProduction": false,
+    "recommendedThreshold": {
+      "minimumApprovals": 2,
+      "minimumRegisteredFactors": 3,
+      "independentFailureDomainsRequired": true,
+      "factorsDerivedFromPhilSecret": false,
+      "factorsDerivedFromExecutionValidator": false
+    },
+    "factorClasses": [
+      "second trusted PhilCore device",
+      "hardware-backed recovery credential",
+      "offline recovery credential or reviewed guardian"
+    ],
+    "delayedFlow": {
+      "requestBindsNewValidatorAndConfigurationEpoch": true,
+      "accountFreezesOrdinaryExecution": true,
+      "challengeDelayRequired": true,
+      "cancellationWindowRequired": true,
+      "expiryRequired": true,
+      "completionMayBePermissionlessAfterAllChecks": true,
+      "completionTransfersValue": false,
+      "postRecoveryFundReleaseRequiresSeparateFreshIntent": true
+    },
+    "recoveryConfigurationRotation": {
+      "delayed": true,
+      "crossAuthorized": true,
+      "cannotTransferValue": true,
+      "cannotChangeIdentityCommitment": true
+    }
+  },
+  "erc4337": {
+    "packedUserOperation": true,
+    "entryPointNonceReplayProtection": true,
+    "nonceLanes": {
+      "ordinary": "key 0",
+      "maintenance": "key 1",
+      "recovery": "key 2"
+    },
+    "recoveryFreezeBlocksOrdinaryLane": true,
+    "paymasterDataRejectedWhenPolicyDisabled": true,
+    "depositReleaseRequiresTypedAuthorization": true,
+    "bundlerTrustedForAuthorization": false,
+    "rpcTrustedForAuthorization": false,
+    "receiptAndStateReconciliationRequired": true
+  },
+  "responsibilitySplit": {
+    "account": [
+      "enforce EntryPoint-only typed selectors",
+      "validate signature or future proof-backed validator result",
+      "enforce expiry, validator epoch, recovery freeze, and action shape",
+      "perform only the exact typed action",
+      "emit action and recovery events"
+    ],
+    "runtime": [
+      "interpret application intent",
+      "apply policy and capability limits",
+      "resolve reviewed chain adapters",
+      "simulate the exact action and full fund lifecycle",
+      "present exact human-readable approval",
+      "obtain fresh proof, approval, presence, and signing authority",
+      "construct and reconcile one exact UserOperation"
+    ],
+    "validator": [
+      "remain inside Device Vault custody",
+      "sign one exact purpose-bound digest",
+      "reject arbitrary message, transaction, and reusable signing",
+      "bind the active validator key reference and configuration epoch"
+    ],
+    "chainAdapter": [
+      "encode and decode chain-specific transactions",
+      "bind canonical network infrastructure",
+      "enforce method allowlists",
+      "estimate and simulate without submission authority",
+      "verify receipts and final balances"
+    ],
+    "application": [
+      "request an intent only",
+      "never receive validator, Runtime, proof, or adapter authority"
+    ]
+  },
+  "migration": {
+    "selectedModel": "identity_and_chain_adapter_version_migration",
+    "proxyUpgradeSelected": false,
+    "v1AccountMutated": false,
+    "v1AssetsRecoverableByV2": false,
+    "newFactoryRequired": true,
+    "newCounterfactualAddressRequired": true,
+    "ownerCommitmentContinuityRequired": true,
+    "canonicalChainAdapterRecordMovesOnlyAfterVerification": true,
+    "assetMigrationFromRecoveryCapableAccountsUsesFreshTypedActions": true
+  },
+  "fundLifecycle": {
+    "requiredStages": [
+      "derive_and_verify_account",
+      "verify_release_route",
+      "simulate_complete_lifecycle",
+      "approve_and_fund_exact_amount",
+      "execute_exact_operation",
+      "approve_and_release_exact_residual",
+      "verify_final_balances_and_authority_consumption"
+    ],
+    "maximumStrandedAmountRequiredBeforeFunding": true,
+    "intendedResidualRecipientRequiredBeforeFunding": true,
+    "separateReleaseApprovalRequired": true,
+    "zeroFinalBalancePreferred": true,
+    "nonzeroDustRequiresExactJustification": true
+  },
+  "unresolvedQuestions": [
+    "Whether the initial V2 implementation should include ERC-721 and ERC-1155 selectors or defer them to V2.1.",
+    "Which reviewed capability-adapter registry design avoids both hidden administration and permanent inflexibility.",
+    "Whether production authorization is an on-chain STARK validator, a threshold validator, or a formally reviewed composition.",
+    "Which independent recovery-factor set and delay are acceptable for production.",
+    "Whether bounded batching belongs in the first implementation or a later audited version.",
+    "Whether paymaster support is required before the first V2 public test.",
+    "How canonical Ethereum adapter-version records are published and independently verified."
+  ],
+  "securityBoundary": {
+    "contractImplementationAdded": false,
+    "v1ContractModified": false,
+    "v1FactoryModified": false,
+    "factoryDeployed": false,
+    "accountDeployed": false,
+    "prefundRecoveryAttempted": false,
+    "proofGenerated": false,
+    "runtimeAuthorizationCreated": false,
+    "userPresenceRequested": false,
+    "deviceVaultSigningUsed": false,
+    "userOperationCreated": false,
+    "userOperationSubmitted": false,
+    "publicMutationOccurred": false
+  }
+}

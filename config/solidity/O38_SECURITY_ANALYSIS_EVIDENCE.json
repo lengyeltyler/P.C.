@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.38",
+  "tool": "Slither",
+  "toolVersion": "0.10.4",
+  "execution": "DISPOSABLE_COPY_LOCAL_ONLY",
+  "scope": [
+    "contracts/base/erc4337/v2/PhilCoreV2StaticAuthorityVerifier.sol",
+    "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+    "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountFactoryV2.sol"
+  ],
+  "detectorOccurrences": {
+    "total": 23,
+    "reportedImpact": {
+      "High": 1,
+      "Medium": 6,
+      "Low": 7,
+      "Informational": 8,
+      "Optimization": 1
+    }
+  },
+  "triage": [
+    {
+      "detectors": ["reentrancy-eth", "reentrancy-no-eth", "reentrancy-events"],
+      "classification": "FALSE_POSITIVE",
+      "reason": "execution lock is set before bounded calls and every action plus both permissionless settlements rejects reentry",
+      "regression": "malicious-recipient settlement reentrancy test"
+    },
+    {
+      "detectors": ["incorrect-equality"],
+      "classification": "INFORMATIONAL",
+      "reason": "zero timestamp is the exact no-pending sentinel"
+    },
+    {
+      "detectors": ["unused-return"],
+      "classification": "FALSE_POSITIVE",
+      "reason": "ECDSA recovery error enum is consumed; only the non-authorizing error argument is unused"
+    },
+    {
+      "detectors": ["timestamp"],
+      "classification": "INFORMATIONAL",
+      "reason": "fixed recovery delay and expiry comparisons are required lifecycle rules"
+    },
+    {
+      "detectors": [
+        "assembly",
+        "cyclomatic-complexity",
+        "low-level-calls",
+        "too-many-digits",
+        "immutable-states"
+      ],
+      "classification": "INFORMATIONAL",
+      "reason": "bounded reviewed implementation surfaces with exact regression coverage"
+    }
+  ],
+  "unmitigated": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 0
+  },
+  "externalAuditRequired": true,
+  "publicMutationCount": 0
+}

@@ -1,0 +1,103 @@
+# Dependencies
+node_modules/
+/node_modules
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.security-tools/
+*.pem
+*.key
+*.keystore
+*.p8
+*.p12
+*.pfx
+*.ppk
+*.mobileprovision
+*.cer
+*.crt
+*.local.json
+local_dev_signing_key*.json
+.philcore-recovery-enrollment/
+secrets.local/
+generated-secrets/
+.philcore-local/
+wallet-exports/
+wallet-backups/
+*.wallet-export.json
+*.wallet-backup.json
+keystore-*.json
+UTC--*
+*recovery-secret*.json
+*recovery-material*.json
+*generated-secret*.json
+
+# Common private-key and package-manager credential locations. The tracked
+# root .npmrc is explicitly retained because it contains only public,
+# deterministic package settings.
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+secring.gpg
+**/.gnupg/private-keys-v1.d/
+**/.npmrc
+!/.npmrc
+**/.npmrc.local
+**/.yarnrc.local
+**/.yarnrc.yml
+**/.pypirc
+
+# Hardhat and JS build outputs
+artifacts/
+!proofs/phil-v1-step3-noir/artifacts/
+!proofs/phil-v1-step3-noir/artifacts/**
+cache/
+coverage/
+dist/
+build/
+apps/philcore-desktop/dist-local/
+apps/philcore-desktop/release/
+!apps/philcore-desktop/build/
+!apps/philcore-desktop/build/*.plist
+!apps/philcore-desktop/build/release-profiles.json
+apps/philcore-desktop/build/preload/
+apps/philcore-desktop/build/native/
+
+# Rust, Cairo, and generated proof outputs
+**/target/
+**/.snfoundry_cache/
+proving/out/
+
+# Generated security-tool raw output
+
+# Logs and OS/editor files
+*.log
+.DS_Store
+**/.DS_Store
+._*
+**/._*
+__MACOSX/
+**/__MACOSX/
+!apps/philcore-desktop/test/fixtures/appledouble/._Helpers
+.vscode/
+.idea/
+
+# Native Apple development output and local-only security state
+DerivedData/
+**/DerivedData/
+**/.build/
+**/xcuserdata/
+**/*.xcuserstate
+**/*.xcworkspace/xcuserdata/
+apps/philcore-ios-companion/**/build/
+apps/philcore-ios-companion/LocalProvisioning/
+apps/philcore-ios-companion/ProtectedEnrollment/
+apps/philcore-ios-companion/PairingArtifacts/
+apps/philcore-ios-companion/**/*private-key*
+apps/philcore-ios-companion/**/*recovery-key*
+apps/philcore-ios-companion/release/
+
+# Local corrective validation output (not release evidence).
+.local/release-validation/

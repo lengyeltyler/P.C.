@@ -1,0 +1,170 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: blst/bindings/blst.h, blst/bindings/blst.hpp, blst/bindings/blst_aux.h, blst/src/bulk_addition.c, blst/src/bytes.h, blst/src/client_min_pk.c, blst/src/client_min_sig.c, blst/src/consts.c, blst/src/consts.h, blst/src/cpuid.c, blst/src/e1.c, blst/src/e2.c, blst/src/ec_mult.h, blst/src/ec_ops.h, blst/src/errors.h, blst/src/exp.c, blst/src/fields.h, blst/src/fp12_tower.c, blst/src/hash_to_field.c, blst/src/keygen.c, blst/src/map_to_g1.c, blst/src/map_to_g2.c, blst/src/multi_scalar.c, blst/src/no_asm.h, blst/src/pairing.c, blst/src/pentaroot.c, blst/src/point.h, blst/src/rb_tree.c, blst/src/recip.c, blst/src/server.c, blst/src/sha256.h, blst/src/sqrt.c, blst/src/vect.c, blst/src/vect.h
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+Files: blst/build/coff/sha256-armv8.S, blst/build/mach-o/sha256-armv8.S
+//
+// Copyright Supranational LLC
+// Licensed under the Apache License, Version 2.0, see LICENSE for details.
+// SPDX-License-Identifier: Apache-2.0
+//
+// ====================================================================
+// Written by Andy Polyakov, @dot-asm, initially for the OpenSSL
+// project.
+// ====================================================================
+//
+// sha256_block procedure for ARMv8.
+//
+// This module is stripped of scalar code paths, with rationale that all
+// known processors are NEON-capable.
+//
+// See original module at CRYPTOGAMS for further details.
+
+Files: blst/src/aggregate.c
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/*
+ * Usage pattern on single-processor system is
+ *
+ * blst_pairing_init(ctx, hash_or_encode, DST);
+ * blst_pairing_aggregate_pk_in_g1(ctx, PK[0], aggregated_signature, msg[0]);
+ * blst_pairing_aggregate_pk_in_g1(ctx, PK[1], NULL, msg[1]);
+ * ...
+ * blst_pairing_commit(ctx);
+ * blst_pairing_finalverify(ctx, NULL);
+ *
+ ***********************************************************************
+ * Usage pattern on multi-processor system is
+ *
+ *   blst_pairing_init(pk[0], hash_or_encode, DST);
+ *   blst_pairing_init(pk[1], hash_or_encode, DST);
+ *   ...
+ * start threads each processing an N/nthreads slice of PKs and messages:
+ *     blst_pairing_aggregate_pk_in_g1(pk[i], PK[i*n+0], NULL, msg[i*n+0]);
+ *     blst_pairing_aggregate_pk_in_g1(pk[i], PK[i*n+1], NULL, msg[i*n+1]);
+ *     ...
+ *     blst_pairing_commit(pkx);
+ *   ...
+ * meanwhile in main thread
+ *   blst_fp12 gtsig;
+ *   blst_aggregated_in_g2(&gtsig, aggregated_signature);
+ * join threads and merge their contexts:
+ *   blst_pairing_merge(pk[0], pk[1]);
+ *   blst_pairing_merge(pk[0], pk[2]);
+ *   ...
+ *   blst_pairing_finalverify(pk[0], gtsig);
+ */
+
+Files: blst/src/blst_t.hpp, src/lib.rs, src/pippenger-no_std.rs, src/pippenger-test_mod.rs, src/pippenger.rs
+// Copyright Supranational LLC
+// Licensed under the Apache License, Version 2.0, see LICENSE for details.
+// SPDX-License-Identifier: Apache-2.0
+
+Files: blst/src/exports.c
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/*
+ * Why this file? Overall goal is to ensure that all internal calls
+ * remain internal after linking application. This is to both
+ *
+ * a) minimize possibility of external name conflicts (since all
+ *    non-blst-prefixed and [assembly subroutines] remain static);
+ * b) preclude possibility of unintentional internal reference
+ *    overload in shared library context (one can achieve same
+ *    effect with -Bsymbolic, but we don't want to rely on end-user
+ *    to remember to use it);
+ */
+
+Files: blst/src/pentaroot-addchain.h
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/*
+ * The "magic" number is 1/5 modulo BLS12_381_r-1. Exponentiation to which
+ * yields 5th root of the base.
+ *
+ * Generated with 'addchain 20974350070050476191779096203274386335076221000211055129041463479975432473805'
+ * https://github.com/kwantam/addchain
+ * # Bos-Coster (win=4)           :  307 (15)
+ * # Bos-Coster (win=10)          :  307 (18)
+ * # Yacobi                       :  319 (16)
+ * # Bos-Coster (win=2)           :  319 ( 5)
+ * # Bos-Coster (win=5)           :  306 (19) <<<
+ * # Bos-Coster (win=7)           :  311 (22)
+ * # Bos-Coster (win=9)           :  313 (20)
+ * # Bos-Coster (win=3)           :  314 ( 9)
+ * # Bos-Coster (win=6)           :  309 (21)
+ * # Bos-Coster (win=8)           :  309 (23)
+ * # Bergeron-Berstel-Brlek-Duboc :  334 ( 5)
+ */
+
+Files: blst/src/recip-addchain.h
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/*
+ * The "magic" number is BLS12_381_P-2. Exponentiation to which yields
+ * reciprocal to input base.
+ *
+ * Generated with 'addchain 4002409555221667393417789825735904156556882819939007885332058136124031650490837864442687629129015664037894272559785'
+ * https://github.com/kwantam/addchain
+ *
+ * # Bos-Coster (win=4)           :  461 (16) <<<
+ * # Bos-Coster (win=3)           :  464 ( 9)
+ * # Bos-Coster (win=8)           :  469 (35)
+ * # Bos-Coster (win=5)           :  463 (28)
+ * # Bos-Coster (win=9)           :  467 (32)
+ * # Bos-Coster (win=7)           :  462 (27)
+ * # Yacobi                       :  481 (31)
+ * # Bos-Coster (win=10)          :  475 (30)
+ * # Bos-Coster (win=6)           :  463 (32)
+ * # Bos-Coster (win=2)           :  489 ( 5)
+ * # Bergeron-Berstel-Brlek-Duboc :  498 ( 5)
+ */
+
+Files: blst/src/sqrt-addchain.h
+/*
+ * Copyright Supranational LLC
+ * Licensed under the Apache License, Version 2.0, see LICENSE for details.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/*
+ * The "magic" number is (BLS12_381_P-3)/4. Exponentiation to which
+ * yields reciprocal of sqrt(x), which is used in simplified Shallue-
+ * van de Woestijne-Ulas map-to-curve method, but it's trivial to adapt
+ * it for more "traditional" sqrt(x) as 'x*ret' (or for is_square(x)
+ * as 'x*ret^2==1').
+ *
+ * Generated with 'addchain 1000602388805416848354447456433976039139220704984751971333014534031007912622709466110671907282253916009473568139946'
+ * https://github.com/kwantam/addchain
+ *
+ * # Bos-Coster (win=4)           :  458 (16) <<<
+ * # Bos-Coster (win=5)           :  460 (28)
+ * # Bos-Coster (win=6)           :  461 (33)
+ * # Bos-Coster (win=7)           :  460 (28)
+ * # Bos-Coster (win=3)           :  462 ( 9)
+ * # Bos-Coster (win=8)           :  466 (34)
+ * # Bos-Coster (win=9)           :  464 (31)
+ * # Yacobi                       :  478 (31)
+ * # Bos-Coster (win=10)          :  473 (30)
+ * # Bos-Coster (win=2)           :  486 ( 5)
+ * # Bergeron-Berstel-Brlek-Duboc :  489 ( 5)
+ */
+

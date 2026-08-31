@@ -1,0 +1,10 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/lib.rs
+// Copyright 2020 Han Xu
+//
+// This Rust implementation is ported from the C version in OpenSSL 1.1.1 stable AES core.
+// Please see README.md for license info.
+
+

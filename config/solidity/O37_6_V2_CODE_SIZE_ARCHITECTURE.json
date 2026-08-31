@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.6",
+  "canonicalPhaseName": "O.37.6 V2 Solidity Code Size Architecture and Deployment Boundary Reduction",
+  "classification": "LOCAL_ONLY_SOLIDITY_ARCHITECTURE_REDUCTION",
+  "result": "COMPLETE_ARCHITECTURE_ONLY",
+  "sourceHeadAtPhaseStart": "bb9efbc3ca5d8a391ecdc25aed1c4fad2a981e53",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repository": "PhilCore",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "o37_1RecoveryEvidenceDocumentSha256": "85241d3c3e70d026be992a64f9131472a3b66e34fb3f26f8b9f287af3d4bb74d",
+    "o37_4AbiFreezeDocumentSha256": "442a7f0c3f9bfcbdea2b9d2da4daebaf5c8fadd14dac1005acc2327c27a527a4",
+    "o37_4AuthorityTransportDocumentSha256": "f594dd2912b92e90cf7ec91d0bd8cf992dd930473094bad01486b31c07594e0e",
+    "o37_4AuthorityFixtureSha256": "b9e0c3b4ab483a6e54b6533dedaddbb2690749f4f9cb68f8332f8f0235d91867",
+    "o37_5ConflictEvidenceSha256": "64257a0b1d42c320d8b2d2264cf8a1201eb2aa16fd9f9f0c2f645e6fea4a07cf",
+    "v2SolidityPresentAtEntry": false
+  },
+  "sizeAttribution": {
+    "eip170MaximumRuntimeBytes": 24576,
+    "directFrozenOpenZeppelin": {
+      "accountRuntimeBytes": 35099,
+      "factoryRuntimeBytes": 43013
+    },
+    "rejectedNativeP256SourceMapAttribution": {
+      "classification": "FORENSIC_ATTRIBUTION_OF_REJECTED_O37_5_OUTPUT",
+      "accountRuntimeBytes": 32796,
+      "accountSourceBytes": 24134,
+      "authorityCryptoSourceBytes": 4534,
+      "openZeppelinDependencyBytes": 942,
+      "accountAbstractionDependencyBytes": 131,
+      "compilerGeneratedAndUnattributedBytes": 3055,
+      "sumBytes": 32796,
+      "accountCreationBytes": 34933,
+      "factoryRuntimeBytes": 40710,
+      "embeddedAccountCreationBytes": 34933,
+      "factoryShellBytes": 5777,
+      "factorySumBytes": 40710
+    },
+    "directOpenZeppelinDelta": {
+      "fallbackWebAuthnP256AdditionalBytes": 2303,
+      "inferredAccountCreationBytes": 37236,
+      "inferredFactoryShellBytes": 5777,
+      "inference": "ACCOUNT_AND_FACTORY_RUNTIME_INCREASED_BY_THE_SAME_2303_BYTES"
+    },
+    "planningContributors": [
+      {
+        "name": "typed action ABI dispatch intent hashing and execution checks",
+        "classification": "LARGEST_ACCOUNT_SOURCE_FAMILY"
+      },
+      {
+        "name": "recovery envelope descriptor WebAuthn P256 and secp256k1 verification",
+        "classification": "MOVE_TO_FIXED_STATIC_VERIFIER"
+      },
+      {
+        "name": "ERC20 ERC721 ERC1155 execution and receiver handling",
+        "classification": "DEFER_TO_SEPARATE_ACCOUNT_VERSION"
+      },
+      {
+        "name": "recovery state transitions",
+        "classification": "RETAIN_IN_MINIMAL_ACCOUNT"
+      },
+      {
+        "name": "ERC4337 caller sender nonce fee validity and paymaster checks",
+        "classification": "RETAIN_ONCHAIN"
+      },
+      {
+        "name": "factory embedded account creation code",
+        "classification": "DOMINANT_FACTORY_CONTRIBUTOR"
+      }
+    ]
+  },
+  "selectedArchitecture": {
+    "profile": "PHILCORE_V2_MINIMAL_STATIC_VERIFIER_V1",
+    "accountVersionLabel": "philcore-v2-minimal-account-v1",
+    "accountVersionId": "0xd9b8b73ed071d4a5da3b0a1d455d97ce219a8627d21b21cacde81f1c8c753369",
+    "securityModelIdUnchanged": true,
+    "historicalO37_4FullProfileUnchanged": true,
+    "authorityTransportUnchanged": true,
+    "recoveryThreshold": 2,
+    "nonceOwner": "ENTRYPOINT_V0_7",
+    "authorityVerifier": {
+      "label": "philcore-v2-static-authority-verifier-v1",
+      "versionId": "0x2e7f527e1c2212f8e2b14a62bc02e18dc7eb16cfcfe3a5f955c533eafb2cd402",
+      "callOpcode": "STATICCALL",
+      "storageAllowed": false,
+      "adminAllowed": false,
+      "upgradeAllowed": false,
+      "selfDestructAllowed": false,
+      "registryAllowed": false,
+      "delegatecallAllowed": false,
+      "runtimeBooleanAccepted": false,
+      "addressFixedByFactoryImmutable": true,
+      "runtimeCodeHashFixedByFactoryImmutable": true,
+      "accountChecksCodeHashBeforeEveryVerification": true,
+      "verifierRequiresCallingAccountBinding": true,
+      "openZeppelinWebAuthnP256FallbackRetained": true,
+      "nativeP256OnlyDependencySelected": false
+    },
+    "minimalAccountActions": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "deferredActions": [
+      3,
+      4,
+      5
+    ],
+    "deferredCapabilities": [
+      "ERC20_TRANSFER",
+      "ERC721_SAFE_TRANSFER",
+      "ERC1155_SAFE_TRANSFER",
+      "ERC721_RECEIVER",
+      "ERC1155_RECEIVER"
+    ],
+    "constructorFieldCount": 20,
+    "constructorDescriptorsAdded": false,
+    "proxyUsed": false,
+    "genericExecuteAdded": false,
+    "moduleSystemAdded": false
+  },
+  "sizeBudgets": {
+    "staticAuthorityVerifier": {
+      "runtimeHardMaximumBytes": 20480,
+      "eip170ReserveBytes": 4096
+    },
+    "minimalAccount": {
+      "runtimeHardMaximumBytes": 15360,
+      "creationHardMaximumBytes": 18432,
+      "eip170RuntimeReserveBytes": 9216
+    },
+    "minimalFactory": {
+      "embeddedAccountCreationMaximumBytes": 18432,
+      "factoryShellMaximumBytes": 4096,
+      "runtimeHardMaximumBytes": 22528,
+      "eip170ReserveBytes": 2048
+    },
+    "warningPolicy": "ANY_SIZE_WARNING_OR_BUDGET_EXCESS_FAILS_THE_NEXT_PHASE"
+  },
+  "factoryStrategy": {
+    "model": "ONE_NON_UPGRADEABLE_FACTORY_PER_MINIMAL_ACCOUNT_VERSION",
+    "factoryVersionLabel": "philcore-v2-minimal-factory-v1",
+    "factoryVersionId": "0x4dfb8d9ebeba6fe8e49286a474a67c1978962b3d28fb367c475bc9506b22cb9b",
+    "create2DeployerRemainsFactory": true,
+    "deploymentSaltFormulaUnchanged": true,
+    "accountInitializationFieldCount": 20,
+    "accountConstructorExternalCallsAllowed": false,
+    "verifierAddressAndCodeHashAreFactoryImmutables": true,
+    "accountReadsVerifierBindingFromFactoryByStaticCall": true,
+    "idempotentExistingAccountVerificationRetained": true,
+    "creationCodeSuppliedByCaller": false,
+    "alternateDeployerAllowed": false
+  },
+  "runtimeBoundary": {
+    "runtimeMayValidateBeforeSubmission": [
+      "full recovery descriptors and enrollment policy",
+      "credential independence and attestation",
+      "typed intent completeness",
+      "fund lifecycle and residual release readiness",
+      "canonical envelope construction"
+    ],
+    "runtimeMayNotReplaceOnchainChecks": true,
+    "runtimeMustRejectDeferredTokenActions": true,
+    "runtimeMustWarnUnsupportedTokensMayBeStranded": true,
+    "privateMaterialRemainsLocal": true
+  },
+  "nextPhaseGates": [
+    "implement verifier first and prove runtime at or below 20480 bytes",
+    "implement minimal account second and prove runtime at or below 15360 bytes",
+    "prove minimal account creation code at or below 18432 bytes",
+    "implement factory third and prove runtime at or below 22528 bytes",
+    "verify STATICCALL opcode only and reject DELEGATECALL",
+    "verify verifier address and runtime code hash immutability",
+    "run O37_2 and O37_4 fixtures without changing bytes",
+    "verify minimal ABI contains no deferred token or receiver selectors",
+    "verify V1 and historical O37_4 and O37_5 hashes",
+    "stop before deployment RPC funding credentials signatures or UserOperations"
+  ],
+  "securityBoundary": {
+    "solidityCreated": false,
+    "bytecodeCreated": false,
+    "deploymentPerformed": false,
+    "rpcUsed": false,
+    "sepoliaUsed": false,
+    "localSepoliaEnvironmentRead": false,
+    "fundsMoved": false,
+    "credentialCreated": false,
+    "signatureCreated": false,
+    "userOperationCreated": false,
+    "publicMutationOccurred": false,
+    "pushPerformed": false
+  }
+}

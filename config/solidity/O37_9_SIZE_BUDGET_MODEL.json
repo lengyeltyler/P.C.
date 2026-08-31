@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.9",
+  "canonicalPhaseName": "O.37.9 V2 Minimal Account Compression and Verifier Binding Resolution",
+  "classification": "LOCAL_ONLY_SOLIDITY_ARCHITECTURE_REDUCTION",
+  "result": "COMPLETE_ARCHITECTURE_REDUCTION_ONLY",
+  "sourceHeadAtPhaseStart": "73eecd93e98c4b9c954e034aaae5fe15473b7ce0",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repository": "PhilCore",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "o37_4AbiFreezeSha256": "442a7f0c3f9bfcbdea2b9d2da4daebaf5c8fadd14dac1005acc2327c27a527a4",
+    "o37_4AuthorityTransportSha256": "f594dd2912b92e90cf7ec91d0bd8cf992dd930473094bad01486b31c07594e0e",
+    "o37_6MinimalArchitectureSha256": "cbcbcf4da55b0c397a69cd517860bb0befcfa8849caf848590039255e78337e9",
+    "o37_6FactoryStrategySha256": "c729fa21450d4db43f64dfd55dd35c7313686f12ca54693557fd59ff451683e3",
+    "o37_7VerifierSourceSha256": "0793a9293d49c5d2eefe4b67082efc303bcceccd36c1526083c2f7f9cf7c8651",
+    "o37_7VerifierEvidenceSha256": "9ba76478847e9d69c0e3e913375d2fadf7a59e53940335c7995c575ee6a33812",
+    "o37_8ConflictEvidenceSha256": "d0b36fcdb376cad595faaeb48a68b601c9c576a2f260362cbd892f5fa61f22b4",
+    "o37_8ConflictReviewSha256": "37b743ee178a9674f42c742c354236ece3aa8775dde0931613085df196042d64"
+  },
+  "selectedVersions": {
+    "accountLabel": "philcore-v2-minimal-account-v2",
+    "accountVersionId": "0xe3809f55cf56b419ecaebf3d2a2e0a43278b5d9a0b4714c063933a87ba2085d4",
+    "factoryLabel": "philcore-v2-minimal-factory-v2",
+    "factoryVersionId": "0x66e130d6512db6801362a672a59d58b9b6c16bb2ba76172808d6b5c21814d671",
+    "securityModelIdChanged": false,
+    "identityCommitmentModelChanged": false,
+    "verifierVersionChanged": false,
+    "authorityTransportChanged": false
+  },
+  "hardBudgets": {
+    "runtimeBytes": 15360,
+    "creationBytes": 18432,
+    "eip170RuntimeBytes": 24576,
+    "warningPolicy": "ANY_BUDGET_EXCESS_OR_COMPILER_WARNING_STOPS_IMPLEMENTATION"
+  },
+  "o37_8BestCandidate": {
+    "classification": "MEASURED_TRANSIENT_UNRETAINED_BUILD",
+    "runtimeBytes": 19454,
+    "creationBytes": 21755,
+    "runtimeKeccak256": "0xb7694928eac7de99d1d2557e51b0e91777356c314872c386726610b67b4b1147",
+    "minimumRuntimeReductionBytes": 4094,
+    "minimumCreationReductionBytes": 3323,
+    "functionCount": 38,
+    "customErrorCount": 24,
+    "eventCount": 11
+  },
+  "forensicAttribution": {
+    "method": "O37_8_19591_BYTE_SOURCE_MAP_PROXY_NORMALIZED_BY_MEASURED_NEGATIVE_137_BYTE_DECODER_DELTA",
+    "acceptanceEvidence": false,
+    "categories": [
+      {
+        "name": "ABI_DISPATCH_DECODING_AND_CANONICAL_SHAPE",
+        "bytes": 12510
+      },
+      {
+        "name": "ENTRYPOINT_VALIDATION_NONCE_FEE_VALIDITY_AND_VERIFIER_REQUEST",
+        "bytes": 4487
+      },
+      {
+        "name": "TYPED_EXECUTION_AND_RECOVERY_LIFECYCLE",
+        "bytes": 2115
+      },
+      {
+        "name": "HASH_AND_COMMITMENT_HELPERS",
+        "bytes": 288
+      },
+      {
+        "name": "DIRECTLY_ATTRIBUTED_DEPENDENCY_CODE",
+        "bytes": 1
+      },
+      {
+        "name": "SOLIDITY_METADATA",
+        "bytes": 53
+      }
+    ],
+    "sumBytes": 19454,
+    "crossCutting": {
+      "errors": "24 definitions; revert bytes are attributed to calling functions by viaIR source maps",
+      "events": "11 definitions; log encoding bytes are attributed to lifecycle functions by viaIR source maps",
+      "dependencies": "inlined dependency instructions are generally attributed to account call sites"
+    }
+  },
+  "plannedRuntimeReduction": {
+    "grossReductionBytes": 4960,
+    "factoryBindingLookupOverheadBytes": 320,
+    "netReductionBytes": 4640,
+    "items": [
+      {
+        "name": "REMOVE_DUPLICATE_EXECUTION_SIDE_COMMON_AUTHORIZATION_CHECKS",
+        "plannedReductionBytes": 1600,
+        "replacementInvariant": "CANONICAL_ENTRYPOINT_EXECUTES_THE_EXACT_CALLDATA_ONLY_AFTER_VALIDATEUSEROP_SUCCESS"
+      },
+      {
+        "name": "COLLAPSE_INDIVIDUAL_GETTERS_AND_REDUNDANT_PUBLIC_SURFACE",
+        "plannedReductionBytes": 1120,
+        "replacementInvariant": "FOUR_COMPLETE_AGGREGATE_SECURITY_VIEWS"
+      },
+      {
+        "name": "CONSOLIDATE_COMPLETION_AND_EXPIRY_INTO_DETERMINISTIC_SETTLEMENT",
+        "plannedReductionBytes": 448,
+        "replacementInvariant": "TIME_SELECTS_COMPLETE_OR_EXPIRE_FOR_ONE_EXACT_STORED_REQUEST"
+      },
+      {
+        "name": "CONSOLIDATE_ERRORS_AND_EVENTS",
+        "plannedReductionBytes": 512,
+        "replacementInvariant": "BOUNDED_REASON_CODES_AND_POST_STATE_COMMITMENTS"
+      },
+      {
+        "name": "DERIVE_REDUNDANT_COMMITMENTS_TIMES_AND_ABI_FIELDS",
+        "plannedReductionBytes": 480,
+        "replacementInvariant": "ONCHAIN_RECOMPUTATION_FROM_AUTHORITATIVE_STATE"
+      },
+      {
+        "name": "SHARE_COMMON_ABI_AND_HASHING_BRANCHES_WITHOUT_MANUAL_WORD_DECODER",
+        "plannedReductionBytes": 704,
+        "replacementInvariant": "ABI_DECODE_AND_CANONICAL_FIXED_ACTION_SHAPES_REMAIN"
+      },
+      {
+        "name": "RESTORE_EXACT_20_FIELD_CONSTRUCTOR_AND_REMOVE_ACCOUNT_VERIFIER_ARGUMENTS",
+        "plannedReductionBytes": 96,
+        "replacementInvariant": "FACTORY_OWNED_IMMUTABLE_VERIFIER_BINDING"
+      }
+    ]
+  },
+  "projectedAccount": {
+    "classification": "ARCHITECTURE_TARGET_NOT_COMPILER_EVIDENCE",
+    "runtimeBytes": 14814,
+    "runtimeReserveBytes": 546,
+    "creationBytes": 16507,
+    "creationReserveBytes": 1925,
+    "additionalCreationReductionFromConstructorBytes": 608
+  },
+  "verifierBinding": {
+    "source": "VERSION_SPECIFIC_FACTORY_IMMUTABLES",
+    "factoryGetter": "verifierBinding()",
+    "factoryGetterSelector": "0xa7d16353",
+    "accountConstructorFieldCount": 20,
+    "accountVerifierConstructorArguments": 0,
+    "accountVerifierStorageSlots": 0,
+    "lookupOpcode": "STATICCALL",
+    "verifierCallOpcode": "STATICCALL",
+    "exactFactoryReturnBytes": 64,
+    "accountChecksExtCodeHash": true,
+    "mutableRegistry": false,
+    "callerSelectedVerifier": false
+  },
+  "proposedAccount": {
+    "externalFunctionCount": 15,
+    "mutableStorageHighestSlot": 14,
+    "duplicateNonceStorage": false,
+    "replayMapping": false,
+    "admin": false,
+    "proxy": false,
+    "delegatecall": false,
+    "arbitraryExecution": false,
+    "mutableVerifier": false,
+    "sessionKeys": false,
+    "modules": false,
+    "paymasters": false,
+    "supportedActions": [
+      1,
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "recoveryThreshold": 2,
+    "validRecoveryBitmaps": [
+      3,
+      5,
+      6
+    ],
+    "entryPointOwnsNonceSequences": true
+  },
+  "retainedState": {
+    "accountSolidity": false,
+    "accountInterfaceSolidity": false,
+    "factorySolidity": false,
+    "buildConfiguration": false,
+    "accountAbiArtifact": false,
+    "storageLayoutArtifact": false,
+    "accountBytecode": false,
+    "factoryBytecode": false,
+    "deploymentArtifact": false
+  },
+  "phaseBoundary": {
+    "solidityCompiled": false,
+    "bytecodeCreated": false,
+    "deploymentPerformed": false,
+    "blockchainInteractionPerformed": false,
+    "rpcUsed": false,
+    "sepoliaUsed": false,
+    "fundsMoved": false,
+    "credentialCreated": false,
+    "signatureCreated": false,
+    "userOperationCreated": false,
+    "userOperationSubmitted": false,
+    "pushPerformed": false
+  }
+}

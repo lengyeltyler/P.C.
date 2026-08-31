@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 3,
+  "baselineCommit": "ec0ef49cd9c17d0fa2a0399761966a08a5c990cb",
+  "description": "Exact approved non-zero outcomes for historical_known_baseline items. Expected failures are distinct from retired entries and reviewed toolchain-only normalization reconciliations. CI never regenerates evidence.",
+  "failureStatePolicy": {
+    "expectedFailureIds": [
+      "unit:o32-v2-cryptographic-foundation.test.cjs",
+      "unit:o33-v2-validator-authorization-engine.test.cjs",
+      "unit:o37-2-v2-deterministic-fixtures.test.cjs",
+      "unit:o37-4-v2-authority-transport.test.cjs",
+      "script:verify:o32-v2-cryptographic-vectors",
+      "script:verify:o33-validator-vectors",
+      "script:verify:o37-2-deterministic-fixtures",
+      "script:verify:o37-4-authority-transport-vectors",
+      "script:verify:o39-consumer-recovery-evidence",
+      "script:verify:o40-recovery-enrollment-evidence",
+      "script:verify:o41-recovery-enrollment-evidence",
+      "script:verify:o42-recovery-enrollment-evidence",
+      "script:verify:o42-1-platform-webauthn-evidence",
+      "script:verify:o43-native-iphone-evidence",
+      "script:test:o37-2-deterministic-fixtures",
+      "script:test:o37-4-authority-transport"
+    ],
+    "retiredIds": [],
+    "normalizationToolchainDrift": {
+      "classification": "node_major_stack_shape_only",
+      "reconciledWith": "node-v26.0.0 npm-v11.12.1",
+      "semanticIdentityRequiredUnchanged": true,
+      "ids": [
+        "script:verify:o32-v2-cryptographic-vectors",
+        "script:verify:o37-2-deterministic-fixtures",
+        "script:verify:o37-4-authority-transport-vectors",
+        "script:verify:o39-consumer-recovery-evidence",
+        "script:verify:o40-recovery-enrollment-evidence",
+        "script:verify:o41-recovery-enrollment-evidence",
+        "script:verify:o42-recovery-enrollment-evidence",
+        "script:verify:o43-native-iphone-evidence"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "unit:o32-v2-cryptographic-foundation.test.cjs",
+      "matcher": "mocha_hardhat",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 22,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.32 V2 cryptographic foundation :: deterministic compatibility package",
+          "bodySha256": "f02ad504257b89e859d7b1c29401d5581ec362031d9f86f5fa2ff28d3f2d29cc"
+        }
+      ],
+      "normalizedOutputSha256": "a57adaf629db1a3c741b2e530ff21a509aad81aae0117703c3939af316566014",
+      "normalizedStdoutSha256": "5ae43343b738f68f990f5cf0420276b3f73b1c32a5c8beb5b631be642263a341",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "unit:o33-v2-validator-authorization-engine.test.cjs",
+      "matcher": "mocha_hardhat",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 23,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.33 V2 validator and authorization engine :: deterministic O.33 vector package",
+          "bodySha256": "e9efbdbdab3e69f18a58d2d0527e9543410f4500ab018e95d4de958f3e9e3db5"
+        }
+      ],
+      "normalizedOutputSha256": "f822f835f2d82a4ac26a829a12d5169538c5d96b40d5abc7159aed42c4da1c16",
+      "normalizedStdoutSha256": "5d8bfaba9a5ba70664d858f960a66a2b9b798195653b677def8ae243710701a5",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "unit:o37-2-v2-deterministic-fixtures.test.cjs",
+      "matcher": "mocha_hardhat",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 11,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.37.2 V2 deterministic cryptographic test fixtures :: rebuilds byte-for-byte and commits no private or canonical authority",
+          "bodySha256": "e96cb6c6add36acbdd39e57f9ec866b58eedbd2b904f70eee2df4973bd173941"
+        }
+      ],
+      "normalizedOutputSha256": "d78da8c63aecf998eec826a09f9eddb27180842e429a2a8194e256d19491f9f2",
+      "normalizedStdoutSha256": "93d2f59abb18bdc477658f90739d7dc09cd67d08c5ee42a01eb75f9bc3cd1c20",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "unit:o37-4-v2-authority-transport.test.cjs",
+      "matcher": "mocha_hardhat",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 14,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.37.4 V2 authority transport and ERC-4337 envelope freeze :: rebuilds byte-for-byte without private material or UserOperations",
+          "bodySha256": "9911dea860dd8c58f6318e0d92ef7f9ac97aaefb74f4059ecdc512dc84a03aca"
+        }
+      ],
+      "normalizedOutputSha256": "2b9ff24bdecc529f7022fb02c2e5d20f91949c193c18542a37eaea35d6c14c0b",
+      "normalizedStdoutSha256": "68d7f1f3bb7abc68a79b2a823fa95b8dde6fe631d9f7028512bcd6cfa601b371",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "script:verify:o32-v2-cryptographic-vectors",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O32_VECTOR_PACKAGE_STALE",
+      "normalizedOutputSha256": "9460778fec80efa53fe37b1bc4b7f19a9318ec457de9521546b4a13b0a0f68c7"
+    },
+    {
+      "id": "script:verify:o33-validator-vectors",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O33_VECTOR_PACKAGE_STALE",
+      "normalizedOutputSha256": "029689ada6b453242ed58d27c0e37dba212cce727e7ff81bcec4d18f8ce47eaf"
+    },
+    {
+      "id": "script:verify:o37-2-deterministic-fixtures",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O37_2_FIXTURE_PACKAGE_STALE",
+      "normalizedOutputSha256": "c581b107ff40dfebb73eab7bb780a5463e4daf0623d13efc0cbfa687babd05e2"
+    },
+    {
+      "id": "script:verify:o37-4-authority-transport-vectors",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O37_4_AUTHORITY_TRANSPORT_PACKAGE_STALE",
+      "normalizedOutputSha256": "9f00e2addd8e416b560f1876eca6bc09e2bdb8683d8eb952bc76519d7d9a680d"
+    },
+    {
+      "id": "script:verify:o39-consumer-recovery-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O39_IMPLEMENTATION_EVIDENCE_STALE",
+      "normalizedOutputSha256": "9b87a008965a5b90f845a1b44d2e1ad4484c94758106f50c59ccf64d9ef242e6"
+    },
+    {
+      "id": "script:verify:o40-recovery-enrollment-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O40_INITIALIZATION_MISMATCH:artifact:verifierRuntimeKeccak256",
+      "normalizedOutputSha256": "44e4f8e6a7ca130eda12e4385102c93b77a6bcc4eee380e872bb736fe5d89a7c"
+    },
+    {
+      "id": "script:verify:o41-recovery-enrollment-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O41_RECOVERY_ENROLLMENT_EVIDENCE_STALE",
+      "normalizedOutputSha256": "47c78db3fd2eeb47ba7565e4d85d1e0c786ba7f4b82eab0f7e78e97b29359f5a"
+    },
+    {
+      "id": "script:verify:o42-recovery-enrollment-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O42_RECOVERY_ENROLLMENT_EVIDENCE_STALE",
+      "normalizedOutputSha256": "7c200a8ed8e57013b05bd41196ec5d252aac5e69864ba2b59128e57ae8990474"
+    },
+    {
+      "id": "script:verify:o42-1-platform-webauthn-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O.42.1 evidence is stale",
+      "normalizedOutputSha256": "1a1b573b6d65c872914208f7879db15ef5d3acab30b8b1866146d7d611498c1c"
+    },
+    {
+      "id": "script:verify:o43-native-iphone-evidence",
+      "matcher": "structured_error",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "errorCode": "O43_NATIVE_IPHONE_EVIDENCE_STALE",
+      "normalizedOutputSha256": "f8fb03dd94d3c29f2a6c7f1cacd9c7b5d630b3abb6f0d029c7d98bd074ed10d5"
+    },
+    {
+      "id": "script:test:o37-2-deterministic-fixtures",
+      "matcher": "alias",
+      "aliasOf": "unit:o37-2-v2-deterministic-fixtures.test.cjs",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 11,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.37.2 V2 deterministic cryptographic test fixtures :: rebuilds byte-for-byte and commits no private or canonical authority",
+          "bodySha256": "e96cb6c6add36acbdd39e57f9ec866b58eedbd2b904f70eee2df4973bd173941"
+        }
+      ],
+      "normalizedOutputSha256": "d78da8c63aecf998eec826a09f9eddb27180842e429a2a8194e256d19491f9f2",
+      "normalizedStdoutSha256": "93d2f59abb18bdc477658f90739d7dc09cd67d08c5ee42a01eb75f9bc3cd1c20",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "script:test:o37-4-authority-transport",
+      "matcher": "alias",
+      "aliasOf": "unit:o37-4-v2-authority-transport.test.cjs",
+      "expectedExitCode": 1,
+      "expectedExitCategory": "nonzero_exit",
+      "passing": 14,
+      "failing": 1,
+      "failures": [
+        {
+          "identity": "O.37.4 V2 authority transport and ERC-4337 envelope freeze :: rebuilds byte-for-byte without private material or UserOperations",
+          "bodySha256": "9911dea860dd8c58f6318e0d92ef7f9ac97aaefb74f4059ecdc512dc84a03aca"
+        }
+      ],
+      "normalizedOutputSha256": "2b9ff24bdecc529f7022fb02c2e5d20f91949c193c18542a37eaea35d6c14c0b",
+      "normalizedStdoutSha256": "68d7f1f3bb7abc68a79b2a823fa95b8dde6fe631d9f7028512bcd6cfa601b371",
+      "normalizedStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/ast.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/checker.rs, src/execution/lazy.rs, src/variables.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2022, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+Files: src/excerpt.rs, src/parse_error.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2022, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/execution/error.rs, src/execution/strict.rs, src/execution.rs, src/parser.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+Files: src/execution/lazy/statements.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2022, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/execution/lazy/store.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2022, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/execution/lazy/values.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2022, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/functions.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/graph.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/lib.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/reference/functions.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+
+Files: src/reference/mod.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, tree-sitter authors.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+

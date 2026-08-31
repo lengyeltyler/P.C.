@@ -1,0 +1,27 @@
+{
+  "format": "phil-sepolia-mint-demo-configuration-v1",
+  "version": 1,
+  "status": "predicted_not_deployed",
+  "generatedAt": "2026-08-24T23:14:33.535Z",
+  "chainId": "11155111",
+  "entryPoint": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+  "deployer": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+  "startingNonce": "3",
+  "infrastructure": {
+    "factory": "0xee49bdFeA3535D8d68edBE3b91c8AA8734A2B48A",
+    "actionGate": "0xCbd3b73C257Fbe4ac4a1084163Aa4cA63ddE8AFA",
+    "mintConsumer": "0xb453815C2804BBB85fd6B10579b80b2E7Dc4fB32"
+  },
+  "accountSalt": "0x66ed250f5bd73e64176c8bd8b0cef5e7a2e3c8ff51a1535e35bbcb53cc98ec2e",
+  "authorizationWindowSeconds": "3600",
+  "maximumTotalFeeWei": "5000000000000000",
+  "gasPolicy": {
+    "callGasLimit": "500000",
+    "verificationGasLimit": "1500000",
+    "preVerificationGas": "150000",
+    "maxFeePerGas": "2028480754",
+    "maxPriorityFeePerGas": "1000000"
+  },
+  "publicMutationEnabled": false,
+  "submissionEnabled": false
+}

@@ -1,0 +1,120 @@
+{
+  "phase": "O.43",
+  "classification": "LOCAL_ONLY_NATIVE_IOS_COMPANION_IMPLEMENTATION",
+  "publicMutationCount": 0,
+  "baseline": {
+    "initialHead": "c81deff878906cfa38443abfc8ca6ef03c68c916",
+    "branch": "codex/device-identity-v1",
+    "v1SourceSha256": {
+      "account": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+      "factory": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+    },
+    "initialV2RuntimeKeccak256": {
+      "verifier": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+      "account": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "factory": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95"
+    }
+  },
+  "protocol": {
+    "role": 1,
+    "verifierKind": 4,
+    "descriptorVersion": 1,
+    "outerRecoveryEnvelopeVersion": 2,
+    "recoveryConfigurationVersion": 3,
+    "threshold": 2,
+    "validBitmaps": [
+      3,
+      5,
+      6
+    ],
+    "validatorExcluded": true,
+    "appAttest": "DEFERRED_OPTIONAL_ENROLLMENT_ATTESTATION"
+  },
+  "contracts": {
+    "PhilCoreV2StaticAuthorityVerifier": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2StaticAuthorityVerifier.sol",
+      "sourceSha256": "410638b556e08ed98deebb00b7375798ad3a3f13230230fbd93884232e7a23d8",
+      "runtimeBytes": 14625,
+      "runtimeKeccak256": "0xa1936c0e1a5ad05b5e894cb8575d38e264d5f0827098398217b63ad32eab62b6",
+      "creationBytes": 14651,
+      "creationKeccak256": "0xf1b6d1623520fe24bb66a871167d7be8216521261dc7938c26ef40537bfdc5be",
+      "abiSha256": "8411815e5a2eead22d9b7d011542fffa67c2d5e79ef1c1234aa792a39aa2154b",
+      "eip170WithinLimit": true,
+      "eip3860WithinLimit": true
+    },
+    "PhilCoreV2MinimalAccountV2": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+      "sourceSha256": "395691b6dc98df0449a9caa4c43fa8481fb0c6f049ef75e214ee808b0e01e821",
+      "runtimeBytes": 13811,
+      "runtimeKeccak256": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "creationBytes": 15630,
+      "creationKeccak256": "0x7fa7fd5dd4a886e6df8ca13223c5dd3cb167c358e0abf9b0297c2a4624cb4882",
+      "abiSha256": "78b6016efe850fa281bb7e8515211ef4e88eee0536dda64321207aeff2efd0db",
+      "eip170WithinLimit": true,
+      "eip3860WithinLimit": true
+    },
+    "PhilCoreV2MinimalAccountFactoryV2": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountFactoryV2.sol",
+      "sourceSha256": "1a76877449939bc45323fbc4046c7039db54e323b70306508fb308e57f38ce51",
+      "runtimeBytes": 18317,
+      "runtimeKeccak256": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95",
+      "creationBytes": 18692,
+      "creationKeccak256": "0xe069c2fe769777cb53c785a05f57aee1b73188a8ea343d0d097503806fe9af84",
+      "abiSha256": "7ad09faf49af8553ce1fdaa9531ea46aba9a09825f344fba8ce687d49bc02b5b",
+      "eip170WithinLimit": true,
+      "eip3860WithinLimit": true
+    }
+  },
+  "solidityImpact": {
+    "verifierChanged": true,
+    "accountChanged": false,
+    "factoryChanged": false,
+    "abiChanged": false,
+    "accountStorageChanged": false,
+    "verifierStorageSlots": 0,
+    "accountStorageSlots": 15,
+    "factoryStorageSlots": 0
+  },
+  "localImplementation": {
+    "bundleIdentifier": "com.philcore.ios.companion.localalpha",
+    "teamId": "B342738S82",
+    "keychainAccessGroup": "B342738S82.com.philcore.ios.companion.localalpha",
+    "algorithm": "P-256 ECDSA",
+    "privateKeyExport": false,
+    "iCloudSynchronization": false,
+    "localApproval": "deviceOwnerAuthentication + key userPresence",
+    "transport": "selected private IPv4 interface",
+    "pairingCrypto": "P-256 ECDH / HKDF-SHA256 / AES-256-GCM",
+    "sessionTtlSeconds": 300,
+    "productionCredentialCreated": false,
+    "disposableCredentialCreated": false
+  },
+  "gates": {
+    "deterministicFixtures": "PASS",
+    "nativeRole1SolidityPairs": "PASS",
+    "desktopPairingProtocol": "PASS",
+    "desktopFullRegression": "PASS",
+    "relevantSolidityLifecycleTests": "45_PASS",
+    "cleanBuildRuntimeReproduction": "PASS",
+    "changedVerifierSlitherHighOrCritical": 0,
+    "swiftSyntaxParse": "PASS",
+    "iOSProjectStructure": "PASS",
+    "iOSUITestTarget": "PRESENT_NOT_EXECUTED",
+    "iOSSimulatorBuild": "BLOCKED_FULL_XCODE_NOT_INSTALLED",
+    "physicalDeviceInstall": "BLOCKED_NO_XCODE_NO_DEVICE_NO_APPLE_DEVELOPMENT_IDENTITY",
+    "physicalSecureEnclaveTest": "NOT_RUN",
+    "productionCeremony": "NOT_RUN"
+  },
+  "stopBoundary": {
+    "publicDeployment": false,
+    "publicTransaction": false,
+    "sepoliaAccess": false,
+    "externalRpcAccess": false,
+    "externalBundlerSubmission": false,
+    "fundsMoved": false,
+    "productionAccountDeployed": false,
+    "productionSecretCommitted": false,
+    "privateSecureEnclaveKeyExported": false,
+    "pushed": false
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "phase": "N.8",
+  "boundary": "philcore_erc4337_rotation_and_recovery",
+  "status": "implemented_for_local_alpha",
+  "productionApproved": false,
+  "baseSepoliaBetaApproved": false,
+  "selectedModel": "delayed_independent_recovery_with_owner_cancellation",
+  "authorities": {
+    "executionOwner": {
+      "canValidateNormalUserOperations": true,
+      "canExecuteOnlyApprovedActionGate": true,
+      "canRotateSelf": true,
+      "canCancelRecovery": true
+    },
+    "recoveryAuthority": {
+      "canRequestRecovery": true,
+      "canCompleteAfterDelay": true,
+      "canCancelRecovery": false,
+      "canExecuteOrdinaryActions": false,
+      "canTransferAssets": false,
+      "canChangeActionGate": false,
+      "canChangeEntryPoint": false,
+      "canChangeOwnerCommitment": false
+    }
+  },
+  "recovery": {
+    "challengeDelaySeconds": 60,
+    "expirySeconds": 3600,
+    "automaticFreezeOnRequest": true,
+    "currentOwnerCanCancel": true,
+    "expiredRecoveryCanBeCancelled": true,
+    "recoveryAuthorityCustodyImplementedForLocalAlpha": true,
+    "recoveryAuthorityRotationSupported": true,
+    "worldIdDirectSigningAuthority": false
+  },
+  "immutability": {
+    "entryPointImmutable": true,
+    "approvedActionGateImmutable": true,
+    "ownerCommitmentImmutable": true,
+    "accountAddressStableAfterOwnerRotation": true
+  },
+  "disabled": {
+    "genericExecute": true,
+    "delegatecall": true,
+    "arbitraryBatching": true,
+    "paymasters": true,
+    "sessionKeys": true,
+    "publicSubmission": true,
+    "baseMainnet": true
+  },
+  "betaGateImpact": {
+    "recoveryModelImplemented": true,
+    "baseSepoliaBetaStillBlocked": true,
+    "remainingBlockers": [
+      "ACP-0002 remains Proposed",
+      "recovery authority custody is implemented for local Alpha but not Beta-approved",
+      "recovery authority rotation is locally implemented but not Beta-approved",
+      "threshold or modular recovery is not implemented",
+      "N.6 Slither/static analysis is complete but external audit remains incomplete",
+      "external audit/independent review is not complete",
+      "accepted Base Sepolia deployments are missing",
+      "remaining high tooling dependency advisories remain unresolved or unaccepted"
+    ]
+  }
+}

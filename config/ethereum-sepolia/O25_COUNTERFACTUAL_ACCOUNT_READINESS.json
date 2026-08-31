@@ -1,0 +1,455 @@
+{
+  "schemaVersion": "philcore-o25-counterfactual-account-readiness-v1",
+  "phase": "O.25",
+  "status": "READ_ONLY_READINESS_REVIEW_COMPLETE_BUNDLER_NOT_CONFIGURED",
+  "generatedAt": "2026-07-28T04:21:11.268Z",
+  "sourceHead": "cfbc65c9e582c280102526f22d94c7a21c314158",
+  "securityModel": "local-proof-gated-v1",
+  "network": {
+    "name": "ethereum_sepolia",
+    "chainId": 11155111,
+    "latestBlockNumber": "11366223",
+    "latestBlockHash": "0x1204798bb6771d87ca2173ad4cd252fe1831a80ea8677fa06b646890a548389e",
+    "latestBlockTimestamp": "2026-07-28T04:21:00.000Z",
+    "rpcClassification": "https://eth-sepolia.g.alchemy.com/<redacted>"
+  },
+  "repositoryAndEnvironment": {
+    "branch": "codex/device-identity-v1",
+    "localEnvironmentPath": ".env.sepolia.local",
+    "localEnvironmentIgnored": true,
+    "localEnvironmentMode": "0600",
+    "account1KeyAddressBinding": true,
+    "account2KeyAddressBinding": true,
+    "privateMaterialPrinted": false
+  },
+  "canonicalIdentity": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+    "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyReferenceId": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "preserved": true
+  },
+  "confirmationTarget": {
+    "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "deploymentTransaction": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+    "runtimeCodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "expectedRuntimeCodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "matched": true,
+    "transactionCount": "1",
+    "changedDuringO25": false
+  },
+  "factory": {
+    "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+    "deploymentTransaction": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+    "runtimeCodeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "expectedRuntimeCodeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "approvedConfirmationTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "expectedChainId": 11155111,
+    "matched": true,
+    "transactionCount": "1",
+    "changedDuringO25": false
+  },
+  "entryPoint": {
+    "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "version": "0.7",
+    "runtimeCodeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+    "expectedRuntimeCodeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+    "matched": true
+  },
+  "accounts": {
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "role": "completed_target_and_factory_deployer_only",
+      "latestNonce": "3",
+      "pendingNonce": "3",
+      "balance": {
+        "wei": "270073390298140959",
+        "gwei": "270073390.298140959",
+        "eth": "0.270073390298140959"
+      },
+      "signingUsedDuringO25": false
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "role": "future_counterfactual_prefund_only",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balance": {
+        "wei": "92576112524973299",
+        "gwei": "92576112.524973299",
+        "eth": "0.092576112524973299"
+      },
+      "signingUsedDuringO25": false
+    }
+  },
+  "counterfactualAccount": {
+    "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "localCreate2Derivation": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "factoryGetAddressResult": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "agreement": true,
+    "factory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+    "saltDecimal": "89057484435249231188944015808027455059582659562521356732679207242648809593390",
+    "saltBytes32": "0xc4e4bffa51db9fb7994df7e4ce5ef52f7e1dfa68d01deab7d0dd05a768575a2e",
+    "owner": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "creationBytecodeHash": "0xdfe8c94b7fa228961f3048c068a171778672e94650c1404eb8c345c1e5926881",
+    "constructorDataHash": "0xcd2c6f1bf4a372ebaccc6bad303fe319ac1f5ca7bb84f7ce54cc0223e31603bb",
+    "initCodeHash": "0xb7f8b670d96dbf627d92344ed05e94298c915572d7c1333057a5e4a8a8a45390",
+    "codeStatus": "empty",
+    "balance": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "latestTransactionCount": "0",
+    "pendingTransactionCount": "0",
+    "entryPointNonce": "0",
+    "entryPointDeposit": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "deployed": false,
+    "funded": false,
+    "unexpectedTransactionHistory": false
+  },
+  "initialization": {
+    "factoryMethod": "createAccount(address,bytes32,bytes32,uint256)",
+    "factoryAddress": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+    "factoryDataHash": "0xb5cc56dbb283e6e595a7ba2ac9f67ab8716c15ee6396b7ef8dde610f0483f20d",
+    "packedInitCodeHash": "0x1fe984910eb31031a34e7308aae4f89b88b7cf571ea50d165ef954b6942bad88",
+    "v07RpcRepresentation": "factory_and_factoryData",
+    "expectedSender": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "expectedEntryPointNonce": "0",
+    "constructorInputs": {
+      "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "owner": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+      "approvedConfirmationTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "validatorKeyId": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+      "expectedChainId": 11155111
+    },
+    "recoveryAuthorityPresent": false,
+    "arbitraryOwnerSubstitutionAllowed": false,
+    "accountCreationAndConfirmationAtomic": true,
+    "failureRollsBackCreation": true,
+    "sourceProposalAccountInitCodeHash": "0xb7f8b670d96dbf627d92344ed05e94298c915572d7c1333057a5e4a8a8a45390"
+  },
+  "estimationOnlyUserOperation": {
+    "artifact": "config/ethereum-sepolia/O25_ESTIMATION_ONLY_USER_OPERATION.json",
+    "artifactDigest": "0x0aa61e4a617354d89b3eb761c8ed1ebd039ce957e1916e422d40b13e7ffef2b3",
+    "submissionReady": false
+  },
+  "localSimulation": {
+    "schemaVersion": "philcore-o25-local-entrypoint-simulation-v1",
+    "source": "isolated_local_hardhat_entrypoint_v0_7",
+    "evidenceClassification": "local_fixture",
+    "fixtureSignatureOnly": true,
+    "realUserSignatureGenerated": false,
+    "protectedIdentityMaterialAccessed": false,
+    "publicNetworkContacted": false,
+    "fixtureMutationOnly": true,
+    "transactionSubmittedToPublicNetwork": false,
+    "accountCreation": {
+      "atomicWithFirstOperation": true,
+      "codeBefore": "0x",
+      "codeAfterPresent": true,
+      "directFactoryCreationGasUsed": "645542",
+      "approximateFirstOperationCreationGasComponent": "690770"
+    },
+    "operation": {
+      "declaredVerificationGasLimit": "1500000",
+      "declaredCallGasLimit": "300000",
+      "declaredPreVerificationGas": "200000",
+      "declaredTotalGas": "2000000",
+      "maxFeePerGasWei": "2500000000",
+      "exactRequiredPrefundWei": "5000000000000000",
+      "handleOpsTransactionEstimate": "1059768",
+      "handleOpsTransactionGasUsed": "869553",
+      "userOperationActualGasUsed": "1034770",
+      "userOperationActualGasCostWei": "608115332692340",
+      "validationGasEstimate": "19880",
+      "executionGasEstimate": "50694",
+      "componentEstimationMethod": "isolated eth_estimateGas calls from the local EntryPoint address with 21000 transaction intrinsic gas removed",
+      "decompositionLimitation": "The component estimates isolate account validation and execution but do not apportion EntryPoint orchestration overhead; the EntryPoint event reports only aggregate actualGasUsed."
+    },
+    "state": {
+      "nonceBefore": "0",
+      "nonceAfter": "1",
+      "depositBeforeWei": "0",
+      "depositAfterWei": "4391884667307660",
+      "targetConfirmationCount": "2",
+      "confirmationSucceeded": true
+    },
+    "rollbackAndFailureChecks": {
+      "insufficientPrefund": true,
+      "modifiedFactoryData": true,
+      "wrongAccountSalt": true,
+      "wrongValidator": true,
+      "wrongTargetOrCall": true,
+      "nonzeroValueUnavailable": true,
+      "staleExpiry": true,
+      "invalidPlaceholderSignature": true,
+      "paymasterIntroduction": true,
+      "gasCeilingViolationRejectedByO25Validator": true
+    },
+    "allFailureChecksPassed": true
+  },
+  "feeEvidence": {
+    "observedAt": "2026-07-28T04:21:00.000Z",
+    "latestBlockNumber": "11366223",
+    "latestBlockHash": "0x1204798bb6771d87ca2173ad4cd252fe1831a80ea8677fa06b646890a548389e",
+    "baseFeePerGas": {
+      "wei": "1099327403",
+      "gwei": "1.099327403",
+      "eth": "0.000000001099327403"
+    },
+    "gasPrice": {
+      "wei": "1100827403",
+      "gwei": "1.100827403",
+      "eth": "0.000000001100827403"
+    },
+    "rpcSuggestedMaxFeePerGas": {
+      "wei": "2200154806",
+      "gwei": "2.200154806",
+      "eth": "0.000000002200154806"
+    },
+    "rpcSuggestedMaxPriorityFeePerGas": {
+      "wei": "1500000",
+      "gwei": "0.0015",
+      "eth": "0.0000000000015"
+    },
+    "feeHistory": {
+      "oldestBlock": "0xad6f4b",
+      "baseFeePerGas": [
+        "0x3bb66d37",
+        "0x39ca84cf",
+        "0x410283bb",
+        "0x41cecb92",
+        "0x418667ab",
+        "0x3df9318d"
+      ],
+      "gasUsedRatio": [
+        0.37128245,
+        0.9996433666666666,
+        0.5490985,
+        0.4828121,
+        0.2831907833333333
+      ],
+      "reward": [
+        [
+          "0x16e360",
+          "0x3bca20c",
+          "0x7102aa00"
+        ],
+        [
+          "0x1d04531",
+          "0x1d04531",
+          "0x46ba8adf"
+        ],
+        [
+          "0x16e360",
+          "0x16e360",
+          "0x59682f00"
+        ],
+        [
+          "0x16e360",
+          "0x1ddefae",
+          "0x62590080"
+        ],
+        [
+          "0x16e360",
+          "0x989680",
+          "0x65dd4540"
+        ]
+      ]
+    },
+    "scenarios": {
+      "current": {
+        "label": "current_rpc_observation",
+        "maxFeePerGas": {
+          "wei": "2200154806",
+          "gwei": "2.200154806",
+          "eth": "0.000000002200154806"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1500000",
+          "gwei": "0.0015",
+          "eth": "0.0000000000015"
+        }
+      },
+      "recommended": {
+        "label": "current_rpc_observation_plus_25_percent",
+        "marginBasisPoints": 2500,
+        "maxFeePerGas": {
+          "wei": "2750193507",
+          "gwei": "2.750193507",
+          "eth": "0.000000002750193507"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1875000",
+          "gwei": "0.001875",
+          "eth": "0.000000000001875"
+        }
+      },
+      "rejectionCeiling": {
+        "label": "absolute_rejection_ceiling_not_a_funding_recommendation",
+        "maxFeePerGas": {
+          "wei": "100000000000",
+          "gwei": "100.0",
+          "eth": "0.0000001"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "5000000000",
+          "gwei": "5.0",
+          "eth": "0.000000005"
+        }
+      }
+    }
+  },
+  "bundler": {
+    "status": "BUNDLER_NOT_CONFIGURED",
+    "configured": false,
+    "endpointClassification": "not_configured",
+    "contacted": false,
+    "supportedEntryPointV07": false,
+    "estimationPerformed": false,
+    "submissionMethodCalled": false,
+    "requirementsSatisfied": false
+  },
+  "bundlerRequirements": [
+    "Ethereum Sepolia chain ID 11155111",
+    "ERC-4337 v0.7 canonical EntryPoint support",
+    "counterfactual factory deployment",
+    "eth_estimateUserOperationGas",
+    "eth_sendUserOperation only after separate future authorization",
+    "UserOperation lookup and receipt lookup",
+    "no mandatory paymaster",
+    "no mutation of signed fields",
+    "transparent request-size, fee, and rate limits"
+  ],
+  "prefund": {
+    "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+    "gasLimits": {
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0"
+    },
+    "empiricalActualExecutionCostAtObservedGasPrice": {
+      "wei": "1139103171802310",
+      "gwei": "1139103.17180231",
+      "eth": "0.00113910317180231"
+    },
+    "estimatedMinimumAtCurrentSuggestedMaxFee": {
+      "wei": "4400309612000000",
+      "gwei": "4400309.612",
+      "eth": "0.004400309612"
+    },
+    "recommendedDisposableTestPrefund": {
+      "wei": "5500387014000000",
+      "gwei": "5500387.014",
+      "eth": "0.005500387014"
+    },
+    "proposedMaximumFundingApproval": {
+      "wei": "5500387014000000",
+      "gwei": "5500387.014",
+      "eth": "0.005500387014"
+    },
+    "absoluteRejectionCeilingExposure": {
+      "wei": "200000000000000000",
+      "gwei": "200000000.0",
+      "eth": "0.2"
+    },
+    "currentCalculation": {
+      "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0",
+      "requiredGas": "2000000",
+      "maxFeePerGasWei": "2200154806",
+      "requiredPrefundWei": "4400309612000000"
+    },
+    "recommendedCalculation": {
+      "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0",
+      "requiredGas": "2000000",
+      "maxFeePerGasWei": "2750193507",
+      "requiredPrefundWei": "5500387014000000"
+    },
+    "hardCeilingCalculation": {
+      "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0",
+      "requiredGas": "2000000",
+      "maxFeePerGasWei": "100000000000",
+      "requiredPrefundWei": "200000000000000000"
+    },
+    "recommendationUsesHardCeiling": false,
+    "extraFundingForFailedOffchainBundlerAttemptWei": "0"
+  },
+  "fundingMechanism": {
+    "selected": "direct_eth_transfer_to_counterfactual_address",
+    "entryPointDepositRequired": false,
+    "worksBeforeDeployment": "ETH balance at the deterministic address survives CREATE2 deployment and BaseAccount pays missingAccountFunds to EntryPoint during validation.",
+    "create2AddressAffectedByBalance": false,
+    "transactionHistoryIntroducedByFunding": true,
+    "residualFunds": "Residual ETH can fund later permitted UserOperations, but the account has no general withdrawal or transfer method and may strand unused ETH.",
+    "neverDeployed": "ETH remains at the counterfactual address without an available private key; practical recovery requires exact account deployment and remains restricted by account code.",
+    "entryPointDepositWithdrawal": "EntryPoint withdrawTo requires the account itself as caller, and the current account exposes no withdrawal path.",
+    "account2Role": "single_future_direct_prefund_proposal_only"
+  },
+  "fundingProposal": {
+    "artifact": "config/ethereum-sepolia/O25_ACCOUNT_PREFUND_PROPOSAL.json",
+    "proposalDigest": "0xc4cc25e76ca33dbd4567a7ae7d44e9f158aa22aa01cce8231ad9807132e53d5f",
+    "approved": false,
+    "signed": false,
+    "broadcast": false
+  },
+  "limits": {
+    "verificationGasLimitMaximum": "1500000",
+    "callGasLimitMaximum": "300000",
+    "preVerificationGasMaximum": "200000",
+    "maxFeePerGasWeiMaximum": "100000000000",
+    "maxPriorityFeePerGasWeiMaximum": "5000000000",
+    "authorizationLifetimeSecondsMaximum": "600"
+  },
+  "stopBoundary": {
+    "ethTransferred": false,
+    "entryPointDepositCreated": false,
+    "accountDeployed": false,
+    "factoryMutationCalled": false,
+    "starkProofGenerated": false,
+    "runtimeAuthorizationGenerated": false,
+    "deviceVaultUsed": false,
+    "userOperationSigned": false,
+    "userOperationSubmitted": false,
+    "bundlerSubmissionCalled": false,
+    "paymasterUsed": false,
+    "publicMutationOccurred": false
+  },
+  "warnings": [
+    "BUNDLER_NOT_CONFIGURED"
+  ],
+  "remainingApprovals": [
+    "approve one compatible Sepolia ERC-4337 v0.7 bundler",
+    "refresh all chain, fee, nonce, balance, deposit, and bundler estimates",
+    "approve the exact Account 2 direct-funding transaction",
+    "after funding, separately generate a fresh proof and Runtime authorization",
+    "separately approve Device Vault signing",
+    "separately approve exact UserOperation submission"
+  ]
+}

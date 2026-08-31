@@ -1,0 +1,27 @@
+{
+  "format": "phil-v1-step5-artifact-manifest-v1",
+  "source": "apps/phil-device-sdk/src/postQuantumMigrationV1.ts",
+  "sourceSha256": "d5354fbbb1fb869ba5decbfc79fa5c6ee7de6b8deda59d2590ef22cf08b25d28",
+  "fixture": "config/cryptography/PHIL_V1_STEP5_PQ_MIGRATION_FIXTURE.json",
+  "fixtureSha256": "49f01a397dffd54d999bee7cfa0da59e53eb0f71e2f51d5f2367d2e87249d72d",
+  "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+  "currentBundleHash": "0x164911292409b4daf8c2f2838516bab2630c1ac1d64d80240aedf80ee862039d",
+  "starknetCapabilityHash": "0x0900fe167fd32e7a00927b6224005b0b748f6bf8f4b3dd7200ffb06314fc603f",
+  "baseCapabilityHash": "0x06ffacc67e522a0a6f01b68cc9da19c7f1617f4cbb2856ef063c78d9c7f5c6ca",
+  "syntheticStarknetEpoch2CapabilityHash": "0x9cd7efaf9e8452deefc6666e5a565427a430fe92ae168f9cae4580db257e8dac",
+  "currentTrustedStateHash": "0x7f2146536b1c5794bff1742dcc19ce4fc1762060ced279792e45ecf17aebbc7a",
+  "rotatedTrustedStateHash": "0x298a3eabb509faf74e1b72e640fbeebb5c9a48cc4a7465a2a07361ca8e459f8a",
+  "rotationCeremonyHash": "0x310276cbd83c00afbb3c32a19b3e21dec6d7ee1518b431f903e7767382ae8141",
+  "standardsSnapshot": {
+    "asOf": "2026-08-22",
+    "fips203": "https://csrc.nist.gov/pubs/fips/203/final",
+    "fips204": "https://csrc.nist.gov/pubs/fips/204/final",
+    "fips205": "https://csrc.nist.gov/pubs/fips/205/final",
+    "nistTransitionDraft": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+    "appleQuantumSecureWorkflows": "https://developer.apple.com/documentation/cryptokit/enhancing-your-app-s-privacy-and-security-with-quantum-secure-workflows",
+    "appleSecureEnclaveMlDsa65Signing": "https://developer.apple.com/documentation/cryptokit/secureenclave/mldsa65/privatekey/signature%28for%3A%29",
+    "appleSecKeyEciesCofactorX963Sha256AesGcm": "https://developer.apple.com/documentation/security/seckeyalgorithm/eciesencryptioncofactorx963sha256aesgcm",
+    "starknetAccounts": "https://docs.starknet.io/learn/protocol/accounts",
+    "erc4337": "https://eips.ethereum.org/EIPS/eip-4337"
+  }
+}

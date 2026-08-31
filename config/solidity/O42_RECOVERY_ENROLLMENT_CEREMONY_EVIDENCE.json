@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.42",
+  "canonicalPhase": "O.42 Real Standard Recovery Enrollment Ceremony and Production Initialization Package",
+  "classification": "LOCAL_INTERACTIVE_PRODUCTION_RECOVERY_ENROLLMENT",
+  "sourceHeadAtPhaseStart": "7b1315d8ecb85595351c88824ba9420a89daac47",
+  "result": "STOPPED_FAIL_CLOSED_BEFORE_CREDENTIAL_CREATION",
+  "readiness": "A_ENROLLMENT_CEREMONY_BLOCKED",
+  "publicMutationCount": 0,
+  "rpcAccessed": false,
+  "sepoliaAccessed": false,
+  "externalNetworkAccessed": false,
+  "environmentFileAccessed": false,
+  "pushed": false,
+  "baseline": {
+    "repository": "<repository-root>",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeInitiallyClean": true,
+    "upstreamAtStart": "origin/main",
+    "aheadAtStart": 134,
+    "behindAtStart": 0,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "v2RuntimeKeccak256": {
+      "verifier": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+      "account": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "factory": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95"
+    },
+    "securityRelevantDiscrepancy": null
+  },
+  "canonicalIdentity": {
+    "publicExportDisposition": "WITHHELD_PRIVATE_OWNER_OBSERVATION"
+  },
+  "staticPreflight": {
+    "o41EvidenceCurrent": true,
+    "canonicalRpId": "recovery.philcore.localhost",
+    "canonicalOrigin": "https://recovery.philcore.localhost:18443",
+    "listener": "127.0.0.1:18443",
+    "nonLoopbackListenerObserved": false,
+    "directoryMode": "0700",
+    "fileMode": "0600",
+    "safeStorageCertificateEnvelopeCreated": true,
+    "crashUploadDisabled": true,
+    "standardBeforePhysicalProbe": "READY_WITH_USER_WARNINGS",
+    "enhanced": "BLOCKED"
+  },
+  "livePhysicalPreflight": {
+    "date": "WITHHELD_PRIVATE_OWNER_OBSERVATION",
+    "primaryIdentityUnlockedLocally": "WITHHELD_PRIVATE_OWNER_OBSERVATION",
+    "unlockSecretExposed": false,
+    "standardResult": "BLOCKED",
+    "state": "PREFLIGHT_BLOCKED",
+    "blockerIds": [
+      "platformAuthenticator"
+    ],
+    "webAuthnApiAvailable": true,
+    "userVerifyingPlatformAuthenticatorAvailable": false,
+    "nativeLocalAuthenticationHelper": {
+      "available": true,
+      "provider": "macos_local_authentication_helper",
+      "userPresenceGuaranteed": true,
+      "biometricClaimSupported": true,
+      "promptedDuringDiagnostic": false,
+      "rawAuthenticationMaterialReturned": false
+    },
+    "developmentRuntime": {
+      "electron": "39.8.10",
+      "macos": "26.5.2",
+      "architecture": "arm64",
+      "signature": "ADHOC_LINKER_SIGNED_NO_TEAM_IDENTIFIER"
+    },
+    "conclusion": "Ordinary native local authentication is available, but the exact platform WebAuthn capability required for Role 0 is not."
+  },
+  "packagedProbe": {
+    "currentSourceMatchedPackage": true,
+    "localAdHocHardenedSigningVerified": true,
+    "appleCredentialUsed": false,
+    "notarizationAttempted": false,
+    "protectedOriginRecordReusedAcrossApplicationIdentity": false,
+    "result": "STARTUP_FAILED_CLOSED_AT_RECOVERY_ENVIRONMENT",
+    "interpretation": "The safeStorage-bound origin envelope was not silently reused by a different application identity."
+  },
+  "protectedLocalState": {
+    "publicExportDisposition": "WITHHELD_PRIVATE_OWNER_OBSERVATION"
+  },
+  "ceremony": {
+    "sessionCreated": false,
+    "role0Created": false,
+    "role1Created": false,
+    "role2Created": false,
+    "webAuthnCreationPromptShown": false,
+    "pairingSessionCreated": false,
+    "offlineFactorGenerated": false,
+    "restorationDrillPerformed": false,
+    "independenceQuestionsAsked": false,
+    "publicCommitmentApprovalRequested": false,
+    "stopReason": "The mandatory Role 0 platform WebAuthn preflight failed before credential creation."
+  },
+  "initialization": {
+    "descriptorVersion": 3,
+    "configurationVersion": 3,
+    "recoveryEpoch": 1,
+    "validBitmaps": [
+      3,
+      5,
+      6
+    ],
+    "role0Commitment": null,
+    "role1Commitment": null,
+    "role2Commitment": null,
+    "recoveryConfigurationHash": null,
+    "productionUserSaltGenerated": false,
+    "protectedInitializationPackageCreated": false,
+    "publicInitializationManifestCreated": false,
+    "factoryAddress": null,
+    "fixtureValuesUsed": false
+  },
+  "regression": {
+    "o39FixturesAndEvidence": "PASS",
+    "o39FocusedTests": "13_PASSING",
+    "o40HistoricalBindingCorrection": "PASS",
+    "o40FocusedTests": "9_PASSING",
+    "o41Evidence": "PASS",
+    "o41FocusedTests": "PASS",
+    "o42FocusedTests": "PASS",
+    "o32ThroughO42": "247_PASSING_0_FAILING",
+    "typecheck": "PASS",
+    "solidityCompile": "PASS",
+    "solidityChanged": false,
+    "cleanIsolatedNpmCi": "PASS"
+  },
+  "security": {
+    "trackedEvidenceSecretScan": "PASS",
+    "protectedStateStructuralScan": "PASS",
+    "rawCredentialIdExposed": false,
+    "offlineRecoveryFactorExposed": false,
+    "recoveryPrivateScalarExposed": false,
+    "pairingSecretExposed": false,
+    "productionSignatureCreated": false,
+    "productionSecretCommitted": false,
+    "highFindings": 0,
+    "criticalFindings": 0,
+    "externalAuditStillRequired": true
+  },
+  "sourceEvidenceSha256": {
+    "secureOrigin": "0ea7d7d02007a94bb6ee799adcf8a55a4cb7b2bfa5b10c76bebdda3c2bbc85a3",
+    "attestationPolicy": "9d5b14e536d55fb834f7a1e05c57cd63621d55742bd0ac9ef812d241c28e1f45",
+    "enrollmentHost": "bdea15bdaa71642711c1bc09ccdb3c20ae33da016191e499300c78cde3dce53e",
+    "desktopMain": "0c3fe1ddac2595e11a659815d80154b4041f6c0927736281e4162cf9c5473700",
+    "renderer": "fd80b4eb21b634ed8d8fee31019d65f9ce7fe191c0e1c7eac3cc18d008aba277",
+    "o38InitializationWorksheet": "50b02d01efcad6a2c1237d5b9c02358796d0ceea63b3e982f056b6d0b5f3dd2e"
+  },
+  "stopBoundary": {
+    "publicDeployment": false,
+    "publicTransaction": false,
+    "sepoliaOrExternalRpc": false,
+    "externalBundlerSubmission": false,
+    "publicFundsMoved": false,
+    "productionAccountDeployed": false,
+    "productionCredentialCreated": false,
+    "productionOfflineFactorCreated": false,
+    "productionSecretCommitted": false,
+    "rawCredentialIdExposed": false,
+    "offlineRecoveryFactorExposed": false,
+    "pushPerformed": false
+  }
+}

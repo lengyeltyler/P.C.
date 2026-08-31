@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://philcore.local/schemas/starknet-publication-config.schema.json",
+  "title": "PhilCore Starknet Publication Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "kind",
+    "profileId",
+    "configurationApprovalStatus",
+    "artifactBinding",
+    "publication",
+    "l1RecipientBinding",
+    "expectedL2SenderBinding",
+    "accountCallerModel",
+    "feeNonceModel",
+    "receiptFinalityPolicy",
+    "networkProfiles",
+    "secretsPolicy"
+  ],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "kind": { "type": "string", "const": "starknet-verified-fact-publication-config" },
+    "profileId": { "type": "string", "minLength": 1 },
+    "configurationApprovalStatus": {
+      "type": "string",
+      "enum": ["draft", "review_required", "approved"]
+    },
+    "artifactBinding": { "type": "object" },
+    "publication": { "type": "object" },
+    "l1RecipientBinding": { "type": "object" },
+    "expectedL2SenderBinding": { "type": "object" },
+    "accountCallerModel": { "type": "object" },
+    "feeNonceModel": { "type": "object" },
+    "receiptFinalityPolicy": { "type": "object" },
+    "networkProfiles": { "type": "object" },
+    "secretsPolicy": { "type": "object" }
+  }
+}

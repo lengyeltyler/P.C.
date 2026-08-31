@@ -1,0 +1,21 @@
+Stwo Cairo Verifier
+
+This component contains software developed in the starkware-libs/stwo-cairo
+project by StarkWare and its contributors:
+https://github.com/starkware-libs/stwo-cairo
+
+Phil recovered this component from upstream revision
+0a5e70b73f397d84c683310382c4e61dc2729f13 and made compatibility and
+proof-parity changes to these files:
+
+crates/verifier_core/src/channel/blake2s.cairo
+crates/verifier_core/src/pcs/quotients.cairo
+crates/verifier_core/src/pcs/quotients/test.cairo
+crates/verifier_core/src/pcs/verifier.cairo
+crates/verifier_core/src/vcs/blake2s_hasher.cairo
+
+The component is licensed under the Apache License, Version 2.0. See
+../../LICENSES/Apache-2.0.txt and PHIL_PROVENANCE.md.
+
+The upstream repository had no NOTICE file at the recovered revision or at the
+later repository-level Apache-2.0 grant reviewed for this distribution.

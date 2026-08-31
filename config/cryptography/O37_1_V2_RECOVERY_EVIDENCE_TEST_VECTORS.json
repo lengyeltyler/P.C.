@@ -1,0 +1,351 @@
+{
+  "schemaVersion": "philcore-o37-1-v2-recovery-evidence-v1",
+  "phase": "O.37.1",
+  "canonicalPhaseName": "O.37.1 V2 Recovery Evidence and Cryptographic Descriptor Completion",
+  "classification": "COMPLETE_LOCAL_CRYPTOGRAPHIC_INTERFACE_CORRECTION",
+  "sourceHeadAtPhaseStart": "6dcc4099a78cd719d484c4e33c808586d2472780",
+  "fixtureOnly": true,
+  "publicMutationCount": 0,
+  "implementationBindings": {
+    "recoveryEvidenceSourceSha256": "43cf487d974fed3ba34253ef54831405f8ca1247df7715c7a41f3fd0064b1cf8",
+    "o32VectorPackageSha256": "c9c5fd6b35c36c1c7a132eabcef81a0f663341943e99bc31430125e64ed7096b",
+    "o33VectorPackageSha256": "d48704a4051641b6234abc04cdd1cb765f2b0c696a68ab949310516c185f512f",
+    "o36_1FreezeSha256": "3bd255f33764822cf51a23fd79420e3d9823a229b2e3ecfc8646cdb142483b93"
+  },
+  "versions": {
+    "descriptorVersion": 2,
+    "configurationVersion": 2,
+    "evidenceVersion": 2,
+    "authorityKind": 2,
+    "threshold": 2
+  },
+  "typeBindings": {
+    "WEBAUTHN_PUBLIC_MATERIAL": {
+      "typeString": "PhilCoreV2WebAuthnPublicMaterial(bytes32 qx,bytes32 qy)",
+      "typeHash": "0x8f1a81381ef4fe36ecdda52c6bc3f1bb90fc29f65b0b37dab428d6305efb652a"
+    },
+    "SECP256K1_PUBLIC_MATERIAL": {
+      "typeString": "PhilCoreV2Secp256k1PublicMaterial(address signer)",
+      "typeHash": "0x1e5e55542aedb138fa8097a3c94b28889aaf732d705f981b3189abcdb139000d"
+    },
+    "INDEPENDENCE_BINDING": {
+      "typeString": "PhilCoreV2RecoveryIndependenceBinding(uint8 bindingVersion,uint8 role,bytes32 credentialIdHash,bytes32 enrollmentCeremonyHash,bytes32 attestationEvidenceHash,bytes32 custodyDomainId)",
+      "typeHash": "0x0e29091eccb6f723ce1b044457365ed0db403330caafc118294c45ec08f4d412"
+    },
+    "FACTOR_DESCRIPTOR": {
+      "typeString": "PhilCoreV2RecoveryFactorDescriptorV2(uint8 descriptorVersion,bytes32 accountVersionId,bytes32 securityModelId,bytes32 recoveryDomainId,uint8 role,uint8 verifierKind,bytes32 publicVerificationMaterialHash,bytes32 credentialIdHash,bytes32 rpIdHash,bytes32 originPolicyHash,bytes32 independenceBindingHash,uint8 userVerificationPolicy,uint8 backupPolicy,uint8 authenticatorAttachmentPolicy,uint8 attestationPolicy,uint64 credentialGeneration)",
+      "typeHash": "0xe6d1a8d0462a651f48be79519b842302beeb3f6234dab1b6bff2e03df7d7fb18"
+    },
+    "RECOVERY_CONFIGURATION": {
+      "typeString": "PhilCoreV2RecoveryConfigurationV2(uint8 configurationVersion,uint8 threshold,bytes32 primaryDeviceCommitment,bytes32 hardwareSecurityKeyCommitment,bytes32 recoveryFactorCommitment)",
+      "typeHash": "0x22eaf8f31f739bc0a61070f895f765394c831652d44469a2f9658921b1525831"
+    },
+    "EVIDENCE_CONTEXT": {
+      "typeString": "PhilCoreV2RecoveryEvidenceContextV2(uint8 envelopeVersion,uint8 authorityKind,uint8 actionType,uint8 factorBitmap,address account,uint256 chainId,address entryPoint,bytes32 authorizedIntentHash,bytes32 userOpHash,bytes32 requestId,bytes32 currentRecoveryConfigHash,uint64 validatorEpoch,uint64 recoveryEpoch,uint48 validAfter,uint48 validUntil,uint64 recoveryDelaySeconds,uint64 recoveryExpirySeconds,bytes32 proposedValidatorCommitment,bytes32 proposedRecoveryConfigHash,uint64 proposedRecoveryEpoch,bytes32 primaryDeviceCommitment,bytes32 hardwareSecurityKeyCommitment,bytes32 recoveryFactorCommitment,bytes32 firstFactorCommitment,bytes32 secondFactorCommitment)",
+      "typeHash": "0x091b144ee8327abfb516731037784cd13e3924937f61cb1a69148424356f7ac0"
+    }
+  },
+  "publicFixtureMaterial": {
+    "primaryDevice": {
+      "qx": "0x6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296",
+      "qy": "0x4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5"
+    },
+    "hardwareSecurityKey": {
+      "qx": "0x7cf27b188d034f7e8a52380304b51ac3c08969e277f21b35a60b48fc47669978",
+      "qy": "0x07775510db8ed040293d9ac69f7430dbba7dade63ce982299e04b79d227873d1"
+    },
+    "recoveryFactor": {
+      "signer": "0x7000000000000000000000000000000000000007"
+    },
+    "rotatedRecoveryFactor": {
+      "signer": "0x8000000000000000000000000000000000000008"
+    },
+    "realCredential": false,
+    "privateKey": false,
+    "signature": false
+  },
+  "independenceBindings": {
+    "primaryDevice": {
+      "bindingVersion": 1,
+      "role": 0,
+      "credentialIdHash": "0x383bfd838438c22386c75d79d5ddf7929d807a698ae1ac6dd2623be3cb764815",
+      "enrollmentCeremonyHash": "0x1af558841f3322cbd6dee2e647a713f0d0c593ee0578831d4171129000ed2d7e",
+      "attestationEvidenceHash": "0x122208d865e88998168ec5b8f811a3c3c2229bc81ff16e3d8089c51ed6c3ed5f",
+      "custodyDomainId": "0xf46df2f233176ee2408e24b1a5f303595c25c981da02449d5c79ff00950c5e51"
+    },
+    "hardwareSecurityKey": {
+      "bindingVersion": 1,
+      "role": 1,
+      "credentialIdHash": "0xc1c2f368ef1a2ac1892a8b8c5c017282599fa999ffce0d11ff8a563cf472a252",
+      "enrollmentCeremonyHash": "0x45e33f2b5166a7853ea2152def985816e8e75fcc93e26c5b2a32323264bc6113",
+      "attestationEvidenceHash": "0x906512f7e9b6af91ae6d39b57b4245dfef1a7bb46fa4eefdc13f0b5453bb1fbe",
+      "custodyDomainId": "0x34b72ee39bd130a734aa3642a3c6780c84ba84a945ba40cf8d5557f9e74deab2"
+    },
+    "recoveryFactor": {
+      "bindingVersion": 1,
+      "role": 2,
+      "credentialIdHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "enrollmentCeremonyHash": "0xc65be590b08bd342c3abd645fac7e84e175b6685724f02617b6cae99132eaa4a",
+      "attestationEvidenceHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "custodyDomainId": "0x78948f9b539f6222c3031869c870ce307562bc166a65bdf7bdd06412161508e0"
+    }
+  },
+  "currentDescriptors": {
+    "primaryDevice": {
+      "descriptorVersion": 2,
+      "accountVersionId": "0x21fa156a27ec1e135fd05d69d2e37b6243327f63e37eac2f40783ba9a652fbb7",
+      "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+      "recoveryDomainId": "0xdffb9d428722b15bbbe50a8e1b4dbfd5b19be5dbaa17dbb1d61f432c0701ab41",
+      "role": 0,
+      "verifierKind": 1,
+      "publicVerificationMaterialHash": "0xb29a8fe321854a210228412dbe7aea6f4a0f95431fc37a13dcaece8541147f99",
+      "credentialIdHash": "0x383bfd838438c22386c75d79d5ddf7929d807a698ae1ac6dd2623be3cb764815",
+      "rpIdHash": "0xdc51502a4d8e354ab80efed360adda1ca9e5379e679bcbf1cda6a4008676d6eb",
+      "originPolicyHash": "0x610f1d17971672405d870f558adac74ded820820452253055ee7c10a16ca8c13",
+      "independenceBindingHash": "0x691471f13161dbda8b9e19826d8a9fb17ca306069c2f7009160da7f939736fce",
+      "userVerificationPolicy": 2,
+      "backupPolicy": 1,
+      "authenticatorAttachmentPolicy": 1,
+      "attestationPolicy": 1,
+      "credentialGeneration": 1
+    },
+    "hardwareSecurityKey": {
+      "descriptorVersion": 2,
+      "accountVersionId": "0x21fa156a27ec1e135fd05d69d2e37b6243327f63e37eac2f40783ba9a652fbb7",
+      "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+      "recoveryDomainId": "0xdffb9d428722b15bbbe50a8e1b4dbfd5b19be5dbaa17dbb1d61f432c0701ab41",
+      "role": 1,
+      "verifierKind": 1,
+      "publicVerificationMaterialHash": "0x7a5a0dd5c3f3bc35c88c80e5bcf2bab00f68c8ea4c19b224b25799788a8d90a1",
+      "credentialIdHash": "0xc1c2f368ef1a2ac1892a8b8c5c017282599fa999ffce0d11ff8a563cf472a252",
+      "rpIdHash": "0xdc51502a4d8e354ab80efed360adda1ca9e5379e679bcbf1cda6a4008676d6eb",
+      "originPolicyHash": "0x610f1d17971672405d870f558adac74ded820820452253055ee7c10a16ca8c13",
+      "independenceBindingHash": "0xa03a7d09318932d345a76718ffb10ca0419b152f3a87fa79a57a061cf49a5c4f",
+      "userVerificationPolicy": 2,
+      "backupPolicy": 1,
+      "authenticatorAttachmentPolicy": 2,
+      "attestationPolicy": 2,
+      "credentialGeneration": 1
+    },
+    "recoveryFactor": {
+      "descriptorVersion": 2,
+      "accountVersionId": "0x21fa156a27ec1e135fd05d69d2e37b6243327f63e37eac2f40783ba9a652fbb7",
+      "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+      "recoveryDomainId": "0xdffb9d428722b15bbbe50a8e1b4dbfd5b19be5dbaa17dbb1d61f432c0701ab41",
+      "role": 2,
+      "verifierKind": 2,
+      "publicVerificationMaterialHash": "0xd3f32271816096ac234a4bd267201919c93db7947df07cb1cc1993b4a0e9a514",
+      "credentialIdHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "rpIdHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "originPolicyHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "independenceBindingHash": "0x621c182a3988ea966626ad1638d2e1b68530a918e194d7c9bce895e37ab1d7c6",
+      "userVerificationPolicy": 0,
+      "backupPolicy": 0,
+      "authenticatorAttachmentPolicy": 0,
+      "attestationPolicy": 0,
+      "credentialGeneration": 1
+    }
+  },
+  "currentCommitments": {
+    "primaryDevice": "0x992638b3e5cc5ec40ccd65fe03c0126fd255c2ae4659a89a329617fc57c433c1",
+    "hardwareSecurityKey": "0xe4efcf8b4ee81f585d88fd427d0b5b446f8d3be6d2fdfb406824c2b38adef52d",
+    "recoveryFactor": "0x9c65a07f871da896d60862ce4eb56e8dbe4f56bf27001580db8f44331a7d858c",
+    "recoveryConfigHash": "0x4619a9e1ea3902374ce5583a8717b4256379bec15cb67082a9eb285f6b078d24"
+  },
+  "validRecoveryRequest": {
+    "factorBitmap": 3,
+    "context": {
+      "envelopeVersion": 2,
+      "authorityKind": 2,
+      "actionType": 8,
+      "factorBitmap": 3,
+      "account": "0x1000000000000000000000000000000000000001",
+      "chainId": "11155111",
+      "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "authorizedIntentHash": "0x9922c827e7c2a35ec43802499b7761482287f29d52cc3c251d75ed2646f6f630",
+      "userOperationHash": "0x16ff4d8a34c318a73bc9dc31923a21f54677e893dd756e2ca524889ba4c055da",
+      "requestId": "0x9922c827e7c2a35ec43802499b7761482287f29d52cc3c251d75ed2646f6f630",
+      "currentRecoveryConfigHash": "0x4619a9e1ea3902374ce5583a8717b4256379bec15cb67082a9eb285f6b078d24",
+      "validatorEpoch": 3,
+      "recoveryEpoch": 2,
+      "validAfter": 1800000000,
+      "validUntil": 1800003600,
+      "recoveryDelaySeconds": 172800,
+      "recoveryExpirySeconds": 604800,
+      "proposedValidatorCommitment": "0x9d91f8217cb593b8198404965812c1d83f7b8479e0a7e1e9abc679835f653033",
+      "proposedRecoveryConfigHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "proposedRecoveryEpoch": 3,
+      "primaryDeviceCommitment": "0x992638b3e5cc5ec40ccd65fe03c0126fd255c2ae4659a89a329617fc57c433c1",
+      "hardwareSecurityKeyCommitment": "0xe4efcf8b4ee81f585d88fd427d0b5b446f8d3be6d2fdfb406824c2b38adef52d",
+      "recoveryFactorCommitment": "0x9c65a07f871da896d60862ce4eb56e8dbe4f56bf27001580db8f44331a7d858c",
+      "firstFactorCommitment": "0x992638b3e5cc5ec40ccd65fe03c0126fd255c2ae4659a89a329617fc57c433c1",
+      "secondFactorCommitment": "0xe4efcf8b4ee81f585d88fd427d0b5b446f8d3be6d2fdfb406824c2b38adef52d"
+    },
+    "contextHash": "0xb47aa0d4ec0734ed12b860679bfe4c471ce6bf65047f3c8a1312edfa87562fd4",
+    "membershipAccepted": true,
+    "stateAccepted": true,
+    "signatureCreated": false,
+    "userOperationCreated": false
+  },
+  "validRotationRequest": {
+    "factorBitmap": 6,
+    "currentRecoveryEpoch": "2",
+    "proposedRecoveryEpoch": "3",
+    "changedRoles": [
+      2
+    ],
+    "proposedDescriptor": {
+      "descriptorVersion": 2,
+      "accountVersionId": "0x21fa156a27ec1e135fd05d69d2e37b6243327f63e37eac2f40783ba9a652fbb7",
+      "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+      "recoveryDomainId": "0xdffb9d428722b15bbbe50a8e1b4dbfd5b19be5dbaa17dbb1d61f432c0701ab41",
+      "role": 2,
+      "verifierKind": 2,
+      "publicVerificationMaterialHash": "0xb047a31ea8805ccdbbab980fd68b0a7c20423bc6f3453a3a59b72dd643686611",
+      "credentialIdHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "rpIdHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "originPolicyHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "independenceBindingHash": "0xdc77a338bcee64fed5b72b4667798e7e10a97e70fe9381d62c9ae7e6b716cfca",
+      "userVerificationPolicy": 0,
+      "backupPolicy": 0,
+      "authenticatorAttachmentPolicy": 0,
+      "attestationPolicy": 0,
+      "credentialGeneration": 2
+    },
+    "proposedRecoveryConfigHash": "0xdde3d687f6c4a1634c6947453ed628921e92eb5457a4522bfd8988ba8ebe6ced",
+    "context": {
+      "envelopeVersion": 2,
+      "authorityKind": 2,
+      "actionType": 10,
+      "factorBitmap": 6,
+      "account": "0x1000000000000000000000000000000000000001",
+      "chainId": "11155111",
+      "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "authorizedIntentHash": "0xe9f3212cdd417f9073632105541014630e5e2ec47a147dda505ee9068e0b7f0e",
+      "userOperationHash": "0xe60577ccf84172c4bbefb8ba4cf708b61a723e8cca87fc33cb816d177cde51ed",
+      "requestId": "0xe9f3212cdd417f9073632105541014630e5e2ec47a147dda505ee9068e0b7f0e",
+      "currentRecoveryConfigHash": "0x4619a9e1ea3902374ce5583a8717b4256379bec15cb67082a9eb285f6b078d24",
+      "validatorEpoch": 3,
+      "recoveryEpoch": 2,
+      "validAfter": 1800000000,
+      "validUntil": 1800003600,
+      "recoveryDelaySeconds": 172800,
+      "recoveryExpirySeconds": 604800,
+      "proposedValidatorCommitment": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "proposedRecoveryConfigHash": "0xdde3d687f6c4a1634c6947453ed628921e92eb5457a4522bfd8988ba8ebe6ced",
+      "proposedRecoveryEpoch": 3,
+      "primaryDeviceCommitment": "0x992638b3e5cc5ec40ccd65fe03c0126fd255c2ae4659a89a329617fc57c433c1",
+      "hardwareSecurityKeyCommitment": "0xe4efcf8b4ee81f585d88fd427d0b5b446f8d3be6d2fdfb406824c2b38adef52d",
+      "recoveryFactorCommitment": "0x9c65a07f871da896d60862ce4eb56e8dbe4f56bf27001580db8f44331a7d858c",
+      "firstFactorCommitment": "0xe4efcf8b4ee81f585d88fd427d0b5b446f8d3be6d2fdfb406824c2b38adef52d",
+      "secondFactorCommitment": "0x9c65a07f871da896d60862ce4eb56e8dbe4f56bf27001580db8f44331a7d858c"
+    },
+    "contextHash": "0xc6204be86312cf0e688f443300619bdcaa5fb978a6b5fa072e72765a8d5d2a0f",
+    "oldFactorRevokedByEpochAndConfigChange": true,
+    "signatureCreated": false,
+    "userOperationCreated": false
+  },
+  "negativeVectors": [
+    {
+      "id": "modified_credential_generation",
+      "changedFields": "primaryDevice.credentialGeneration",
+      "expectedError": "factor_evidence_commitment_mismatch",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "modified_policy_hash",
+      "changedFields": "primaryDevice.originPolicyHash",
+      "expectedError": "factor_evidence_commitment_mismatch",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "wrong_role",
+      "changedFields": "firstDescriptor.role",
+      "expectedError": "factor_evidence_role_order_invalid",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "wrong_verifier_kind",
+      "changedFields": "primaryDevice.verifierKind",
+      "expectedError": "primary_device_verifierKind_invalid",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "wrong_domain",
+      "changedFields": "primaryDevice.recoveryDomainId",
+      "expectedError": "recoveryDomainId_unsupported",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "stale_epoch",
+      "changedFields": "validatorEpoch",
+      "expectedError": "validator_epoch_stale",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "duplicate_factor",
+      "changedFields": "hardwareSecurityKeyCommitment",
+      "expectedError": "recovery_factor_commitments_must_be_unique",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "invalid_bitmap",
+      "changedFields": "factorBitmap",
+      "expectedError": "recovery_factor_bitmap_invalid",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    },
+    {
+      "id": "same_factor_rotation",
+      "changedFields": "proposedRecoveryFactor.publicVerificationMaterialHash",
+      "expectedError": "rotated_factor_public_material_must_change",
+      "rejected": true,
+      "signatureCreated": false,
+      "userOperationCreated": false
+    }
+  ],
+  "compatibility": {
+    "o32VectorPackageChanged": false,
+    "o33VectorPackageChanged": false,
+    "o32IntentAndAuthorityDigestTypesRetained": true,
+    "o36_1LegacyFactorCommitmentAcceptedByFutureSolidity": false,
+    "o35AccountInitializationFieldCountRetained": 20,
+    "descriptorFieldsCarriedInPublicOneTimeEvidence": true
+  },
+  "runtimeFreeze": {
+    "node": "26.0.0",
+    "npm": "11.12.1",
+    "lockfileVersion": 3,
+    "installCommand": "npm ci",
+    "runtimeCheckCommand": "npm run check:o37-1-runtime"
+  },
+  "securityBoundary": {
+    "privateMaterialStored": false,
+    "privateMaterialCommitted": false,
+    "credentialCreated": false,
+    "signatureCreated": false,
+    "userOperationCreated": false,
+    "solidityCreated": false,
+    "bytecodeCreated": false,
+    "deploymentPerformed": false,
+    "accountCreated": false,
+    "rpcUsed": false,
+    "fundsMoved": false,
+    "publicMutationOccurred": false
+  }
+}

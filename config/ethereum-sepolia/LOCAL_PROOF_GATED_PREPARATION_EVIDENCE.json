@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "philcore-local-proof-gated-preparation-evidence-v1",
+  "phase": "O.20",
+  "generatedAt": "2026-07-26T03:02:30.411Z",
+  "architectureApproval": {
+    "status": "Conditionally Approved for Disposable Sepolia Preparation",
+    "scope": "one disposable Ethereum Sepolia experiment preparation only",
+    "ethereumVerifiesStwoProof": false
+  },
+  "canonicalIdentityBinding": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+    "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyReferenceId": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "sameCanonicalRecord": true,
+    "privateMaterialAccessed": false
+  },
+  "sourceCommit": "13b28149f99c4fae261b96f56fb9ad2790b21e23",
+  "repositoryCleanAtGeneration": true,
+  "manifest": {
+    "path": "config/ethereum-sepolia/LOCAL_PROOF_GATED_DEPLOYMENT_MANIFEST_PROPOSED.json",
+    "status": "proposed",
+    "sha256": "e8657982eec3068d32c919edcd8352764491e2213db7d12d04d726ca025f9e04"
+  },
+  "compiler": {
+    "solidity": "0.8.24",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "hardhat": "2.28.4"
+  },
+  "bytecode": [
+    {
+      "contract": "PhilCoreLocalProofConfirmationTargetV1",
+      "creationBytecodeHash": "0x2d6acc0d004e51fed77a473beaba524a60a0a617667be36f064fbe3c4aea2127",
+      "deployedBytecodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad"
+    },
+    {
+      "contract": "PhilCore4337LocalProofAccountFactoryV1",
+      "creationBytecodeHash": "0x1bd6d5d0f49474af2dbc2630b25316cf0856c4ea4d1aee869efdce0fcd03e147",
+      "deployedBytecodeHash": "0x8a62bef9a075d1638a8ebed8030d39928f31adaf86cf11d850a16ed815dba5a0"
+    },
+    {
+      "contract": "PhilCore4337LocalProofAccountV1",
+      "creationBytecodeHash": "0xdfe8c94b7fa228961f3048c068a171778672e94650c1404eb8c345c1e5926881",
+      "deployedBytecodeHash": "0xbec05380e8225faa3f15b4b7894c90bc9e591a555839057ab71ceed5922ab76c"
+    }
+  ],
+  "staticAnalysis": {
+    "status": "completed_with_findings",
+    "unresolvedCriticalOrHigh": []
+  },
+  "contractInvariants": {
+    "status": "passed",
+    "failed": []
+  },
+  "readOnlyPreflight": {
+    "schemaVersion": "philcore-local-proof-gated-preparation-v1",
+    "status": "READ_ONLY_PREFLIGHT_PASSED",
+    "checkedAt": "2026-07-26T03:02:28.648Z",
+    "rpcClassification": "https://eth-sepolia.g.alchemy.com/<redacted>",
+    "chainId": 11155111,
+    "blockNumber": "11351915",
+    "entryPoint": {
+      "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "codePresent": true,
+      "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+      "entryPointBalance": "11226280553540151884339",
+      "getNonceCallSupported": true
+    },
+    "proposedAddresses": {
+      "confirmationTarget": {
+        "address": "0x7e26405275C84c541e9f9aB68D1C6F7234a16345",
+        "codeStatus": "empty",
+        "balanceWei": "0"
+      },
+      "accountFactory": {
+        "address": "0x7096565D191e664390b7041cCf297F443793e266",
+        "codeStatus": "empty",
+        "balanceWei": "0"
+      },
+      "firstAccount": {
+        "address": "0x30283Bfd6D65472d9f3b0A173382675b947C69d1",
+        "codeStatus": "empty",
+        "balanceWei": "0"
+      }
+    },
+    "deployer": {
+      "address": "0x17f2F9f2e0aaf90768c0f26579fba5043Ef0C903",
+      "configuredPendingNonce": "37",
+      "observedPendingNonce": "37",
+      "nonceMatched": true,
+      "balanceWei": "192724712126032299"
+    },
+    "validator": {
+      "address": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "codePresent": false,
+      "balanceWei": "0"
+    },
+    "feeData": {
+      "gasPriceWei": "1116416838",
+      "source": "rpc"
+    },
+    "mutationMethodsExposed": false,
+    "mutationAttempted": false,
+    "publicMutationOccurred": false,
+    "errors": []
+  },
+  "bundler": {
+    "status": "BUNDLER_ESTIMATE_NOT_CONFIGURED",
+    "endpointClassification": "not_configured",
+    "mutationMethodsExposed": false,
+    "supportedEntryPoint": "not_checked"
+  },
+  "proposedAddresses": {
+    "status": "calculated",
+    "targetAddress": "0x7e26405275C84c541e9f9aB68D1C6F7234a16345",
+    "factoryAddress": "0x7096565D191e664390b7041cCf297F443793e266",
+    "accountAddress": "0x30283Bfd6D65472d9f3b0A173382675b947C69d1",
+    "targetDeploymentNonce": "37",
+    "factoryDeploymentNonce": "38",
+    "inputs": {
+      "deployerAddress": "0x17f2F9f2e0aaf90768c0f26579fba5043Ef0C903",
+      "ownerAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+      "validatorKeyId": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+      "accountSalt": "89057484435249231188944015808027455059582659562521356732679207242648809593390",
+      "chainId": 11155111,
+      "entryPointAddress": "0x0000000071727De22E5E9d8BAf0edAc6f37da032"
+    },
+    "missing": [],
+    "errors": []
+  },
+  "gasEstimates": {
+    "source": "live_read_only_rpc",
+    "targetDeploymentGas": "307816",
+    "factoryDeploymentGas": "1050089",
+    "gasPriceWei": "1116416838",
+    "bundlerEstimateStatus": "BUNDLER_ESTIMATE_NOT_CONFIGURED"
+  },
+  "funding": {
+    "status": "estimates_unresolved",
+    "bufferBasisPoints": 2500,
+    "entryPointDepositRequired": false,
+    "counterfactualAccountPreFundingRequired": true,
+    "unusedSepoliaEthTreatment": "retain only in disposable test addresses",
+    "errors": [
+      "live gas or fee estimates are unresolved"
+    ]
+  },
+  "firstUserOperation": {
+    "status": "inputs_required",
+    "securityModel": "local-proof-gated-v1",
+    "sender": "0x30283Bfd6D65472d9f3b0A173382675b947C69d1",
+    "nonce": null,
+    "factory": "0x7096565D191e664390b7041cCf297F443793e266",
+    "factoryData": null,
+    "callData": null,
+    "gasFields": null,
+    "feeFields": null,
+    "paymasterAndData": "0x",
+    "signature": "0x",
+    "actionId": null,
+    "authorizationDigest": null,
+    "expiry": null,
+    "valueWei": "0",
+    "tokenMovement": false,
+    "batchEnabled": false,
+    "delegatecallEnabled": false,
+    "paymasterEnabled": false,
+    "signaturePresent": false,
+    "publicMutationAuthorized": false,
+    "publicMutationOccurred": false,
+    "missingInputs": [
+      "PHILCORE_LOCAL_PROOF_ACTION_ID",
+      "PHILCORE_LOCAL_PROOF_AUTHORIZATION_DIGEST",
+      "PHILCORE_LOCAL_PROOF_EXPIRY",
+      "PHILCORE_LOCAL_PROOF_VERIFICATION_GAS_LIMIT",
+      "PHILCORE_LOCAL_PROOF_CALL_GAS_LIMIT",
+      "PHILCORE_LOCAL_PROOF_PRE_VERIFICATION_GAS",
+      "PHILCORE_LOCAL_PROOF_MAX_PRIORITY_FEE_PER_GAS"
+    ]
+  },
+  "mutationGatesPresent": false,
+  "mutationAttempted": false,
+  "publicMutationOccurred": false,
+  "deploymentManifestAccepted": false,
+  "productionApproved": false
+}

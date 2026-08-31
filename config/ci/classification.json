@@ -1,0 +1,2621 @@
+{
+  "schemaVersion": 2,
+  "baselineCommit": "ec0ef49cd9c17d0fa2a0399761966a08a5c990cb",
+  "lanes": [
+    "required_product_runtime",
+    "solidity_erc4337",
+    "desktop",
+    "proving",
+    "deterministic_evidence",
+    "historical_known_baseline",
+    "environment_dependent",
+    "physical_ceremony_manual",
+    "public_network_prohibited"
+  ],
+  "requiredAutomatedLanes": [
+    "required_product_runtime",
+    "solidity_erc4337",
+    "desktop",
+    "proving",
+    "deterministic_evidence"
+  ],
+  "items": [
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-ipc.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-authorization-ipc.test.cjs",
+      "notes": "Offline Step 6C-2 narrow preload/IPC contract. No device, external network, production authority, or physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-ui-state.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-authorization-ui-state.test.cjs",
+      "notes": "Offline Step 6C-3 renderer-state, enrollment-label, stale-poll, and terminal-QR regression cases. No device, external network, production authority, or physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-enrollment-urlsession-integration.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-enrollment-urlsession-integration.test.cjs",
+      "notes": "Offline Step 6C-3 production-shaped URLSession HEAD/POST interoperability against an isolated local listener. Synthetic enrollment only; no physical device, external network, production authority, or ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-storage.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-authorization-storage.test.cjs",
+      "notes": "Offline Step 6C-2 OS-wrapping adapter and durable journal-store tests using a disclosed synthetic wrapping adapter."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./apps/philcore-desktop/test/desktop-routine-authorization.test.cjs",
+      "notes": "Offline Step 6C-2 authenticated Desktop host/listener composition against the isolated local Hardhat environment."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-local-product-runtime.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c-product.config.cjs --no-compile ./apps/philcore-desktop/test/desktop-routine-authorization-local-product-runtime.test.cjs",
+      "notes": "Offline Step 6C-2 fresh-random product-owned local runtime. Synthetic enrollment only; no physical device or external network."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-product-flow.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c-product.config.cjs --no-compile ./apps/philcore-desktop/test/desktop-routine-authorization-product-flow.test.cjs",
+      "notes": "Offline Step 6C-2 protected enrollment-to-local-receipt product flow with disclosed synthetic phone authority."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-product-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-authorization-product-host.test.cjs",
+      "notes": "Offline Step 6C-2 product-host ordering and deletion boundary."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-routine-device-enrollment-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-routine-device-enrollment-host.test.cjs",
+      "notes": "Offline Step 6C-2 RFC1918 enrollment listener with synthetic proof of possession; not physical-device evidence."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-controlled-sepolia-beta-ceremony-lifecycle.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-controlled-sepolia-beta-ceremony-lifecycle.test.cjs",
+      "notes": "Offline Phase 1 P3 ceremony lifecycle, sanitized owner-only evidence, restart invalidation, stale-attempt isolation, and companion source-identity wiring. Synthetic phone-free evidence only."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-action-lifecycle.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-action-lifecycle.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-alpha-product.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-alpha-product.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-a.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-a.test.cjs",
+      "notes": "Read-only UI claim locks for the Controlled Sepolia Beta projection, deferred recovery surface, locked-action gating, and sanitized public evidence."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-b.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-b.test.cjs",
+      "notes": "Offline Pass B semantic locks for concise Phil guidance, plain-language authorization summaries, fail-closed failure copy, deferred recovery, and local-versus-completed-Beta separation."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-c.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-c.test.cjs",
+      "notes": "Offline Pass C visual-state locks for the supported Desktop minimum, explicit state labels and icons, optional technical evidence, reduced motion, focus treatment, and ordinary Ethereum/recovery hierarchy."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-d.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-controlled-beta-ui-pass-d.test.cjs",
+      "notes": "Offline Pass D release locks for packaged developer-surface isolation, final About and Advanced evidence, truthful Beta claims, secret-free public evidence, and iOS DEBUG-only fixture routing."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-release-artifact-continuity.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-release-artifact-continuity.test.cjs",
+      "notes": "Offline Desktop release-engineering locks for canonical signing/notarization lineage, fail-closed artifact hashes, external Apple credentials, and unchanged historical evidence. Performs no signing, stapling, or notarization submission."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-approval.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-approval.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-bridge.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-bridge.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-transport.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-transport.test.cjs",
+      "notes": "Automated desktop recovery-transport host drill (O.44). Uses Hardhat local static verifier only. Not a completed physical ceremony; no real listener, phone, or network."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-e2e.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-e2e.test.cjs",
+      "notes": "Automated desktop Electron e2e compatibility test executed by ci:lane:desktop. Requires a working Electron GUI session; not a physical ceremony. Local agent environments that trap Electron (SIGTRAP/133) are an environmental limitation — hosted macos-14 is the merge gate."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-native-iphone-pairing.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "physical_ceremony_manual",
+      "command": "node apps/philcore-desktop/test/desktop-native-iphone-pairing.test.cjs",
+      "notes": "Physical iPhone / WebAuthn user-presence / pairing ceremony path. Never reported as an automated pass. Excluded from ci:lane:desktop."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-o10-trusted-tester-ops.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-o10-trusted-tester-ops.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-o11-1-contamination.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-o11-1-contamination.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-o11-trusted-tester-cycle.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-o11-trusted-tester-cycle.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-o9-distribution.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-o9-distribution.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-package-pruning.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-package-pruning.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-platform-auth.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-platform-auth.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-platform-webauthn.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "physical_ceremony_manual",
+      "command": "node apps/philcore-desktop/test/desktop-platform-webauthn.test.cjs",
+      "notes": "Physical iPhone / WebAuthn user-presence / pairing ceremony path. Never reported as an automated pass. Excluded from ci:lane:desktop."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-philenator-engine.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-philenator-engine.test.cjs",
+      "notes": "Offline pinned Philenator manifest, local SVG composition, randomization, provenance, and active-content rejection coverage. No external network, identity authority, proof, signing, or device use."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-preload-packaging.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-preload-packaging.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-real-local-authorization.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-real-local-authorization.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-noir-root-proof-product.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-noir-root-proof-product.test.cjs",
+      "notes": "Offline product-path Noir/Barretenberg proof, independent native verification, hostile-input rejection, and proof-privacy regression coverage. No device, public network, deployment, transaction, or external prover."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-ceremony-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-ceremony-host.test.cjs",
+      "notes": "Main-only dormant recovery ceremony host adapter tests; deterministic injected clock/randomness only. No IPC, renderer, or physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-genesis-staging-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-genesis-staging-host.test.cjs",
+      "notes": "Package 5B-0.5 dormant recovery genesis staging host suite. Dormancy: the host module has no product wiring and is required by no main, preload, renderer, IPC, or bridge-contract file. No IPC. No renderer. No network. No signing. No physical ceremony. Intentional dist-local exclusion: the host file is deliberately absent from build-local.cjs requiredFiles, while package-local.cjs picks it up through its whole-tree src copy."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-genesis-coordinator.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-genesis-coordinator.test.cjs",
+      "notes": "Dormant main-only genesis staging coordinator suite. The coordinator exclusively owns one Package 5B-0.5 staging host, performs no filesystem access of its own, and is required by no main, preload, renderer, IPC, or bridge-contract file. Deterministic injected clock/randomness only. No IPC. No renderer. No device adapter. No network. No signing. No physical ceremony. Intentional dist-local exclusion: the coordinator file is deliberately absent from build-local.cjs requiredFiles, while package-local.cjs picks it up through its whole-tree src copy."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-staging-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-staging-host.test.cjs",
+      "notes": "Dormant main-only recovery staging host filesystem, lock, durability, and restart-reconciliation tests with injected deterministic dependencies; no IPC, renderer, network, signing, or physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-enrollment.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-enrollment.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-recovery-secure-origin.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-recovery-secure-origin.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-renderer-startup.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-renderer-startup.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-reset-local-alpha.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-reset-local-alpha.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-runtime-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-runtime-host.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-security.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-security.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-user-operation-preparation.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-sepolia-user-operation-preparation.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-storage-restart.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-storage-restart.test.cjs",
+      "notes": "Automated desktop compatibility test executed individually by ci:lane:desktop (classified desktop_test_file list). Not a completed physical ceremony."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-user-presence.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "physical_ceremony_manual",
+      "command": "node apps/philcore-desktop/test/desktop-user-presence.test.cjs",
+      "notes": "Physical iPhone / WebAuthn user-presence / pairing ceremony path. Never reported as an automated pass. Excluded from ci:lane:desktop."
+    },
+    {
+      "id": "evidence:o37-10-v2-minimal-account:check",
+      "kind": "evidence_check",
+      "lane": "deterministic_evidence",
+      "command": "npm run evidence:o37-10-v2-minimal-account -- --check",
+      "notes": "O.37.10 evidence --check is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "proving:phase34_core",
+      "kind": "proving_target",
+      "lane": "proving",
+      "command": "cargo +nightly-2025-07-14 test --manifest-path ./proving/Cargo.toml --test phase34_core",
+      "notes": "Pinned Rust nightly from proving/rust-toolchain.toml / package.json."
+    },
+    {
+      "id": "script:check:o37-1-runtime",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run check:o37-1-runtime",
+      "notes": "Committed evidence/toolchain --check that is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:check:starknet-toolchain",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run check:starknet-toolchain",
+      "notes": "Committed evidence/toolchain --check that is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:compile",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run compile",
+      "notes": "Static/type and compile gate; also invoked by classification_static workflow job.",
+      "execution": {
+        "mode": "workflow_step",
+        "workflowStep": "classification-static / Compile"
+      }
+    },
+    {
+      "id": "script:desktop:test",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run desktop:test",
+      "notes": "Mixed aggregate via run-desktop-tests.cjs: includes physical/manual suites and omits required desktop-e2e and desktop-o9 files. CI desktop lane executes classified desktop_test_file items instead."
+    },
+    {
+      "id": "script:test:device-vault-ecdsa-signing",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:device-vault-ecdsa-signing",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:device-vault-ecdsa-custody.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:erc4337-recovery",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:erc4337-recovery",
+      "notes": "Alias of unit:philcore-erc4337-rotation-recovery.test.cjs.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:philcore-erc4337-rotation-recovery.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:local-device-signing-session",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run test:local-device-signing-session",
+      "notes": "Fails without local deploy-session / identity demo fixtures on a clean runner; classified environment_dependent rather than forced green."
+    },
+    {
+      "id": "script:test:o34-v2-account-core",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o34-v2-account-core",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o34-v2-account-core.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o35-v2-factory-lifecycle-design",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o35-v2-factory-lifecycle-design",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o35-v2-factory-account-lifecycle-design.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o36-1-v2-security-interface-freeze",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o36-1-v2-security-interface-freeze",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o36-1-v2-security-interface-freeze.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o36-v2-solidity-implementation-gate",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o36-v2-solidity-implementation-gate",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o36-v2-solidity-implementation-gate.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-1-recovery-evidence",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-1-recovery-evidence",
+      "notes": "Alias of unit:o37-1-v2-recovery-evidence.test.cjs — same required Solidity lane.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-1-v2-recovery-evidence.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-10-v2-minimal-account",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-10-v2-minimal-account",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-10-v2-minimal-account.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-2-deterministic-fixtures",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run test:o37-2-deterministic-fixtures",
+      "notes": "Alias of unit:o37-2-v2-deterministic-fixtures.test.cjs; stale fixture identity tracked in historical manifest.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-2-v2-deterministic-fixtures.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-3-v2-solidity-implementation-conflict",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-3-v2-solidity-implementation-conflict",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-3-v2-solidity-implementation-conflict.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-4-authority-transport",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run test:o37-4-authority-transport",
+      "notes": "Alias of unit:o37-4-v2-authority-transport.test.cjs; stale transport package identity tracked in historical manifest.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-4-v2-authority-transport.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-5-v2-solidity-implementation-conflict",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-5-v2-solidity-implementation-conflict",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-5-v2-solidity-implementation-conflict.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-6-v2-code-size-architecture",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-6-v2-code-size-architecture",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-6-v2-code-size-architecture.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-7-static-verifier",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-7-static-verifier",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-7-v2-static-verifier.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o37-v2-solidity-implementation-conflict",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o37-v2-solidity-implementation-conflict",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o37-v2-solidity-implementation-conflict.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o38-v2-readiness",
+      "kind": "package_script",
+      "lane": "public_network_prohibited",
+      "command": "npm run test:o38-v2-readiness",
+      "notes": "Public-network / submission / monitoring / deployment operation."
+    },
+    {
+      "id": "script:test:o39-consumer-recovery",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:o39-consumer-recovery",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o39-consumer-recovery.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o40-recovery-enrollment-preflight",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run test:o40-recovery-enrollment-preflight",
+      "notes": ""
+    },
+    {
+      "id": "script:test:o41-recovery-enrollment-environment",
+      "kind": "package_script",
+      "lane": "physical_ceremony_manual",
+      "command": "npm run test:o41-recovery-enrollment-environment",
+      "notes": ""
+    },
+    {
+      "id": "script:test:o42-1-platform-webauthn",
+      "kind": "package_script",
+      "lane": "physical_ceremony_manual",
+      "command": "npm run test:o42-1-platform-webauthn",
+      "notes": ""
+    },
+    {
+      "id": "script:test:o42-recovery-enrollment-ceremony",
+      "kind": "package_script",
+      "lane": "physical_ceremony_manual",
+      "command": "npm run test:o42-recovery-enrollment-ceremony",
+      "notes": ""
+    },
+    {
+      "id": "script:test:o43-native-iphone",
+      "kind": "package_script",
+      "lane": "physical_ceremony_manual",
+      "command": "npm run test:o43-native-iphone",
+      "notes": ""
+    },
+    {
+      "id": "script:test:o44-recovery-transport",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run test:o44-recovery-transport",
+      "notes": "Alias of unit:o44-recovery-transport.test.cjs — offline deterministic transport protocol.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o44-recovery-transport.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:o45-recovery-bootstrap",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run test:o45-recovery-bootstrap",
+      "notes": "Alias of unit:o45-recovery-bootstrap.test.cjs — offline deterministic QR bootstrap transport protocol.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:o45-recovery-bootstrap.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step2-device-recovery",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step2-device-recovery",
+      "notes": "Offline synthetic Step 2 scoped-identity, recovery, and device-approval boundary tests; no physical device, signing service, or network.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step2-device-recovery.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step3-cairo",
+      "kind": "package_script",
+      "lane": "proving",
+      "command": "npm run test:phil-v1-step3-cairo",
+      "notes": "Offline Starknet Foundry tests for the Step 3 reference verifier adapter; no RPC, deployment, transaction, or public-network mutation.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step3-noir",
+      "kind": "package_script",
+      "lane": "proving",
+      "command": "npm run test:phil-v1-step3-noir",
+      "notes": "Offline pinned Noir/Barretenberg reference-circuit tests using synthetic fixtures only; no secrets, device, RPC, deployment, or public-network mutation.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step3-root-proof-adapter",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step3-root-proof-adapter",
+      "notes": "Alias of the offline Step 3 root-proof adapter unit suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step3-root-proof-adapter.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step4-cairo",
+      "kind": "package_script",
+      "lane": "proving",
+      "command": "npm run test:phil-v1-step4-cairo",
+      "notes": "Offline Starknet Foundry tests for the Step 4 composed-account gate; no RPC, deployment, transaction, or public-network mutation.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step4-composed-account",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step4-composed-account",
+      "notes": "Alias of the deterministic in-memory Step 4 composed authorization suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step4-composed-account-authorization.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step5-pq-migration",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step5-pq-migration",
+      "notes": "Alias of the offline algorithm-agility and post-quantum migration control-plane suite; it creates no PQ security authority.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step5-post-quantum-migration.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6a-base-adapter",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6a-base-adapter",
+      "notes": "Alias of the offline, non-authoritative Step 6A Base adapter suite; no provider, signing, deployment, or network mutation.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6a-base-network-adapter.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6b-account",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:phil-v1-step6b-account",
+      "notes": "Alias of the local Hardhat Step 6B smart-account composition suite; no public provider, deployment, transaction, or meaningful asset.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6b-local-smart-account.test.cjs"
+      }
+    },
+    {
+      "id": "script:verify:phil-v1-step3-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step3-artifacts",
+      "notes": "Read-only deterministic verification of committed Step 3 reference-adapter artifacts.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:phil-v1-step4-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step4-artifacts",
+      "notes": "Read-only deterministic verification of committed Step 4 composed-authorization artifacts.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:phil-v1-step5-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step5-artifacts",
+      "notes": "Read-only deterministic verification of committed Step 5 migration-control artifacts.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:phil-v1-step6a-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step6a-artifacts",
+      "notes": "Read-only deterministic verification of committed Step 6A adapter artifacts.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-desktop",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-desktop",
+      "notes": "Alias of the classified Step 6C-2 Desktop product-host suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-enrollment",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c2-enrollment",
+      "notes": "Alias of the strict V2 routine-device enrollment protocol suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-v1-step6c2-enrollment.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-enrollment-host",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-enrollment-host",
+      "notes": "Alias of the classified dedicated enrollment-listener suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-device-enrollment-host.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-local-product-runtime",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-local-product-runtime",
+      "notes": "Alias of the classified fresh-random local product-runtime suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-local-product-runtime.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-product-flow",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-product-flow",
+      "notes": "Alias of the classified protected enrollment-to-receipt product-flow suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-product-flow.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-product-host",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-product-host",
+      "notes": "Alias of the classified product-host ordering suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-product-host.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-ipc",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-ipc",
+      "notes": "Alias of the classified Step 6C-2 narrow IPC suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-ipc.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-storage",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c2-storage",
+      "notes": "Alias of the classified Step 6C-2 protected storage suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-routine-authorization-storage.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-transport",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c2-transport",
+      "notes": "Alias of the deterministic authenticated routine transport suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-v1-step6c2-transport.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c2-ios-simulator",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c2-ios-simulator",
+      "notes": "Automated iPhone Simulator-only cross-language transport, UI-state, cancellation, and no-sign-before-presentation suite. Not physical-device evidence.",
+      "execution": { "mode": "executed_directly" }
+    },
+    {
+      "id": "script:test:phil-v1-desktop-noir-root-proof",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-desktop-noir-root-proof",
+      "notes": "Alias of the classified offline product-path Noir/Barretenberg proof and privacy regression suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-noir-root-proof-product.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-desktop",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-v1-step6c-desktop",
+      "notes": "Offline synthetic Step 6C protected Desktop coordinator boundary; no physical device, RPC, signing, deployment, or public network.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-desktop.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-entrypoint",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:phil-v1-step6c-entrypoint",
+      "notes": "Offline local Hardhat integration against the official EntryPoint v0.7 implementation.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-entrypoint.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-ios-synthetic",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c-ios-synthetic",
+      "notes": "Disclosed synthetic P-256 compatibility only; not Secure Enclave, user-presence, signing, or physical-device evidence.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-ios-synthetic.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-journal",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c-journal",
+      "notes": "Offline in-memory journal and encrypted-frame state-machine tests; product durable host remains a separate gate.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-journal.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-records",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c-records",
+      "notes": "Offline deterministic Step 6C authorization record construction and hostile-substitution validation.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-records.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:phil-v1-step6c-wire",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-v1-step6c-wire",
+      "notes": "Offline deterministic strict DER, low-S, raw-wire, and P-256 public-key validation.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:phil-v1-step6c-wire.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:proving",
+      "kind": "package_script",
+      "lane": "proving",
+      "command": "npm run test:proving",
+      "notes": "",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "proving:phase34_core"
+      }
+    },
+    {
+      "id": "script:test:recovery-authority-custody",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:recovery-authority-custody",
+      "notes": "Focused npm wrapper around a classified unit file; lane mirrors the underlying suite.",
+      "execution": {
+        "mode": "alias_of",
+        "aliasOf": "unit:philcore-recovery-authority-custody.test.cjs"
+      }
+    },
+    {
+      "id": "script:test:unit",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run test:unit",
+      "notes": "Mixed known-red aggregate over the entire unit tree; environment-dependent and not an independently verified historical identity. Not a merge gate."
+    },
+    {
+      "id": "script:typecheck",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run typecheck",
+      "notes": "Static/type and compile gate; also invoked by classification_static workflow job.",
+      "execution": {
+        "mode": "workflow_step",
+        "workflowStep": "classification-static / Typecheck"
+      }
+    },
+    {
+      "id": "script:verify:base-consumer-execution",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run verify:base-consumer-execution",
+      "notes": "Diagnostic verify against local/deployed artifact state."
+    },
+    {
+      "id": "script:verify:phil-v1-step6c2-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step6c2-artifacts",
+      "notes": "Offline deterministic verification of the Step 6C-2 authenticated transport and product-wiring fixture/manifest.",
+      "execution": { "mode": "executed_directly" }
+    },
+    {
+      "id": "script:verify:phil-v1-step6c-artifacts",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:phil-v1-step6c-artifacts",
+      "notes": "Offline deterministic verification of the committed disclosed-synthetic Step 6C fixture and implementation manifest.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:base-fact-mirror",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run verify:base-fact-mirror",
+      "notes": "Diagnostic verify against local/deployed artifact state."
+    },
+    {
+      "id": "script:verify:base-nullifier-consumption",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run verify:base-nullifier-consumption",
+      "notes": "Diagnostic verify against local/deployed artifact state."
+    },
+    {
+      "id": "script:verify:o32-v2-cryptographic-vectors",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o32-v2-cryptographic-vectors",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o33-validator-vectors",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o33-validator-vectors",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o37-1-recovery-evidence-vectors",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:o37-1-recovery-evidence-vectors",
+      "notes": "Committed evidence/toolchain --check that is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o37-2-deterministic-fixtures",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o37-2-deterministic-fixtures",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o37-4-authority-transport-vectors",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o37-4-authority-transport-vectors",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o39-consumer-recovery-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o39-consumer-recovery-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o39-consumer-recovery-fixtures",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:o39-consumer-recovery-fixtures",
+      "notes": "Committed evidence/toolchain --check that is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o40-recovery-enrollment-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o40-recovery-enrollment-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o41-recovery-enrollment-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o41-recovery-enrollment-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o42-1-platform-webauthn-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o42-1-platform-webauthn-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o42-recovery-enrollment-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o42-recovery-enrollment-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o43-native-iphone-evidence",
+      "kind": "package_script",
+      "lane": "historical_known_baseline",
+      "command": "npm run verify:o43-native-iphone-evidence",
+      "notes": "Evidence --check currently fails because committed artifacts are stale; tracked as historical baseline, never greened by regeneration in CI.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o43-native-iphone-fixtures",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:o43-native-iphone-fixtures",
+      "notes": "Committed evidence/toolchain --check that is green at this baseline without regeneration.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o44-recovery-transport-fixtures",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:o44-recovery-transport-fixtures",
+      "notes": "O.44 offline recovery-approval transport fixture --check; deterministic synthetic vectors only.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:o45-recovery-bootstrap-fixtures",
+      "kind": "package_script",
+      "lane": "deterministic_evidence",
+      "command": "npm run verify:o45-recovery-bootstrap-fixtures",
+      "notes": "O.45 offline recovery-bootstrap fixture --check; deterministic synthetic vectors only.",
+      "execution": {
+        "mode": "executed_directly"
+      }
+    },
+    {
+      "id": "script:verify:philcore-recovery-state",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run verify:philcore-recovery-state",
+      "notes": "Diagnostic verify against local/deployed artifact state."
+    },
+    {
+      "id": "script:verify:philcore-user-operation-execution",
+      "kind": "package_script",
+      "lane": "public_network_prohibited",
+      "command": "npm run verify:philcore-user-operation-execution",
+      "notes": "Public-network / submission / monitoring / deployment operation."
+    },
+    {
+      "id": "script:verify:starknet-artifacts",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run verify:starknet-artifacts",
+      "notes": "Invokes Starknet artifact harnesses and may rewrite readiness manifests; not a pure committed --check gate."
+    },
+    {
+      "id": "script:verify:starknet-publication-artifact-binding",
+      "kind": "package_script",
+      "lane": "public_network_prohibited",
+      "command": "npm run verify:starknet-publication-artifact-binding",
+      "notes": "Public-network / submission / monitoring / deployment operation."
+    },
+    {
+      "id": "unit:base-authorization-execution-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/base-authorization-execution-preparation.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:base-authorization-execution-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/base-authorization-execution-signing.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:base-consumer.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/base-consumer.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing smart-account deploy proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:ci-classification.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/ci-classification.test.cjs",
+      "notes": "Deterministic CI classifier/runner unit coverage."
+    },
+    {
+      "id": "unit:ci-starknet-toolchain-installer.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/ci-starknet-toolchain-installer.test.cjs",
+      "notes": "CI installer unit tests for pinned Scarb/cairo-execute provisioning; not product runtime behavior."
+    },
+    {
+      "id": "unit:device-vault-ecdsa-custody.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/device-vault-ecdsa-custody.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:ethereum-sepolia-local-environment.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/ethereum-sepolia-local-environment.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:ethereum-sepolia-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/ethereum-sepolia-readiness.test.cjs",
+      "notes": "Fails: AssertionError against committed Sepolia readiness expectations (1 failing)."
+    },
+    {
+      "id": "unit:evidence-provenance-schema.test.cjs",
+      "kind": "unit_test",
+      "lane": "deterministic_evidence",
+      "command": "npx hardhat test --no-compile ./test/unit/evidence-provenance-schema.test.cjs",
+      "notes": "Tests deterministic provenance schema mechanics and permanent legacy-evidence locks; does not automate any physical ceremony."
+    },
+    {
+      "id": "unit:evidence-provenance-v2-registry.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/evidence-provenance-v2-registry.test.cjs",
+      "notes": "Private-history topology suite retained for provenance review but excluded from the clean public deterministic lane because its fixtures require private commit objects that are intentionally absent from the independent public history."
+    },
+    {
+      "id": "unit:hash-parity.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/hash-parity.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:ios-companion-bundle-identity.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/ios-companion-bundle-identity.test.cjs",
+      "notes": "Xcode-independent static correctness check for companion Info.plist identity substitutions and app-target pbxproj guards; does not automate a simulator, physical device, credential, signing, or ceremony."
+    },
+    {
+      "id": "unit:l1-base-mirror.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-base-mirror.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:l1-fact-anchor-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-fact-anchor-preparation.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:l1-fact-anchor-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-fact-anchor-signing.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:l1-to-base-relay-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-to-base-relay-preparation.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:l1-to-base-relay-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-to-base-relay-signing.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:l1-trust-anchor.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/l1-trust-anchor.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:local-device-signing-session-integration.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/local-device-signing-session-integration.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:local-device-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/local-device-signing.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:local-proof-gated-deployment-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/local-proof-gated-deployment-preparation.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:mint-path.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/mint-path.test.cjs",
+      "notes": "Fails with ENOENT under proving/out (missing proof artifacts). Requires local proving outputs."
+    },
+    {
+      "id": "unit:o21-3-final-submission-boundary-review.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o21-3-final-submission-boundary-review.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o22-current-source-deployment-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o22-current-source-deployment-readiness.test.cjs",
+      "notes": "Fails: AssertionError on localProofGatedDeploymentPreparation.ts readiness expectations (3 failing)."
+    },
+    {
+      "id": "unit:o23r-new-deployer-target-deployment.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o23r-new-deployer-target-deployment.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o24-factory-deployment.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o24-factory-deployment.test.cjs",
+      "notes": "Fails: compiler_build_info_ambiguous without a unique local compiler build-info binding (1 failing)."
+    },
+    {
+      "id": "unit:o25-counterfactual-prefund-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o25-counterfactual-prefund-readiness.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o26-1-live-bundler-estimation.test.cjs",
+      "kind": "unit_test",
+      "lane": "public_network_prohibited",
+      "command": "npx hardhat test --no-compile ./test/unit/o26-1-live-bundler-estimation.test.cjs",
+      "notes": "Live bundler / public-network submission surface."
+    },
+    {
+      "id": "unit:o26-bundler-and-exact-prefund-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o26-bundler-and-exact-prefund-readiness.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o27-account2-direct-prefund.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o27-account2-direct-prefund.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o28-recovery-aware-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o28-recovery-aware-readiness.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o29-recovery-capable-account-v2-architecture.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o29-recovery-capable-account-v2-architecture.test.cjs",
+      "notes": "Requires proving/out fixtures, local Sepolia env files, and/or Starknet publication config; not deterministic on a clean CI runner."
+    },
+    {
+      "id": "unit:o30-v2-account-specification.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o30-v2-account-specification.test.cjs",
+      "notes": "Deterministic account-specification unit suite (17/17 green on clean runner); required Solidity/account lane."
+    },
+    {
+      "id": "unit:o31-v2-implementation-architecture.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o31-v2-implementation-architecture.test.cjs",
+      "notes": "Requires the private O.31 baseline commit object and pre-sanitization owner-path evidence bytes; its former failure body is not reproducible in an independent public history."
+    },
+    {
+      "id": "unit:o32-v2-cryptographic-foundation.test.cjs",
+      "kind": "unit_test",
+      "lane": "historical_known_baseline",
+      "command": "npx hardhat test --no-compile ./test/unit/o32-v2-cryptographic-foundation.test.cjs",
+      "notes": "Coupled to committed cryptographic fixtures/evidence that are currently stale or historically red at this baseline; tracked via historical lane, not required green."
+    },
+    {
+      "id": "unit:o33-v2-validator-authorization-engine.test.cjs",
+      "kind": "unit_test",
+      "lane": "historical_known_baseline",
+      "command": "npx hardhat test --no-compile ./test/unit/o33-v2-validator-authorization-engine.test.cjs",
+      "notes": "Coupled to committed cryptographic fixtures/evidence that are currently stale or historically red at this baseline; tracked via historical lane, not required green."
+    },
+    {
+      "id": "unit:o34-v2-account-core.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o34-v2-account-core.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o35-v2-factory-account-lifecycle-design.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o35-v2-factory-account-lifecycle-design.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o36-1-v2-security-interface-freeze.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o36-1-v2-security-interface-freeze.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o36-v2-solidity-implementation-gate.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o36-v2-solidity-implementation-gate.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-1-v2-recovery-evidence.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-1-v2-recovery-evidence.test.cjs",
+      "notes": "Deterministic green at this baseline; previously mis-grouped with stale evidence history."
+    },
+    {
+      "id": "unit:o37-10-v2-erc7562-op054.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-10-v2-erc7562-op054.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-10-v2-erc7562-validation.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-10-v2-erc7562-validation.test.cjs",
+      "notes": "ERC-7562 validation-path expansion beyond OP-054. Trace-based. Does not replace o37-10-v2-erc7562-op054.test.cjs."
+    },
+    {
+      "id": "unit:o37-10-v2-recovery-fsm-invariants.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-10-v2-recovery-fsm-invariants.test.cjs",
+      "notes": "CL-020 recovery FSM property/invariant suite. Does not replace o37-10 lifecycle coverage."
+    },
+    {
+      "id": "unit:o37-10-v2-minimal-account.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-10-v2-minimal-account.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-2-v2-deterministic-fixtures.test.cjs",
+      "kind": "unit_test",
+      "lane": "historical_known_baseline",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-2-v2-deterministic-fixtures.test.cjs",
+      "notes": "Coupled to committed cryptographic fixtures/evidence that are currently stale or historically red at this baseline; tracked via historical lane, not required green."
+    },
+    {
+      "id": "unit:o37-3-v2-solidity-implementation-conflict.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-3-v2-solidity-implementation-conflict.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-4-v2-authority-transport.test.cjs",
+      "kind": "unit_test",
+      "lane": "historical_known_baseline",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-4-v2-authority-transport.test.cjs",
+      "notes": "Coupled to committed cryptographic fixtures/evidence that are currently stale or historically red at this baseline; tracked via historical lane, not required green."
+    },
+    {
+      "id": "unit:o37-5-v2-solidity-implementation-conflict.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-5-v2-solidity-implementation-conflict.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-6-v2-code-size-architecture.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-6-v2-code-size-architecture.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-7-v2-static-verifier.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-7-v2-static-verifier.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-8-v2-minimal-account-conflict.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-8-v2-minimal-account-conflict.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o37-9-conformance.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-9-conformance.test.cjs",
+      "notes": "Deterministic green conformance suite at this baseline."
+    },
+    {
+      "id": "unit:o37-v2-solidity-implementation-conflict.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o37-v2-solidity-implementation-conflict.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o38-v2-deployment-readiness.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o38-v2-deployment-readiness.test.cjs",
+      "notes": "Deployment/enrollment readiness depends on local environment artifacts."
+    },
+    {
+      "id": "unit:o39-consumer-recovery.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/o39-consumer-recovery.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:o40-recovery-enrollment-preflight.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o40-recovery-enrollment-preflight.test.cjs",
+      "notes": "Fails: O40_INITIALIZATION_MISMATCH:artifact:verifierRuntimeKeccak256 (2 failing). Stale initializer binding; not regenerated here."
+    },
+    {
+      "id": "unit:o41-recovery-enrollment-environment.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/o41-recovery-enrollment-environment.test.cjs",
+      "notes": "Deployment/enrollment readiness depends on local environment artifacts."
+    },
+    {
+      "id": "unit:o42-1-platform-webauthn-compatibility.test.cjs",
+      "kind": "unit_test",
+      "lane": "physical_ceremony_manual",
+      "command": "npx hardhat test --no-compile ./test/unit/o42-1-platform-webauthn-compatibility.test.cjs",
+      "notes": "Platform WebAuthn user-presence ceremony compatibility; not an automated CI pass."
+    },
+    {
+      "id": "unit:o42-recovery-enrollment-ceremony.test.cjs",
+      "kind": "unit_test",
+      "lane": "physical_ceremony_manual",
+      "command": "npx hardhat test --no-compile ./test/unit/o42-recovery-enrollment-ceremony.test.cjs",
+      "notes": "Ceremony/manual enrollment path; must not be reported as automated pass."
+    },
+    {
+      "id": "unit:o43-native-iphone-recovery.test.cjs",
+      "kind": "unit_test",
+      "lane": "physical_ceremony_manual",
+      "command": "npx hardhat test --no-compile ./test/unit/o43-native-iphone-recovery.test.cjs",
+      "notes": "Depends on native iPhone companion / physical device ceremony surfaces."
+    },
+    {
+      "id": "unit:o44-recovery-transport.test.cjs",
+      "kind": "unit_test",
+      "lane": "deterministic_evidence",
+      "command": "npx hardhat test --no-compile ./test/unit/o44-recovery-transport.test.cjs",
+      "notes": "Offline deterministic O.44 recovery-approval transport protocol and synthetic fixture vectors; no network or ceremony."
+    },
+    {
+      "id": "unit:o45-recovery-bootstrap.test.cjs",
+      "kind": "unit_test",
+      "lane": "deterministic_evidence",
+      "command": "npx hardhat test --no-compile ./test/unit/o45-recovery-bootstrap.test.cjs",
+      "notes": "Offline deterministic O.45 recovery-bootstrap QR ticket/URI/request-delivery protocol and synthetic fixture vectors; no network or ceremony."
+    },
+    {
+      "id": "unit:phil-device-identity-demo.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-device-identity-demo.test.cjs",
+      "notes": "Fails: Missing proving/out/smart_account_deploy_session.json (local proving session artifact)."
+    },
+    {
+      "id": "unit:phil-identity.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-identity.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:phil-v1-step2-device-recovery.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-v1-step2-device-recovery.test.cjs",
+      "notes": "Offline synthetic Step 2 scoped-identity, exact 2-of-3 recovery, lifecycle, device-approval, and protected-surface tests; physical-device evidence remains separately gated."
+    },
+    {
+      "id": "unit:phil-v1-step3-root-proof-adapter.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-v1-step3-root-proof-adapter.test.cjs",
+      "notes": "Offline synthetic Step 3 scoped root-proof adapter validation and source-boundary checks; no prover authority, RPC, deployment, or network mutation."
+    },
+    {
+      "id": "unit:phil-v1-step4-composed-account-authorization.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-v1-step4-composed-account-authorization.test.cjs",
+      "notes": "Deterministic in-memory Step 4 proof, device-signature, policy, nonce, expiry, and revocation composition checks; no device, signing service, RPC, or execution."
+    },
+    {
+      "id": "unit:phil-v1-step5-post-quantum-migration.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-v1-step5-post-quantum-migration.test.cjs",
+      "notes": "Offline Step 5 algorithm registry, capability, downgrade, hybrid, rotation, and retirement control-plane tests; no current post-quantum protection is claimed."
+    },
+    {
+      "id": "unit:phil-v1-step6a-base-network-adapter.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-v1-step6a-base-network-adapter.test.cjs",
+      "notes": "Offline Step 6A adapter-isolation and synthetic manifest tests; public provider, signing, deployment, and network activity remain unavailable."
+    },
+    {
+      "id": "unit:phil-v1-step6b-local-smart-account.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6b.config.cjs --no-compile ./test/unit/phil-v1-step6b-local-smart-account.test.cjs",
+      "notes": "Local Hardhat Step 6B smart-account composition with synthetic authorization and harmless target only; no public provider, deployment, transaction, or meaningful asset."
+    },
+    {
+      "id": "unit:phil-v1-step6c2-enrollment.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c2-enrollment.test.cjs",
+      "notes": "Offline strict V2 routine-device enrollment bootstrap, identity binding, and synthetic proof-of-possession tests."
+    },
+    {
+      "id": "unit:phil-v1-step6c2-transport.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c2-transport.test.cjs",
+      "notes": "Offline canonical QR, ECDH/HKDF, AES-GCM frame/AAD, nonce-reuse, and strict begin-message tests."
+    },
+    {
+      "id": "unit:phil-v1-step6c-desktop.test.cjs",
+      "kind": "unit_test",
+      "lane": "desktop",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-desktop.test.cjs",
+      "notes": "Offline synthetic protected Desktop coordinator boundary; product durable host and physical-device work remain separate gates."
+    },
+    {
+      "id": "unit:phil-v1-step6c-entrypoint.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-entrypoint.test.cjs",
+      "notes": "Offline local Hardhat official EntryPoint v0.7 validation, execution, failure, nonce, and evidence integration."
+    },
+    {
+      "id": "unit:phil-v1-step6c-ios-synthetic.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-ios-synthetic.test.cjs",
+      "notes": "Disclosed synthetic P-256 compatibility only; not Secure Enclave, user-presence, signing, or physical-device evidence."
+    },
+    {
+      "id": "unit:phil-v1-step6c-journal.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-journal.test.cjs",
+      "notes": "Offline in-memory journal, CAS transition, encrypted frame, and restart validation; no product durability claim."
+    },
+    {
+      "id": "unit:phil-v1-step6c-records.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-records.test.cjs",
+      "notes": "Offline deterministic authorization schema, binding, time-window, and hostile-substitution coverage."
+    },
+    {
+      "id": "unit:phil-v1-step6c-wire.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-v1-step6c.config.cjs --no-compile ./test/unit/phil-v1-step6c-wire.test.cjs",
+      "notes": "Offline strict P-256 DER/raw-wire parsing and validation coverage."
+    },
+    {
+      "id": "unit:phil-beta-profile.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "node --test ./test/unit/phil-beta-profile.test.cjs",
+      "notes": "Offline lock for the controlled Sepolia Beta chain, account, recovery, fee, fund, trust-boundary, and prohibited-surface profile."
+    },
+    {
+      "id": "unit:philcore-authorization-confirmation-target.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-authorization-confirmation-target.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:philcore-erc4337-bundler-submission.test.cjs",
+      "kind": "unit_test",
+      "lane": "public_network_prohibited",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-bundler-submission.test.cjs",
+      "notes": "Live bundler / public-network submission surface."
+    },
+    {
+      "id": "unit:philcore-erc4337-rotation-recovery.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-rotation-recovery.test.cjs",
+      "notes": "Independently green on clean runner after compile; required Solidity lane."
+    },
+    {
+      "id": "unit:phil-beta-reusable-sepolia-contracts.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-beta-reusable-sepolia-contracts.test.cjs",
+      "notes": "Offline Sepolia-chain EntryPoint v0.7 reusable account, composed ActionGate, sequential nonce, recovery freeze, and zero-value enforcement coverage. No public mutation."
+    },
+    {
+      "id": "unit:philcore-erc4337-security-review-n1.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-security-review-n1.test.cjs",
+      "notes": "Independently green on clean runner after compile; required Solidity lane."
+    },
+    {
+      "id": "unit:philcore-erc4337-smart-account-foundation.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-smart-account-foundation.test.cjs",
+      "notes": "Independently green on clean runner after compile; required Solidity lane."
+    },
+    {
+      "id": "unit:philcore-erc4337-user-operation-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-user-operation-preparation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:philcore-erc4337-user-operation-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-erc4337-user-operation-signing.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:philcore-local-proof-gated-account.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-local-proof-gated-account.test.cjs",
+      "notes": "Independently green on clean runner after compile; required Solidity lane."
+    },
+    {
+      "id": "unit:philcore-recovery-authority-custody.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/philcore-recovery-authority-custody.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:proof-stwo-abi.test.cjs",
+      "kind": "unit_test",
+      "lane": "proving",
+      "command": "npx hardhat test --no-compile ./test/unit/proof-stwo-abi.test.cjs",
+      "notes": "Hardhat-side proving ABI checks; cargo suite is separate."
+    },
+    {
+      "id": "unit:recovery-cancellation-documentation-alignment.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/recovery-cancellation-documentation-alignment.test.cjs",
+      "notes": "Checks documentation and canonical-authority consistency for V2 recovery cancellation; does not perform a ceremony or change contract semantics. Directly executed."
+    },
+    {
+      "id": "unit:runtime-action-unlock-proof-generation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-action-unlock-proof-generation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-alpha0-demo.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-alpha0-demo.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-alpha0-shell.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-alpha0-shell.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-audit-collector.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-audit-collector.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-audit-drafts.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-audit-drafts.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-authentication-evidence.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authentication-evidence.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-authoritative-capability-grant.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authoritative-capability-grant.test.cjs",
+      "notes": "Fails without local deploy-session / identity demo fixtures on a clean runner; classified environment_dependent rather than forced green."
+    },
+    {
+      "id": "unit:runtime-authoritative-policy-decision.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authoritative-policy-decision.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-authoritative-trust-decision.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authoritative-trust-decision.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-authorization-decision-candidate.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authorization-decision-candidate.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-authorization-package-draft.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-authorization-package-draft.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-bounded-policy-evaluation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-bounded-policy-evaluation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-bounded-trust-decision-candidate.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-bounded-trust-decision-candidate.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-bounded-trust-evaluation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-bounded-trust-evaluation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-capability-activation-candidates.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-capability-activation-candidates.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-capability-grant-draft-collector.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-capability-grant-draft-collector.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-capability-grant-draft-review.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-capability-grant-draft-review.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-capability-grant-drafts.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-capability-grant-drafts.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-connected-signing-purpose-review.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-connected-signing-purpose-review.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-connected-unsigned-user-operation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-connected-unsigned-user-operation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-credential-counter-persistence.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-credential-counter-persistence.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-device-vault-unlock.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-device-vault-unlock.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-facade.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-facade.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-fixture-authentication-lifecycle.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-fixture-authentication-lifecycle.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-helpers.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-helpers.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-intake.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-intake.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-local-proof-gated-account.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-local-proof-gated-account.test.cjs",
+      "notes": "Fails on clean runner: AssertionError in Runtime local-proof-gated account expectations (1 failing). Not repaired in this CI package."
+    },
+    {
+      "id": "unit:runtime-platform-user-approval-decision.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-platform-user-approval-decision.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-possession-evaluation-results.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-possession-evaluation-results.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-possession-verification-drafts.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-possession-verification-drafts.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-production-authentication-verification.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-production-authentication-verification.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-production-verified-partial-unlock.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-production-verified-partial-unlock.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-protected-state-view.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-protected-state-view.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-public-credential-directory.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-public-credential-directory.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-public-trust-metadata-evaluation-collector-review.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-public-trust-metadata-evaluation-collector-review.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-public-trust-metadata-evaluation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-public-trust-metadata-evaluation.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-redaction.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-redaction.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-selected-credential-public-material.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-selected-credential-public-material.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-session-context.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-session-context.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-session-lifecycle.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-session-lifecycle.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-session-store.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-session-store.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-trust-evaluation-draft-collector.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-trust-evaluation-draft-collector.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-trust-evaluation-draft-review.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-trust-evaluation-draft-review.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-trust-evaluation-drafts.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-trust-evaluation-drafts.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-trust-manager-production-verification.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-trust-manager-production-verification.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-trust-manager-verification-input.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-trust-manager-verification-input.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-user-approval-drafts.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-user-approval-drafts.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-user-decision-fixtures.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-user-decision-fixtures.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:runtime-webauthn-fixture-verification.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/runtime-webauthn-fixture-verification.test.cjs",
+      "notes": ""
+    },
+    {
+      "id": "unit:slither-report-sanitization.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/slither-report-sanitization.test.cjs",
+      "notes": "Locks repository-relative Slither source mappings and rejects developer-home paths in public static-analysis evidence."
+    },
+    {
+      "id": "unit:starknet-fact-publication-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/starknet-fact-publication-preparation.test.cjs",
+      "notes": "Fails: ENOENT reading Starknet publication config/artifacts under config/."
+    },
+    {
+      "id": "unit:starknet-fact-publication-submission.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/starknet-fact-publication-submission.test.cjs",
+      "notes": "Fails: ENOENT reading Starknet publication config/artifacts under config/."
+    },
+    {
+      "id": "unit:starknet-publication-config.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/starknet-publication-config.test.cjs",
+      "notes": "Fails: ENOENT opening Starknet publication config path."
+    },
+    {
+      "id": "unit:starknet-publisher-signing.test.cjs",
+      "kind": "unit_test",
+      "lane": "environment_dependent",
+      "command": "npx hardhat test --no-compile ./test/unit/starknet-publisher-signing.test.cjs",
+      "notes": "Fails: ENOENT reading Starknet publication config/artifacts under config/."
+    },
+    {
+      "id": "unit:v2-confirmation-target.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --no-compile ./test/unit/v2-confirmation-target.test.cjs",
+      "notes": "Offline Hardhat tests for PhilCoreV2ConfirmationTargetV1 evidence sink; no network or ceremony."
+    },
+    {
+      "id": "unit:v2-deployment-preparation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2-deployment-preparation.test.cjs",
+      "notes": "Offline unit tests for V2 Sepolia demo deployment preparation; no RPC, signing, or submission."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryCeremonyLifecycle.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryCeremonyLifecycle.test.cjs",
+      "notes": "Pure SDK consumer recovery ceremony lifecycle (mint/cancel/lazy expiry); no factor collection, IPC, persistence, or completion."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryStagingJournal.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryStagingJournal.test.cjs",
+      "notes": "Pure dormant recovery-candidate staging journal schema, checksum, and state-machine tests; no factor collection, trusted publication, signing, network, or physical ceremony."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisProtocol.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisProtocol.test.cjs",
+      "notes": "Pure dormant non-circular genesis intent, ceremony hashing, and provenance validation; no lifecycle, persistence, IPC, signing, network, or physical ceremony."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisRoleCeremonyLifecycle.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisRoleCeremonyLifecycle.test.cjs",
+      "notes": "Pure dormant genesis role ceremony lifecycle (mint/observe/cancel/consume/retire, projection, validator); genesis deployment-intent/role hash domain only, never the account-bound enrollment ceremony domain; no filesystem, clock, randomness, IPC, persistence, device, signing, network, or physical ceremony."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisStagingJournal.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisStagingJournal.test.cjs",
+      "notes": "Pure dormant append-only genesis candidate staging journal: normalized state transitions, closed stored-record reconstruction, and checksum only; no filesystem durability, IPC, signing, network, or physical ceremony."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisStagingProfile.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisStagingProfile.test.cjs",
+      "notes": "Pure dormant genesis staging-journal to recovery-profile validation adapter: exact intent, ceremony, factor, and validator projections with one pure profile-validator delegation. The suite constructs records only in memory and limits filesystem use to read-only source and require-graph scans; it performs no writes, creates no temporary directory, accesses no staging root, and constructs no staging host, coordinator, or desktop process. No journal transition, supersession, product or IPC wiring, device behavior, secret access, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisFinalizedProfile.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisFinalizedProfile.test.cjs",
+      "notes": "Pure dormant genesis finalized-profile record builder and stored-record validator: one staging-profile adapter delegation, embedded STAGING journal evidence, checksum, and hostile-safe expected-result comparison only in memory. No filesystem durability, staging host, coordinator, product or IPC wiring, device behavior, secret access, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisCredentialObligation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisCredentialObligation.test.cjs",
+      "notes": "Pure dormant durable credential-obligation record, sanctioned genesis ceremony projection, role-specific credential-ID coherence, checksum, and state-transition tests only in memory. No filesystem, product or IPC wiring, device behavior, credential creation or deletion, secret access, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisCredentialOrphanClassification.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisCredentialOrphanClassification.test.cjs",
+      "notes": "Pure dormant genesis credential-orphan classifier: converts a validated ORPHANED obligation into a 16-key factual projection of durable binding, credential knowledge, and unresolved binding with exactly one obligation-validator delegation. Tests construct records only in memory and limit filesystem use to read-only source and require-graph scans. No host, coordinator, product or IPC wiring, device behavior, credential creation or deletion, clearing API, secret access, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisManifestBindingConflictProjection.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisManifestBindingConflictProjection.test.cjs",
+      "notes": "Pure dormant factual projection of lower-validated credential-sidecar and staging-manifest binding conflicts. The adapter grants no resolution or transition authority, performs no mutation or I/O, and tests use only in-memory records plus read-only source and require-graph scans. No host, coordinator, product or IPC wiring, device behavior, credential creation or deletion, secret access, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisConflictEvidenceValidation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisConflictEvidenceValidation.test.cjs",
+      "notes": "Pure dormant genesis conflict-evidence format validator: checks envelope shape, projection binding, SHA-256 challenge-binding hash, and caller-clock freshness against ceremony expiry. Exactly one conflict-projection delegation. No provider trust, possession or signature verification, replay store, winner, clearing, host, coordinator, product, IPC, device, secret, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2ConsumerRecoveryGenesisConflictEvidenceNonResolver.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2ConsumerRecoveryGenesisConflictEvidenceNonResolver.test.cjs",
+      "notes": "Characterization of dormant genesis conflict-evidence non-authority: product/runtime reachability, import isolation, load-time side-effect absence, frozen NONE authority, freshness-is-not-replay, role-2 zero isolation, and hostile non-escalation. No provider, possession, replay store, winner, clearing, host construction, device, secret, signing, network, deployment, transaction, or chain activity."
+    },
+    {
+      "id": "unit:v2LocalCeremonyProtocol.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/v2LocalCeremonyProtocol.test.cjs",
+      "notes": "SDK-only local recovery ceremony hash and secp256k1 recovery primitives; no signature over the new proof digest and no combined verifier."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-device-host.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-sepolia-mint-device-host.test.cjs",
+      "notes": "Offline encrypted physical-iPhone-shaped request/response persistence, restart, and tamper tests with synthetic keys; no physical device or public network."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-noir-composition.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node ./apps/philcore-desktop/test/desktop-sepolia-mint-noir-composition.test.cjs",
+      "notes": "Offline real Noir proof and exact P-256 composition integration with synthetic local secrets; no physical device or public network."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-product-workflow.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node ./apps/philcore-desktop/test/desktop-sepolia-mint-product-workflow.test.cjs",
+      "notes": "Offline full product composition through signed-unsubmitted UserOperation using synthetic keys and real Noir; no public submission."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-replay-store.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-sepolia-mint-replay-store.test.cjs",
+      "notes": "Offline durable four-dimensional replay reservation, restart, corruption, and interrupted-write tests."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-runtime-capability.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node ./apps/philcore-desktop/test/desktop-sepolia-mint-runtime-capability.test.cjs",
+      "notes": "Offline proof that Phil root and Device Vault execution authority remain process-local through composition."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-ui-state.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node --test ./apps/philcore-desktop/test/desktop-sepolia-mint-ui-state.test.cjs",
+      "notes": "Offline Sepolia mint renderer-state regression coverage for fresh starts, expiry, approval, submission ambiguity, and terminal outcomes; no physical device or public network."
+    },
+    {
+      "id": "unit:phil-sepolia-local-composed-contracts.test.cjs",
+      "kind": "unit_test",
+      "lane": "solidity_erc4337",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-sepolia-local-composed-contracts.test.cjs",
+      "notes": "Sepolia-chain local Hardhat EntryPoint v0.7 account/factory/gate/consumer execution, real Noir composition, mutation fuzzing, malformed signatures, and replay invariants."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-authorization.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-sepolia-mint-authorization.test.cjs",
+      "notes": "Offline canonical mint envelope, digest, exceptional pre-proof digest, nullifier, and device binding tests."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-composed-authorization.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-sepolia-mint-composed-authorization.test.cjs",
+      "notes": "Offline fail-closed proof, P-256 device, policy, epoch, nonce, fee, time, cancellation, denial, and replay composition."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-device-request.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-sepolia-mint-device-request.test.cjs",
+      "notes": "Offline independently reproducible iPhone review and exact approval-digest binding with synthetic P-256 evidence."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-product-reachability.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-sepolia-mint-product-reachability.test.cjs",
+      "notes": "Static product-graph exclusion of STWO, synthetic secrets, and public submission plus package composition checks."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-public-mutation-guard.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --no-compile ./test/unit/phil-sepolia-mint-public-mutation-guard.test.cjs",
+      "notes": "Offline fail-closed plan/executor approval, no-send planner, one-shot submission, and no-retry source-boundary tests."
+    },
+    {
+      "id": "unit:philcore-controlled-sepolia-beta-p1-guard.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "node --test ./test/unit/philcore-controlled-sepolia-beta-p1-guard.test.cjs",
+      "notes": "Offline exact-digest P1 approval, no-send planner, four-transaction freeze, corrected account binding, exposure ceiling, and one-shot ambiguity-stop tests."
+    },
+    {
+      "id": "unit:philcore-controlled-sepolia-beta-p2-guard.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "node --test ./test/unit/philcore-controlled-sepolia-beta-p2-guard.test.cjs",
+      "notes": "Offline P2 Beta graph, physical-composition boundary, exact-digest P2/P2R approvals, tracked incident and live-reconciliation binding, private durable evidence paths, bundler fee floor, two-mutation initial freeze, one-mutation zero-funding recovery, execution-owner recipient, iOS second-scan path, durable locks, and one-shot ambiguity-stop tests."
+    },
+    {
+      "id": "unit:philcore-controlled-sepolia-beta-p3-guard.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "node --test ./test/unit/philcore-controlled-sepolia-beta-p3-guard.test.cjs",
+      "notes": "Offline P3 nonce-1 second-action, exact P2 receipt binding, read-only stale-operation nonce rejection, fresh replay fields, one-shot submission, durable lock, no-funding/no-retry, and dual-provider final-state guard tests."
+    },
+    {
+      "id": "unit:philcore-controlled-sepolia-beta-p5-guard.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "node --test ./test/unit/philcore-controlled-sepolia-beta-p5-guard.test.cjs",
+      "notes": "Offline P5 unsigned no-send planning, exact-plan fixture signing with pre-custody state revalidation, plan/artifact exclusivity and binding, exact pre-state equality, prefund and terminal-dust arithmetic, owner-only release, one-lock/one-send/no-retry execution, and six-way reconciliation classification tests using synthetic fixtures only."
+    },
+    {
+      "id": "unit:phil-sepolia-mint-user-operation.test.cjs",
+      "kind": "unit_test",
+      "lane": "required_product_runtime",
+      "command": "npx hardhat test --config ./hardhat.phil-sepolia-mint.config.cjs --no-compile ./test/unit/phil-sepolia-mint-user-operation.test.cjs",
+      "notes": "Offline exact packed v0.7 UserOperation, durable reservation, fee ceiling, execution-owner, and post-release mutation tests."
+    },
+    {
+      "id": "script:test:phil-sepolia-local-composed-contracts",
+      "kind": "package_script",
+      "lane": "solidity_erc4337",
+      "command": "npm run test:phil-sepolia-local-composed-contracts",
+      "notes": "Alias of the focused Sepolia local-contract suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-local-composed-contracts.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-authorization",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-authorization",
+      "notes": "Alias of the canonical mint-authorization suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-authorization.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-composition",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-composition",
+      "notes": "Alias of the composed-authorization suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-composed-authorization.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-device-host",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-sepolia-mint-device-host",
+      "notes": "Alias of the Desktop encrypted device-host suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-device-host.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-device-request",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-device-request",
+      "notes": "Alias of the exact device-request suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-device-request.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-noir-composition",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-sepolia-mint-noir-composition",
+      "notes": "Alias of the Desktop real-Noir composition suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-noir-composition.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-product-reachability",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-product-reachability",
+      "notes": "Alias of the product reachability suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-product-reachability.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-product-workflow",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-sepolia-mint-product-workflow",
+      "notes": "Alias of the Desktop end-to-end signed-unsubmitted product workflow suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-product-workflow.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-public-mutation-guard",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-public-mutation-guard",
+      "notes": "Alias of the guarded public-mutation boundary suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-public-mutation-guard.test.cjs" }
+    },
+    {
+      "id": "script:test:philcore-controlled-sepolia-beta-p1-guard",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:philcore-controlled-sepolia-beta-p1-guard",
+      "notes": "Alias of the controlled P1 public-mutation guard suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:philcore-controlled-sepolia-beta-p1-guard.test.cjs" }
+    },
+    {
+      "id": "script:test:philcore-controlled-sepolia-beta-p2-guard",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:philcore-controlled-sepolia-beta-p2-guard",
+      "notes": "Alias of the controlled P2 composition and public-mutation guard suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:philcore-controlled-sepolia-beta-p2-guard.test.cjs" }
+    },
+    {
+      "id": "script:test:philcore-controlled-sepolia-beta-p3-guard",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:philcore-controlled-sepolia-beta-p3-guard",
+      "notes": "Alias of the controlled P3 second-action and stale-replay guard suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:philcore-controlled-sepolia-beta-p3-guard.test.cjs" }
+    },
+    {
+      "id": "script:test:philcore-controlled-sepolia-beta-p5-guard",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:philcore-controlled-sepolia-beta-p5-guard",
+      "notes": "Alias of the restricted P5 unsigned planner, fixture-only exact-plan signing boundary, one-shot executor, and reconciliation guard suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:philcore-controlled-sepolia-beta-p5-guard.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-replay-store",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-sepolia-mint-replay-store",
+      "notes": "Alias of the Desktop durable replay-store suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-replay-store.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-runtime-capability",
+      "kind": "package_script",
+      "lane": "desktop",
+      "command": "npm run test:phil-sepolia-mint-runtime-capability",
+      "notes": "Alias of the Desktop process-local capability suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "desktop_file:apps/philcore-desktop/test/desktop-sepolia-mint-runtime-capability.test.cjs" }
+    },
+    {
+      "id": "script:test:phil-sepolia-mint-user-operation",
+      "kind": "package_script",
+      "lane": "required_product_runtime",
+      "command": "npm run test:phil-sepolia-mint-user-operation",
+      "notes": "Alias of the exact UserOperation release/signing suite.",
+      "execution": { "mode": "alias_of", "aliasOf": "unit:phil-sepolia-mint-user-operation.test.cjs" }
+    },
+    {
+      "id": "script:check:phil-sepolia-mint-demo",
+      "kind": "package_script",
+      "lane": "environment_dependent",
+      "command": "npm run check:phil-sepolia-mint-demo",
+      "notes": "Fresh non-writing Sepolia RPC and bundler preflight against the frozen configuration. Requires operator-supplied endpoints and performs no public mutation.",
+      "execution": { "mode": "manual" }
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-release-fixture-exclusion.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-release-fixture-exclusion.test.cjs",
+      "notes": "Focused release fixture exclusion / exact package inventory regression; no physical ceremony or public mutation."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-release-inventory.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-release-inventory.test.cjs",
+      "notes": "Focused release fixture exclusion / exact package inventory regression; no physical ceremony or public mutation."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/desktop-final-beta-ui.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/desktop-final-beta-ui.test.cjs",
+      "notes": "Bounded final UI tests: explicit local naming, form retention, helper position and critical-control avoidance, static help, locked privacy and reduced-motion success gate."
+    },
+    {
+      "id": "desktop_file:apps/philcore-desktop/test/native-notice-coverage.test.cjs",
+      "kind": "desktop_test_file",
+      "lane": "desktop",
+      "command": "node apps/philcore-desktop/test/native-notice-coverage.test.cjs",
+      "notes": "Existing native notice coverage tests; required release packaging validation retained from the accepted clean-export rehearsal."
+    }
+  ],
+  "totals": {
+    "required_product_runtime": 114,
+    "solidity_erc4337": 50,
+    "desktop": 68,
+    "proving": 6,
+    "deterministic_evidence": 19,
+    "historical_known_baseline": 16,
+    "environment_dependent": 46,
+    "physical_ceremony_manual": 10,
+    "public_network_prohibited": 5
+  },
+  "notes": {
+    "desktopLane": "CI executes only desktop_test_file items classified as desktop. script:desktop:test is a mixed aggregate and is not the CI runner.",
+    "historicalLane": "historical_known_baseline requires a 1:1 manifest bijection with exact exit/failure matching. No evidence regeneration.",
+    "o37Green": "unit:o37-1-v2-recovery-evidence and unit:o37-9-conformance are required Solidity at this baseline (deterministic green), not historical failures."
+  }
+}

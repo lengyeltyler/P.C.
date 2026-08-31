@@ -1,0 +1,478 @@
+{
+  "format": "phil-v1-step5-post-quantum-migration-fixture-v1",
+  "classification": "architecture-only-disclosed-synthetic-fixture",
+  "productionAuthority": false,
+  "networkActivity": false,
+  "physicalDeviceUsed": false,
+  "backendSelected": false,
+  "wholeSystemPostQuantum": false,
+  "registry": {
+    "registryEpoch": "1",
+    "schemeCount": 17,
+    "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79"
+  },
+  "schemes": [
+    {
+      "schemeId": "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79",
+      "label": "phil-signature-p256-sha256-v1",
+      "kind": 1,
+      "quantumPosture": 1,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0xc7502870049c9a73e7c4fb304187f82fa6f015876f233a4676f5f0cee3ebaa27",
+      "implementationBindingHash": "0x02f10c3c67a24e3032dd546c24cc4e81df61acbf843e7f7b4bc7725b2d344b6c",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x73755364f23c57929be84e70ccde5f66665c099554199176b13b2580f18dfc67",
+      "label": "phil-signature-secp256k1-keccak256-v1",
+      "kind": 1,
+      "quantumPosture": 1,
+      "lifecycle": 1,
+      "evidenceLevel": 2,
+      "standardReferenceHash": "0xe89f236bde7f154f095bbc18a3e30f3d2e29d6481fccf11ca09fec177f256636",
+      "implementationBindingHash": "0x74f2b814cc4b257bd7f4fc5a697b3bf3f01b5b1f27569d889efac3c7dc414391",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x35d156a0e3ab9134d33880075c81b6c1b7f1741af6cfd46e0cfb910610c42c2b",
+      "label": "nist-fips-204-ml-dsa-65",
+      "kind": 1,
+      "quantumPosture": 2,
+      "lifecycle": 2,
+      "evidenceLevel": 3,
+      "standardReferenceHash": "0xa0d5ced02144cf1d2c0aa7a3b6f43b06e991df36892c46875c0e42b65066a937",
+      "implementationBindingHash": "0x6da364bc8086acbbd5161e9297268fac6a8eff4d6372f97a9d7f4d702a29be76",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xe3d1cac4ce73bce4fda156d898b7b80606db1abf0a2860ba88407aadf74df526",
+      "label": "nist-fips-205-slh-dsa-sha2-128s",
+      "kind": 1,
+      "quantumPosture": 2,
+      "lifecycle": 2,
+      "evidenceLevel": 1,
+      "standardReferenceHash": "0xdbe83bed9b9dcb234a99343c12e33c2e7673255fc03210f864a38c97aa287496",
+      "implementationBindingHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xce2f42ec6224111db8861fdaaa2101131af7c40163b36152276c911f0cd1dea2",
+      "label": "phil-key-wrap-p256-ecies-cofactor-x963-sha256-aesgcm-v1",
+      "kind": 2,
+      "quantumPosture": 1,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0x4f6922dae10f5b3c4a1038815112bfcb0289e0086edf7c900284b0224c303c03",
+      "implementationBindingHash": "0xd02e3ce7d31ff72ef6b4fa31367ca47c8ca2fc15cd5e30c275e3760ce4b56b7b",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x96ee8a0cb516bc4b58eb742f744d3742a37b003cd9c0e480db1e47bf1c7a4f48",
+      "label": "nist-fips-203-ml-kem-768",
+      "kind": 2,
+      "quantumPosture": 2,
+      "lifecycle": 2,
+      "evidenceLevel": 3,
+      "standardReferenceHash": "0x373499c50bc95ea6d9b5c158fa2dd2546a32159d53e4272e26162edd4cdf61bf",
+      "implementationBindingHash": "0xb3c023e810c9ee152cca40acb33ff5870cc52a9fa23a4c0a2ba33dd140787420",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x7cce8a2fa1c7dff87c4a9e2ce00a2d59c4439f9993d5f7b49ae0dfb9c36cfa92",
+      "label": "nist-fips-203-ml-kem-1024",
+      "kind": 2,
+      "quantumPosture": 2,
+      "lifecycle": 2,
+      "evidenceLevel": 3,
+      "standardReferenceHash": "0xca32ce12154987ce7dba99df531609c0db0a212f1e8228ed7e9f2aa5001a9463",
+      "implementationBindingHash": "0x088aaac70de5cb78772400146a7d82ffc8ffc870965b5df98402285084dfd74c",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xe342133ae8b4662317d26ea1128faf903384e1907ecae2f56f6a6db3c7309b37",
+      "label": "sha-256",
+      "kind": 3,
+      "quantumPosture": 2,
+      "lifecycle": 1,
+      "evidenceLevel": 2,
+      "standardReferenceHash": "0x52b927054aecad6fc2223fda66658d1ef1a331d0e5d43a8b6a34afb21c4d6fa9",
+      "implementationBindingHash": "0x5bb8acd177283705c4e1c3463a3636b7f62f61bf5e4f4997f0864cb1e2f2d088",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x3dbf6a852f95a8dd226e345537fd9e7de87a85b693c3300e0bb17c07f6c98011",
+      "label": "keccak-256",
+      "kind": 3,
+      "quantumPosture": 2,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0x33432b869c54e45a89bd59a7b9bff240f5c11455e50d315b4dd031a374c4452c",
+      "implementationBindingHash": "0xef1a121a2ca89c52bc62947b8492749aa32c283a64c1bd3d5b8c5dc91e8bc653",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xa5fae4882b8ee21f076593a7b7fa535884a5f183ba28369638b03b69174417ff",
+      "label": "aes-256-gcm",
+      "kind": 6,
+      "quantumPosture": 2,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0xe83bda61c9a6693628d471537786f97d4ec0c92c35f260993a917186d2660c24",
+      "implementationBindingHash": "0xb8e020c87348b2a6ac3be6f2a969ca3d209e15c4da6dcadf4ff65bdae3ef26a0",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x72a7abec5c9c2deafd3447076bf62083f48f598f0b588138c73d8f3580d2ac5d",
+      "label": "hkdf-sha256",
+      "kind": 7,
+      "quantumPosture": 2,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0x91a3296f03dd57c07a84e1bb4e17cd0febedb8a385e943b5bfcd3bf2b8c7479c",
+      "implementationBindingHash": "0xbded5d11b9b8fbac3b63b6f75476ee7c639088304a5b01b9bd354052014bd51e",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x01ca8b0ac2e9ee9d8878edb5fa1673efe6ddcc80e650d9f9c77935865563c1ba",
+      "label": "phil-pairwise-hkdf-sha256-aes256gcm-2of3-v1",
+      "kind": 8,
+      "quantumPosture": 2,
+      "lifecycle": 1,
+      "evidenceLevel": 2,
+      "standardReferenceHash": "0x2b74bf88f486b2d7a72eb0bdb7446ab12ab7868c40f5de48b38c6d9647438eab",
+      "implementationBindingHash": "0xbded5d11b9b8fbac3b63b6f75476ee7c639088304a5b01b9bd354052014bd51e",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45",
+      "label": "phil-proof-noir-ultrahonk-keccak-step3-v1",
+      "kind": 4,
+      "quantumPosture": 1,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0xe237950deb1571fcc079d59f73a2ab9002aa24c96fd3d7b05db108ed4dbcee7a",
+      "implementationBindingHash": "0x630552df1f67e67b481c22bfa2a6f7075a530f7083be868263ab734cdd933f01",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x83026489f9e318627e45787ad437a2eb91238d013ee5980183f0917fe19ba83b",
+      "label": "phil-proof-transparent-hash-stark-reserved-v1",
+      "kind": 4,
+      "quantumPosture": 4,
+      "lifecycle": 2,
+      "evidenceLevel": 1,
+      "standardReferenceHash": "0xfa12448c034e6209d8472ad4871280bf401f540abf2e4579fa386d1781fdb886",
+      "implementationBindingHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0x07de2b14386b15b6d906c9fe34b43e4e0bbde62bc7720db259c2a735fd5b09ee",
+      "label": "phil-proof-stwo-experimental-quarantined-v1",
+      "kind": 4,
+      "quantumPosture": 4,
+      "lifecycle": 5,
+      "evidenceLevel": 2,
+      "standardReferenceHash": "0xb401075b4208e3e1f1e996300bd93fa163806da7a42f5adb5c8c728cacbd82dd",
+      "implementationBindingHash": "0x7ac0dd6853ba311299f10ae88fd75626d7aacbdaeaff3f9a8cf3dc2945620bfc",
+      "compatibleProofSchemeIds": [],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "1"
+    },
+    {
+      "schemeId": "0xeb397b5507b743a77022b27b24ec90f73e6dd78ed1c44bd3985cfd6902e22045",
+      "label": "phil-verifier-step3-garaga-1.0.1-v1",
+      "kind": 5,
+      "quantumPosture": 1,
+      "lifecycle": 1,
+      "evidenceLevel": 5,
+      "standardReferenceHash": "0xb2358993e2dd8938295681b7893383af46f375222d665c2cd01e35c5f9d1a3c1",
+      "implementationBindingHash": "0x6bca451bd40c7957752c8ef6820ba2bb035eff9387969fc084373128146f9199",
+      "compatibleProofSchemeIds": [
+        "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45"
+      ],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    },
+    {
+      "schemeId": "0xbc9004a97603ec8895168f628932353aa205ad426a7bee6f47800f2f2eefdb07",
+      "label": "phil-verifier-transparent-stark-reserved-v1",
+      "kind": 5,
+      "quantumPosture": 4,
+      "lifecycle": 2,
+      "evidenceLevel": 1,
+      "standardReferenceHash": "0xbf4a1c1ae903b7c1f2329fe4d726b4468fdf842a061ef9137493d9c302257b49",
+      "implementationBindingHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "compatibleProofSchemeIds": [
+        "0x83026489f9e318627e45787ad437a2eb91238d013ee5980183f0917fe19ba83b"
+      ],
+      "introducedRegistryEpoch": "1",
+      "retiredRegistryEpoch": "0"
+    }
+  ],
+  "platformCapabilities": {
+    "appleSecureEnclave": {
+      "currentPhilDeviceSignatureSchemeIds": [
+        "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+      ],
+      "documentedPostQuantumSignatureCandidateIds": [
+        "0x35d156a0e3ab9134d33880075c81b6c1b7f1741af6cfd46e0cfb910610c42c2b"
+      ],
+      "documentedKeyEstablishmentCandidateIds": [
+        "0x96ee8a0cb516bc4b58eb742f744d3742a37b003cd9c0e480db1e47bf1c7a4f48",
+        "0x7cce8a2fa1c7dff87c4a9e2ce00a2d59c4439f9993d5f7b49ae0dfb9c36cfa92"
+      ],
+      "secureEnclaveMlDsaSigningDocumented": true,
+      "philMlDsaDeviceIntegrationVerified": false,
+      "philMlKemDeviceIntegrationVerified": false,
+      "postQuantumDeviceAuthorizationAvailable": false
+    }
+  },
+  "networkCapabilities": {
+    "starknetSepolia": {
+      "formatVersionHash": "0x46c034979b9f0c7924794f6927326c7bc390f289d284485574a22dded2e48e2e",
+      "networkIdHash": "0x5956597ee81777c670f2a0d7027f805e4efa573ef516ddd06e753652301aaf0b",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "capabilityEpoch": "1",
+      "accountModelHash": "0xe61e4c6b0d23fba901bcee6cea991e97e60525c0c1365acf8ff89523e830e05d",
+      "enforcement": 2,
+      "maximumSecurityMode": 1,
+      "signatureSchemeIds": [
+        "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+      ],
+      "proofSchemeIds": [
+        "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45"
+      ],
+      "verifierSchemeIds": [
+        "0xeb397b5507b743a77022b27b24ec90f73e6dd78ed1c44bd3985cfd6902e22045"
+      ],
+      "authorizationPathAvailable": false,
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "implementationBindingHash": "0x9c8712b21cbfbc9bd3c9a838bd715dd047aee1d45097659074a708379700c40b",
+      "evidenceHash": "0xe16df4a39fa721d4527c30be858b56550b19557d6f97432a3634c333abecb07e",
+      "capabilityHash": "0x0900fe167fd32e7a00927b6224005b0b748f6bf8f4b3dd7200ffb06314fc603f"
+    },
+    "syntheticStarknetSepoliaEpoch2": {
+      "formatVersionHash": "0x46c034979b9f0c7924794f6927326c7bc390f289d284485574a22dded2e48e2e",
+      "networkIdHash": "0x5956597ee81777c670f2a0d7027f805e4efa573ef516ddd06e753652301aaf0b",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "capabilityEpoch": "2",
+      "accountModelHash": "0xe61e4c6b0d23fba901bcee6cea991e97e60525c0c1365acf8ff89523e830e05d",
+      "enforcement": 2,
+      "maximumSecurityMode": 1,
+      "signatureSchemeIds": [
+        "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+      ],
+      "proofSchemeIds": [
+        "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45"
+      ],
+      "verifierSchemeIds": [
+        "0xeb397b5507b743a77022b27b24ec90f73e6dd78ed1c44bd3985cfd6902e22045"
+      ],
+      "authorizationPathAvailable": false,
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "implementationBindingHash": "0x80322249e30f067560be0ef73a7da94dd5a8b98c289f92e9bb6c60ade39082e3",
+      "evidenceHash": "0xa1e1397e8c8e7fdfdb01618740df521b467982b257c547e2f18b094e93aa84f1",
+      "capabilityHash": "0x9cd7efaf9e8452deefc6666e5a565427a430fe92ae168f9cae4580db257e8dac"
+    },
+    "baseMainnet": {
+      "formatVersionHash": "0x46c034979b9f0c7924794f6927326c7bc390f289d284485574a22dded2e48e2e",
+      "networkIdHash": "0x43b48883ef7be0f98fe7f98fafb2187e42caab4063697b32816f95e09d69b3ec",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "capabilityEpoch": "1",
+      "accountModelHash": "0xb328639ffeb02aa0d2d50a6d38d797deb195c15047f1800c9b404c3391ad449e",
+      "enforcement": 1,
+      "maximumSecurityMode": 1,
+      "signatureSchemeIds": [
+        "0x73755364f23c57929be84e70ccde5f66665c099554199176b13b2580f18dfc67"
+      ],
+      "proofSchemeIds": [],
+      "verifierSchemeIds": [],
+      "authorizationPathAvailable": false,
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "implementationBindingHash": "0x2a0f013222e4452164bb58fd9ed69a6fcd1f791f66bf3c199ca029bb0281da32",
+      "evidenceHash": "0xc5e52bf8407eb9c20c001ef2ca881018463aed735f88441f23e088abfdd9f249",
+      "capabilityHash": "0x06ffacc67e522a0a6f01b68cc9da19c7f1617f4cbb2856ef063c78d9c7f5c6ca"
+    }
+  },
+  "trustedStates": {
+    "currentStarknet": {
+      "formatVersionHash": "0xd381b005e7b540196cc2b15f9308c9a912fc144348670415382c8d678706ac2a",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "networkIdHash": "0x5956597ee81777c670f2a0d7027f805e4efa573ef516ddd06e753652301aaf0b",
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "greatestAcceptedCapabilityEpoch": "1",
+      "expectedCapabilityHash": "0x0900fe167fd32e7a00927b6224005b0b748f6bf8f4b3dd7200ffb06314fc603f",
+      "greatestAcceptedPolicyEpoch": "1",
+      "expectedPolicyHash": "0x164911292409b4daf8c2f2838516bab2630c1ac1d64d80240aedf80ee862039d",
+      "trustedStateHash": "0x7f2146536b1c5794bff1742dcc19ce4fc1762060ced279792e45ecf17aebbc7a"
+    },
+    "syntheticRotatedStarknet": {
+      "formatVersionHash": "0xd381b005e7b540196cc2b15f9308c9a912fc144348670415382c8d678706ac2a",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "networkIdHash": "0x5956597ee81777c670f2a0d7027f805e4efa573ef516ddd06e753652301aaf0b",
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "greatestAcceptedCapabilityEpoch": "2",
+      "expectedCapabilityHash": "0x9cd7efaf9e8452deefc6666e5a565427a430fe92ae168f9cae4580db257e8dac",
+      "greatestAcceptedPolicyEpoch": "2",
+      "expectedPolicyHash": "0x2b1171b0a45024c9064ac1956955d1e45adf9c3c1258fa0f18ff91424e2b9e8c",
+      "trustedStateHash": "0x298a3eabb509faf74e1b72e640fbeebb5c9a48cc4a7465a2a07361ca8e459f8a"
+    },
+    "baseMainnet": {
+      "formatVersionHash": "0xd381b005e7b540196cc2b15f9308c9a912fc144348670415382c8d678706ac2a",
+      "registryEpoch": "1",
+      "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+      "networkIdHash": "0x43b48883ef7be0f98fe7f98fafb2187e42caab4063697b32816f95e09d69b3ec",
+      "capabilityAuthorityHash": "0xf74e8410c117e8491933dc9efd0e21ec3627e3565632155ddc52e749cdcea92a",
+      "greatestAcceptedCapabilityEpoch": "1",
+      "expectedCapabilityHash": "0x06ffacc67e522a0a6f01b68cc9da19c7f1617f4cbb2856ef063c78d9c7f5c6ca",
+      "greatestAcceptedPolicyEpoch": "1",
+      "expectedPolicyHash": "0xf28c6b87de38d2f719873015b2981249a104ca30ceff8d4d2fbf0257fca489e4",
+      "trustedStateHash": "0x8b743f3607a96eed50d47a4323a9a1e0f977443a046855f50d644169598a911f"
+    }
+  },
+  "currentPolicyBundle": {
+    "formatVersionHash": "0xf675ea26a9e0280577311816f82b940ac2cd137a5b48b2e77fa421a765ae4512",
+    "registryEpoch": "1",
+    "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+    "policyEpoch": "1",
+    "securityMode": 1,
+    "signatureCombiner": "all",
+    "deviceSignatureSchemeIds": [
+      "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+    ],
+    "validatorSignatureSchemeIds": [
+      "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+    ],
+    "recoveryProtectionSchemeIds": [
+      "0x01ca8b0ac2e9ee9d8878edb5fa1673efe6ddcc80e650d9f9c77935865563c1ba"
+    ],
+    "keyEstablishmentSchemeIds": [
+      "0xce2f42ec6224111db8861fdaaa2101131af7c40163b36152276c911f0cd1dea2"
+    ],
+    "hashSchemeIds": [
+      "0x3dbf6a852f95a8dd226e345537fd9e7de87a85b693c3300e0bb17c07f6c98011",
+      "0xe342133ae8b4662317d26ea1128faf903384e1907ecae2f56f6a6db3c7309b37"
+    ],
+    "symmetricSchemeIds": [
+      "0xa5fae4882b8ee21f076593a7b7fa535884a5f183ba28369638b03b69174417ff"
+    ],
+    "kdfSchemeIds": [
+      "0x72a7abec5c9c2deafd3447076bf62083f48f598f0b588138c73d8f3580d2ac5d"
+    ],
+    "proofSchemeId": "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45",
+    "verifierSchemeId": "0xeb397b5507b743a77022b27b24ec90f73e6dd78ed1c44bd3985cfd6902e22045",
+    "networkCapabilityHash": "0x0900fe167fd32e7a00927b6224005b0b748f6bf8f4b3dd7200ffb06314fc603f",
+    "recoveryIndependenceHash": "0x0f2a5f0d63321dae6b8391e1ad5b5445d860cce0a2fbe24e60284ad8bf6071f9",
+    "bundleHash": "0x164911292409b4daf8c2f2838516bab2630c1ac1d64d80240aedf80ee862039d"
+  },
+  "syntheticRotationTargetBundle": {
+    "formatVersionHash": "0xf675ea26a9e0280577311816f82b940ac2cd137a5b48b2e77fa421a765ae4512",
+    "registryEpoch": "1",
+    "registryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+    "policyEpoch": "2",
+    "securityMode": 1,
+    "signatureCombiner": "all",
+    "deviceSignatureSchemeIds": [
+      "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+    ],
+    "validatorSignatureSchemeIds": [
+      "0xecb7b7ca61ef9c5a5ed1badb8a0f28c30e57c11a1d71d6394b84146524a6da79"
+    ],
+    "recoveryProtectionSchemeIds": [
+      "0x01ca8b0ac2e9ee9d8878edb5fa1673efe6ddcc80e650d9f9c77935865563c1ba"
+    ],
+    "keyEstablishmentSchemeIds": [
+      "0xce2f42ec6224111db8861fdaaa2101131af7c40163b36152276c911f0cd1dea2"
+    ],
+    "hashSchemeIds": [
+      "0x3dbf6a852f95a8dd226e345537fd9e7de87a85b693c3300e0bb17c07f6c98011",
+      "0xe342133ae8b4662317d26ea1128faf903384e1907ecae2f56f6a6db3c7309b37"
+    ],
+    "symmetricSchemeIds": [
+      "0xa5fae4882b8ee21f076593a7b7fa535884a5f183ba28369638b03b69174417ff"
+    ],
+    "kdfSchemeIds": [
+      "0x72a7abec5c9c2deafd3447076bf62083f48f598f0b588138c73d8f3580d2ac5d"
+    ],
+    "proofSchemeId": "0xb9625f4cf1aa6c242b41ccb286f51345762c1e6db6e36641585791da8840aa45",
+    "verifierSchemeId": "0xeb397b5507b743a77022b27b24ec90f73e6dd78ed1c44bd3985cfd6902e22045",
+    "networkCapabilityHash": "0x9cd7efaf9e8452deefc6666e5a565427a430fe92ae168f9cae4580db257e8dac",
+    "recoveryIndependenceHash": "0x834ac3fe2c99e740e5698c186341df37fb62f0761e80ba0d7c9462e4381ed48c",
+    "bundleHash": "0x2b1171b0a45024c9064ac1956955d1e45adf9c3c1258fa0f18ff91424e2b9e8c"
+  },
+  "syntheticRotationCeremony": {
+    "formatVersionHash": "0xb7e6def01ca18671c89f9096dddd46255c7ceaea54ea2020daf5c2669a03a8ea",
+    "ceremonyKind": 2,
+    "fromBundleHash": "0x164911292409b4daf8c2f2838516bab2630c1ac1d64d80240aedf80ee862039d",
+    "toBundleHash": "0x2b1171b0a45024c9064ac1956955d1e45adf9c3c1258fa0f18ff91424e2b9e8c",
+    "fromNetworkCapabilityHash": "0x0900fe167fd32e7a00927b6224005b0b748f6bf8f4b3dd7200ffb06314fc603f",
+    "toNetworkCapabilityHash": "0x9cd7efaf9e8452deefc6666e5a565427a430fe92ae168f9cae4580db257e8dac",
+    "fromTrustedStateHash": "0x7f2146536b1c5794bff1742dcc19ce4fc1762060ced279792e45ecf17aebbc7a",
+    "toTrustedStateHash": "0x298a3eabb509faf74e1b72e640fbeebb5c9a48cc4a7465a2a07361ca8e459f8a",
+    "fromDeviceEpoch": "1",
+    "toDeviceEpoch": "2",
+    "fromValidatorEpoch": "1",
+    "toValidatorEpoch": "2",
+    "fromRecoveryEpoch": "1",
+    "toRecoveryEpoch": "2",
+    "newKeySetHash": "0xecd5ca3abb7b421825a07a1e23f76413c3ecb15cc5ca9f574a80b5432c2abd88",
+    "userApprovalDigest": "0xe42959719eb848ce3cbe9811f3ba94fba796c313137c2d62849c052c3e337892",
+    "recoveryApprovalDigest": "0x422c883349fef95bdf16aa93ac44dbcac726aad3effcebac101922d022331062",
+    "independentReviewHash": "0x133d125de83511dc83bf9eb64b5ad0c94236df2003617bd5776be9416793a888",
+    "notBefore": "1800000000",
+    "expiresAt": "1800003600",
+    "emergencyFreeze": false,
+    "ceremonyHash": "0x310276cbd83c00afbb3c32a19b3e21dec6d7ee1518b431f903e7767382ae8141"
+  },
+  "currentClaimAssessment": {
+    "claim": "algorithm_agile_only",
+    "wholeSystemPostQuantum": false,
+    "reasons": [
+      "network authorization path is not deployed and independently verified",
+      "authorization still depends on quantum-vulnerable signature or proof components"
+    ]
+  },
+  "activationGates": [
+    "admitted-and-independently-reviewed-pq-device-signature",
+    "admitted-and-independently-reviewed-pq-key-establishment",
+    "admitted-and-independently-reviewed-pq-proof-and-verifier",
+    "network-enforced-hybrid-and-account-path",
+    "recovery-ceremony-proves-independent-pq-rotation",
+    "downgrade-and-retirement-tests-pass",
+    "separate-publication-and-production-authorization"
+  ]
+}

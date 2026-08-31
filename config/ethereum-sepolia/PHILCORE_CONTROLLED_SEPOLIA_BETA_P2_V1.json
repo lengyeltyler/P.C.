@@ -1,0 +1,50 @@
+{
+  "format": "philcore-controlled-sepolia-beta-p2-configuration-v1",
+  "version": 1,
+  "status": "p1_infrastructure_confirmed_p2_not_authorized",
+  "chainId": "11155111",
+  "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+  "deployer": "0xF4F3d0E5df54908BC2bf0864B4EdC18653f09ad1",
+  "infrastructure": {
+    "factory": "0xCcbdB547b70741D78d327B4584607C651ddF327A",
+    "actionGate": "0xD48e07a5c3A4E472E4923Db39219140F417A42D4",
+    "mintConsumer": "0x683EeE209640D9fb5bFB12876B916B35A19E18e5"
+  },
+  "runtimeCodeHashes": {
+    "entryPoint": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+    "consumer": "0x0a51746d6e9eab9ac2e7000cc70d3b374d10f86ef2b8dd0ac90c134988e11891",
+    "gate": "0x137555ca098aebbcdbc8c4bee8d20e1e92643c67fd81cdeea7fc800380502a3a",
+    "factory": "0x1e622114595755e7091fec38985ce4bccd6f2f3b8dd48bda755c754f1d9a312e"
+  },
+  "account": {
+    "predictedAddress": "0xb72053013089F089502B075009c0BD807349eCC6",
+    "salt": "0x47c7e6eadfd16c5f2783126fb09bc5b65988cc76c4b8d11209eebb5c62e64a96",
+    "ownerCommitment": "0x51913d802ac498f0277510d5d01c21521bd4042a90c436b112bc18c25c0a8d74",
+    "initialExecutionValidator": "0xCCFdf0a8172A8B10529a48F77F75941A1FB7aA81",
+    "initialRecoveryAuthority": "0x8d9eaf12897d52612fC24189a8aA899C51aE7A83"
+  },
+  "authorizationWindowSeconds": "3600",
+  "maximumTotalFeeWei": "5000000000000000",
+  "maximumNativeAccountBalanceWei": "10000000000000000",
+  "maximumEntryPointDepositWei": "10000000000000000",
+  "maximumOperatorExposureWei": "50000000000000000",
+  "gasPolicy": {
+    "callGasLimit": "300000",
+    "verificationGasLimit": "1800000",
+    "preVerificationGas": "100000",
+    "maxFeePerGas": "2200000000",
+    "maxPriorityFeePerGas": "100000000"
+  },
+  "phoneAssurance": {
+    "assuranceClass": "trusted_philcore_ios_application_enforced_unattested",
+    "trustedPhilCoreIOSApplicationRequired": true,
+    "secureEnclaveBackedRecordRequired": true,
+    "userPresenceRequiredRecordRequired": true,
+    "p256ProofOfPossessionRequired": true,
+    "remoteHardwareAttestationEstablished": false,
+    "maliciousAlternateClientResistanceClaimed": false
+  },
+  "publicMutationEnabled": false,
+  "submissionEnabled": false,
+  "automaticRetryAllowed": false
+}

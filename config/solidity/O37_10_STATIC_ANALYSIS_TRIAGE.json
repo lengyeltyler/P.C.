@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.10",
+  "tool": "Slither",
+  "toolVersion": "0.10.4",
+  "scope": [
+    "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+    "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountFactoryV2.sol"
+  ],
+  "status": "COMPLETED_WITH_REVIEWED_FINDINGS",
+  "formalExternalAudit": false,
+  "actionableChangesApplied": [
+    "factory explicitly implements the verifier-binding interface",
+    "unused factory-version source constant removed",
+    "both EIP-1559 fee words are consumed and priority fee above max fee is rejected",
+    "permissionless recovery settlements reject execution-lock reentrancy"
+  ],
+  "acceptedDetectorFamilies": {
+    "reentrancy": "execution lock is set before each external action; every action and both permissionless settlements reject the lock; malicious-recipient regression proves settlement cannot reenter",
+    "strictEquality": "zero timestamp is the exact no-pending-state sentinel in aggregate views",
+    "timestamp": "fixed recovery delay and expiry comparisons are required lifecycle rules",
+    "assembly": "bounded canonical 64-byte binding decode and fixed-word calldata reads are length and range checked",
+    "cyclomaticComplexity": "one closed eight-action decoder prevents alternate dispatch and generic execution",
+    "lowLevelCalls": "EntryPoint prefund, typed native transfer, factory STATICCALL, and verifier STATICCALL are the reviewed bounded calls",
+    "tooManyDigits": "detector applies to type(PhilCoreV2MinimalAccountV2).creationCode syntax, not a numeric literal",
+    "immutableState": "validator verifier kind remains in frozen O.37.9 slot 0 and has no mutation surface"
+  },
+  "remainingUntriagedFindings": 0,
+  "highOrCriticalUnmitigatedFindings": 0,
+  "regressionTest": "test/unit/o37-10-v2-minimal-account.test.cjs",
+  "externalAuditStillRequiredBeforePublicDeployment": true
+}

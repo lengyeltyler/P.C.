@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "philcore-o22-first-sepolia-funding-readiness-v1",
+  "phase": "O.22",
+  "status": "proposed_estimates_only",
+  "accepted": false,
+  "fundingApproved": false,
+  "fundingPerformed": false,
+  "assumptions": {
+    "currentGasPrice": {
+      "wei": "1007963318",
+      "gwei": "1.007963318",
+      "eth": "0.000000001007963318"
+    },
+    "recommendedMaxFeePerGas": {
+      "wei": "2015926636",
+      "gwei": "2.015926636",
+      "eth": "0.000000002015926636"
+    },
+    "maxFeePerGasCeiling": {
+      "wei": "100000000000",
+      "gwei": "100.0",
+      "eth": "0.0000001"
+    },
+    "maxPriorityFeePerGasCeiling": {
+      "wei": "5000000000",
+      "gwei": "5.0",
+      "eth": "0.000000005"
+    },
+    "safetyBufferBasisPoints": 2500
+  },
+  "disposableDeployer": {
+    "purpose": "confirmation target and account factory deployments only",
+    "estimatedMinimum": {
+      "wei": "1368718429328790",
+      "gwei": "1368718.42932879",
+      "eth": "0.00136871842932879"
+    },
+    "recommendedTestAmount": {
+      "wei": "3421795569340316",
+      "gwei": "3421795.569340316",
+      "eth": "0.003421795569340316"
+    },
+    "configuredHardCeilingExposure": {
+      "wei": "169738100000000000",
+      "gwei": "169738100.0",
+      "eth": "0.1697381"
+    },
+    "gasUnits": {
+      "targetDeployment": "307816",
+      "factoryDeployment": "1050089",
+      "combined": "1357905",
+      "buffered": "1697381"
+    }
+  },
+  "counterfactualSmartAccount": {
+    "purpose": "first counterfactual deployment and confirmation UserOperation prefund",
+    "estimatedMinimum": {
+      "wei": "1016920080043748",
+      "gwei": "1016920.080043748",
+      "eth": "0.001016920080043748"
+    },
+    "recommendedTestAmount": {
+      "wei": "4031853272000000",
+      "gwei": "4031853.272",
+      "eth": "0.004031853272"
+    },
+    "configuredHardCeilingExposure": {
+      "wei": "200000000000000000",
+      "gwei": "200000000.0",
+      "eth": "0.2"
+    },
+    "hardGasCeiling": "2000000",
+    "prefundMechanism": "direct ETH transfer to the counterfactual address",
+    "entryPointDepositRequired": false,
+    "mechanismRationale": "BaseAccount pays missingAccountFunds from the account balance during validation; the predicted address may be prefunded before CREATE2 deployment",
+    "withdrawalWarning": "the experimental account exposes no withdrawal or recovery method; unused prefund may be stranded"
+  },
+  "totalConfiguredHardCeilingExposure": {
+    "wei": "369738100000000000",
+    "gwei": "369738100.0",
+    "eth": "0.3697381"
+  },
+  "bundlerStatus": "BUNDLER_ESTIMATE_NOT_CONFIGURED",
+  "exactBundlerPrefundResolved": false,
+  "publicMutationOccurred": false
+}

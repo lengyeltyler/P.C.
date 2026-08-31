@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "philcore-controlled-sepolia-beta-v1",
+  "status": "implementation_candidate_external_review_required",
+  "network": {
+    "name": "ethereum-sepolia",
+    "chainId": 11155111,
+    "entryPointVersion": "0.7",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032"
+  },
+  "account": {
+    "contract": "PhilCore4337Account",
+    "factory": "PhilCore4337AccountFactory",
+    "upgradeable": false,
+    "nonceKey": "0",
+    "reuseDeployedAccount": true,
+    "singleAuthorizedAccount": true,
+    "initCodeAfterDeployment": "0x",
+    "paymasterAllowed": false,
+    "batchAllowed": false,
+    "delegatecallAllowed": false,
+    "genericCallAllowed": false
+  },
+  "ordinaryAction": {
+    "action": "zero-value-test-pass",
+    "accountSelector": "0xb61d27f6",
+    "gateSelector": "0xfa724deb",
+    "maximumValueWei": "0",
+    "maximumTotalFeeWei": "5000000000000000",
+    "mintRecipientPolicy": "current_execution_owner_enforced_on_chain",
+    "automaticRetry": false
+  },
+  "recovery": {
+    "model": "independent-delayed-recovery-authority-with-owner-cancellation",
+    "delaySeconds": "172800",
+    "expirySeconds": "604800",
+    "ordinaryActionAuthority": false,
+    "accountFrozenWhilePending": true,
+    "executionOwnerRotation": true,
+    "recoveryAuthorityRotation": true
+  },
+  "funding": {
+    "maximumOperatorExposureWei": "50000000000000000",
+    "maximumAccountNativeBalanceWei": "10000000000000000",
+    "maximumEntryPointDepositWei": "10000000000000000",
+    "legacyDisclosedAlphaSourceAllowedForCappedFundingOnly": true,
+    "legacyDisclosedAlphaSourceMayHoldBetaAuthority": false,
+    "fundOnlyBalanceBearingRoles": true,
+    "releaseRecipient": "current_execution_owner_only",
+    "meaningfulAssetsAllowed": false
+  },
+  "verificationBoundary": {
+    "noir": "verified_locally_before_execution_signature_release",
+    "iphoneP256": "verified_locally_before_execution_signature_release",
+    "ethereum": "enforces_entrypoint_signature_account_restrictions_gate_and_replay",
+    "onChainNoirVerificationClaimAllowed": false,
+    "onChainP256VerificationClaimAllowed": false
+  },
+  "release": {
+    "mainnetAllowed": false,
+    "publicMutationRequiresFrozenPlan": true,
+    "externalAuditRequired": true,
+    "signedPackagesRequired": true,
+    "physicalAcceptanceRequired": true
+  }
+}

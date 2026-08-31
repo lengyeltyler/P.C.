@@ -1,0 +1,16 @@
+Phil Character and Brand Assets Notice
+
+Copyright (c) 2026 Tyler Lengyel. All rights reserved.
+
+The 3D Phil and Avastar character artwork included in this repository is owned
+and controlled by Tyler Lengyel. The owner directly authorized the source
+sprite sheets to be separated into individual poses and used in the Phil and
+PhilCore projects on August 23-24, 2026.
+
+These character and brand assets are not licensed under the repository's MIT
+software license. No permission is granted to use Phil names, characters,
+marks, or artwork in an unrelated product or in a way that suggests endorsement.
+
+Repository contributors may modify the assets only as needed to develop,
+test, document, and distribute the Phil and PhilCore products under the
+project owner's direction.

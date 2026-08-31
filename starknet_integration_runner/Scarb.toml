@@ -1,0 +1,15 @@
+[package]
+name = "phil_starknet_integration_runner"
+version = "0.1.0"
+edition = "2024_07"
+license = "MIT"
+
+[dependencies]
+phil_starknet_integration = { path = "../starknet_integration" }
+phil_cairo_air_adapter_spike = { path = "../cairo_air_adapter_spike" }
+cairo_execute = "2.15.0"
+
+[cairo]
+enable-gas = false
+
+[[target.executable]]

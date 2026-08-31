@@ -1,0 +1,59 @@
+{
+  "format": "PHIL_V1_STEP6C2_ARTIFACT_MANIFEST_V3",
+  "generatedAtProtocolTime": "2026-08-22T00:00:00.000Z",
+  "candidateBinding": "Exact commit and tree are bound only by the independent Step 6C-2 review record.",
+  "fixture": {
+    "path": "config/adapters/PHIL_V1_STEP6C2_PRODUCT_WIRING_FIXTURE.json",
+    "bytes": 20335,
+    "sha256": "93d948ee063e7db02def36521d075384d9cb13e42740f14a534b7833caa2efa5"
+  },
+  "inheritedStep6C1": {
+    "sourceCommit": "6f048eb69ac2ca4bcd6f9649b9a543cf17f0b62c",
+    "sourceTree": "a9032b29802bcd3f4bfc7a2de48f911e9b805063",
+    "acceptedCandidate": "22b5cf31d068104c762c411cd4fa6ad8e0485eae",
+    "acceptedTree": "2b0ff7fdf25f6571852be23853a9ad9c6f3e064f"
+  },
+  "focusedAutomatedTests": {
+    "typescriptTransport": 6,
+    "typescriptEnrollment": 3,
+    "desktopHost": 4,
+    "desktopLocalProductRuntime": 2,
+    "desktopProductFlow": 1,
+    "desktopIpc": 6,
+    "desktopStorage": 3,
+    "desktopProductHost": 3,
+    "desktopEnrollmentHost": 1,
+    "desktopUrlSessionIntegration": 1,
+    "desktopUiState": 6,
+    "desktopSecureOrigin": 1,
+    "swiftSimulator": 26,
+    "total": 63
+  },
+  "protocolIdentities": {
+    "authorization": {
+      "transcriptLabel": "PHIL_ROUTINE_AUTHORIZATION_TRANSPORT_V1",
+      "hkdfInfo": "PHIL_ROUTINE_AUTHORIZATION_AES256_GCM_V1",
+      "beginPath": "/philcore/routine/v1/begin",
+      "completePath": "/philcore/routine/v1/complete",
+      "qrPrefix": "phil-step6c-routine-v1:"
+    },
+    "enrollment": {
+      "transcriptLabel": "PHIL_ROUTINE_DEVICE_ENROLLMENT_PROOF_V2",
+      "acceptanceLabel": "PHIL_ROUTINE_DEVICE_ENROLLMENT_ACCEPTANCE_V2",
+      "preflightPath": "/philcore/routine-enrollment/v2/preflight",
+      "completePath": "/philcore/routine-enrollment/v2/complete",
+      "qrPrefix": "phil-step6c-routine-enrollment-v2:",
+      "maximumGeneration": 64,
+      "signatureSuiteId": "0x140f8ea7446c92baefbb03cbe88f45e108b18b111cbe132948c8d41636f7da34",
+      "providerProfileId": "0x5462c1e1f72e6fb3019acd7854d6f1b4c899935ef8616da00fe91c2857219d9d",
+      "wireEncodingId": "0xaecd0161fdadacd890513da0fd14374a2007d469a10cd27a5bca178b5295a624"
+    }
+  },
+  "nonclaims": [
+    "physical iPhone verification",
+    "public or test network admission",
+    "production authority",
+    "post-quantum enforcement",
+    "production readiness"
+  ]
+}

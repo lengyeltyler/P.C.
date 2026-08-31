@@ -1,0 +1,9 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/datetime.rs
+
+// Adapted from the `humantime` crate.
+// Copyright (c) 2016 The humantime Developers
+// Released under the MIT OR Apache 2.0 licenses
+

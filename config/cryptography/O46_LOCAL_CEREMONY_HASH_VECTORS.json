@@ -1,0 +1,86 @@
+{
+  "phase": "O.46",
+  "canonicalPhaseName": "O.46 Local Ceremony Hash Vectors",
+  "classification": "TEST_FIXTURE_ONLY",
+  "hashOnly": true,
+  "limitations": [
+    "Hash-only vectors: neither signatures nor private material are present.",
+    "Cannot test combined Role 2 proof verification.",
+    "Values are deterministic public placeholders or public protocol constants.",
+    "No fixture generator or signing script exists."
+  ],
+  "provenance": {
+    "publicMutationCount": 0,
+    "networkCalls": 0,
+    "productionCredentialCreated": false,
+    "productionSignatureCreated": false,
+    "blockchainMutations": 0,
+    "secretsCommitted": false,
+    "privateScalarsCommitted": false,
+    "rpcUsed": false,
+    "environmentFileUsed": false,
+    "fixtureGeneratorExists": false,
+    "signingScriptExists": false,
+    "combinedRole2ProofVerificationTestable": false
+  },
+  "protocolConstants": {
+    "enrollmentLiteral": "PhilCoreV2LocalEnrollmentCeremony(bytes32 ceremonyId,address account,uint256 chainId,address entryPoint,bytes32 accountVersionId,bytes32 securityModelId,bytes32 recoveryDomainId,uint64 expectedRecoveryEpoch,uint64 expectedValidatorEpoch,uint48 expiresAt)",
+    "enrollmentTypehash": "0x8031098c01a87af0c858de46b12f22ddb7a73c87ffb87d5337fd3e84f363f139",
+    "enrollmentAbiTypes": [
+      "bytes32",
+      "bytes32",
+      "address",
+      "uint256",
+      "address",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "uint48"
+    ],
+    "role2ProofLiteral": "PhilCoreV2LocalRole2CeremonyProof(uint8 proofVersion,bytes32 enrollmentCeremonyHash,bytes32 independenceBindingHash,bytes32 factorCommitment,uint64 credentialGeneration,address account,uint256 chainId,address entryPoint,address signer)",
+    "role2ProofTypehash": "0xefb939b411b644e9baceab6caff16106eee45846a67a64c35998e12fc52b5fa2",
+    "proofAbiTypes": [
+      "bytes32",
+      "uint8",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "address",
+      "uint256",
+      "address",
+      "address"
+    ],
+    "accountVersionId": "0xa271e70f3c567c6a54a81e455de89f98cc067a931ac70816c6016e9b9ca1fd1f",
+    "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+    "recoveryDomainId": "0x50df2518b753705d83b2dc8a73412c09128650011de272b1b6ca1d4cd01bb6a9",
+    "proofVersion": "1"
+  },
+  "enrollment": {
+    "ceremonyId": "0x827fb6a1d6c993f9398090b62cbb32171b4fdc11fc6b9d885f263e18402faf34",
+    "account": "0xd5520BEEC59848D796EBA0badAa9c65f1be6E6F6",
+    "chainId": "11155111",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "accountVersionId": "0xa271e70f3c567c6a54a81e455de89f98cc067a931ac70816c6016e9b9ca1fd1f",
+    "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+    "recoveryDomainId": "0x50df2518b753705d83b2dc8a73412c09128650011de272b1b6ca1d4cd01bb6a9",
+    "expectedRecoveryEpoch": "1",
+    "expectedValidatorEpoch": "1",
+    "expiresAt": "2000000000",
+    "expectedEnrollmentCeremonyHash": "0x53acfab50180fc16e50747709affe37c425aaf80340574fb8b1e720898448626"
+  },
+  "role2Proof": {
+    "proofVersion": "1",
+    "enrollmentCeremonyHash": "0x53acfab50180fc16e50747709affe37c425aaf80340574fb8b1e720898448626",
+    "independenceBindingHash": "0x7c5c0178254e14f4a3b2753c789d3767de1858b8009ed8edb1e755b5e464c741",
+    "factorCommitment": "0xa8807b18a2abd852741da4124c931d7f3f8d6914abdd60fce5ccadee2fc9def8",
+    "credentialGeneration": "1",
+    "account": "0xd5520BEEC59848D796EBA0badAa9c65f1be6E6F6",
+    "chainId": "11155111",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "signer": "0xe2F0a9A29E87D99d88875662FF936782C7596BB0",
+    "expectedRole2CeremonyProofDigest": "0xf0b19eb804fc813914b8f574c196265c85674cede48bf07fbf858caadcfca910"
+  }
+}

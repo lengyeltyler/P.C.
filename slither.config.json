@@ -1,0 +1,6 @@
+{
+  "filter_paths": "node_modules|artifacts|cache|coverage|dist|build|proving|docs|starknet_integration|starknet_integration_runner|starknet_adapter_spike|starknet_spike|cairo_air_adapter_spike",
+  "exclude_dependencies": false,
+  "exclude_informational": false,
+  "exclude_optimization": false
+}

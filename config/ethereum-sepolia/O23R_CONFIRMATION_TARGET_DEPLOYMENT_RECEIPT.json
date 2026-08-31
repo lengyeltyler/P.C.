@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "philcore-o23r-confirmation-target-deployment-receipt-v1",
+  "phase": "O.23R",
+  "sourceHead": "5ddf72d0e218a34a8bb60b552c46dd3428baffef",
+  "evidenceRecordedFromHead": "d1313bdf7651900c564f2e56e0e474eb397bc9f0",
+  "sourceBinding": {
+    "sourceCommitAtGeneration": "5ddf72d0e218a34a8bb60b552c46dd3428baffef",
+    "deploymentSourceTreeSha256": "e7fec5789382de95e0f7422a3c62c5b9210f25c2418a8ca52bbb3d934c0f6a5b",
+    "sources": [
+      {
+        "path": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+        "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+      },
+      {
+        "path": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+        "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+        "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+        "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+      }
+    ]
+  },
+  "compiler": {
+    "version": "0.8.24",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "evmVersion": "paris",
+    "buildInfoSha256": "0793e6481f66541cbcff92044a5eee789e8df2e23c037f89c6c4ceacdc04220d"
+  },
+  "targetArtifact": {
+    "id": "confirmationTarget",
+    "contract": "PhilCoreLocalProofConfirmationTargetV1",
+    "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+    "artifact": "artifacts/contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol/PhilCoreLocalProofConfirmationTargetV1.json",
+    "sourceSha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6",
+    "abiSha256": "a877274627b040611a898dc28dd678bdf02f0542de71458958ceb0cf71126ee9",
+    "creationBytecodeHash": "0x2d6acc0d004e51fed77a473beaba524a60a0a617667be36f064fbe3c4aea2127",
+    "deployedBytecodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "creationBytecodeSize": 1189,
+    "deployedBytecodeSize": 1161
+  },
+  "signerPublicAddress": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+  "signerRecovered": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+  "nonce": "1",
+  "predictedTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+  "actualTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+  "transactionHash": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+  "receiptStatus": "success",
+  "confirmationsRequired": 2,
+  "blockNumber": "11365970",
+  "blockHash": "0x9c12b5880d50e8d4c7ce04b63dfdbf739b2d8b778142eda4432471b153f3f735",
+  "gasUsed": "304234",
+  "effectiveGasPriceWei": "1092737926",
+  "exactTransactionCostWei": "332448030178684",
+  "exactTransactionCostEth": "0.000332448030178684",
+  "runtimeCodeVerification": {
+    "expectedHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "actualHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "matched": true
+  },
+  "constructorStateVerification": {
+    "constructorArguments": [],
+    "constructorHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+    "securityModelId": "0x23dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4c",
+    "matched": true
+  },
+  "preSigning": {
+    "chainId": 11155111,
+    "signer": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+    "signerDerivationMatched": true,
+    "nonce": "1",
+    "expectedTargetAddress": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "sourceSha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6",
+    "creationBytecodeHash": "0x2d6acc0d004e51fed77a473beaba524a60a0a617667be36f064fbe3c4aea2127",
+    "constructorHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+    "valueWei": "0",
+    "freshGasEstimate": "307816",
+    "gasLimit": "384770",
+    "maxFeePerGasWei": "10000000000",
+    "maxPriorityFeePerGasWei": "1500000",
+    "maximumTransactionCostWei": "3847700000000000",
+    "latestBlockNumber": "11365969",
+    "latestBlockHash": "0x966c75dff4c34667cea3e8a902680890840aa6a77723d4c593b07adcb54dfa70",
+    "approvalDigest": "0xdce7ceb997c99afbba65872b10101b3efb6a89c883da9572f6253f3715c5ccdc",
+    "approvalExpiresAt": "2026-07-28T05:27:43.305Z"
+  },
+  "stateBefore": {
+    "deploymentWallet": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "271564356172676490",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "futurePrefundingWallet": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "92576112524973299",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "target": {
+      "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    }
+  },
+  "stateAfter": {
+    "observedAtBlockNumber": "11365971",
+    "observedAtBlockHash": "0x1ba686c614f9a217f6b1e99b0fe50000e5e052fc39c9f786a9d37579482cc06e",
+    "deploymentWallet": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "2",
+      "pendingNonce": "2",
+      "balanceWei": "271231908142497806",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "futurePrefundingWallet": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "92576112524973299",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "target": {
+      "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "0",
+      "codeStatus": "present",
+      "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad"
+    },
+    "factory": {
+      "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "smartAccount": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    }
+  },
+  "publicMutationOccurred": true,
+  "publicMutationScope": "new-deployer-confirmation-target-only",
+  "factoryDeployed": false,
+  "smartAccountFunded": false,
+  "fundingWalletUsed": false,
+  "deviceVaultSignatureGenerated": false,
+  "bundlerContacted": false,
+  "userOperationSubmitted": false,
+  "acp0002Status": "Proposed",
+  "betaApproved": false,
+  "productionApproved": false
+}

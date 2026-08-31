@@ -1,0 +1,13 @@
+Supplemental source/header notices for selected native crate. Optional target alternatives are retained conservatively; this does not assert every source file is incorporated.
+
+Source files: src/math/generic/floor.rs
+/* SPDX-License-Identifier: MIT
+ * origin: musl src/math/floor.c */
+
+Source files: src/math/generic/fmax.rs, src/math/generic/fmaximum.rs, src/math/generic/fmaximum_num.rs, src/math/generic/fmin.rs, src/math/generic/fminimum.rs, src/math/generic/fminimum_num.rs, src/math/generic/fmod.rs
+/* SPDX-License-Identifier: MIT OR Apache-2.0 */
+
+Source files: src/math/generic/trunc.rs
+/* SPDX-License-Identifier: MIT
+ * origin: musl src/math/trunc.c */
+

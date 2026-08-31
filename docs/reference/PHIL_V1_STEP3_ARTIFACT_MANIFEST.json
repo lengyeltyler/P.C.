@@ -1,0 +1,263 @@
+{
+  "format": "phil-v1-step3-reference-artifact-manifest-v1",
+  "status": "exact-candidate-pending-independent-review",
+  "productionBackendSelected": false,
+  "productionAuthority": false,
+  "networkActivity": false,
+  "physicalDeviceUsed": false,
+  "proofSystem": "UltraKeccakZK Honk",
+  "toolchain": {
+    "nargo": {
+      "version": "1.0.0-beta.16",
+      "releaseArchiveSha256": "e21d6d09639831568850b365002e0c60456328155b143296ccf6fb3ca4cec794",
+      "executableSha256": "7960d2a6fbcfa547ef52b8fdd8c158e2eb6a1a753500198bbe7711efe50c5fce"
+    },
+    "barretenberg": {
+      "version": "3.0.0-nightly.20251104",
+      "releaseArchiveSha256": "fc30922f8ee2db86a3fb0ddca026f8ab4cf123e6cffbbff17169ede50e513ef4",
+      "executableSha256": "fe5cdb8b85c2f76d806ab86fdfff450cf5c25b017c6b94c7a69f187c02bea565"
+    },
+    "garaga": {
+      "version": "1.0.1",
+      "sourceCommit": "aa91b6504c86995789edb4e78f9f9ba20571625c",
+      "python": "3.10.18"
+    },
+    "generatedCairoTarget": "2.14.0",
+    "localScarbCompiler": {
+      "version": "2.14.0",
+      "releaseArchiveSha256": "3667608675ded9e13322cf5cf1fcda06d6d84b0857e04e846148c6ae8cf5f576",
+      "executableSha256": "2e20da95b4cd51c030c54c0e5977a3a398ca18c8b68eefe6dc6e000d91467488"
+    },
+    "starknetFoundry": {
+      "version": "0.53.0",
+      "releaseArchiveSha256": "4c3be134ad09c4fb2093dda68272520d5cea595ac2b7a1c1714d39877f77b4b8",
+      "snforgeExecutableSha256": "fb2d19e2c4befbdf2ffd9937351b6a6d9363421c50aafe86d252a92d19442d72"
+    },
+    "universalSierraCompiler": {
+      "version": "2.10.0",
+      "releaseArchiveSha256": "3b7806314732b7cff266b95fcf0c8f0927e4776819e36f94a2c2a2eaff8ad2d0",
+      "executableSha256": "de6d1d4e03b8398cd895238ff2205d848b73488b0c2e8b8c7fec427a0281c4f1"
+    }
+  },
+  "descriptor": {
+    "format": "phil-proof-descriptor-v1",
+    "productionAuthority": false,
+    "networkActivity": false,
+    "verifierBindingDomain": "0xf5493e9f27242cdf85ace193f2784214a50ca873677947b4f462c1ac04c26566",
+    "descriptor": {
+      "descriptorVersionHash": "0x38c3687cbb1c0fc9ad3ff1d78f823a7ee85be5aa23961da1a1ca08405ded8312",
+      "proofSuiteId": "0xc8a18467a1246a8baa470555abe106412f413ca6f8b569e6edd62fccf4f51d08",
+      "proofSystemVersionHash": "0x837eb3779007100735e5492fde148331052b07956541e22c9113ea4a788b180c",
+      "circuitOrProgramId": "0x8cfc8dc33e503e664707651ee894bfab7e1880f7c22986cdf568e4e0b1080f0c",
+      "publicInputSchemaId": "0xeffa81060c3385e4c62a367ef3ffd3d014439f1078d109a51e33fa8c01582cde",
+      "verificationKeyHash": "0xc267bbb8610f38774e3c83a67cebda8a2b17de7fef4f81169dd3595d076cb6f9",
+      "verifierCodeHash": "0x1319ba7377a82df8cc9715f834e8433a02790160da833d134bdf4c1852427d2c",
+      "verifierBindingHash": "0x3378c5874e3b08504dcd60fc111db77c7ea51fb72efb8d75c7145cbf4c0d451f",
+      "codecId": "0x1cdb75128f2d70f2021a2b3fb6fc7d7e3f312af761fbc921810adad3478b19c6"
+    },
+    "proofDescriptorHash": "0xccc5b3202fdccaa2378075eb21ad8f0180961b12a937b0a37fcac79a8851f135",
+    "verifierSourceHashRule": "keccak256(concat(utf8(repo-relative-src-path-within-verifier + NUL), raw-file-bytes) for sorted Cairo source paths)"
+  },
+  "artifacts": [
+    {
+      "path": "apps/phil-device-sdk/src/authorizationEnvelopeV1.ts",
+      "bytes": 11568,
+      "sha256": "a7f1285f01665f598cfe8480f49308a3c7bf64fe1540f8ed772aca3f23527fec",
+      "keccak256": "0xc9d307fc43ee723138a35828b36c4c6588f404c0719a6c939f4456edf9e77617"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/rootProofV1.ts",
+      "bytes": 11879,
+      "sha256": "4b8ed9b628aad16bca1235c84c9e3d9d83a534a1e1e4c086d7c09dbd2ebebe8e",
+      "keccak256": "0x75f1cce55acfafbce9bd0a86a0e518bb051b7b3ce577daa249ed7ba21170e776"
+    },
+    {
+      "path": "test/unit/phil-v1-step3-root-proof-adapter.test.cjs",
+      "bytes": 11345,
+      "sha256": "3cfd830b8d05e123b3f7c1c72cfc09ce48de301d518698b062d161a488718f59",
+      "keccak256": "0xed6b2a2d91119c33f4cef3daa1a21384cb5efb2c48e3d7ded9f8bd819191b677"
+    },
+    {
+      "path": "scripts/security/test-phil-v1-step3-noir.cjs",
+      "bytes": 6805,
+      "sha256": "3c00f0ad877b6f5fbe91d3625279c8b7dedb8f298758b52251dfbda4bf66c548",
+      "keccak256": "0xd646deef4107231ac0b605443fb6e998ce7e58fbe8ea3f0919a4d277cf9968ce"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/Nargo.toml",
+      "bytes": 88,
+      "sha256": "b6c3ff90580f7e3b05d9c64723a024b2bae3092f69bb5df9a868b3e7f43c3c30",
+      "keccak256": "0x458a58d5abc8f0baefc27fa19dd4995d438866c45c69de2be79705db3cadcb03"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/Prover.toml",
+      "bytes": 1210,
+      "sha256": "b0c7c0edf07c52707e0added1f1fae91414f5332fe8666efc90c0f3ee185c067",
+      "keccak256": "0x04f142a7d2e5b0fd54ccd9c18397f65e4bbe5bdac7f3b6e2301ce2465a6be95b"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/README.md",
+      "bytes": 2639,
+      "sha256": "90dd480413367a2158d7bad0bc74fc31d8487fe5588b038c4f283a2c39b49217",
+      "keccak256": "0xb87cc65c6128494bdcd2a96057f9d285af83c13c2ebfdaec321e0c6a03ea5cbf"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/src/main.nr",
+      "bytes": 6974,
+      "sha256": "c94dcfa3db7576536df5c92f6b97e303d314e5fc75937e886d92dc31c22f6f6e",
+      "keccak256": "0x8cfc8dc33e503e664707651ee894bfab7e1880f7c22986cdf568e4e0b1080f0c"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/descriptor.json",
+      "bytes": 1319,
+      "sha256": "0086db6aa2a7acc274eec859492def616215dbcd07c6e83f271d1a3b4d1d8aa1",
+      "keccak256": "0x207e5380e98a18e3e322101916429359f80b65d5d1043bce75cff2aa52cd47cf"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/fixtures/canonical-vector.json",
+      "bytes": 5634,
+      "sha256": "6d7f287ee7a2f1ab7523154a0e5a8f31e533aceeddfe0742db35c4ce826da6cf",
+      "keccak256": "0xc0a79bc966664d71418990b0504277168209eec1228c977bab2ecaa6d043355e"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/phil_v1_step3_root_proof.json",
+      "bytes": 62329,
+      "sha256": "514dec0c8ee3f34e313d393deef697a5327dfd27abf99b1b707dd0db60e41984",
+      "keccak256": "0x61a49378675e14dbaf8b10bbf10fee1adfdc58fbb58cef9f2c12da9c49b88363"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/vk",
+      "bytes": 1888,
+      "sha256": "c830f13279278714cec8da9dc9e0114705d8f6eaf4a90c72b8c3b7b660abf3fd",
+      "keccak256": "0xc267bbb8610f38774e3c83a67cebda8a2b17de7fef4f81169dd3595d076cb6f9"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/vk_hash",
+      "bytes": 32,
+      "sha256": "d8176bcde03bdb4e15599d38ed3484d8dcf477514127505172d52d51c6e50076",
+      "keccak256": "0x42e18a398075ec2e69183b1d35cc0af23758d029e0d85640b732b4878acb81fa"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/synthetic_proof",
+      "bytes": 9408,
+      "sha256": "adc9f044b336d8507ef897f41dce99f72c211d71d9724a81b7b6702928838eef",
+      "keccak256": "0xfdfe96826dba5ce0a8baf6fb6639cc41e537656d5de1a2667ef29f3fd3cea8a0"
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/synthetic_public_inputs",
+      "bytes": 416,
+      "sha256": "a78658c7e36ad126422741c60feafb792aa8580ca2b058005aa3bd10eb32791c",
+      "keccak256": "0xef5c64ea45a4f97290278e30cc6fbbeb22e116b113c4605255255bec3d0dd304"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/src/honk_verifier.cairo",
+      "bytes": 13496,
+      "sha256": "341f3f302867925218f3a0ac98833d3ce0ecae652a80016fb4ae3142c7a1a941",
+      "keccak256": "0xbe106b71fee3fa057c861cb2b11d4c06e3d10ee3bb5fba981de9e66ad35349a3"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/src/honk_verifier_circuits.cairo",
+      "bytes": 142287,
+      "sha256": "d35766fb81f84ff5c4c1950b7f8c6026df38535ca6c8a8b2b54fc4b142b1c673",
+      "keccak256": "0xe21580b2649558a13ac9dd84c5166b03d4e7a698653daa0508059c2ce46f332b"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/src/honk_verifier_constants.cairo",
+      "bytes": 130670,
+      "sha256": "7ae6836eb21ba9cb162cf7407c25e63366be9dde5fbc87651f0ebb25d8ea6d71",
+      "keccak256": "0x5dad366d6bed42a8fe8d4d927dc961abffbb6665ec6315cedf91c2eae4683c6a"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/src/lib.cairo",
+      "bytes": 126,
+      "sha256": "5f85e3415e624ba01647b327f1eff2f45ef1ee4e48a9e96d3e39c7bb7dfd9dca",
+      "keccak256": "0x73f5ca87e46cf985f9b709e7511249128d3ebbb49bd795ea77b1420b6b75a267"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/README.md",
+      "bytes": 960,
+      "sha256": "1b653a17c0c0d9f208017de0379aae9a6b79a79538db8dc4d4578276ebc1cf28",
+      "keccak256": "0x79da1f85cf99844e8472382c8491c5707f474ff8fce2dd86b4a40445b3774f99"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/Scarb.toml",
+      "bytes": 650,
+      "sha256": "207086638adf9aaa2aff1fa999c98a885de8abd6102a69d651b376bcb0addcdf",
+      "keccak256": "0x725f607a3eb3bfd8003b7c2a2d03286921132f7f4cb7b6d3d63097d73f15bec3"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/Scarb.lock",
+      "bytes": 949,
+      "sha256": "78155f3bcb22f62c8e69c36a07534d56312862264620d14cf75d4c61e952416a",
+      "keccak256": "0x7896ee380d31e69c68f21cc90268c23fcd59198ee5c008cd4806d620f2f94790"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/.tool-versions",
+      "bytes": 37,
+      "sha256": "3628d59ab756404db9729fff5b20a108cff403880c76d812e11d7cf5f236cc34",
+      "keccak256": "0xd0e3505f78d2671c067dd08f3b2b67754d9d712411d1e6aa8da22786fdffb7a3"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/tests/test_phil_v1_step3_verifier.cairo",
+      "bytes": 2289,
+      "sha256": "32d9b3b737016a58859461bba2d4a86170461b398fb1d7bdd43086453c5ba207",
+      "keccak256": "0xeb3f443c94ed2c44c71686b3a663a7056380a718f0dc8f95719d3dfa899a1f4e"
+    },
+    {
+      "path": "starknet/phil-v1-step3-verifier/tests/proof_calldata.txt",
+      "bytes": 77538,
+      "sha256": "f57b9171f9553d544a132d139df31adb9541493463085a0fc716e5266a92143d",
+      "keccak256": "0x37cafc547c0e3dfb55a64d323b38d3a1cca7c2e71e94b0264d83b061e0d2cf27"
+    }
+  ],
+  "measurements": {
+    "acirOpcodes": 3894,
+    "circuitSize": 94786,
+    "logicalPublicInputs": 7,
+    "packedPublicInputs": 13,
+    "witnessSolveSeconds": 0.12,
+    "witnessSolveMaximumResidentBytes": 71172096,
+    "verificationKeyGenerationSeconds": 0.64,
+    "verificationKeyMaximumResidentBytes": 209108992,
+    "proofGenerationSeconds": 0.8,
+    "proofGenerationMaximumResidentBytes": 260915200,
+    "proofBytes": 9408,
+    "nativePublicInputBytes": 416,
+    "garagaCalldataTextBytes": 77538,
+    "cairoBuild": "passed",
+    "cairoBuildSeconds": 2.97,
+    "cairoBuildMaximumResidentBytes": 1591541760,
+    "sierraContractClassBytes": 1691441,
+    "sierraProgramFelts": 36843,
+    "sierraClassHash": "0x271bf805307ed1a7720fbd8364767eba0ccbd74c6799c975ae83f7f922ee5bd",
+    "casmContractClassBytes": 1221983,
+    "casmBytecodeFelts": 66178,
+    "casmHints": 531,
+    "casmCompiledClassHash": "0x154b6afe8acf0e963177e9e80f46b7c760d2b554245f41aec3d2d78710d8911",
+    "localCairoVerification": "passed",
+    "cairoTestCount": 2,
+    "cairoTestMaximumResidentBytes": 2160181248,
+    "validProofTotalL2Gas": 272378527,
+    "validProofVerifierL2Gas": 259670377,
+    "tamperedProofTotalL2GasUntilRejection": 76215386,
+    "tamperedProofVerifierL2GasUntilRejection": 42923366,
+    "cairoKeccakSyscallsPerCase": 94,
+    "cairoLibraryCallsPerCase": 1,
+    "networkFeeMeasurement": "not measured; no RPC or network activity authorized"
+  },
+  "negativeEvidence": {
+    "circuitMismatchCases": 10,
+    "malformedProofRejected": true,
+    "repeatedProofsRandomized": true,
+    "serializedSyntheticPhilSecretAbsent": true,
+    "serializedSyntheticNullifierSeedAbsent": true,
+    "adapterEnvelopeBindingTests": true,
+    "noAuthorityReachabilityTests": true
+  },
+  "residualLimits": [
+    "Noir compiler is beta and Barretenberg is a nightly compatibility pin.",
+    "The generated verifier and local compiler are pinned to Cairo and Scarb 2.14.0; this remains reference evidence, not a production compiler selection.",
+    "Desktop proving only; iPhone proving is unverified and out of Step 3 scope.",
+    "No account composition, deployment, RPC, signing, transaction, or production enablement is included."
+  ]
+}

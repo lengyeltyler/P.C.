@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="932" viewBox="0 0 430 932">
+  <rect width="430" height="932" rx="50" fill="#f5f7f5"/>
+  <rect x="145" y="12" width="140" height="35" rx="18" fill="#111714"/>
+  <text x="24" y="82" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#557066">O.43 SYNTHETIC TEST STATE</text>
+  <text x="24" y="118" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="29" font-weight="700" fill="#14231d">Pair with desktop</text>
+  <text x="24" y="154" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#52665e">Compare this fingerprint on both devices.</text>
+  <rect x="20" y="177" width="390" height="140" rx="22" fill="#e6ecff"/>
+  <circle cx="62" cy="221" r="23" fill="#294fef"/>
+  <text x="62" y="228" text-anchor="middle" font-family="sans-serif" font-size="21" font-weight="700" fill="#fff">↔</text>
+  <text x="99" y="213" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="17" font-weight="700" fill="#14231d">Compare on both devices</text>
+  <text x="99" y="249" font-family="SFMono-Regular,Menlo,monospace" font-size="18" font-weight="700" fill="#243f35">7B3E 9C11 204A</text>
+  <text x="99" y="278" font-family="SFMono-Regular,Menlo,monospace" font-size="18" font-weight="700" fill="#243f35">D806 18F2 A745</text>
+  <rect x="20" y="343" width="390" height="73" rx="18" fill="#fff" stroke="#dce3df"/>
+  <circle cx="52" cy="380" r="13" fill="#294fef"/>
+  <path d="M46 380l4 4 8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="79" y="375" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" font-weight="700" fill="#21332c">The fingerprint exactly matches</text>
+  <text x="79" y="397" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#52665e">my Mac</text>
+  <rect x="20" y="442" width="390" height="195" rx="22" fill="#fff" stroke="#dce3df"/>
+  <text x="41" y="477" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" font-weight="700" fill="#14231d">Safe request details</text>
+  <text x="41" y="516" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Connection</text>
+  <text x="389" y="516" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#557066">Private local network</text>
+  <line x1="41" y1="537" x2="389" y2="537" stroke="#e3e8e5"/>
+  <text x="41" y="570" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Expires</text>
+  <text x="389" y="570" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#557066">4 minutes</text>
+  <line x1="41" y1="591" x2="389" y2="591" stroke="#e3e8e5"/>
+  <text x="41" y="624" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Requested generation</text>
+  <text x="389" y="624" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#557066">1</text>
+  <text x="24" y="678" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#52665e">Face ID or the device passcode is required before</text>
+  <text x="24" y="701" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#52665e">the exact enrollment transcript can be signed.</text>
+  <rect x="20" y="735" width="390" height="56" rx="16" fill="#294fef"/>
+  <text x="215" y="770" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="17" font-weight="700" fill="#fff">Approve this iPhone</text>
+  <rect x="20" y="806" width="390" height="48" rx="14" fill="#e9eeeb"/>
+  <text x="215" y="836" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" fill="#354a41">Cancel pairing</text>
+  <line x1="0" y1="875" x2="430" y2="875" stroke="#dde4e0"/>
+  <text x="52" y="909" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">STATUS</text>
+  <text x="151" y="909" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#294fef">PAIR</text>
+  <text x="242" y="909" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">RECOVERY</text>
+  <text x="350" y="909" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">SETTINGS</text>
+</svg>

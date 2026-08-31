@@ -1,0 +1,207 @@
+{
+  "phase": "O.4",
+  "status": "documented",
+  "reviewDate": "2026-07-16",
+  "productionRuntimeHighAdvisories": 0,
+  "desktopRuntimeHighAdvisories": 0,
+  "acceptedDevelopmentToolingHighAdvisories": [
+    "serialize-javascript",
+    "tmp",
+    "undici"
+  ],
+  "decision": "Remaining high npm advisory groups are accepted only as development-tooling risk pending a reviewed Hardhat/toolchain migration. They are not approved as production-runtime dependencies.",
+  "categories": [
+    {
+      "category": "device_sdk_runtime",
+      "packages": [
+        "ethers",
+        "starknet"
+      ],
+      "productionBundled": "candidate_runtime_dependency",
+      "highAdvisoryStatus": "none_reported_by_npm_audit",
+      "approvedUse": "Runtime SDK helpers, hashing, encoding, and chain/client references.",
+      "owner": "PhilCore Runtime",
+      "controls": [
+        "lockfile_pinned",
+        "no_private_key_exposure",
+        "exact_hash_and_calldata_tests"
+      ]
+    },
+    {
+      "category": "desktop_application_runtime",
+      "packages": [
+        "electron@39.8.10"
+      ],
+      "productionBundled": "local_alpha_runtime_dependency_only",
+      "highAdvisoryStatus": "no_high_advisory_after_o1_same_major_patch",
+      "approvedUse": "Local-only desktop Alpha shell with public-network mutation disabled, plus O.3 macOS Keychain/safeStorage platform unlock boundary. No production packaging approval.",
+      "owner": "PhilCore Desktop",
+      "controls": [
+        "context_isolation_enabled",
+        "node_integration_disabled",
+        "sandbox_enabled",
+        "strict_renderer_csp",
+        "local_fixture_mode_only",
+        "platform_unlock_uses_electron_safeStorage_without_new_native_keychain_dependency",
+        "no_renderer_keychain_or_wrapping_key_api",
+        "no_meaningful_assets_before_audit",
+        "recheck_electron_advisories_before_beta_packaging"
+      ]
+    },
+    {
+      "category": "contract_development",
+      "packages": [
+        "hardhat",
+        "@nomicfoundation/hardhat-ethers",
+        "@openzeppelin/contracts",
+        "@account-abstraction/contracts",
+        "solc"
+      ],
+      "productionBundled": false,
+      "highAdvisoryStatus": "hardhat_transitive_tooling_highs_accepted_temporarily",
+      "approvedUse": "Local compile, local tests, local fixtures, and audit reproduction only.",
+      "owner": "Smart Account / Contracts",
+      "controls": [
+        "do_not_run_on_untrusted_repositories",
+        "do_not_run_as_elevated_user",
+        "pin_package_lock",
+        "public_network_mutation_disabled_by_default",
+        "hardhat_major_upgrade_requires_review"
+      ]
+    },
+    {
+      "category": "test_dependencies",
+      "packages": [
+        "mocha",
+        "serialize-javascript",
+        "tmp",
+        "undici"
+      ],
+      "productionBundled": false,
+      "highAdvisoryStatus": "accepted_development_tooling_risk",
+      "approvedUse": "Local tests and diagnostics with repository-controlled fixtures only.",
+      "owner": "Test Infrastructure",
+      "controls": [
+        "no_untrusted_test_configs",
+        "no_untrusted_fixture_imports",
+        "temporary_directory_isolation",
+        "exclude_from_production_bundle"
+      ]
+    },
+    {
+      "category": "proving_dependencies",
+      "packages": [
+        "Rust crates in proving/Cargo.lock"
+      ],
+      "productionBundled": "proof_tooling_boundary",
+      "highAdvisoryStatus": "not_assessed_by_npm_audit",
+      "approvedUse": "Local ACTION_UNLOCK proof generation, verification, and harness tests.",
+      "owner": "Proof System",
+      "controls": [
+        "pinned_rust_toolchain",
+        "proving_tests",
+        "no_secret_fixture_commit"
+      ]
+    },
+    {
+      "category": "security_tool_dependencies",
+      "packages": [
+        "slither-analyzer",
+        "Python packages in config/security/slither-requirements-lock.txt"
+      ],
+      "productionBundled": false,
+      "highAdvisoryStatus": "outside_npm_audit",
+      "approvedUse": "Local static analysis only.",
+      "owner": "Security Review",
+      "controls": [
+        "repository_local_virtualenv",
+        "pinned_slither_version",
+        "no_runtime_packaging"
+      ]
+    },
+    {
+      "category": "diagnostic_only_dependencies",
+      "packages": [
+        "tsx",
+        "Hardhat local network",
+        "fixture provider helpers"
+      ],
+      "productionBundled": false,
+      "highAdvisoryStatus": "no_production_runtime_exposure",
+      "approvedUse": "Local diagnostic scripts that must not submit public transactions without explicit prerequisites.",
+      "owner": "Diagnostics",
+      "controls": [
+        "fixture_by_default",
+        "explicit_submit_flags",
+        "no_secret_output",
+        "no_public_mutation_without_approval"
+      ]
+    }
+  ],
+  "remainingHighAdvisories": [
+    {
+      "package": "serialize-javascript",
+      "installedRange": "<=7.0.4",
+      "dependencyPath": "hardhat -> mocha -> serialize-javascript",
+      "advisoryIds": [
+        1113686,
+        1119440
+      ],
+      "runtimeExposure": "development_tooling_only",
+      "betaRelevance": "accepted_for_local_alpha_and_audit_reproduction_only; not production runtime",
+      "remediationDecision": "accepted_development_tooling_risk_pending_major_toolchain_review",
+      "residualRisk": "Malicious objects or untrusted test tooling inputs could exploit local test serialization behavior.",
+      "compensatingControls": [
+        "repository-controlled tests only",
+        "do not process untrusted repositories/configuration",
+        "do not run as elevated user",
+        "exclude dev dependencies from production packaging"
+      ]
+    },
+    {
+      "package": "tmp",
+      "installedRange": "<=0.2.5",
+      "dependencyPath": "hardhat -> solc -> tmp",
+      "advisoryIds": [
+        1109537,
+        1120654
+      ],
+      "runtimeExposure": "development_tooling_only",
+      "betaRelevance": "accepted_for_local_compile_and_test_only; not production runtime",
+      "remediationDecision": "accepted_development_tooling_risk_pending_solc_hardhat_review",
+      "residualRisk": "Local temporary-file race/path traversal risk if tooling is run in an attacker-controlled workspace or temp directory.",
+      "compensatingControls": [
+        "trusted checkout only",
+        "do not run as elevated user",
+        "isolate temporary directories for CI",
+        "exclude dev dependencies from production packaging"
+      ]
+    },
+    {
+      "package": "undici",
+      "installedRange": "<=6.26.0",
+      "dependencyPath": "hardhat -> undici",
+      "advisoryIds": [
+        1112496,
+        1114594,
+        1114638,
+        1114640,
+        1114642,
+        1121242,
+        1121245,
+        1121250,
+        1121255
+      ],
+      "runtimeExposure": "development_tooling_only",
+      "betaRelevance": "accepted_for_local_hardhat_tooling_only; not production runtime",
+      "remediationDecision": "accepted_development_tooling_risk_pending_hardhat_3_architecture_review",
+      "residualRisk": "Local tooling HTTP/WebSocket client resource exhaustion or protocol parsing risk when pointed at untrusted endpoints.",
+      "compensatingControls": [
+        "use trusted local/test RPC endpoints",
+        "avoid untrusted websocket endpoints",
+        "no public deployment automation by default",
+        "Hardhat major upgrade requires Architecture Change Control"
+      ]
+    }
+  ]
+}

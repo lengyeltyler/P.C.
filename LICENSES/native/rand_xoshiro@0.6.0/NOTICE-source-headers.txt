@@ -1,0 +1,32 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/common.rs
+// Copyright 2018 Developers of the Rand project.
+//
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or https://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
+
+
+Files: src/lib.rs
+// Copyright 2018 Developers of the Rand project.
+//
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or https://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
+
+
+Files: src/splitmix64.rs, src/xoroshiro128plus.rs, src/xoroshiro128plusplus.rs, src/xoroshiro128starstar.rs, src/xoroshiro64star.rs, src/xoroshiro64starstar.rs, src/xoshiro128plus.rs, src/xoshiro128plusplus.rs, src/xoshiro128starstar.rs, src/xoshiro256plus.rs, src/xoshiro256plusplus.rs, src/xoshiro256starstar.rs, src/xoshiro512plus.rs, src/xoshiro512plusplus.rs, src/xoshiro512starstar.rs
+// Copyright 2018 Developers of the Rand project.
+//
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or https://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
+

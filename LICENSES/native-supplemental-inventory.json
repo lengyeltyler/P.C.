@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 1,
+  "coverageStatus": "NOTICE_REFERENCES_VERIFIED",
+  "target": "aarch64-apple-darwin",
+  "components": [
+    {
+      "component": "libdeflate",
+      "version": "1.24",
+      "source": "ebiggers/libdeflate@v1.24",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "MIT",
+      "consumer": "bb",
+      "relationship": "static library",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/libdeflate-MIT.txt",
+          "sha256": "4ad69099cb4374836fd27583d9991e2838cd86b6e4666ab26b2d32582c91e73a"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "LMDB",
+      "version": "0.9 branch",
+      "source": "LMDB/lmdb@ddd0a773e2f44d38e4e31ec9ed81af81f4e4ccbb",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "OLDAP-2.8",
+      "consumer": "bb",
+      "relationship": "static library",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/LMDB-LICENSE.txt",
+          "sha256": "310fe25c858a9515fc8c8d7d1f24a67c9496f84a91e0a0e41ea9975b1371e569"
+        },
+        {
+          "path": "LICENSES/bb-native/LMDB-COPYRIGHT.txt",
+          "sha256": "3c87f63656b6a12fda225b6f798c547fe89e3404f499e890b445761eb310fd4f"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "msgpack-c",
+      "version": "Aztec fork",
+      "source": "AztecProtocol/msgpack-c@5ee9a1c8c325658b29867829677c7eb79c433a98",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "BSL-1.0",
+      "consumer": "bb",
+      "relationship": "header implementation",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/msgpack-COPYING.txt",
+          "sha256": "664550b43996452a5a2c7471bb0ff77185a58c69ccafa60f983dc4c162e1ee22"
+        },
+        {
+          "path": "LICENSES/bb-native/msgpack-Boost-1.0.txt",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices. Boost object-code exception remains available."
+    },
+    {
+      "component": "nlohmann-json",
+      "version": "3.11.3",
+      "source": "nlohmann/json@9cca280a4d0ccf0c08f47a99aa71d1b0e52f8d03",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "MIT",
+      "consumer": "bb",
+      "relationship": "header implementation, including Florian Loitsch dtoa",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/nlohmann-JSON-MIT.txt",
+          "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+        },
+        {
+          "path": "LICENSES/bb-native/nlohmann-to_chars-copyright.txt",
+          "sha256": "520f2e9f5d1505970d2c7ec221a83db2de8edec99af95480feb54f8288afb63e"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "cpp-httplib",
+      "version": "0.15.3",
+      "source": "yhirose/cpp-httplib@v0.15.3",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "MIT",
+      "consumer": "bb",
+      "relationship": "header implementation; OpenSSL/zlib/brotli disabled",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/cpp-httplib-MIT.txt",
+          "sha256": "4b45cbe16d7b71b89ae6127e26e0d90a029198ca5e958ad8e3d0b8bbed364d8b"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "CLI11",
+      "version": "2.4.2",
+      "source": "Aztec exact vendored bb/cli.hpp",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "BSD-3-Clause",
+      "consumer": "bb",
+      "relationship": "vendored header",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/CLI11-BSD-3-Clause.txt",
+          "sha256": "d52b488dda644a733f4d64018f17c8ddf82f8ab2dea4a6dedec199b5f994486f"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "base64",
+      "version": "2.rc.08",
+      "source": "Aztec exact vendored common/base64.cpp",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "Zlib",
+      "consumer": "bb",
+      "relationship": "vendored C++",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/base64-Zlib.txt",
+          "sha256": "e41ea9e60c9cd2295f90a5483d914ac7f36acd430513b6e016d7912631b4308a"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "BLAKE2s",
+      "version": "vendored",
+      "source": "Aztec exact vendored crypto/blake2s",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "Apache-2.0 OR CC0-1.0",
+      "consumer": "bb",
+      "relationship": "vendored C",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/BLAKE2s.txt",
+          "sha256": "73a0d7fdb4e59a58e29244e0322fd50c7d388b77754458a2be78a2a8c47760d8"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "BLAKE3",
+      "version": "vendored",
+      "source": "Aztec exact vendored crypto/blake3s",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "Apache-2.0 OR CC0-1.0",
+      "consumer": "bb",
+      "relationship": "vendored C",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/BLAKE3.txt",
+          "sha256": "3acfacac733d80856eaa17e6c53223edd3ad022b394cc90e9379617f1eea02ac"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "ethash-keccak",
+      "version": "vendored",
+      "source": "Aztec exact vendored crypto/keccak",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "Apache-2.0",
+      "consumer": "bb",
+      "relationship": "vendored C",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/ethash-Keccak-Apache-2.0.txt",
+          "sha256": "0fb0617e928679a8e377a1d27d92386a78b5fc223828e4f630ce63d01fccbc7b"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "serde-reflection C++ runtime",
+      "version": "vendored",
+      "source": "Aztec exact generated dsl/acir_format/serde/serde.hpp",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "MIT OR Apache-2.0",
+      "consumer": "bb",
+      "relationship": "generated/copied C++ runtime; generator dev edge does not exclude copied code",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/serde-reflection.txt",
+          "sha256": "b89d64bf862dad8a66458f0be18566534839d2eb88c2f53c71e0bb38c1e7f5c9"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices."
+    },
+    {
+      "component": "Tuplet",
+      "version": "modified vendored header",
+      "source": "Aztec common/tuplet.hpp; upstream Boost grant at codeinred/tuplet@3c7685e90852ef0ccf2e00844955bd04bfe156bf",
+      "selectionRevision": "7ee33765552f65607e0adafc86ad3c2c5d7d0f1c",
+      "license": "BSL-1.0",
+      "consumer": "bb",
+      "relationship": "modified vendored header; exact original upstream code revision not asserted",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/bb-native/Tuplet-Boost-1.0.txt",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ],
+      "sourceObligation": "No reciprocal source obligation under the selected permissive grant; retain upstream notices. Boost object-code exception remains available."
+    },
+    {
+      "component": "Rust standard libraries and builtins",
+      "source": "rust-lang/rust",
+      "versions": [
+        "1.85.0",
+        "1.89.0 / 29483883eed69d5fb4db01964cdf2af4d86e9cb2",
+        "nightly-2025-07-14 / e9182f195b8505c87c4bd055b9f6e114ccda0981"
+      ],
+      "relationship": "statically linked standard library and compiler runtime; compiler executable itself not shipped",
+      "license": "MIT OR Apache-2.0 and retained file-level grants. Rust1.85 official std archive provides COPYRIGHT/MIT/Apache only; Rust1.89 and nightly provide COPYRIGHT-library.html, retained here.",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/native-platform/rust-1.85.0-COPYRIGHT",
+          "sha256": "252b04f034f7383e09401dc700c8b933e3e38818eaa8b2f09dd247542be92292"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-1.85.0-LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-1.85.0-LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-1.89.0-COPYRIGHT",
+          "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-1.89.0-COPYRIGHT-library.html",
+          "sha256": "9934873304420fc1720c09cd92ad272240508da2ea69279d638a7820db4415ff"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-edr-LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-edr-LICENSE-MIT",
+          "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+        },
+        {
+          "path": "LICENSES/native-platform/rust-nightly-2025-07-14-COPYRIGHT-library.html",
+          "sha256": "4960d17079468344a10d4d830961a6d8f643bd434f7cae077f16db89b3502262"
+        }
+      ]
+    },
+    {
+      "component": "Zig C++ libraries and compiler runtime",
+      "version": "0.15.1",
+      "source": "ziglang/zig@0.15.1",
+      "relationship": "selected cross compiler runtime dependencies; Apple system dylibs are external rather than bundled",
+      "license": "Apache-2.0 WITH LLVM-exception / MIT / retained upstream alternatives",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/native-platform/zig-0.15.1-LICENSE",
+          "sha256": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-compiler-rt-1a8f1058753f-LICENSE",
+          "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-compiler-rt-dd27f8c290bc-LICENSE",
+          "sha256": "dd27f8c290bcdc8368549cd7cd98710a9dbdc34122f2e096a1edb97824ed4148"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-libcxx-LICENSE",
+          "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-libcxxabi-LICENSE",
+          "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-libunwind-LICENSE",
+          "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d"
+        },
+        {
+          "path": "LICENSES/native-platform/zig-musl-COPYRIGHT",
+          "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+        }
+      ]
+    },
+    {
+      "component": "esbuild embedded Go runtime",
+      "version": "Go1.23.12; x/sys v0.0.0-20220715151400-c0bba94af5f8",
+      "sourceRevision": "esbuild@208f539945b145e7c9d6d844290f81c3fe5af320",
+      "relationship": "Go static executable, CGO disabled; one external Go module observed",
+      "license": "BSD-3-Clause",
+      "noticeReferences": [
+        {
+          "path": "LICENSES/native-platform/Go-1.23.12-LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        },
+        {
+          "path": "LICENSES/native-platform/Go-xsys-LICENSE",
+          "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+        }
+      ]
+    },
+    {
+      "component": "EDR native C/assembly",
+      "relationship": "selected c-kzg2.1.5, blst0.3.15, libmimalloc-sys0.1.42(mimalloc2.2.3), secp256k1-sys0.11.0, ring0.17.14; exact crate archives and nested/file-level notices in Rust inventory",
+      "license": "Apache-2.0 / MIT / ISC / file-level grants",
+      "source": "Exact published crates; blst records dirty:true, no pristine Git provenance claim"
+    },
+    {
+      "component": "Generated Rust/data implementations",
+      "relationship": "prost and derive output, NAPI bridge, mime_guess generated data, coins-bip39 Wagyu-derived code; source attribution and upstream grants retained; exact original copied data revisions where unspecified are not invented",
+      "source": "Exact selected crate sources and build.rs",
+      "license": "Apache-2.0 / MIT / retained file-level grants"
+    }
+  ],
+  "requiredReferences": [
+    {
+      "path": "LICENSES/bb-native/libdeflate-MIT.txt",
+      "sha256": "4ad69099cb4374836fd27583d9991e2838cd86b6e4666ab26b2d32582c91e73a"
+    },
+    {
+      "path": "LICENSES/bb-native/LMDB-LICENSE.txt",
+      "sha256": "310fe25c858a9515fc8c8d7d1f24a67c9496f84a91e0a0e41ea9975b1371e569"
+    },
+    {
+      "path": "LICENSES/bb-native/LMDB-COPYRIGHT.txt",
+      "sha256": "3c87f63656b6a12fda225b6f798c547fe89e3404f499e890b445761eb310fd4f"
+    },
+    {
+      "path": "LICENSES/bb-native/msgpack-COPYING.txt",
+      "sha256": "664550b43996452a5a2c7471bb0ff77185a58c69ccafa60f983dc4c162e1ee22"
+    },
+    {
+      "path": "LICENSES/bb-native/msgpack-Boost-1.0.txt",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "path": "LICENSES/bb-native/nlohmann-JSON-MIT.txt",
+      "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14"
+    },
+    {
+      "path": "LICENSES/bb-native/nlohmann-to_chars-copyright.txt",
+      "sha256": "520f2e9f5d1505970d2c7ec221a83db2de8edec99af95480feb54f8288afb63e"
+    },
+    {
+      "path": "LICENSES/bb-native/cpp-httplib-MIT.txt",
+      "sha256": "4b45cbe16d7b71b89ae6127e26e0d90a029198ca5e958ad8e3d0b8bbed364d8b"
+    },
+    {
+      "path": "LICENSES/bb-native/CLI11-BSD-3-Clause.txt",
+      "sha256": "d52b488dda644a733f4d64018f17c8ddf82f8ab2dea4a6dedec199b5f994486f"
+    },
+    {
+      "path": "LICENSES/bb-native/base64-Zlib.txt",
+      "sha256": "e41ea9e60c9cd2295f90a5483d914ac7f36acd430513b6e016d7912631b4308a"
+    },
+    {
+      "path": "LICENSES/bb-native/BLAKE2s.txt",
+      "sha256": "73a0d7fdb4e59a58e29244e0322fd50c7d388b77754458a2be78a2a8c47760d8"
+    },
+    {
+      "path": "LICENSES/bb-native/BLAKE3.txt",
+      "sha256": "3acfacac733d80856eaa17e6c53223edd3ad022b394cc90e9379617f1eea02ac"
+    },
+    {
+      "path": "LICENSES/bb-native/ethash-Keccak-Apache-2.0.txt",
+      "sha256": "0fb0617e928679a8e377a1d27d92386a78b5fc223828e4f630ce63d01fccbc7b"
+    },
+    {
+      "path": "LICENSES/bb-native/serde-reflection.txt",
+      "sha256": "b89d64bf862dad8a66458f0be18566534839d2eb88c2f53c71e0bb38c1e7f5c9"
+    },
+    {
+      "path": "LICENSES/bb-native/Tuplet-Boost-1.0.txt",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    {
+      "path": "LICENSES/native-platform/Go-1.23.12-LICENSE",
+      "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+    },
+    {
+      "path": "LICENSES/native-platform/Go-xsys-LICENSE",
+      "sha256": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-1.85.0-COPYRIGHT",
+      "sha256": "252b04f034f7383e09401dc700c8b933e3e38818eaa8b2f09dd247542be92292"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-1.85.0-LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-1.85.0-LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-1.89.0-COPYRIGHT",
+      "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-1.89.0-COPYRIGHT-library.html",
+      "sha256": "9934873304420fc1720c09cd92ad272240508da2ea69279d638a7820db4415ff"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-edr-LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-edr-LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+    },
+    {
+      "path": "LICENSES/native-platform/rust-nightly-2025-07-14-COPYRIGHT-library.html",
+      "sha256": "4960d17079468344a10d4d830961a6d8f643bd434f7cae077f16db89b3502262"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-0.15.1-LICENSE",
+      "sha256": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-compiler-rt-1a8f1058753f-LICENSE",
+      "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-compiler-rt-dd27f8c290bc-LICENSE",
+      "sha256": "dd27f8c290bcdc8368549cd7cd98710a9dbdc34122f2e096a1edb97824ed4148"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-libcxx-LICENSE",
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-libcxxabi-LICENSE",
+      "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-libunwind-LICENSE",
+      "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d"
+    },
+    {
+      "path": "LICENSES/native-platform/zig-musl-COPYRIGHT",
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    }
+  ],
+  "excludedBbBuildComponents": {
+    "Tracy": "profiling OFF",
+    "backward-cpp": "ENABLE_STACKTRACES OFF",
+    "gtest": "test targets only",
+    "benchmark": "benchmark targets only",
+    "full AVM vm2": "bb target does not link this target; Rust AVM transpiler IS linked",
+    "OpenSSL/zlib/brotli for httplib": "disabled in selected CMake configuration"
+  },
+  "buildEvidence": {
+    "aztec-source/barretenberg/cpp/bootstrap.sh": {
+      "sha256": "a577ff14d6779531aaa58a1bb224c6c7ea1a729075104efeafebac2479c42dbd",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "aztec-source/barretenberg/cpp/CMakePresets.json": {
+      "sha256": "cdd83d83b5df14eee255522329daa79d1eb6ec69c0fbc98444531fa3cd04bc89",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "aztec-source/barretenberg/cpp/src/barretenberg/bb/CMakeLists.txt": {
+      "sha256": "04dfbfe215d8834b753d0398309cbf8e06af27c5fed6b51c312be2e182dfff2a",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "aztec-source/build-images/src/Dockerfile": {
+      "sha256": "5e1756ead8587647332b4f3e5183444921fd692d2d0357363076937d1df57d8d",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "aztec-source/avm-transpiler/Cargo.toml": {
+      "sha256": "c409dc6f34019e663ea3bc085fa3169bdc359bac27df4b0ae3ea2aa82844110a",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "noir-1.0.0-beta.16/.github/workflows/publish-nargo.yml": {
+      "sha256": "69b53763504a7cf9e610f52eb489c532f43b5df6907665672a7a58a0e17a5d55",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "noir-1.0.0-beta.16/justfile": {
+      "sha256": "5fcd044d287b795e5b94a4a83287317ab3c52a3646fc4438acb34704a5f78e43",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    },
+    "edr-source/.github/workflows/edr-npm-release.yml": {
+      "sha256": "ad07d1bad81837c91ca5050fb2aec28798f0e5d8ecb2e11ff4da4ba56260badf",
+      "scope": "exact upstream source file; audit retrieval prefix is not a source path"
+    }
+  }
+}

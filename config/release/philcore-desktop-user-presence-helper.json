@@ -1,0 +1,8 @@
+{
+  "phase": "O.7",
+  "status": "built",
+  "helperPath": "apps/philcore-desktop/build/native/darwin-arm64/PhilCoreUserPresenceHelper",
+  "sha256": "bab4162456e34a2e82107756da4d400453db9a72adf2240dda1cfa7d9e3f026f",
+  "biometricDataReturned": false,
+  "rawAuthenticationMaterialReturned": false
+}

@@ -1,0 +1,19 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/as_bytes.rs, src/simd/simdty.rs
+// Copyright 2016 blake2-rfc Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+
+Files: src/simd/simd_opt/u32x4.rs, src/simd/simd_opt/u64x4.rs, src/simd/simd_opt.rs, src/simd/simdint.rs, src/simd/simdop.rs, src/simd.rs
+// Copyright 2015 blake2-rfc Developers
+//
+// Licensed under the Apache License, Version 2.0, <LICENSE-APACHE or
+// http://apache.org/licenses/LICENSE-2.0> or the MIT license <LICENSE-MIT or
+// http://opensource.org/licenses/MIT>, at your option. This file may not be
+// copied, modified, or distributed except according to those terms.
+

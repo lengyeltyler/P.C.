@@ -1,0 +1,2291 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.10",
+  "account": {
+    "functionCount": 15,
+    "functions": [
+      "accountConfiguration",
+      "accountSecurityState",
+      "cancelRecovery",
+      "cancelRecoveryConfigRotation",
+      "confirmIntent",
+      "pendingRecovery",
+      "pendingRecoveryConfigRotation",
+      "requestRecovery",
+      "requestRecoveryConfigRotation",
+      "rotateValidator",
+      "settleRecovery",
+      "settleRecoveryConfigRotation",
+      "transferNative",
+      "validateUserOp",
+      "withdrawEntryPointDeposit"
+    ],
+    "abiKeccak256": "0xf2efaddf183a684e562559a67ae68646d0f9a7db6ec7381568c3352e58edfd63",
+    "abi": [
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "contract IEntryPoint",
+                "name": "entryPoint",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deploymentChainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "ownerCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "identityBindingCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "factoryBinding",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountVersionId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "securityModelId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "confirmationTarget",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "initialValidator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "validatorVerifierKind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorKeyIdBinding",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "validatorEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "primaryDeviceRecoveryCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "hardwareSecurityKeyCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "independentRecoveryFactorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "recoveryConfigurationHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryDelaySeconds",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryExpirySeconds",
+                "type": "uint64"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AccountInitializationV1",
+            "name": "initialization",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "ExternalCallFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidExecution",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidInitialization",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidIntent",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidRecoveryState",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidUserOperation",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "UnauthorizedEntryPoint",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "VerifierBindingInvalid",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "actionId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint8",
+            "name": "actionType",
+            "type": "uint8"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "target",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes32",
+            "name": "postStateHash",
+            "type": "bytes32"
+          }
+        ],
+        "name": "ActionExecuted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint8",
+            "name": "actionType",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint64",
+            "name": "validatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint64",
+            "name": "recoveryEpoch",
+            "type": "uint64"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes32",
+            "name": "postStateHash",
+            "type": "bytes32"
+          }
+        ],
+        "name": "AuthorityTransition",
+        "type": "event"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "fallback"
+      },
+      {
+        "inputs": [],
+        "name": "accountConfiguration",
+        "outputs": [
+          {
+            "internalType": "contract IEntryPoint",
+            "name": "entryPoint",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deploymentChainId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "ownerCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "identityBindingCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "factoryBinding",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "accountVersionId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "securityModelId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "confirmationTarget",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "accountSecurityState",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "activeValidator",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "validatorCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "validatorKeyIdBinding",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "validatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint8",
+            "name": "validatorVerifierKind",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "recoveryState",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint64",
+            "name": "recoveryEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "recoveryConfigurationHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "primaryDeviceCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "hardwareSecurityKeyCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "recoveryFactorCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bool",
+            "name": "executionLocked",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "recoveryRequestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "cancelRecovery",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "rotationRequestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "cancelRecoveryConfigRotation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "confirmationDigest",
+            "type": "bytes32"
+          }
+        ],
+        "name": "confirmIntent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "pendingRecovery",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "proposedValidator",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedValidatorKeyIdBinding",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedValidatorCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "proposedValidatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "sourceValidatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "sourceRecoveryEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint48",
+            "name": "requestedAt",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "executableAfter",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "expiresAt",
+            "type": "uint48"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "pendingRecoveryConfigRotation",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "requestId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedRecoveryConfigHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedPrimaryDeviceCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedHardwareSecurityKeyCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedRecoveryFactorCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "proposedRecoveryEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "sourceValidatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "sourceRecoveryEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint48",
+            "name": "requestedAt",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "executableAfter",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "expiresAt",
+            "type": "uint48"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "address",
+            "name": "proposedValidator",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedValidatorKeyIdBinding",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "proposedValidatorEpoch",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "recoveryRequestSalt",
+            "type": "bytes32"
+          }
+        ],
+        "name": "requestRecovery",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedPrimaryDeviceCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedHardwareSecurityKeyCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedRecoveryFactorCommitment",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "proposedRecoveryEpoch",
+            "type": "uint64"
+          }
+        ],
+        "name": "requestRecoveryConfigRotation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "address",
+            "name": "proposedValidator",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "proposedValidatorKeyIdBinding",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "proposedValidatorEpoch",
+            "type": "uint64"
+          }
+        ],
+        "name": "rotateValidator",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "recoveryRequestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "settleRecovery",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "rotationRequestId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "settleRecoveryConfigRotation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountWei",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferNative",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "sender",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nonce",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes",
+                "name": "initCode",
+                "type": "bytes"
+              },
+              {
+                "internalType": "bytes",
+                "name": "callData",
+                "type": "bytes"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountGasLimits",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "preVerificationGas",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "gasFees",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes",
+                "name": "paymasterAndData",
+                "type": "bytes"
+              },
+              {
+                "internalType": "bytes",
+                "name": "signature",
+                "type": "bytes"
+              }
+            ],
+            "internalType": "struct PackedUserOperation",
+            "name": "userOp",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "userOpHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "missingAccountFunds",
+            "type": "uint256"
+          }
+        ],
+        "name": "validateUserOp",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "validationData",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "specificationVersion",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "securityModelId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "actionType",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "actionId",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "purpose",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "ownerCommitment",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "chainId",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "entryPoint",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                  },
+                  {
+                    "internalType": "uint192",
+                    "name": "nonceKey",
+                    "type": "uint192"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "nonceSequence",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "validatorEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "uint64",
+                    "name": "recoveryEpoch",
+                    "type": "uint64"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "applicationContextHash",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "bytes32",
+                    "name": "fundLifecycleDigest",
+                    "type": "bytes32"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "maxTotalFeeWei",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validAfter",
+                    "type": "uint48"
+                  },
+                  {
+                    "internalType": "uint48",
+                    "name": "validUntil",
+                    "type": "uint48"
+                  }
+                ],
+                "internalType": "struct PhilCoreV2IntentCoreHeaderV1",
+                "name": "core",
+                "type": "tuple"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "runtimeAuthorizationDigest",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AuthorizedIntentV1",
+            "name": "intent",
+            "type": "tuple"
+          },
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountWei",
+            "type": "uint256"
+          }
+        ],
+        "name": "withdrawEntryPointDeposit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ]
+  },
+  "factory": {
+    "functionCount": 5,
+    "functions": [
+      "accountCreationCodeHash",
+      "createAccount",
+      "deploymentSalt",
+      "getAddress",
+      "verifierBinding"
+    ],
+    "abiKeccak256": "0x7f24824a16ae338680756470e53d1633ab1a518b880d5c278d12525f43ff943b",
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "contract IEntryPoint",
+            "name": "entryPoint_",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deploymentChainId_",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "confirmationTarget_",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "verifier_",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "verifierRuntimeCodeHash_",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "AccountAlreadyDeployed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "AccountDeploymentFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidAccountInitialization",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "reason",
+            "type": "uint8"
+          }
+        ],
+        "name": "InvalidFactoryConfiguration",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "deploymentSalt",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "ownerCommitment",
+            "type": "bytes32"
+          }
+        ],
+        "name": "AccountCreated",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "contract IEntryPoint",
+                "name": "entryPoint",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deploymentChainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "ownerCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "identityBindingCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "factoryBinding",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountVersionId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "securityModelId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "confirmationTarget",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "initialValidator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "validatorVerifierKind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorKeyIdBinding",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "validatorEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "primaryDeviceRecoveryCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "hardwareSecurityKeyCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "independentRecoveryFactorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "recoveryConfigurationHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryDelaySeconds",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryExpirySeconds",
+                "type": "uint64"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AccountInitializationV1",
+            "name": "initialization",
+            "type": "tuple"
+          }
+        ],
+        "name": "accountCreationCodeHash",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "contract IEntryPoint",
+                "name": "entryPoint",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deploymentChainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "ownerCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "identityBindingCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "factoryBinding",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountVersionId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "securityModelId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "confirmationTarget",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "initialValidator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "validatorVerifierKind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorKeyIdBinding",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "validatorEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "primaryDeviceRecoveryCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "hardwareSecurityKeyCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "independentRecoveryFactorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "recoveryConfigurationHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryDelaySeconds",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryExpirySeconds",
+                "type": "uint64"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AccountInitializationV1",
+            "name": "initialization",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "userSalt",
+            "type": "bytes32"
+          }
+        ],
+        "name": "createAccount",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "contract IEntryPoint",
+                "name": "entryPoint",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deploymentChainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "ownerCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "identityBindingCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "factoryBinding",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountVersionId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "securityModelId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "confirmationTarget",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "initialValidator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "validatorVerifierKind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorKeyIdBinding",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "validatorEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "primaryDeviceRecoveryCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "hardwareSecurityKeyCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "independentRecoveryFactorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "recoveryConfigurationHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryDelaySeconds",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryExpirySeconds",
+                "type": "uint64"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AccountInitializationV1",
+            "name": "initialization",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "userSalt",
+            "type": "bytes32"
+          }
+        ],
+        "name": "deploymentSalt",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "contract IEntryPoint",
+                "name": "entryPoint",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deploymentChainId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "ownerCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "identityBindingCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "factoryBinding",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "accountVersionId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "securityModelId",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "confirmationTarget",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "initialValidator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "validatorVerifierKind",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorKeyIdBinding",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "validatorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "validatorEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "primaryDeviceRecoveryCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "hardwareSecurityKeyCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "independentRecoveryFactorCommitment",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "recoveryConfigurationHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryEpoch",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryDelaySeconds",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "recoveryExpirySeconds",
+                "type": "uint64"
+              }
+            ],
+            "internalType": "struct PhilCoreV2AccountInitializationV1",
+            "name": "initialization",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "userSalt",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getAddress",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "verifierBinding",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "verifier",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "verifierRuntimeCodeHash",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+  },
+  "verifier": {
+    "functionCount": 3,
+    "abiKeccak256": "0xc508c5fe01e267ec247080f3aae1daccb6d518a8eab63f6298160b40f8d4747e"
+  }
+}

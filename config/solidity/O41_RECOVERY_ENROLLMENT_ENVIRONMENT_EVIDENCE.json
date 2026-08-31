@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.41",
+  "canonicalPhase": "O.41 Consumer Recovery Enrollment Environment and Secure Ceremony UI",
+  "classification": "LOCAL_ONLY_DESKTOP_RECOVERY_ENVIRONMENT_IMPLEMENTATION",
+  "sourceHeadAtPhaseStart": "9797c947cc1ab2283bc43fa48f0b5a41ee4d4b7d",
+  "result": "COMPLETE",
+  "publicMutationCount": 0,
+  "rpcAccessed": false,
+  "sepoliaAccessed": false,
+  "environmentFileContentsAccessed": false,
+  "environmentFileLoaded": false,
+  "environmentFileMetadataInspectedForIgnoreAndModeOnly": true,
+  "productionCredentialsCreated": false,
+  "realOfflineFactorsCreated": false,
+  "productionSignaturesCreated": false,
+  "pushed": false,
+  "baseline": {
+    "repository": "<repository-root>",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeInitiallyClean": true,
+    "upstreamAtStart": "origin/main",
+    "aheadAtStart": 130,
+    "behindAtStart": 0,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "o39RuntimeKeccak256": {
+      "verifier": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+      "account": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "factory": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95"
+    },
+    "discrepancy": null
+  },
+  "recoveryModel": {
+    "roles": {
+      "0": "PRIMARY_DEVICE_RECOVERY_ONLY_WEBAUTHN",
+      "1": "INDEPENDENT_SECONDARY_PLATFORM_OR_EXTERNAL_KEY",
+      "2": "OFFLINE_PHIL39_V1_SECP256K1"
+    },
+    "threshold": "EXACT_2_OF_3",
+    "validBitmaps": [
+      3,
+      5,
+      6
+    ],
+    "totp": "DEFERRED_OPTIONAL_DEFENSE_IN_DEPTH_NOT_AUTHORITY"
+  },
+  "secureOrigin": {
+    "model": "APPLICATION_CONTROLLED_LOOPBACK_HTTPS_WITH_EXACT_CERTIFICATE_PIN",
+    "rpId": "recovery.philcore.localhost",
+    "origin": "https://recovery.philcore.localhost:18443",
+    "listener": "127.0.0.1",
+    "port": 18443,
+    "externalInterfaces": false,
+    "processAuthorization": "RANDOM_HEADER_INJECTED_BY_ELECTRON_SESSION",
+    "certificate": {
+      "kind": "PER_INSTALL_LOCALLY_GENERATED",
+      "privateKeyPersistence": "ELECTRON_SAFE_STORAGE_CIPHERTEXT",
+      "osTrustInstallation": false,
+      "tlsErrorsGenerallyIgnored": false,
+      "rotateWithinDaysOfExpiry": 30
+    },
+    "developmentOriginEqualsPackagedOrigin": true,
+    "offlineAfterInstall": true
+  },
+  "attestation": {
+    "consumerPlatformPolicy": {
+      "id": "PHILCORE_CONSUMER_PLATFORM_POLICY_V1",
+      "version": 1,
+      "rpId": "recovery.philcore.localhost",
+      "origin": "https://recovery.philcore.localhost:18443",
+      "publicKeyAlgorithm": "ES256",
+      "userVerification": "required",
+      "attestation": "none",
+      "requireAttestedCredentialData": true,
+      "backupEligibility": false,
+      "backupState": false,
+      "manufacturerProvenanceClaimed": false,
+      "acceptedRoles": [
+        0,
+        1
+      ],
+      "policyCommitment": "0xe2a4f0ccafdf6056573e9b2a56fc2adff3c46b89b04a15caff79ad0501c1d98c"
+    },
+    "externalHardwarePolicy": {
+      "id": "PHILCORE_EXTERNAL_HARDWARE_POLICY_V1",
+      "version": 1,
+      "rpId": "recovery.philcore.localhost",
+      "origin": "https://recovery.philcore.localhost:18443",
+      "publicKeyAlgorithm": "ES256",
+      "userVerification": "required",
+      "attestation": "direct",
+      "trustRootBundleVersion": null,
+      "trustRootBundleIntegrityHash": null,
+      "supportedAttestationFormats": [],
+      "readiness": "BLOCKED",
+      "blocker": "DIRECT_ATTESTATION_TRUST_ROOT_VALIDATION_NOT_IMPLEMENTED",
+      "manufacturerProvenanceClaimed": false,
+      "fallbackPolicyId": "PHILCORE_CONSUMER_PLATFORM_POLICY_V1",
+      "policyCommitment": "0x9aaf5c877157350b8df055a91c95cd2b00f5bbcb854cef3e065333b6bcecb043"
+    },
+    "trustRootSubsystem": "BOUNDED_DEFERRAL_NO_FORMATS_OR_AUTHENTICATORS_ALLOWLISTED",
+    "hardwareConsumerFallback": "CONSUMER_PLATFORM_NO_HARDWARE_ATTESTATION",
+    "directAttestationContradiction": "RESOLVED_BY_EXPLICIT_VERSIONED_PROFILE_SPLIT_NOT_SILENT_DOWNGRADE"
+  },
+  "storage": {
+    "root": "Electron userData/philcore-recovery-enrollment",
+    "directoryMode": "0700",
+    "fileMode": "0600",
+    "encryption": "ELECTRON_SAFE_STORAGE",
+    "envelopeVersion": 1,
+    "atomicWrite": true,
+    "symlinkDefense": true,
+    "rootAndUserBinding": true,
+    "rendererRawCredentialIdAccess": false,
+    "genericReadSecretMethod": false,
+    "rotationAndDeletion": true
+  },
+  "pairing": {
+    "protocolVersion": 1,
+    "transport": "USER_MEDIATED_PUBLIC_REQUEST_AND_AEAD_RESPONSE",
+    "ttlSeconds": 300,
+    "sessionIdBits": 256,
+    "keyAgreement": "EPHEMERAL_P256_ECDH_HKDF_SHA256",
+    "encryption": "AES_256_GCM",
+    "singleUse": true,
+    "centralServerRequired": false,
+    "deterministicSyntheticSimulator": true
+  },
+  "offlineFactor": {
+    "format": "PHIL39-V1",
+    "reveal": "DEDICATED_SANDBOXED_NO_PRELOAD_WINDOW",
+    "clipboard": "DISABLED",
+    "export": "USER_SELECTED_SYSTEM_PRINT_FLOW_ONLY",
+    "restoreDrillRequired": true,
+    "retainedSecret": false,
+    "retainedPublicFields": [
+      "signer",
+      "formatVersion",
+      "safePublicFingerprint",
+      "confirmationStatus",
+      "restorationDrillStatus"
+    ]
+  },
+  "loggingAndCrash": {
+    "secretWrapper": true,
+    "explicitToJSONRedaction": true,
+    "boundedErrorCodes": true,
+    "crashReporterUploadDisabled": true,
+    "breakpadSwitchDisabled": true,
+    "uncaughtObjectDumping": false,
+    "rendererSensitiveConsoleObjects": false,
+    "canaryTests": "PASS"
+  },
+  "preflightV2": {
+    "version": 2,
+    "standard": "READY_WITH_USER_WARNINGS",
+    "enhanced": "BLOCKED",
+    "standardBlockers": [],
+    "enhancedBlockers": [
+      "hardware_trust_roots",
+      "hardware_chain_validation"
+    ],
+    "warnings": [
+      "A later interactive ceremony must validate the actual primary and secondary devices.",
+      "Custody-domain independence remains an explicit user-reviewed property."
+    ],
+    "ceremonyReady": true,
+    "productionCredentialCreated": false
+  },
+  "packaging": {
+    "localStaticBuild": "PASS",
+    "localPackageComposition": "PASS",
+    "packagedLaunchAndBridge": "PASS",
+    "isolatedUserDataLaunch": "PASS",
+    "signedNotarizedBuild": "NOT_RUN_SIGNING_AND_NOTARIZATION_CREDENTIALS_NOT_AVAILABLE_OR_AUTHORIZED",
+    "publicDistributionCreated": false
+  },
+  "dependencies": {
+    "refreshedDate": "2026-07-30",
+    "productionAudit": {
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0
+    },
+    "completePinnedTree": {
+      "low": 10,
+      "moderate": 2,
+      "high": 8,
+      "critical": 0
+    },
+    "highGroups": [
+      "@nomicfoundation/hardhat-ethers",
+      "adm-zip",
+      "brace-expansion",
+      "hardhat",
+      "immutable",
+      "serialize-javascript",
+      "tmp",
+      "undici"
+    ],
+    "reachableHighOrCriticalOnEnrollmentStartup": 0,
+    "hardhatBackedDesktopModulesLazyLoaded": true,
+    "solidityDependencyVersionsChanged": false
+  },
+  "sourceEvidenceSha256": {
+    "secureOrigin": "dccbce48dc91273cefcd1386ac1432f777c8a534bc114a94af9aa913476ce7f4",
+    "attestationPolicy": "9d5b14e536d55fb834f7a1e05c57cd63621d55742bd0ac9ef812d241c28e1f45",
+    "enrollmentHost": "4fecef89ec2a3b90253069d97ea7fc693a841bbaf54e694ecdb62ed1a3a03ee8",
+    "desktopMain": "f2140be563ea282c16b86174d56716073a04c037f695ab2fb97045453418e8b4",
+    "desktopRuntimeHost": "29d0dac2289262de6d1fe93aad67d3f6bfff2dab5717ebcbf9ad64fffeb52661",
+    "bridge": "573b5106ebf13f9520f4c91349a52bd3ebc895bde35f1c67797f0c14e29d2621",
+    "preload": "ccf3a6bcfa09291b0870ac890313abe0efa68bb58f634c25b2fb62685b9aaca3",
+    "renderer": "9d0848b0e533f34cabc82a48d9e34e19593f2e6215a0777263edddb54cd2bc9c",
+    "preflightV2": "31e66435d80149dd3a68f0ea9b5e3882a709247b4a882616a8818842e7bea63a"
+  },
+  "tests": {
+    "focusedO41": "PASS",
+    "originAndCertificate": "PASS",
+    "attestationPolicy": "PASS",
+    "webAuthnFixtureIntegration": "PASS",
+    "storageAndIpc": "PASS",
+    "loggingCanaries": "PASS",
+    "pairing": "PASS",
+    "offlineRevealRestore": "PASS",
+    "stateMachine": "PASS",
+    "desktopRegression": "PASS",
+    "o39SolidityRegression": "PASS",
+    "secretScan": "PASS"
+  },
+  "solidity": {
+    "changed": false,
+    "verifierRuntimeKeccak256": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+    "accountRuntimeKeccak256": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+    "factoryRuntimeKeccak256": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95",
+    "deploymentEvidenceInvalidated": false
+  },
+  "stopBoundary": {
+    "publicDeployment": false,
+    "publicTransaction": false,
+    "externalRpc": false,
+    "fundsMoved": false,
+    "productionAccountCreated": false,
+    "realProductionCredentialCreated": false,
+    "realOfflineFactorCreated": false,
+    "productionSecretCommitted": false,
+    "pushPerformed": false
+  }
+}

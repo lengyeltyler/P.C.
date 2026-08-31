@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "philcore-o25-account2-funding-proposal-v1",
+  "phase": "O.25",
+  "status": "proposed",
+  "approved": false,
+  "signed": false,
+  "broadcast": false,
+  "chainId": 11155111,
+  "transactionType": 2,
+  "sender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+  "recipient": "0xF7212776373B51c1514Dd9C4490048270056C150",
+  "nonce": "0",
+  "value": {
+    "wei": "5500387014000000",
+    "gwei": "5500387.014",
+    "eth": "0.005500387014"
+  },
+  "calldata": "0x",
+  "gasLimit": "21000",
+  "maxFeePerGas": {
+    "wei": "2750193507",
+    "gwei": "2.750193507",
+    "eth": "0.000000002750193507"
+  },
+  "maxPriorityFeePerGas": {
+    "wei": "1875000",
+    "gwei": "0.001875",
+    "eth": "0.000000000001875"
+  },
+  "maximumGasCost": {
+    "wei": "57754063647000",
+    "gwei": "57754.063647",
+    "eth": "0.000057754063647"
+  },
+  "maximumTotalDebit": {
+    "wei": "5558141077647000",
+    "gwei": "5558141.077647",
+    "eth": "0.005558141077647"
+  },
+  "senderBalanceBefore": {
+    "wei": "92576112524973299",
+    "gwei": "92576112.524973299",
+    "eth": "0.092576112524973299"
+  },
+  "senderBalanceAfterAtMaximumCost": {
+    "wei": "87017971447326299",
+    "gwei": "87017971.447326299",
+    "eth": "0.087017971447326299"
+  },
+  "smartAccountBalanceBefore": {
+    "wei": "0",
+    "gwei": "0.0",
+    "eth": "0.0"
+  },
+  "expectedSmartAccountBalanceAfter": {
+    "wei": "5500387014000000",
+    "gwei": "5500387.014",
+    "eth": "0.005500387014"
+  },
+  "latestBlockNumber": "11366223",
+  "latestBlockHash": "0x1204798bb6771d87ca2173ad4cd252fe1831a80ea8677fa06b646890a548389e",
+  "observedAt": "2026-07-28T04:21:00.000Z",
+  "expiresAt": "2026-07-28T04:36:00.000Z",
+  "mechanism": "direct_eth_transfer_to_counterfactual_address",
+  "factoryCall": false,
+  "entryPointCall": false,
+  "accountDeployment": false,
+  "publicMutationAuthorized": false,
+  "publicMutationOccurred": false,
+  "stopConditions": [
+    "wrong chain, recipient, account prediction, or nonce",
+    "target, factory, or EntryPoint deployment binding changed",
+    "smart account code, balance, deposit, or EntryPoint nonce changed",
+    "transaction value or fee envelope changed",
+    "nonempty calldata",
+    "stale evidence",
+    "bundler remains unapproved or incompatible",
+    "first-operation model changed"
+  ],
+  "proposalDigest": "0xc4cc25e76ca33dbd4567a7ae7d44e9f158aa22aa01cce8231ad9807132e53d5f"
+}

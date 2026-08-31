@@ -1,0 +1,270 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: c_src/mimalloc/include/mimalloc/atomic.h
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2024 Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/include/mimalloc/internal.h, c_src/mimalloc/include/mimalloc/track.h, c_src/mimalloc/src/os.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/include/mimalloc/prim.h, c_src/mimalloc/include/mimalloc/types.h, c_src/mimalloc/src/alloc.c, c_src/mimalloc/src/free.c, c_src/mimalloc/src/segment.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2024, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/include/mimalloc-new-delete.h, c_src/mimalloc/include/mimalloc-override.h
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2020 Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/include/mimalloc-stats.h, c_src/mimalloc/include/mimalloc.h
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2025, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/alloc-aligned.c, c_src/mimalloc/src/alloc-override.c, c_src/mimalloc/src/options.c, c_src/mimalloc/src/stats.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2021, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/alloc-posix.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2021, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// ------------------------------------------------------------------------
+// mi prefixed publi definitions of various Posix, Unix, and C++ functions
+// for convenience and used when overriding these functions.
+// ------------------------------------------------------------------------
+
+Files: c_src/mimalloc/src/arena-abandon.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2024, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/arena.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2024, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------
+"Arenas" are fixed area's of OS memory from which we can allocate
+large blocks (>= MI_ARENA_MIN_BLOCK_SIZE, 4MiB).
+In contrast to the rest of mimalloc, the arenas are shared between
+threads and need to be accessed using atomic operations.
+
+Arenas are also used to for huge OS page (1GiB) reservations or for reserving
+OS memory upfront which can be improve performance or is sometimes needed
+on embedded devices. We can also employ this with WASI or `sbrk` systems
+to reserve large arenas upfront and be able to reuse the memory more effectively.
+
+The arena allocation needs to be thread safe and we use an atomic bitmap to allocate.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/bitmap.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2023 Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------
+Concurrent bitmap that can set/reset sequences of bits atomically,
+represented as an array of fields where each field is a machine word (`size_t`)
+
+There are two api's; the standard one cannot have sequences that cross
+between the bitmap fields (and a sequence must be <= MI_BITMAP_FIELD_BITS).
+
+The `_across` postfixed functions do allow sequences that can cross over
+between the fields. (This is used in arena allocation)
+---------------------------------------------------------------------------- */
+
+Files: c_src/mimalloc/src/bitmap.h
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2023 Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------------------
+Concurrent bitmap that can set/reset sequences of bits atomically,
+represented as an array of fields where each field is a machine word (`size_t`)
+
+There are two api's; the standard one cannot have sequences that cross
+between the bitmap fields (and a sequence must be <= MI_BITMAP_FIELD_BITS).
+(this is used in region allocation)
+
+The `_across` postfixed functions do allow sequences that can cross over
+between the fields. (This is used in arena allocation)
+---------------------------------------------------------------------------- */
+
+Files: c_src/mimalloc/src/heap.c
+/*----------------------------------------------------------------------------
+Copyright (c) 2018-2021, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/init.c, c_src/mimalloc/src/prim/osx/alloc-override-zone.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2022, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/libc.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// --------------------------------------------------------
+// This module defines various std libc functions to reduce
+// the dependency on libc, and also prevent errors caused
+// by some libc implementations when called before `main`
+// executes (due to malloc redirection)
+// --------------------------------------------------------
+
+Files: c_src/mimalloc/src/page-queue.c
+/*----------------------------------------------------------------------------
+Copyright (c) 2018-2024, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+  Definition of page queues for each block size
+----------------------------------------------------------- */
+
+Files: c_src/mimalloc/src/page.c
+/*----------------------------------------------------------------------------
+Copyright (c) 2018-2024, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+  The core of the allocator. Every segment contains
+  pages of a certain block size. The main function
+  exported is `mi_malloc_generic`.
+----------------------------------------------------------- */
+
+Files: c_src/mimalloc/src/prim/emscripten/prim.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen, Alon Zakai
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// This file is included in `src/prim/prim.c`
+
+Files: c_src/mimalloc/src/prim/osx/prim.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// We use the unix/prim.c with the mmap API on macOSX
+
+Files: c_src/mimalloc/src/prim/prim.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// Select the implementation of the primitives
+// depending on the OS.
+
+Files: c_src/mimalloc/src/prim/unix/prim.c, c_src/mimalloc/src/prim/wasi/prim.c, c_src/mimalloc/src/prim/windows/prim.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+// This file is included in `src/prim/prim.c`
+
+Files: c_src/mimalloc/src/prim/windows/etw.h
+//**********************************************************************`
+//* This is an include file generated by Message Compiler.             *`
+//*                                                                    *`
+//* Copyright (c) Microsoft Corporation. All Rights Reserved.          *`
+//**********************************************************************`
+
+Files: c_src/mimalloc/src/random.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2021, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+Files: c_src/mimalloc/src/segment-map.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2019-2023, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+  The following functions are to reliably find the segment or
+  block that encompasses any pointer p (or NULL if it is not
+  in any of our segments).
+  We maintain a bitmap of all memory with 1 bit per MI_SEGMENT_SIZE (64MiB)
+  set to 1 if it contains the segment meta data.
+----------------------------------------------------------- */
+
+Files: c_src/mimalloc/src/static.c
+/* ----------------------------------------------------------------------------
+Copyright (c) 2018-2020, Microsoft Research, Daan Leijen
+This is free software; you can redistribute it and/or modify it under the
+terms of the MIT license. A copy of the license can be found in the file
+"LICENSE" at the root of this distribution.
+-----------------------------------------------------------------------------*/
+

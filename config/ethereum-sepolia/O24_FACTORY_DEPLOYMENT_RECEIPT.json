@@ -1,0 +1,351 @@
+{
+  "schemaVersion": "philcore-o24-factory-deployment-receipt-v1",
+  "phase": "O.24",
+  "status": "factory_deployed_and_verified",
+  "sourceHead": "47c56715b8e5bda272ce010a08d1a218311a601b",
+  "evidenceRecordedFromHead": "ff17c4127468e17e80bbb116678c4bae5e7db903",
+  "compiler": {
+    "version": "0.8.24",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "evmVersion": "paris",
+    "buildInfoSha256": "0793e6481f66541cbcff92044a5eee789e8df2e23c037f89c6c4ceacdc04220d"
+  },
+  "sourceBinding": {
+    "sourceCommitAtGeneration": "47c56715b8e5bda272ce010a08d1a218311a601b",
+    "deploymentSourceTreeSha256": "e7fec5789382de95e0f7422a3c62c5b9210f25c2418a8ca52bbb3d934c0f6a5b",
+    "sources": [
+      {
+        "path": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+        "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+      },
+      {
+        "path": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+        "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+        "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+        "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+      }
+    ]
+  },
+  "factoryArtifact": {
+    "id": "accountFactory",
+    "contract": "PhilCore4337LocalProofAccountFactoryV1",
+    "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+    "artifact": "artifacts/contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol/PhilCore4337LocalProofAccountFactoryV1.json",
+    "sourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "abiSha256": "5630e705f060f5f42bccf27f0d4816e3c3e3dd255df2ea202b8294db93e8f944",
+    "creationBytecodeHash": "0x1bd6d5d0f49474af2dbc2630b25316cf0856c4ea4d1aee869efdce0fcd03e147",
+    "deployedBytecodeHash": "0x8a62bef9a075d1638a8ebed8030d39928f31adaf86cf11d850a16ed815dba5a0",
+    "creationBytecodeSize": 4875,
+    "deployedBytecodeSize": 4581
+  },
+  "accountArtifact": {
+    "id": "account",
+    "contract": "PhilCore4337LocalProofAccountV1",
+    "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+    "artifact": "artifacts/contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol/PhilCore4337LocalProofAccountV1.json",
+    "sourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "abiSha256": "e7a46da1ab952a175683f71eee7147764a9637e5956724923c1c6b093fe726a1",
+    "creationBytecodeHash": "0xdfe8c94b7fa228961f3048c068a171778672e94650c1404eb8c345c1e5926881",
+    "deployedBytecodeHash": "0xbec05380e8225faa3f15b4b7894c90bc9e591a555839057ab71ceed5922ab76c",
+    "creationBytecodeSize": 3394,
+    "deployedBytecodeSize": 2840
+  },
+  "constructorBinding": {
+    "arguments": [
+      "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      11155111
+    ],
+    "data": "0x0000000000000000000000000000000071727de22e5e9d8baf0edac6f37da032000000000000000000000000334577b0feb9e1f49d4ca4ff6dacc6f8732594d70000000000000000000000000000000000000000000000000000000000aa36a7",
+    "dataHash": "0x507825f7a614e5fc6a4e59825c4a617990c1378405beb1b4a68526c5e6ae9b34",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "approvedConfirmationTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "expectedChainId": 11155111,
+    "accountImplementationModel": "factory_embeds_creation_bytecode_and_uses_create2",
+    "standaloneImplementationRequired": false
+  },
+  "expectedImmutableRuntime": {
+    "bytecodeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "immutableReferences": [
+      {
+        "id": "6629",
+        "name": "entryPoint",
+        "start": 176,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000071727de22e5e9d8baf0edac6f37da032"
+      },
+      {
+        "id": "6629",
+        "name": "entryPoint",
+        "start": 571,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000071727de22e5e9d8baf0edac6f37da032"
+      },
+      {
+        "id": "6629",
+        "name": "entryPoint",
+        "start": 888,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000071727de22e5e9d8baf0edac6f37da032"
+      },
+      {
+        "id": "6631",
+        "name": "approvedConfirmationTarget",
+        "start": 105,
+        "length": 32,
+        "encodedValue": "0x000000000000000000000000334577b0feb9e1f49d4ca4ff6dacc6f8732594d7"
+      },
+      {
+        "id": "6631",
+        "name": "approvedConfirmationTarget",
+        "start": 629,
+        "length": 32,
+        "encodedValue": "0x000000000000000000000000334577b0feb9e1f49d4ca4ff6dacc6f8732594d7"
+      },
+      {
+        "id": "6631",
+        "name": "approvedConfirmationTarget",
+        "start": 940,
+        "length": 32,
+        "encodedValue": "0x000000000000000000000000334577b0feb9e1f49d4ca4ff6dacc6f8732594d7"
+      },
+      {
+        "id": "6633",
+        "name": "expectedChainId",
+        "start": 246,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000000000000000000000000000000aa36a7"
+      },
+      {
+        "id": "6633",
+        "name": "expectedChainId",
+        "start": 679,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000000000000000000000000000000aa36a7"
+      },
+      {
+        "id": "6633",
+        "name": "expectedChainId",
+        "start": 986,
+        "length": 32,
+        "encodedValue": "0x0000000000000000000000000000000000000000000000000000000000aa36a7"
+      }
+    ]
+  },
+  "entryPointBinding": {
+    "expected": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "actual": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "matched": true
+  },
+  "confirmationTargetBinding": {
+    "expected": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "actual": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "codeHashBefore": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "codeHashAfter": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "changed": false
+  },
+  "signerPublicAddress": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+  "signerRecovered": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+  "nonce": "2",
+  "predictedFactory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+  "actualFactory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+  "transactionHash": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+  "receiptStatus": "success",
+  "confirmationsRequired": 2,
+  "blockNumber": "11366062",
+  "blockHash": "0x0f910a19e2fbe5784a68ad2a5216e45a3646b8bfc6c0b020a58227d908292879",
+  "gasUsed": "1040663",
+  "effectiveGasPriceWei": "1113249769",
+  "exactTransactionCostWei": "1158517844356847",
+  "exactTransactionCostEth": "0.001158517844356847",
+  "runtimeCodeVerification": {
+    "expectedHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "actualHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "matched": true
+  },
+  "constructorStateVerification": {
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "approvedConfirmationTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "expectedChainId": 11155111,
+    "matched": true
+  },
+  "counterfactualAccount": {
+    "expected": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "recalculatedLocally": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "returnedByFactory": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "accountInitCodeHash": "0xb7f8b670d96dbf627d92344ed05e94298c915572d7c1333057a5e4a8a8a45390",
+    "codeStatus": "empty",
+    "balanceWei": "0",
+    "entryPointDepositWei": "0",
+    "deployed": false,
+    "funded": false
+  },
+  "preSigning": {
+    "schemaVersion": "philcore-o24-factory-only-approval-v1",
+    "approvalSource": "explicit_o24_user_instruction",
+    "oneTime": true,
+    "chainId": 11155111,
+    "signer": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+    "nonce": "2",
+    "predictedFactory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+    "factorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "creationBytecodeHash": "0x1bd6d5d0f49474af2dbc2630b25316cf0856c4ea4d1aee869efdce0fcd03e147",
+    "artifactRuntimeBytecodeHash": "0x8a62bef9a075d1638a8ebed8030d39928f31adaf86cf11d850a16ed815dba5a0",
+    "expectedImmutableRuntimeBytecodeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "constructorDataHash": "0x507825f7a614e5fc6a4e59825c4a617990c1378405beb1b4a68526c5e6ae9b34",
+    "deploymentDataHash": "0x1e75b1b46a0167e6b25477a0e4c4bc1d0541933293e81d26b1c36d63716a9a2c",
+    "valueWei": "0",
+    "gasEstimate": "1050089",
+    "gasLimit": "1312611",
+    "maxFeePerGasWei": "10000000000",
+    "maxPriorityFeePerGasWei": "1500000",
+    "maximumTransactionCostWei": "13126110000000000",
+    "latestBlockNumber": "11366057",
+    "latestBlockHash": "0xa6f2780244bd2e5d0d8939336a945d545bb7258a6f01b46f682ca5949ac1d2ec",
+    "issuedAt": "2026-07-28T03:46:23.160Z",
+    "expiresAt": "2026-07-28T05:46:23.160Z",
+    "approvedScope": "factory-deployment-only",
+    "fundingWalletUseApproved": false,
+    "smartAccountDeploymentApproved": false,
+    "smartAccountFundingApproved": false,
+    "deviceVaultSigningApproved": false,
+    "bundlerContactApproved": false,
+    "userOperationSubmissionApproved": false,
+    "approvalDigest": "0xbcdf46bc93cea9b7b54c18cc3cc90a5d4c78f6573266b686985466f112225c44"
+  },
+  "reconciliation": {
+    "mode": "read_only_after_post_deployment_verifier_name_collision",
+    "additionalTransactionSigned": false,
+    "additionalTransactionBroadcast": false
+  },
+  "stateBefore": {
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "2",
+      "pendingNonce": "2",
+      "balanceWei": "271231908142497806",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "92576112524973299",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "validator": {
+      "address": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "entryPoint": {
+      "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "latestNonce": "2",
+      "pendingNonce": "2",
+      "balanceWei": "11224280215161221063884",
+      "codeStatus": "present",
+      "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+    },
+    "target": {
+      "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "0",
+      "codeStatus": "present",
+      "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad"
+    },
+    "factory": {
+      "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "smartAccount": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    }
+  },
+  "stateAfter": {
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "3",
+      "pendingNonce": "3",
+      "balanceWei": "270073390298140959",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "92576112524973299",
+      "codeStatus": "empty",
+      "codeHash": null
+    },
+    "entryPoint": {
+      "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "latestNonce": "2",
+      "pendingNonce": "2",
+      "balanceWei": "11224280215161221063884",
+      "codeStatus": "present",
+      "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+    },
+    "target": {
+      "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "0",
+      "codeStatus": "present",
+      "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad"
+    },
+    "factory": {
+      "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "0",
+      "codeStatus": "present",
+      "codeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f"
+    },
+    "smartAccount": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "0",
+      "codeStatus": "empty",
+      "codeHash": null
+    }
+  },
+  "publicMutationOccurred": true,
+  "publicMutationScope": "factory-deployment-only",
+  "confirmationTargetChanged": false,
+  "fundingWalletUsed": false,
+  "smartAccountDeployed": false,
+  "smartAccountFunded": false,
+  "factoryAccountCreationCalled": false,
+  "entryPointDepositCreated": false,
+  "deviceVaultSignatureGenerated": false,
+  "bundlerContacted": false,
+  "userOperationSubmitted": false,
+  "acp0002Status": "Proposed",
+  "betaApproved": false,
+  "productionApproved": false
+}

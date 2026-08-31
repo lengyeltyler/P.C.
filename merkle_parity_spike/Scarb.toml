@@ -1,0 +1,17 @@
+[package]
+name = "phil_merkle_parity_spike"
+version = "0.1.0"
+edition = "2024_07"
+license = "MIT"
+
+[dependencies]
+stwo_verifier_core = { path = "../vendor/stwo_cairo_verifier/crates/verifier_core" }
+cairo_execute = "2.15.0"
+
+[dev-dependencies]
+cairo_test = "2.15.0"
+
+[cairo]
+enable-gas = false
+
+[[target.executable]]

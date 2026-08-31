@@ -1,0 +1,19 @@
+{
+  "format": "phil-proof-descriptor-v1",
+  "productionAuthority": false,
+  "networkActivity": false,
+  "verifierBindingDomain": "0xf5493e9f27242cdf85ace193f2784214a50ca873677947b4f462c1ac04c26566",
+  "descriptor": {
+    "descriptorVersionHash": "0x38c3687cbb1c0fc9ad3ff1d78f823a7ee85be5aa23961da1a1ca08405ded8312",
+    "proofSuiteId": "0xc8a18467a1246a8baa470555abe106412f413ca6f8b569e6edd62fccf4f51d08",
+    "proofSystemVersionHash": "0x837eb3779007100735e5492fde148331052b07956541e22c9113ea4a788b180c",
+    "circuitOrProgramId": "0x8cfc8dc33e503e664707651ee894bfab7e1880f7c22986cdf568e4e0b1080f0c",
+    "publicInputSchemaId": "0xeffa81060c3385e4c62a367ef3ffd3d014439f1078d109a51e33fa8c01582cde",
+    "verificationKeyHash": "0xc267bbb8610f38774e3c83a67cebda8a2b17de7fef4f81169dd3595d076cb6f9",
+    "verifierCodeHash": "0x1319ba7377a82df8cc9715f834e8433a02790160da833d134bdf4c1852427d2c",
+    "verifierBindingHash": "0x3378c5874e3b08504dcd60fc111db77c7ea51fb72efb8d75c7145cbf4c0d451f",
+    "codecId": "0x1cdb75128f2d70f2021a2b3fb6fc7d7e3f312af761fbc921810adad3478b19c6"
+  },
+  "proofDescriptorHash": "0xccc5b3202fdccaa2378075eb21ad8f0180961b12a937b0a37fcac79a8851f135",
+  "verifierSourceHashRule": "keccak256(concat(utf8(repo-relative-src-path-within-verifier + NUL), raw-file-bytes) for sorted Cairo source paths)"
+}

@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.40",
+  "canonicalPhase": "O.40 Real Three-Domain Recovery Enrollment Ceremony and Production Initialization Completion",
+  "classification": "LOCAL_INTERACTIVE_ENROLLMENT_AND_INITIALIZATION",
+  "sourceHeadAtPhaseStart": "7a7722bdec6fbff0a484d865ff0fc9af7bc352f5",
+  "result": "STOPPED_FAIL_CLOSED_BEFORE_CREDENTIAL_CREATION",
+  "readiness": "A_INITIALIZATION_STILL_BLOCKED",
+  "publicMutationCount": 0,
+  "rpcAccessed": false,
+  "sepoliaAccessed": false,
+  "environmentFileAccessed": false,
+  "productionCredentialsCreated": false,
+  "productionSecretsGenerated": false,
+  "baseline": {
+    "repository": "<repository-root>",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeInitiallyClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+  },
+  "hashChronology": {
+    "o38AcceptedRuntimeKeccak256": {
+      "verifier": "0x4597c97018b1fe4b941a035275e229ea5c163db9801545217aa3a93614b1b5be",
+      "account": "0x4f0ea630700c155eb69d7661161abebdcf74dc734127131ad2dfa48dd141e3c5",
+      "factory": "0x4359422db2c5320d3c7914a414766fff29779fa45859e0fe28b4af0a67860e90"
+    },
+    "o39HistoricallyReportedInitialRuntimeKeccak256Incorrect": {
+      "verifier": "0x4597f14309786bf27cbe50d4193cce030ad34a9e9b0de8acb7d93602cfa0b5be",
+      "account": "0x4f0e49bc58069857b49fc62e24c2bf149277d21c1f73583a5d2012813db1e3c5",
+      "factory": "0x4359e7e5de4e81ad62c72bded6173bcdd6e9fa1a7bde376160f6b91436530e90"
+    },
+    "actualO39PreChangeRuntimeKeccak256": {
+      "verifier": "0x4597c97018b1fe4b941a035275e229ea5c163db9801545217aa3a93614b1b5be",
+      "account": "0x4f0ea630700c155eb69d7661161abebdcf74dc734127131ad2dfa48dd141e3c5",
+      "factory": "0x4359422db2c5320d3c7914a414766fff29779fa45859e0fe28b4af0a67860e90"
+    },
+    "actualO39PostChangeRuntimeKeccak256": {
+      "verifier": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+      "account": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "factory": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95"
+    },
+    "historicalReproductionCommit": "25bffe61ff008a85e29c24a32e8ca2f5550c4855",
+    "cause": "O.39 reporting transcription error; no matching tracked artifact, compiler drift, or repository corruption",
+    "resolution": "CORRECTED_WITH_HISTORICAL_ERROR_PRESERVED"
+  },
+  "currentContractPackage": {
+    "compiler": {
+      "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+      "evmVersion": "cancun",
+      "optimizerEnabled": true,
+      "optimizerRuns": 200,
+      "viaIR": true
+    },
+    "contracts": {
+      "PhilCoreV2StaticAuthorityVerifier": {
+        "source": "contracts/base/erc4337/v2/PhilCoreV2StaticAuthorityVerifier.sol",
+        "sourceSha256": "a7271408aafdd342480258a6a6e35b26ab7b12ff454f8cd49f99066f7fac7f36",
+        "runtimeBytes": 13048,
+        "runtimeKeccak256": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+        "creationBytes": 13074,
+        "creationKeccak256": "0xe77412fbb2d5c2e3bc44881822442e38d3fcc7f2e2dd992742111db6f4511494",
+        "abiKeccak256": "0xc508c5fe01e267ec247080f3aae1daccb6d518a8eab63f6298160b40f8d4747e",
+        "storageEntryCount": 0,
+        "occupiedStorageSlotCount": 0,
+        "storageLayoutKeccak256": "0x701ba858aec7af048411d54bb95a504061943584754e8d7a818ce23761d99d6d",
+        "sizeGate": {
+          "limit": 20480,
+          "passed": true
+        }
+      },
+      "PhilCoreV2MinimalAccountV2": {
+        "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+        "sourceSha256": "395691b6dc98df0449a9caa4c43fa8481fb0c6f049ef75e214ee808b0e01e821",
+        "runtimeBytes": 13811,
+        "runtimeKeccak256": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+        "creationBytes": 15630,
+        "creationKeccak256": "0x7fa7fd5dd4a886e6df8ca13223c5dd3cb167c358e0abf9b0297c2a4624cb4882",
+        "abiKeccak256": "0xf2efaddf183a684e562559a67ae68646d0f9a7db6ec7381568c3352e58edfd63",
+        "storageEntryCount": 25,
+        "occupiedStorageSlotCount": 15,
+        "storageLayoutKeccak256": "0x463ff40c47ca095f0f0c83ae7ac9bebc1c1b697dd59d505405d5a4269e8ff053",
+        "sizeGate": {
+          "runtimeLimit": 15360,
+          "creationLimit": 18432,
+          "passed": true
+        }
+      },
+      "PhilCoreV2MinimalAccountFactoryV2": {
+        "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountFactoryV2.sol",
+        "sourceSha256": "1a76877449939bc45323fbc4046c7039db54e323b70306508fb308e57f38ce51",
+        "runtimeBytes": 18317,
+        "runtimeKeccak256": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95",
+        "creationBytes": 18692,
+        "creationKeccak256": "0xe069c2fe769777cb53c785a05f57aee1b73188a8ea343d0d097503806fe9af84",
+        "abiKeccak256": "0x7f24824a16ae338680756470e53d1633ab1a518b880d5c278d12525f43ff943b",
+        "storageEntryCount": 0,
+        "occupiedStorageSlotCount": 0,
+        "storageLayoutKeccak256": "0x701ba858aec7af048411d54bb95a504061943584754e8d7a818ce23761d99d6d",
+        "sizeGate": {
+          "eip170RuntimeLimit": 24576,
+          "passed": true
+        }
+      }
+    },
+    "fixtureSha256": "b86784290b99b893d6d3433550748da52a7bc3c3bb57c5c64d2a917b1c5f0a38"
+  },
+  "enrollmentEnvironment": {
+    "applicationLoadMode": "FILE_ORIGIN",
+    "rpId": null,
+    "origin": null,
+    "webAuthnPlatformProbe": "NOT_RUN_BECAUSE_NO_CANONICAL_SECURE_RP_ORIGIN",
+    "existingSafeStoragePrimitive": "ELECTRON_SAFE_STORAGE_PRESENT_BUT_NOT_INTEGRATED_FOR_O39_CREDENTIAL_IDS",
+    "credentialStorageAdapter": "ABSENT",
+    "secondaryDeviceHandoff": "ABSENT",
+    "hardwareKeyCeremonyIntegration": "ABSENT",
+    "offlineRevealAndRestoreInterface": "ABSENT",
+    "directAttestationTrustValidation": "ABSENT",
+    "runtimeBackupPolicy": "BE_AND_BS_MUST_BOTH_BE_FALSE",
+    "rawCredentialIdLoggingInO39Foundation": false,
+    "endToEndCrashAndDebugLogExclusionEstablished": false,
+    "standardPreflight": {
+      "status": "BLOCKED",
+      "role1Class": "STANDARD_SECONDARY_DEVICE",
+      "checks": [
+        {
+          "id": "canonical_https_rp_origin",
+          "passed": false,
+          "detail": "A canonical HTTPS RP ID/origin binding is not configured."
+        },
+        {
+          "id": "application_origin_binding",
+          "passed": false,
+          "detail": "The application does not run at the stable enrolled origin."
+        },
+        {
+          "id": "secure_context",
+          "passed": false,
+          "detail": "The ceremony secure-context requirement is not established."
+        },
+        {
+          "id": "webauthn_api",
+          "passed": false,
+          "detail": "The WebAuthn API is unavailable or has not been safely probed."
+        },
+        {
+          "id": "platform_authenticator",
+          "passed": false,
+          "detail": "A user-verifying platform authenticator is unavailable or unverified."
+        },
+        {
+          "id": "direct_attestation_trust",
+          "passed": false,
+          "detail": "O.39 requires verified direct attestation, but trust-root validation is unavailable."
+        },
+        {
+          "id": "credential_storage_adapter",
+          "passed": false,
+          "detail": "No integrated encrypted recovery-credential adapter with opaque references is available."
+        },
+        {
+          "id": "logging_boundary",
+          "passed": false,
+          "detail": "End-to-end log, crash-log, and terminal exclusion is not established."
+        },
+        {
+          "id": "clipboard_boundary",
+          "passed": true,
+          "detail": "The ceremony does not place secrets on the clipboard."
+        },
+        {
+          "id": "local_record_boundary",
+          "passed": false,
+          "detail": "Ignored-path and restrictive-permission handling is not established for enrollment records."
+        },
+        {
+          "id": "backup_policy",
+          "passed": true,
+          "detail": "BE/BS behavior is captured and the device-bound policy is understood."
+        },
+        {
+          "id": "role1_ceremony",
+          "passed": false,
+          "detail": "No request-bound, expiring secondary-device handoff is implemented."
+        },
+        {
+          "id": "offline_secure_display",
+          "passed": false,
+          "detail": "No dedicated no-log offline-factor reveal interface is available."
+        },
+        {
+          "id": "offline_secure_restore",
+          "passed": false,
+          "detail": "No dedicated no-log offline restoration input is available."
+        }
+      ],
+      "blockerIds": [
+        "canonical_https_rp_origin",
+        "application_origin_binding",
+        "secure_context",
+        "webauthn_api",
+        "platform_authenticator",
+        "direct_attestation_trust",
+        "credential_storage_adapter",
+        "logging_boundary",
+        "local_record_boundary",
+        "role1_ceremony",
+        "offline_secure_display",
+        "offline_secure_restore"
+      ],
+      "warnings": [
+        "Separate Apple, Google, password-manager, and backup custody cannot be proven cryptographically and requires explicit user review."
+      ],
+      "productionCredentialCreationPermitted": false
+    },
+    "enhancedPreflight": {
+      "status": "BLOCKED",
+      "role1Class": "ENHANCED_HARDWARE_KEY",
+      "checks": [
+        {
+          "id": "canonical_https_rp_origin",
+          "passed": false,
+          "detail": "A canonical HTTPS RP ID/origin binding is not configured."
+        },
+        {
+          "id": "application_origin_binding",
+          "passed": false,
+          "detail": "The application does not run at the stable enrolled origin."
+        },
+        {
+          "id": "secure_context",
+          "passed": false,
+          "detail": "The ceremony secure-context requirement is not established."
+        },
+        {
+          "id": "webauthn_api",
+          "passed": false,
+          "detail": "The WebAuthn API is unavailable or has not been safely probed."
+        },
+        {
+          "id": "platform_authenticator",
+          "passed": false,
+          "detail": "A user-verifying platform authenticator is unavailable or unverified."
+        },
+        {
+          "id": "direct_attestation_trust",
+          "passed": false,
+          "detail": "O.39 requires verified direct attestation, but trust-root validation is unavailable."
+        },
+        {
+          "id": "credential_storage_adapter",
+          "passed": false,
+          "detail": "No integrated encrypted recovery-credential adapter with opaque references is available."
+        },
+        {
+          "id": "logging_boundary",
+          "passed": false,
+          "detail": "End-to-end log, crash-log, and terminal exclusion is not established."
+        },
+        {
+          "id": "clipboard_boundary",
+          "passed": true,
+          "detail": "The ceremony does not place secrets on the clipboard."
+        },
+        {
+          "id": "local_record_boundary",
+          "passed": false,
+          "detail": "Ignored-path and restrictive-permission handling is not established for enrollment records."
+        },
+        {
+          "id": "backup_policy",
+          "passed": true,
+          "detail": "BE/BS behavior is captured and the device-bound policy is understood."
+        },
+        {
+          "id": "role1_ceremony",
+          "passed": false,
+          "detail": "No reviewed external hardware-key ceremony is integrated."
+        },
+        {
+          "id": "offline_secure_display",
+          "passed": false,
+          "detail": "No dedicated no-log offline-factor reveal interface is available."
+        },
+        {
+          "id": "offline_secure_restore",
+          "passed": false,
+          "detail": "No dedicated no-log offline restoration input is available."
+        }
+      ],
+      "blockerIds": [
+        "canonical_https_rp_origin",
+        "application_origin_binding",
+        "secure_context",
+        "webauthn_api",
+        "platform_authenticator",
+        "direct_attestation_trust",
+        "credential_storage_adapter",
+        "logging_boundary",
+        "local_record_boundary",
+        "role1_ceremony",
+        "offline_secure_display",
+        "offline_secure_restore"
+      ],
+      "warnings": [
+        "Separate Apple, Google, password-manager, and backup custody cannot be proven cryptographically and requires explicit user review."
+      ],
+      "productionCredentialCreationPermitted": false
+    }
+  },
+  "enrollment": {
+    "role1ChoiceRequested": false,
+    "role0Created": false,
+    "role1Created": false,
+    "offlineFactorCreated": false,
+    "restorationDrillPerformed": false,
+    "reason": "Common preflight blockers make either profile unsafe before any physical user action."
+  },
+  "initialization": {
+    "recoveryConfigurationCreated": false,
+    "productionUserSaltCreated": false,
+    "tupleFieldCount": 20,
+    "knownOrSelectedPendingLiveFieldCount": 15,
+    "missingEnrollmentDerivedFields": [
+      "primaryDeviceRecoveryCommitment",
+      "hardwareSecurityKeyCommitment",
+      "independentRecoveryFactorCommitment",
+      "recoveryConfigurationHash"
+    ],
+    "protectedLocalPackageCreated": false,
+    "publicManifestCreated": false,
+    "fixtureValuesUsed": false
+  },
+  "infrastructure": {
+    "confirmationTarget": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "confirmationTargetClassification": "SELECTED_PENDING_FRESH_LIVE_VERIFICATION",
+    "historicalRuntimeKeccak256": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+    "futureVerifierAddress": null,
+    "futureFactoryAddress": null,
+    "futureAccountAddress": null,
+    "preparation": {
+      "phase": "O.40",
+      "mode": "DRY_RUN",
+      "publicMutationCount": 0,
+      "rpcAccessed": false,
+      "credentialsAccessed": false,
+      "artifactHashes": {
+        "verifierRuntimeKeccak256": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+        "verifierCreationKeccak256": "0xe77412fbb2d5c2e3bc44881822442e38d3fcc7f2e2dd992742111db6f4511494",
+        "accountRuntimeKeccak256": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+        "accountCreationKeccak256": "0x7fa7fd5dd4a886e6df8ca13223c5dd3cb167c358e0abf9b0297c2a4624cb4882",
+        "factoryRuntimeKeccak256": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95",
+        "factoryCreationKeccak256": "0xe069c2fe769777cb53c785a05f57aee1b73188a8ea343d0d097503806fe9af84"
+      },
+      "initialization": {
+        "status": "INITIALIZATION_BLOCKED",
+        "missing": [
+          "factoryBinding",
+          "primaryDeviceRecoveryCommitment",
+          "hardwareSecurityKeyCommitment",
+          "independentRecoveryFactorCommitment",
+          "recoveryConfigurationHash",
+          "futureVerifierAddress",
+          "futureFactoryAddress",
+          "userSalt",
+          "deploymentGasCeiling"
+        ]
+      },
+      "create2": null,
+      "broadcastPathImplemented": false
+    }
+  },
+  "blockers": [
+    "canonical stable HTTPS RP ID/origin not configured; desktop loads from file://",
+    "direct attestation is mandatory but trust-root validation is explicitly unimplemented",
+    "no integrated encrypted recovery-credential storage adapter",
+    "no Standard secondary-device handoff or Enhanced hardware-key ceremony integration",
+    "no dedicated no-log offline reveal and restoration input",
+    "end-to-end crash/debug-log exclusion for enrollment secrets is not established",
+    "the pinned development dependency tree retains existing High advisories and remains Beta-blocked, although production dependencies audit clean"
+  ],
+  "sourceEvidenceSha256": {
+    "preflight": "0eb7a79842f78d05fc926b3169a57dbf72d505621023a62d73af5ee1f225de53",
+    "enrollment": "230ecb25279b05355cd106d6eb453692263b19cd6ef09d40d49a0abd0b47f551",
+    "webAuthn": "c93537a59d900a2fe5d1976a1fe3e8c0ed8af7a46a97ab25aea321d2607b4da1",
+    "desktopMain": "561e63de883279c46421b014dc061c75622cf55bc41278555c49d1618a5f7e15",
+    "desktopRuntimeHost": "20635191220494a272e0a8496648a8f9b6a551924453245ac43f01be95a501d0",
+    "desktopBridge": "043447c3294b511225878d8d7f85f6d091d35fb9c5d194c6fa483c6d7bb5e957",
+    "deploymentTemplate": "6e94ea9d331111cf8d965ec489baad94b9d21ea5b09af924a81ca1752d2e4ec3"
+  },
+  "tests": {
+    "o40FocusedPassing": 9,
+    "o40FocusedFailing": 0,
+    "o32ThroughO40Passing": 238,
+    "o32ThroughO40Failing": 0,
+    "typecheckPassed": true,
+    "solidityCompilePassed": true,
+    "isolatedTrackedOnlyCopy": {
+      "npmCi": "PASS",
+      "solidityFilesCompiled": 60,
+      "regression": "238_PASSING_0_FAILING",
+      "typecheck": "PASS",
+      "deterministicEvidence": "PASS",
+      "localGitIndexRequiredByO37_9Test": true
+    }
+  },
+  "security": {
+    "staticAnalysis": {
+      "generalRepositorySlither": "PASS_NO_UNRESOLVED_HIGH_OR_CRITICAL",
+      "v2SolidityChangedByO40": false,
+      "v2O39DetectorDispositionRetained": "23 occurrences; 0 unmitigated High and 0 Critical"
+    },
+    "npmAudit": {
+      "productionDependencies": {
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "completePinnedDevelopmentTree": {
+        "low": 10,
+        "moderate": 2,
+        "high": 8,
+        "critical": 0,
+        "existingBetaGate": "BLOCKED_PENDING_HIGH_ADVISORY_ACCEPTANCE_OR_REMEDIATION"
+      }
+    },
+    "o40TrackedFileSecretScan": "PASS",
+    "productionSecretsCommitted": false,
+    "rawCredentialIdsCommitted": false,
+    "offlineRecoveryFactorCommitted": false,
+    "productionSignaturesCommitted": false,
+    "publicDeploymentPerformed": false,
+    "publicTransactionPerformed": false,
+    "pushPerformed": false,
+    "externalAuditStillRequired": true
+  }
+}

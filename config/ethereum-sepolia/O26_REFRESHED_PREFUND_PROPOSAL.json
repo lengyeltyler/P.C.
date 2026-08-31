@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "philcore-o26-refreshed-prefund-proposal-v1",
+  "phase": "O.26",
+  "status": "BLOCKED_PENDING_BUNDLER_CONFIGURATION",
+  "approved": false,
+  "signed": false,
+  "broadcast": false,
+  "generatedAt": "2026-07-28T05:18:30.282Z",
+  "sourceHead": "aefcfba56dd4127bb62d4b7fbd7a1f49afd3ad30",
+  "network": {
+    "name": "ethereum_sepolia",
+    "chainId": 11155111,
+    "blockNumber": "11366502",
+    "blockHash": "0xf60810f2011d7da4205adcb80e345fd8bc73556938107601a7239ad6b0783353",
+    "observedAt": "2026-07-28T05:18:24.000Z",
+    "expiresAt": "2026-07-28T05:33:24.000Z"
+  },
+  "feeEvidence": {
+    "baseFeePerGas": {
+      "wei": "1067626619",
+      "gwei": "1.067626619",
+      "eth": "0.000000001067626619"
+    },
+    "gasPrice": {
+      "wei": "1069126619",
+      "gwei": "1.069126619",
+      "eth": "0.000000001069126619"
+    },
+    "rpcSuggestedMaxFeePerGas": {
+      "wei": "2136753238",
+      "gwei": "2.136753238",
+      "eth": "0.000000002136753238"
+    },
+    "rpcSuggestedMaxPriorityFeePerGas": {
+      "wei": "1500000",
+      "gwei": "0.0015",
+      "eth": "0.0000000000015"
+    },
+    "scenarios": {
+      "current": {
+        "label": "current_rpc_observation",
+        "maxFeePerGas": {
+          "wei": "2136753238",
+          "gwei": "2.136753238",
+          "eth": "0.000000002136753238"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1500000",
+          "gwei": "0.0015",
+          "eth": "0.0000000000015"
+        }
+      },
+      "recommended": {
+        "label": "current_rpc_observation_plus_25_percent",
+        "marginBasisPoints": 2500,
+        "maxFeePerGas": {
+          "wei": "2670941547",
+          "gwei": "2.670941547",
+          "eth": "0.000000002670941547"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1875000",
+          "gwei": "0.001875",
+          "eth": "0.000000000001875"
+        }
+      },
+      "rejectionCeiling": {
+        "label": "absolute_rejection_ceiling_not_a_funding_recommendation",
+        "maxFeePerGas": {
+          "wei": "100000000000",
+          "gwei": "100.0",
+          "eth": "0.0000001"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "5000000000",
+          "gwei": "5.0",
+          "eth": "0.000000005"
+        }
+      }
+    }
+  },
+  "selectedGas": {
+    "verificationGasLimit": "1500000",
+    "callGasLimit": "300000",
+    "preVerificationGas": "200000",
+    "paymasterVerificationGasLimit": "0",
+    "paymasterPostOpGasLimit": "0",
+    "totalDeclaredGas": "2000000",
+    "selectionStatus": "provisional_hard_ceiling_pending_bundler_estimate"
+  },
+  "prefund": {
+    "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+    "estimatedMinimum": {
+      "wei": "4273506476000000",
+      "gwei": "4273506.476",
+      "eth": "0.004273506476"
+    },
+    "recommendedDisposableTestPrefund": {
+      "wei": "5341883094000000",
+      "gwei": "5341883.094",
+      "eth": "0.005341883094"
+    },
+    "proposedMaximumFundingApproval": {
+      "wei": "5341883094000000",
+      "gwei": "5341883.094",
+      "eth": "0.005341883094"
+    },
+    "absoluteRejectionCeilingExposure": {
+      "wei": "200000000000000000",
+      "gwei": "200000000.0",
+      "eth": "0.2"
+    },
+    "expectedActualCostAtObservedGasPrice": {
+      "wei": "1106300151542630",
+      "gwei": "1106300.15154263",
+      "eth": "0.00110630015154263"
+    },
+    "expectedResidualAfterSuccess": {
+      "wei": "4235582942457370",
+      "gwei": "4235582.94245737",
+      "eth": "0.00423558294245737"
+    }
+  },
+  "fundingMechanism": {
+    "proposed": "direct_eth_transfer_to_counterfactual_address",
+    "performed": false,
+    "sender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+    "recipient": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "residualRiskClassification": "RESIDUAL_FUNDS_NONRECOVERABLE_BY_CURRENT_ACCOUNT",
+    "residualCanFundFuturePermittedUserOperations": true,
+    "generalWithdrawalAvailable": false,
+    "entryPointDepositWithdrawalAvailableThroughAccount": false,
+    "failedOffchainSimulationConsumesPrefund": false,
+    "validationTransactionRevertLeavesTransferBalanceUnchanged": true,
+    "includedExecutionFailureMayConsumeActualGas": true,
+    "undeployedAddressBalanceRecoverableWithoutExactDeployment": false,
+    "recommendation": "Use only disposable Sepolia ETH after remote bundler estimation and separate approval. Add a reviewed restricted recovery/withdrawal capability before non-disposable use."
+  },
+  "blockers": [
+    "PHILCORE_SEPOLIA_BUNDLER_URL is not configured",
+    "exact remote bundler gas estimation has not occurred",
+    "funding approval is absent"
+  ],
+  "account1Signed": false,
+  "account2Signed": false,
+  "ethTransferred": false,
+  "accountDeployed": false,
+  "userOperationSubmitted": false,
+  "publicMutationOccurred": false
+}

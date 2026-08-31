@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "philcore-o26-bundler-compatibility-report-v1",
+  "phase": "O.26",
+  "status": "BUNDLER_CONFIGURATION_REQUIRED",
+  "generatedAt": "2026-07-28T05:18:30.282Z",
+  "sourceHead": "aefcfba56dd4127bb62d4b7fbd7a1f49afd3ad30",
+  "branch": "codex/device-identity-v1",
+  "securityModel": "local-proof-gated-v1",
+  "configuredBundler": {
+    "status": "BUNDLER_CONFIGURATION_REQUIRED",
+    "configured": false,
+    "contacted": false,
+    "endpoint": {
+      "configured": false,
+      "redacted": "not_configured",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "chainId": null,
+    "supportedEntryPoints": [],
+    "supportedMethods": [],
+    "paymasterRequired": null,
+    "estimationResponse": null,
+    "estimationPerformed": false,
+    "submissionMethodExposed": false,
+    "submissionMethodCalled": false
+  },
+  "providerComparisonAsOf": "2026-07-27",
+  "providerComparison": [
+    {
+      "provider": "Pimlico",
+      "recommendation": "recommended",
+      "sepoliaSupported": true,
+      "entryPointV07Supported": true,
+      "endpointFormat": "public: https://public.pimlico.io/v2/{CHAIN_ID}/rpc; authenticated endpoint requires an externally managed API key",
+      "methods": [
+        "eth_supportedEntryPoints",
+        "eth_estimateUserOperationGas",
+        "eth_sendUserOperation",
+        "eth_getUserOperationByHash",
+        "eth_getUserOperationReceipt"
+      ],
+      "paymasterRequired": false,
+      "customAccountCompatibility": "standard ERC-4337 account; the account must supply its own structurally valid dummy signature",
+      "testAllowance": "public endpoint available without an API key; 20 requests per minute per IP",
+      "requestLimits": "public endpoint: 20 requests per minute per IP",
+      "setupBurden": "low for an explicitly configured public test endpoint",
+      "risks": [
+        "shared public endpoint has strict rate limits",
+        "provider simulation remains advisory",
+        "custom PhilCore envelope compatibility must be verified remotely"
+      ],
+      "officialSources": [
+        "https://docs.pimlico.io/references/bundler/public-endpoint",
+        "https://docs.pimlico.io/references/bundler/endpoints/eth_estimateUserOperationGas"
+      ]
+    },
+    {
+      "provider": "Alchemy",
+      "recommendation": "fallback",
+      "sepoliaSupported": true,
+      "entryPointV07Supported": true,
+      "endpointFormat": "Alchemy Bundler endpoint with an externally managed API key",
+      "methods": [
+        "eth_supportedEntryPoints",
+        "eth_estimateUserOperationGas",
+        "eth_sendUserOperation",
+        "eth_getUserOperationByHash",
+        "eth_getUserOperationReceipt"
+      ],
+      "paymasterRequired": false,
+      "customAccountCompatibility": "v0.7 PackedUserOperation accounts are supported; account-specific dummy signature required",
+      "testAllowance": "plan-dependent; not assumed by PhilCore",
+      "requestLimits": "plan-dependent; verify in the selected Alchemy account",
+      "setupBurden": "moderate; requires explicit bundler endpoint configuration",
+      "risks": [
+        "credential-bearing URL must remain outside the repository",
+        "fee and rate limits depend on the selected plan",
+        "custom PhilCore envelope compatibility must be verified remotely"
+      ],
+      "officialSources": [
+        "https://www.alchemy.com/docs/wallets/supported-chains",
+        "https://www.alchemy.com/docs/wallets/transactions/low-level-infra/bundler/overview",
+        "https://www.alchemy.com/docs/wallets/reference/bundler-faqs"
+      ]
+    },
+    {
+      "provider": "Candide",
+      "recommendation": "alternative",
+      "sepoliaSupported": true,
+      "entryPointV07Supported": true,
+      "endpointFormat": "public: https://api.candide.dev/public/v3/{CHAIN_ID}; authenticated: https://api.candide.dev/api/v3/{CHAIN_ID}/{API_KEY}",
+      "methods": [
+        "eth_supportedEntryPoints",
+        "eth_estimateUserOperationGas",
+        "eth_sendUserOperation",
+        "eth_getUserOperationByHash",
+        "eth_getUserOperationReceipt"
+      ],
+      "paymasterRequired": false,
+      "customAccountCompatibility": "standard ERC-4337 API; semi-valid account-specific signature shape may be required",
+      "testAllowance": "public endpoint available without an API key",
+      "requestLimits": "public endpoint is IP rate-limited; exact numeric limit is not published",
+      "setupBurden": "low for an explicitly configured public test endpoint",
+      "risks": [
+        "public numeric rate limit is unspecified",
+        "full credential-bearing authenticated URL is secret",
+        "custom PhilCore envelope compatibility must be verified remotely"
+      ],
+      "officialSources": [
+        "https://docs.candide.dev/wallet/api/supported-networks/",
+        "https://docs.candide.dev/wallet/api/public-endpoints/",
+        "https://docs.candide.dev/wallet/bundler/rpc-methods/"
+      ]
+    }
+  ],
+  "recommendation": {
+    "primary": "Pimlico",
+    "fallback": "Alchemy",
+    "automaticallySelected": false,
+    "rationale": "Pimlico documents a credential-free, rate-limited public endpoint, standard v0.7 methods, sender-balance override for estimates, and no mandatory paymaster.",
+    "exactNextConfiguration": "Set PHILCORE_SEPOLIA_BUNDLER_URL in ignored mode-0600 .env.sepolia.local to an explicitly approved Sepolia endpoint; preserve credentials outside version control.",
+    "nextSafeCommand": "npm run ethereum-sepolia:refresh-o26-readiness"
+  },
+  "requiredChainId": 11155111,
+  "requiredEntryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+  "configuredProviderContacted": false,
+  "remoteEstimationPerformed": false,
+  "paymasterPermitted": false,
+  "providerMayMutateUserOperation": false,
+  "submissionApiExposed": false,
+  "submissionMethodCalled": false,
+  "publicMutationOccurred": false
+}

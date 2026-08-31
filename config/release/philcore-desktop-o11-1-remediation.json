@@ -1,0 +1,114 @@
+{
+  "phase": "O.11.1",
+  "status": "partially_complete_awaiting_fresh_signing_notarization_and_independent_finder_validation",
+  "replacementReleaseIdentifier": "philcore-desktop-o11-1-trusted-tester-rc2",
+  "oldArtifact": {
+    "releaseIdentifier": "philcore-desktop-o9-trusted-tester-rc1",
+    "sha256": "eb3ae7e67ecad33128477269dd2e8de98003671fdaa5156f3854d4744c045a9c",
+    "revoked": true,
+    "reason": "AppleDouble contamination causing framework seal failure during normal Finder installation.",
+    "suitableForExternalDistribution": false,
+    "distributedToTesters": false,
+    "finderValidation": "failed",
+    "independentUserGatekeeperValidation": "failed"
+  },
+  "rootCause": {
+    "mechanism": "ditto archive creation without --norsrc serialized extended attributes as physical AppleDouble ZIP entries",
+    "firstProvenContaminatedArtifactStage": "notarization_upload_zip",
+    "notarizationUploadZipAppleDoubleEntries": 13217,
+    "finalDistributionZipAppleDoubleEntries": 13218,
+    "frameworkRootEntries": [
+      "._Electron Framework",
+      "._Helpers",
+      "._Libraries",
+      "._Resources"
+    ],
+    "notCausedByUsersSharedTransfer": true,
+    "notCausedByApplicationsInstall": true,
+    "notCausedBySecondUser": true
+  },
+  "historicalStageAudit": [
+    {
+      "stage": "pre_developer_id_signing_app",
+      "result": "historical_copy_unavailable",
+      "inferenceAllowed": false,
+      "note": "The old pipeline did not retain a stage-specific app snapshot. Current guards now make this a mandatory measured stage."
+    },
+    {
+      "stage": "immediately_after_developer_id_signing_app",
+      "result": "historical_copy_unavailable",
+      "inferenceAllowed": false
+    },
+    {
+      "stage": "notarization_upload_zip",
+      "result": "failed",
+      "appleDoubleEntries": 13217,
+      "inspection": "direct zipinfo entry audit"
+    },
+    {
+      "stage": "current_post_stapling_working_app",
+      "result": "no_physical_appledouble_files_but_extended_attributes_present",
+      "note": "The working app is not proof of a clean distribution ZIP."
+    },
+    {
+      "stage": "final_trusted_tester_zip",
+      "result": "failed",
+      "appleDoubleEntries": 13218,
+      "inspection": "direct zipinfo entry audit"
+    },
+    {
+      "stage": "ditto_extracted_app",
+      "result": "historical_path_passed",
+      "physicalAppleDoubleFiles": 0,
+      "strictCodeSigning": "passed",
+      "explanation": "ditto consumed AppleDouble entries into metadata"
+    },
+    {
+      "stage": "unzip_extracted_app",
+      "result": "failed",
+      "physicalAppleDoubleFiles": 13218,
+      "strictCodeSigning": "failed"
+    },
+    {
+      "stage": "finder_extracted_app_after_users_shared_transfer",
+      "result": "failed_independent_evidence",
+      "frameworkRootAppleDoubleFiles": 4,
+      "strictCodeSigning": "failed",
+      "gatekeeper": "rejected"
+    },
+    {
+      "stage": "applications_installed_second_user_copy",
+      "result": "failed_independent_evidence",
+      "strictCodeSigning": "failed",
+      "gatekeeper": "rejected",
+      "stapler": "validated"
+    }
+  ],
+  "priorVerificationGap": {
+    "exactZipSha256Matched": true,
+    "extractionMechanism": "ditto -x -k",
+    "finderExtractionTested": false,
+    "finderLaunchTested": false,
+    "archiveEntriesAudited": false,
+    "spctlParsedIncorrectly": false,
+    "staleEvidenceTrusted": false,
+    "workingAppUsedForSomeChecks": true,
+    "independentUserContext": false
+  },
+  "replacementGates": {
+    "developerIdSigned": false,
+    "freshNotarizationAccepted": false,
+    "stapled": false,
+    "finalZipEntryAuditPassed": false,
+    "automatedExtractionMatrixPassed": false,
+    "independentSecondUserFinderGatePassed": false,
+    "suitableForExternalDistribution": false,
+    "distributedToTesters": false
+  },
+  "securityBoundary": {
+    "publicNetworkMutation": false,
+    "baseSepoliaBetaGate": "blocked",
+    "acp0002": "Proposed",
+    "productionApproved": false
+  }
+}

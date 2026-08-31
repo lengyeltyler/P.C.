@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.38",
+  "canonicalPhaseName": "O.38 V2 Sepolia Deployment Readiness and Reproducibility Gate",
+  "classification": "LOCAL_ONLY_DEPLOYMENT_READINESS_AND_REPRODUCIBILITY",
+  "sourceHeadAtPhaseStart": "9b784928ef73932197b044e408ce3c0b9117f467",
+  "isolatedBuild": {
+    "method": "temporary tracked-only copy outside the active worktree",
+    "pathCommitted": false,
+    "gitMetadataRequiredForRegression": true,
+    "existingNodeModulesUsed": false,
+    "existingCacheUsed": false,
+    "existingArtifactsUsed": false,
+    "ignoredConfigurationUsed": false,
+    "environmentFileUsed": false,
+    "node": "26.0.0",
+    "npm": "11.12.1",
+    "lockfileVersion": 3,
+    "npmCi": "PASS",
+    "compile": "PASS",
+    "solidityFilesCompiled": 60,
+    "relevantRegressionTestsPassing": 216,
+    "relevantRegressionTestsFailing": 0,
+    "typescriptTypecheck": "PASS",
+    "metadataDrift": false
+  },
+  "compiler": {
+    "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "metadata": {
+      "appendCBOR": true,
+      "bytecodeHash": "ipfs",
+      "useLiteralContent": true
+    }
+  },
+  "contracts": {
+    "verifier": {
+      "runtimeKeccak256": "0x4597c97018b1fe4b941a035275e229ea5c163db9801545217aa3a93614b1b5be",
+      "creationKeccak256": "0xf4b02d44bf35dd9968866754cf59930936f95a939fecf6e5f25ad4631d17f332",
+      "abiKeccak256": "0xc508c5fe01e267ec247080f3aae1daccb6d518a8eab63f6298160b40f8d4747e",
+      "matchesO3710": true
+    },
+    "account": {
+      "runtimeKeccak256": "0x4f0ea630700c155eb69d7661161abebdcf74dc734127131ad2dfa48dd141e3c5",
+      "creationKeccak256": "0x19b09241c4a1c2f4c02bf361cea97bdbfcc3b91cce37b1d99cbb1b9de9ac0d9b",
+      "abiKeccak256": "0xf2efaddf183a684e562559a67ae68646d0f9a7db6ec7381568c3352e58edfd63",
+      "storageLayoutKeccak256": "0x14ffc0953f35344c5ccdae918c6ad048083f827bd383a1e54270ec55c161cec6",
+      "matchesO3710": true
+    },
+    "factory": {
+      "runtimeKeccak256": "0x4359422db2c5320d3c7914a414766fff29779fa45859e0fe28b4af0a67860e90",
+      "creationKeccak256": "0x5b9263755de1b9a686c240ff0d799bc62a595a42a2471ef0a1d5b84697538632",
+      "abiKeccak256": "0x7f24824a16ae338680756470e53d1633ab1a518b880d5c278d12525f43ff943b",
+      "storageLayoutKeccak256": "0x518674ab2b227e5f11e9084f615d57663cde47bce1ba168b4c19c7ee22a73d70",
+      "matchesO3710": true
+    }
+  },
+  "deterministicEvidence": {
+    "abiReportSha256": "58a33bd4721dc2b94fc403593860e43933d7106ed47b00243e9438a037d09f80",
+    "storageLayoutReportSha256": "4d9711435030941f2293601cc31fde0e06b11404fc8afc5d8d755f59c2947fe2",
+    "create2VectorsSha256": "b329d3b24d3a797f7889646f4c5a9def8fe8b7be65f9fd7d5359543847286bea",
+    "o372FixturePackageSha256": "f24074efc3d1543457b4afa9a79530b77c9cd662d74c269cf2c576b5eb47b620",
+    "o374AuthorityTransportSha256": "b9e0c3b4ab483a6e54b6533dedaddbb2690749f4f9cb68f8332f8f0235d91867",
+    "vectorRegenerationChecks": "PASS",
+    "create2Checks": "PASS"
+  },
+  "result": "REPRODUCIBLE_EXACT_MATCH",
+  "publicMutationCount": 0
+}

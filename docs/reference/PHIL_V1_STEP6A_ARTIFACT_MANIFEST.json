@@ -1,0 +1,18 @@
+{
+  "format": "phil-v1-step6a-artifact-manifest-v1",
+  "source": "apps/phil-device-sdk/src/networkAdapterV1.ts",
+  "sourceSha256": "16a547a833e8fbe459ce3ac8faef75336a593a3e2c2ea8968cbe981569dd8d3d",
+  "fixture": "config/adapters/PHIL_V1_STEP6A_BASE_ADAPTER_FIXTURE.json",
+  "fixtureSha256": "0c820940e709ed09a65117e9ce2342de88825cebce51796146ef849d6b0a4f89",
+  "adapterManifestHash": "0x163dcb7e0bad5098a57ef06d7f08f2414e0610f7846d5690dc1d7961a8a987db",
+  "actionHash": "0x7ae7dd7164e0e79a49f63a3067cd158045bb572f4e985cacee9dcd9f1130a778",
+  "authorizationEnvelopeDigest": "0x7186691da4e0ba447af2ad906d0f951b583ab43b3f0af1ad9b9aee13d06ea6c5",
+  "deviceApprovalDigest": "0x2f432f014881cb28365f41ed51de3a79c1243c3412a0db6b81580e4fbbc05e70",
+  "authorizationHash": "0x1bc4a14b212ddc84987bfbdb2a01c707cc81971c01bebdb15c90b8ee9b73b589",
+  "standardsSnapshot": {
+    "asOf": "2026-08-22",
+    "erc4337": "https://eips.ethereum.org/EIPS/eip-4337",
+    "baseAccountOverview": "https://docs.base.org/base-account/overview/what-is-base-account",
+    "basePreinstalls": "https://docs.base.org/base-chain/specs/protocol/execution/evm/preinstalls"
+  }
+}

@@ -1,0 +1,7 @@
+/* Identity artwork and its Philenator world retain their generated colors.
+ * Shared black-and-white interface tokens and chrome live in styles.css. */
+.phil-avatar img,
+.character-art,
+.world-transition__companions img {
+  filter: none;
+}

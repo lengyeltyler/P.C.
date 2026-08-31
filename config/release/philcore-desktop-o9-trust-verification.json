@@ -1,0 +1,67 @@
+{
+  "phase": "O.9",
+  "status": "historical_ditto_path_passed_independent_finder_path_failed_artifact_revoked",
+  "verifiedAt": "2026-07-17T20:13:54.051Z",
+  "workingApp": {
+    "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app",
+    "stapleValidated": true,
+    "gatekeeperAccepted": true,
+    "gatekeeperSource": "Notarized Developer ID",
+    "strictSignatureVerified": true,
+    "developerIdVerified": true
+  },
+  "scopeCorrection": {
+    "historicalExtractedAppMechanism": "ditto -x -k",
+    "finderExtractionWasNotTested": true,
+    "finderLaunchWasNotTested": true,
+    "archiveEntriesWereNotAuditedForAppleDouble": true,
+    "finderValidation": "failed",
+    "independentUserGatekeeperValidation": "failed",
+    "artifactRevoked": true
+  },
+  "finalZip": {
+    "path": "apps/philcore-desktop/release/local-alpha/philcore-desktop-o9-trusted-tester-rc1/philcore-desktop-o9-trusted-tester-rc1-macos-arm64.zip",
+    "sha256": "eb3ae7e67ecad33128477269dd2e8de98003671fdaa5156f3854d4744c045a9c",
+    "bytes": 251403900,
+    "repositoryIndependentVerifierPassed": false,
+    "historicalVerifierWithoutArchiveAuditPassed": true
+  },
+  "stageSpecificSha256": {
+    "immutableInAppBuildMetadata": {
+      "description": "Sealed app-embedded metadata written before top-level signing. It is not edited after notarization or stapling because that would break the app seal.",
+      "manifestPath": "PhilCore Desktop Local Alpha.app/Contents/Resources/app/config/release/philcore-desktop-local-alpha.json",
+      "embeddedZipHashIsNotFinalDistributionHash": true,
+      "embeddedSigningNotarizationClaim": false
+    },
+    "preNotarizationSignedArtifactZip": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha-0.1.0-local-alpha-macos-darwin-arm64.zip",
+      "sha256": "80dd7331ecf1263f9197ec158fe10fb14601a75fd97241ff46631c49585a2446",
+      "note": "Developer ID signed app ZIP produced before stapling; retained as pre-notarization signed-artifact continuity evidence."
+    },
+    "notarizationUploadZip": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha-notarization.zip",
+      "sha256": "afbcaf46301ac979e5356b61830f261b44075a17f6d0a301a2fe0b73fbd07105",
+      "bytes": 251401643,
+      "submissionId": "949114a4-4b10-45f5-b313-9bff27c3bd0d"
+    },
+    "finalStapledDistributionZip": {
+      "path": "apps/philcore-desktop/release/local-alpha/philcore-desktop-o9-trusted-tester-rc1/philcore-desktop-o9-trusted-tester-rc1-macos-arm64.zip",
+      "sha256": "eb3ae7e67ecad33128477269dd2e8de98003671fdaa5156f3854d4744c045a9c",
+      "bytes": 251403900
+    }
+  },
+  "publicNetworkMutation": false,
+  "distributedToTesters": false,
+  "productionApproved": false,
+  "credentialsExposed": false,
+  "releasePolicy": {
+    "revoked": true,
+    "suitableForExternalDistribution": false,
+    "distributedToTesters": false,
+    "productionApproved": false,
+    "baseSepoliaBetaGate": "blocked",
+    "acp0002": "Proposed",
+    "publicNetworkMutation": false,
+    "meaningfulAssetsAllowed": false
+  }
+}

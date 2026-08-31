@@ -1,0 +1,68 @@
+{
+  "status": "proposed",
+  "productionApproved": false,
+  "phase": "N.8",
+  "entryPoint": {
+    "version": "erc4337-v0.7",
+    "package": "@account-abstraction/contracts",
+    "packageVersion": "0.7.0",
+    "canonicalAddress": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "localFixture": "deploy EntryPoint from @account-abstraction/contracts/artifacts/EntryPoint.json"
+  },
+  "account": {
+    "contract": "PhilCore4337Account",
+    "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+    "foundation": "custom minimal account using @account-abstraction/contracts v0.7 BaseAccount and IEntryPoint",
+    "audited": false,
+    "upgradeable": false,
+    "executeAbi": "execute(address target,uint256 value,bytes data)",
+    "directOwnerExecuteAllowed": false,
+    "entryPointExecuteAllowed": true,
+    "selfExecuteAllowed": false,
+    "authorityModel": "action_gate_restricted_account",
+    "approvedActionGate": "immutable per factory/account family",
+    "allowedTarget": "approvedActionGate",
+    "allowedSelector": "PhilBaseActionGate.verifyAndConsume(...)",
+    "batchExecution": false,
+    "executionOwnerMutable": true,
+    "ownerCommitmentImmutable": true,
+    "entryPointImmutable": true,
+    "recoveryAuthority": "initial recovery authority bound to factory/account family; current account recovery authority is mutable through bounded delayed rotation",
+    "recoveryModel": "delayed_independent_recovery_with_owner_cancellation",
+    "recoveryAuthorityCanCancel": false,
+    "recoveryAuthorityCanExecuteOrdinaryActions": false
+  },
+  "factory": {
+    "contract": "PhilCore4337AccountFactory",
+    "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+    "method": "createAccount(address owner,bytes32 ownerCommitment,uint256 salt)",
+    "addressMethod": "getAddress(address owner,bytes32 ownerCommitment,uint256 salt)",
+    "deploymentModel": "create2",
+    "approvedActionGate": "immutable factory constructor parameter",
+    "recoveryAuthority": "immutable factory constructor parameter",
+    "recoveryDelaySeconds": "immutable factory constructor parameter",
+    "recoveryExpirySeconds": "immutable factory constructor parameter",
+    "addressDerivationIncludesApprovedActionGate": true,
+    "addressDerivationIncludesRecoveryConfiguration": true
+  },
+  "validator": {
+    "betaModel": "ecdsa_owner",
+    "signatureFormat": "eth_sign over EntryPoint getUserOpHash using EIP-191 personal-sign prefix",
+    "philCoreBinding": "ownerCommitment is stored on the account as public identity binding metadata; it is not the signing key",
+    "philSecretOnChain": false,
+    "webAuthnOnChain": false,
+    "sessionKeys": "disabled",
+    "paymaster": "disabled",
+    "normalRotation": "supported by explicit rotateExecutionOwner(address)",
+    "lostKeyRecovery": "supported by delayed independent recovery authority for local Alpha",
+    "recoveryAuthorityCustody": "local Alpha separate encrypted Device Vault ECDSA recovery key",
+    "recoveryAuthorityRotation": "supported for local Alpha through bounded delayed other-authority-cancellable rotation"
+  },
+  "runtimeLimitations": [
+    "No UserOperation signing in M.9A",
+    "No bundler submission in M.9A",
+    "No paymaster invocation in M.9A",
+    "No live deployment in M.9A",
+    "No live Base mutation in M.9A"
+  ]
+}

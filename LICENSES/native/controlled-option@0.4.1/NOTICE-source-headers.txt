@@ -1,0 +1,12 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/lib.rs
+// -*- coding: utf-8 -*-
+// ------------------------------------------------------------------------------------------------
+// Copyright © 2021, Douglas Creager.
+// Licensed under either of Apache License, Version 2.0, or MIT license, at your option.
+// Please see the LICENSE-APACHE or LICENSE-MIT files in this distribution for license details.
+// ------------------------------------------------------------------------------------------------
+
+

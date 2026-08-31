@@ -1,0 +1,93 @@
+{
+  "phase": "N.8",
+  "boundary": "philcore_recovery_authority_custody",
+  "status": "implemented_for_local_alpha",
+  "productionApproved": false,
+  "baseSepoliaBetaApproved": false,
+  "selectedLocalAlphaModel": "separate_device_vault_ecdsa_recovery_key",
+  "recommendedBaseSepoliaBetaModel": "second_device_hardware_or_approved_testnet_operator_recovery_authority",
+  "recommendedProductionModel": "threshold_or_modular_recovery_authority",
+  "custody": {
+    "type": "device_vault_separate_ecdsa_key",
+    "signerType": "secp256k1_ecdsa",
+    "separationRequired": true,
+    "derivedFromPhilSecret": false,
+    "derivedFromExecutionValidator": false,
+    "privateKeyReturned": false,
+    "storedEncrypted": true,
+    "sameDeviceLocalAlphaAllowed": true,
+    "sameDeviceProductionApproved": false
+  },
+  "unlockPolicy": {
+    "requiresUnlockedDeviceVault": true,
+    "requiresUnlockedUserSession": true,
+    "sessionTtlSeconds": 300,
+    "oneTimeSigningSession": true,
+    "arbitraryMessageSigning": false,
+    "arbitraryTransactionSigning": false
+  },
+  "approvalPolicy": {
+    "approvalSource": [
+      "developer_fixture",
+      "authenticated_recovery_device_user",
+      "trusted_secondary_device",
+      "hardware_key_confirmation",
+      "approved_testnet_operator"
+    ],
+    "oneTimeApproval": true,
+    "approvalExpires": true,
+    "bindsPresentationDigest": true,
+    "fixtureApprovalPublicNetworkAllowed": false
+  },
+  "recoveryActions": {
+    "requestRecovery": true,
+    "completeRecovery": true,
+    "cancelRecoveryByRecoveryAuthority": false,
+    "cancelRecoveryByCurrentOwner": true,
+    "ordinaryExecutionAuthority": false,
+    "assetTransferAuthority": false,
+    "actionGateBypass": false
+  },
+  "challengePolicy": {
+    "challengeDelayRequired": true,
+    "accountFrozenDuringRecovery": true,
+    "currentOwnerCanCancel": true,
+    "recoveryExpiryRequired": true
+  },
+  "deviceVaultCoordination": {
+    "newExecutionValidatorPendingUntilVerifiedCompletion": true,
+    "oldExecutionValidatorRevokedOnlyAfterVerifiedCompletion": true,
+    "failedCompletionDoesNotActivateNewValidator": true,
+    "localStateRequiresReceiptVerification": true
+  },
+  "recoveryAuthorityRotation": {
+    "contractLevelSupported": true,
+    "model": "bounded_delayed_other_authority_cancellable_rotation",
+    "baseSepoliaBetaImpact": "requires_beta_acceptance_and_external_review",
+    "productionImpact": "insufficient_without_threshold_or_modular_recovery"
+  },
+  "baseSepoliaBetaGateEvidence": {
+    "executionKeyCustody": "local_alpha_implemented",
+    "recoveryKeyCustody": "local_alpha_implemented",
+    "custodySeparation": "implemented_for_local_alpha",
+    "recoveryChallengePolicy": "implemented",
+    "cancellationPolicy": "current_owner_controlled",
+    "completionApproval": "implemented_for_local_alpha",
+    "deviceVaultCoordination": "implemented_for_local_alpha_tests",
+    "recoveryReceiptVerification": "implemented_for_local_entrypoint_tests",
+    "accountFreezeBehavior": "tested",
+    "lostKeyRecoveryTested": true,
+    "stolenKeyScenarioTested": true,
+    "recoveryAuthorityCompromiseTested": true,
+    "recoveryAuthorityRotationStatus": "implemented_for_local_alpha_pending_beta_review",
+    "disposableAccountPolicy": "required",
+    "meaningfulAssetsPolicy": "prohibited",
+    "operationalMonitoringPlan": "documented",
+    "staticAnalysis": "n6_slither_and_custom_invariants_complete",
+    "dependencyAdvisories": "blocked_remaining_high_tooling_advisories",
+    "externalAudit": "missing"
+  },
+  "localAlphaApproval": true,
+  "baseSepoliaBetaApproval": false,
+  "productionApproval": false
+}

@@ -1,0 +1,12 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/lib.rs
+// Copyright ⓒ 2015-2018 Kevin B. Knapp
+//
+// `clap_complete` is distributed under the terms of both the MIT license and the Apache License
+// (Version 2.0).
+// See the [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) files in this repository
+// for more information.
+
+

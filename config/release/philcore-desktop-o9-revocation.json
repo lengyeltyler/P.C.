@@ -1,0 +1,18 @@
+{
+  "revocationFormat": "philcore-release-revocation-v1",
+  "phase": "O.11.1",
+  "releaseIdentifier": "philcore-desktop-o9-trusted-tester-rc1",
+  "artifactSha256": "eb3ae7e67ecad33128477269dd2e8de98003671fdaa5156f3854d4744c045a9c",
+  "status": "revoked",
+  "reason": "AppleDouble contamination causing framework seal failure during normal Finder installation.",
+  "suitableForExternalDistribution": false,
+  "distributedToTesters": false,
+  "finderValidation": "failed",
+  "independentUserGatekeeperValidation": "failed",
+  "appleCertificateRevoked": false,
+  "appleNotarizationRevokedGlobally": false,
+  "philCoreReleaseArtifactRevoked": true,
+  "baseSepoliaBetaGate": "blocked",
+  "acp0002": "Proposed",
+  "productionApproved": false
+}

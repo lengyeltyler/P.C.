@@ -1,0 +1,53 @@
+{
+  "phase": "O.11",
+  "generatedAt": "2026-07-17T21:10:03.159Z",
+  "o11_1Correction": {
+    "artifactRevoked": true,
+    "finderValidation": "failed",
+    "independentUserGatekeeperValidation": "failed",
+    "externalDistributionProhibited": true
+  },
+  "externalSlot": {
+    "recordFormat": "philcore-external-tester-pending-slot-v1",
+    "testerIdentifier": "tester-002-external-pending",
+    "cohortIdentifier": "o11-stage-b-one-external-slot",
+    "releaseIdentifier": "philcore-desktop-o9-trusted-tester-rc1",
+    "artifactSha256": "eb3ae7e67ecad33128477269dd2e8de98003671fdaa5156f3854d4744c045a9c",
+    "acknowledgementAccepted": false,
+    "artifactDelivered": false,
+    "checksumVerified": false,
+    "installed": false,
+    "firstLaunchCompleted": false,
+    "distributedToTesters": false,
+    "personIdentified": false,
+    "contactRecorded": false,
+    "createdAt": "2026-07-17T21:10:03.159Z"
+  },
+  "externalDistributionGate": {
+    "gateFormat": "philcore-external-distribution-approval-gate-v1",
+    "status": "blocked",
+    "approved": false,
+    "reasons": [
+      "external_acknowledgement_missing",
+      "operator_distribution_approval_missing",
+      "named_tester_missing",
+      "approved_delivery_method_missing"
+    ],
+    "distributedToTesters": false,
+    "usesAppleNotarizationApproval": false
+  },
+  "suitabilityDecision": "blocked_by_revoked_artifact",
+  "invitation": {
+    "prepared": true,
+    "artifactSent": false,
+    "includesChecksumInstructions": true,
+    "includesVerifierInstructions": true,
+    "includesInstallationChecklist": true,
+    "includesDiagnosticInstructions": true,
+    "includesDefectReportTemplate": true,
+    "includesRemovalInstructions": true,
+    "includesEmergencyStopInstructions": true,
+    "includesExpirationAndRevocationNotice": true
+  },
+  "distributedToTesters": false
+}

@@ -1,0 +1,50 @@
+{
+  "phase": "N.7",
+  "baseline": "N.6",
+  "status": "completed",
+  "generatedAt": "2026-07-15",
+  "slitherReport": "config/security/philcore-solidity-static-analysis.json",
+  "customInvariantReport": "config/security/philcore-contract-invariants-report.json",
+  "slitherDelta": {
+    "criticalFindingsBefore": 0,
+    "criticalFindingsAfter": 0,
+    "highFindingsBefore": 0,
+    "highFindingsAfter": 0,
+    "totalFindingsBefore": 40,
+    "totalFindingsAfter": 40,
+    "mediumFindingsBefore": 6,
+    "mediumFindingsAfter": 6,
+    "lowFindingsBefore": 26,
+    "lowFindingsAfter": 26,
+    "informationalFindingsBefore": 8,
+    "informationalFindingsAfter": 8
+  },
+  "targetedFinding": {
+    "id": "N6-SLITHER-004 / N6-MED-008",
+    "component": "PhilMintPassConsumer",
+    "n6Status": "open",
+    "n7Status": "remediated_zero_value_only",
+    "slitherDetectorStillReportsPayableInterfaceHeuristic": true,
+    "n7Classification": "accepted_zero_value_only",
+    "betaBlocking": false,
+    "productionBlocking": false,
+    "evidence": [
+      "contracts/base/PhilMintPassConsumer.sol",
+      "test/unit/mint-path.test.cjs",
+      "config/security/philcore-contract-invariants-report.json",
+      "config/security/philcore-solidity-static-analysis.json"
+    ]
+  },
+  "customInvariantDelta": {
+    "checksBefore": 17,
+    "checksAfter": 18,
+    "newChecks": [
+      "N7-INV-018 PhilMintPassConsumer cannot retain unauthorized ETH because nonzero msg.value is rejected before mint state changes."
+    ],
+    "failedChecks": 0
+  },
+  "architectureChangeControl": {
+    "required": false,
+    "reason": "The selected zero-value-only model narrows PhilMintPassConsumer behavior and does not alter ACTION_UNLOCK, proof schemas, public inputs, cross-domain semantics, account architecture, or Runtime authority."
+  }
+}

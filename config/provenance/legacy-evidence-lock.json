@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "policy": "LEGACY_EVIDENCE_PERMANENTLY_FROZEN",
+  "lockedAtCommit": "d1d85696fbb6800de68eec4b6bc20177e8b14e42",
+  "lockedAtTree": "5293c0aa38055771424acf52ca47489ef406b307",
+  "artifacts": [
+    {
+      "id": "o41-recovery-enrollment-environment",
+      "path": "config/solidity/O41_RECOVERY_ENROLLMENT_ENVIRONMENT_EVIDENCE.json",
+      "baselineCommit": "d1d85696fbb6800de68eec4b6bc20177e8b14e42",
+      "sha256": "41ffb81c24c1fe21e4ea6ff89152941b4555e61b749fa437a47036f0ea8861f5"
+    },
+    {
+      "id": "o42-recovery-enrollment-ceremony",
+      "path": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "baselineCommit": "d1d85696fbb6800de68eec4b6bc20177e8b14e42",
+      "sha256": "be9cd76c70239c121e4703ff74978844d6a853bd562ff7c0c04c79b6a97463fe"
+    },
+    {
+      "id": "o42-1-platform-webauthn-compatibility",
+      "path": "config/solidity/O42_1_PLATFORM_WEBAUTHN_COMPATIBILITY_EVIDENCE.json",
+      "baselineCommit": "d1d85696fbb6800de68eec4b6bc20177e8b14e42",
+      "sha256": "d24c9e808cc22f0171e3b4d484869b61dede6c138e584096fd9dae79cdcfbb85"
+    },
+    {
+      "id": "o43-native-iphone-implementation",
+      "path": "config/solidity/O43_NATIVE_IPHONE_IMPLEMENTATION_EVIDENCE.json",
+      "baselineCommit": "d1d85696fbb6800de68eec4b6bc20177e8b14e42",
+      "sha256": "892bae52762138ab27fbc7856349060662a4f7bf83711b73f311ccb7c500399d"
+    }
+  ]
+}

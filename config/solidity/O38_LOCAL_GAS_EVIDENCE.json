@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.38",
+  "classification": "LOCAL_EPHEMERAL_HARDHAT_ONLY",
+  "chainId": "31337",
+  "entryPointPackage": "@account-abstraction/contracts@0.7.0",
+  "compilerSettingsBoundToO3710": true,
+  "estimates": {
+    "verifierDeployment": {
+      "expectedGas": 2787109,
+      "conservativeCeilingGas": 3350000,
+      "costClass": "ONE_TIME_INFRASTRUCTURE"
+    },
+    "factoryDeployment": {
+      "expectedGas": 4015425,
+      "conservativeCeilingGas": 4825000,
+      "costClass": "ONE_TIME_INFRASTRUCTURE"
+    },
+    "accountDeploymentAndInitialization": {
+      "expectedGas": 2995764,
+      "conservativeCeilingGas": 3600000,
+      "costClass": "PER_ACCOUNT",
+      "initializationIncrement": "INCLUDED_IN_CREATE2_DEPLOYMENT"
+    },
+    "initialEntryPointDeposit": {
+      "expectedGas": 45599,
+      "conservativeCeilingGas": 75000,
+      "costClass": "PER_ACCOUNT",
+      "depositValueIncludedInGas": false
+    },
+    "nativeEthUserOperation": {
+      "expectedGas": 151886,
+      "conservativeCeilingGas": 250000,
+      "costClass": "PER_OPERATION"
+    },
+    "confirmationUserOperation": {
+      "expectedGas": 211104,
+      "conservativeCeilingGas": 300000,
+      "costClass": "PER_OPERATION"
+    },
+    "validatorRotation": {
+      "expectedGas": 150660,
+      "conservativeCeilingGas": 250000,
+      "costClass": "PER_OPERATION"
+    },
+    "recoveryInitiation": {
+      "accountAndEntryPointGasWithMockVerifier": 228546,
+      "realRecoveryVerifierEstimateGas": 119791,
+      "expectedCombinedGas": 348337,
+      "conservativeCeilingGas": 500000,
+      "costClass": "PER_RECOVERY"
+    },
+    "recoveryCancellation": {
+      "accountAndEntryPointGasWithMockVerifier": 116310,
+      "realRecoveryVerifierEstimateGas": 119791,
+      "expectedCombinedGas": 236101,
+      "conservativeCeilingGas": 350000,
+      "costClass": "PER_RECOVERY"
+    },
+    "recoveryCompletion": {
+      "expectedGas": 50944,
+      "conservativeCeilingGas": 100000,
+      "costClass": "PER_RECOVERY"
+    },
+    "configurationRotationInitiation": {
+      "accountAndEntryPointGasWithMockVerifier": 248780,
+      "realCombinedVerifierWorstObservedEstimateGas": 176124,
+      "expectedCombinedGas": 424904,
+      "conservativeCeilingGas": 600000,
+      "costClass": "PER_RECOVERY_CONFIGURATION"
+    },
+    "configurationRotationCancellation": {
+      "accountAndEntryPointGasWithMockVerifier": 113757,
+      "realRecoveryVerifierEstimateGas": 119791,
+      "expectedCombinedGas": 233548,
+      "conservativeCeilingGas": 350000,
+      "costClass": "PER_RECOVERY_CONFIGURATION"
+    },
+    "configurationRotationCompletion": {
+      "expectedGas": 57474,
+      "conservativeCeilingGas": 110000,
+      "costClass": "PER_RECOVERY_CONFIGURATION"
+    },
+    "entryPointDepositWithdrawal": {
+      "expectedGas": 154956,
+      "conservativeCeilingGas": 250000,
+      "costClass": "PER_OPERATION"
+    }
+  },
+  "verifierEstimates": {
+    "validatorEnvelope": 41730,
+    "recoveryEnvelope": 119791,
+    "combinedPrimaryAndHardware": 176124,
+    "combinedPrimaryAndIndependent": 135917
+  },
+  "rehearsalFundingBound": {
+    "includedGasCeiling": 12650000,
+    "maxFeePerGasWeiAssumption": "10000000000",
+    "gasCostWei": "126500000000000000",
+    "gasReserveBps": 2500,
+    "gasReserveWei": "31625000000000000",
+    "initialEntryPointDepositWei": "5000000000000000",
+    "recoverableNativeAccountBalanceWei": "1000000000000000",
+    "minimumSepoliaEthWei": "164125000000000000",
+    "minimumSepoliaEth": "0.164125",
+    "approvalRule": "recompute live fees and reject deployment if the separately approved max fee exceeds 10 gwei or any gas ceiling changes"
+  },
+  "variabilitySources": [
+    "deployment constructor calldata zero/nonzero byte mix",
+    "authority envelope class and WebAuthn evidence length",
+    "cold versus warm accesses",
+    "storage zero-to-nonzero versus nonzero-to-nonzero transitions",
+    "beneficiary and recipient behavior",
+    "EntryPoint prefund and deposit state"
+  ],
+  "publicMutationCount": 0
+}

@@ -1,0 +1,2 @@
+Exact published mime_guess2.0.5 src/mime_types.rs explicitly names both upstream sources; mappings incorporated by build.rs.
+The upstream data snapshot revisions are unspecified. These notices retain the upstream MIT grants; no byte-identical upstream revision claim is made.

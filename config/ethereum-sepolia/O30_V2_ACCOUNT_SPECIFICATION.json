@@ -1,0 +1,679 @@
+{
+  "schemaVersion": "philcore-o30-v2-account-specification-v1",
+  "phase": "O.30",
+  "canonicalPhaseName": "O.30 V2 Account Specification and Threat Model Refinement",
+  "classification": "V2_SPECIFICATION_COMPLETE_LOCAL_ONLY",
+  "sourceHeadAtPhaseStart": "907cd616ad47c13c818cf81348003c9da47bf320",
+  "scope": "architecture_specification_only",
+  "publicMutationCount": 0,
+  "identityBoundary": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "label": "My Phil",
+    "validatorAddressAtBaseline": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyIdAtBaseline": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBindingAtBaseline": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "identityRemainsChainIndependent": true,
+    "accountIsChainAdapterState": true
+  },
+  "v1Freeze": {
+    "accountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "factorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "modifyV1": false,
+    "recoverO27Prefund": false,
+    "reuseV1AddressForV2": false
+  },
+  "intent": {
+    "specificationVersion": 1,
+    "securityModelIdText": "philcore-v2-typed-intent-local-proof-gated-v1",
+    "canonicalSerialization": "EIP-712 with abi.encode type hashes; never abi.encodePacked",
+    "packedEncodingAllowed": false,
+    "domain": {
+      "name": "PhilCore V2 Account",
+      "version": "1",
+      "fields": [
+        "chainId",
+        "verifyingContract"
+      ]
+    },
+    "coreHeaderFieldsInOrder": [
+      "uint8 specificationVersion",
+      "bytes32 securityModelId",
+      "uint8 actionType",
+      "bytes32 actionId",
+      "bytes32 purpose",
+      "bytes32 ownerCommitment",
+      "uint256 chainId",
+      "address entryPoint",
+      "address account",
+      "uint192 nonceKey",
+      "uint64 nonceSequence",
+      "uint64 validatorEpoch",
+      "uint64 recoveryEpoch",
+      "bytes32 applicationContextHash",
+      "bytes32 fundLifecycleDigest",
+      "uint256 maxTotalFeeWei",
+      "uint48 validAfter",
+      "uint48 validUntil"
+    ],
+    "headerRules": {
+      "specificationVersionMustEqualOne": true,
+      "actionIdNonzero": true,
+      "securityModelIdMustEqualImmutableAccountValue": true,
+      "actionTypeMustMatchSelector": true,
+      "purposeMustBeAllowedForActionType": true,
+      "ownerCommitmentNonzero": true,
+      "applicationContextHashNonzero": true,
+      "fundLifecycleDigestRequiredForAllActions": true,
+      "nonAssetLifecycleMustCommitNoAssetEffect": true,
+      "maxTotalFeeWeiNonzero": true,
+      "validUntilStrictlyAfterValidAfter": true,
+      "ordinaryAndMaintenanceMaximumLifetimeSeconds": 600,
+      "recoverySubmissionMaximumLifetimeSeconds": 3600,
+      "maxTotalFeeMustCoverUserOperationUpperBound": true
+    },
+    "authorizedIntentFieldsInOrder": [
+      "bytes32 intentCoreHash",
+      "bytes32 runtimeAuthorizationDigest"
+    ],
+    "authorizedIntentRules": {
+      "runtimeAuthorizationDigestNonzero": true,
+      "runtimeAuthorizationBindsIntentCoreHash": true,
+      "circularHashDependencyAllowed": false
+    },
+    "applicationContext": {
+      "fieldsInOrder": [
+        "bytes32 applicationIdHash",
+        "bytes32 originHash",
+        "bytes32 sessionIdHash",
+        "bytes32 capabilityGrantIdHash",
+        "bytes32 policyDecisionIdHash"
+      ],
+      "hash": "keccak256(abi.encode(PHILCORE_V2_APPLICATION_CONTEXT_TYPEHASH, ordered fields))"
+    },
+    "fundLifecycle": {
+      "fieldsInOrder": [
+        "bytes32 lifecycleSchemaHash",
+        "address account",
+        "address asset",
+        "uint256 tokenId",
+        "uint256 maximumFundingOrHolding",
+        "uint256 maximumStranded",
+        "address residualRecipient",
+        "uint256 expectedPostOperationBalance",
+        "uint256 expectedFinalBalance",
+        "bytes32 releaseRouteHash",
+        "bytes32 simulationEvidenceHash"
+      ],
+      "hash": "keccak256(abi.encode(PHILCORE_V2_FUND_LIFECYCLE_TYPEHASH, ordered fields))",
+      "canonicalAssetEncoding": {
+        "native": "asset address zero and tokenId zero",
+        "entryPointDeposit": "asset equals canonical EntryPoint and tokenId zero",
+        "erc20": "asset equals token and tokenId zero",
+        "erc721": "asset equals token and tokenId equals exact NFT identifier",
+        "erc1155": "asset equals token and tokenId equals exact identifier",
+        "nonAssetAction": "asset address zero, tokenId zero, all balance and exposure fields zero"
+      }
+    },
+    "actionSpecificTypeHashes": true,
+    "optionalFieldsAllowed": false,
+    "unusedFieldsZeroFilled": false,
+    "hashes": {
+      "coreHeaderHash": "keccak256(abi.encode(PHILCORE_V2_INTENT_CORE_HEADER_TYPEHASH, ordered core header fields))",
+      "intentCoreHash": "keccak256(abi.encode(action-specific TYPEHASH, coreHeaderHash, ordered action payload))",
+      "authorizedIntentHash": "keccak256(abi.encode(PHILCORE_V2_AUTHORIZED_INTENT_TYPEHASH, intentCoreHash, runtimeAuthorizationDigest))",
+      "authorizationStructHash": "keccak256(abi.encode(PHILCORE_V2_AUTHORIZATION_TYPEHASH, authorizedIntentHash, userOpHash, validator, validatorKeyIdBinding, validatorEpoch, recoveryEpoch))",
+      "validatorDigest": "keccak256(0x1901 || EIP712DomainSeparator || authorizationStructHash)",
+      "recoveryAuthorizationStructHash": "keccak256(abi.encode(PHILCORE_V2_RECOVERY_AUTHORIZATION_TYPEHASH, authorizedIntentHash, userOpHash, recoveryConfigHash, recoveryEpoch, factorBitmap))",
+      "recoveryFactorDigest": "keccak256(0x1901 || EIP712DomainSeparator || recoveryAuthorizationStructHash)",
+      "combinedCancellationStructHash": "keccak256(abi.encode(PHILCORE_V2_COMBINED_CANCELLATION_TYPEHASH, authorizedIntentHash, userOpHash, validator, validatorEpoch, recoveryConfigHash, recoveryEpoch, factorBitmap))",
+      "configRotationAuthorizationStructHash": "keccak256(abi.encode(PHILCORE_V2_CONFIG_ROTATION_AUTHORIZATION_TYPEHASH, authorizedIntentHash, userOpHash, validator, validatorEpoch, recoveryConfigHash, recoveryEpoch, proposedRecoveryConfigHash, proposedRecoveryEpoch, factorBitmap))",
+      "configRotationDigest": "keccak256(0x1901 || EIP712DomainSeparator || configRotationAuthorizationStructHash)"
+    },
+    "signature": {
+      "algorithmForInitialLocalTestImplementation": "secp256k1 ECDSA",
+      "rawDigestSigningOnly": true,
+      "personalSign": false,
+      "lowSRequired": true,
+      "recoveryByteCanonical": true,
+      "arbitraryMessageSigningAllowed": false,
+      "typedDataSigningApiExposed": false
+    },
+    "authorizationFlow": [
+      "application requests non-authoritative intent",
+      "Runtime resolves one action-specific canonical payload and intentCoreHash",
+      "Runtime policy, proof, approval, and presence bind the intentCoreHash",
+      "Runtime creates one authorization digest and authorizedIntentHash",
+      "Ethereum adapter constructs one exact PackedUserOperation",
+      "Device Vault signs the account authorization digest for that UserOperation",
+      "account recomputes intent and authorization hashes during validation",
+      "EntryPoint nonce and validity window authorize one inclusion",
+      "account executes one typed action and emits authorizedIntentHash and actionId",
+      "Runtime reconciles receipt, event, balances, and consumed authority"
+    ]
+  },
+  "canonicalPurposes": {
+    "hashRule": "bytes32 purpose = keccak256(bytes(ASCII constant))",
+    "values": [
+      "PHILCORE_V2_PURPOSE_CONFIRM_ACTION",
+      "PHILCORE_V2_PURPOSE_TRANSFER_ASSET",
+      "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+      "PHILCORE_V2_PURPOSE_MIGRATE_ASSET",
+      "PHILCORE_V2_PURPOSE_WITHDRAW_DEPOSIT",
+      "PHILCORE_V2_PURPOSE_ROTATE_VALIDATOR",
+      "PHILCORE_V2_PURPOSE_REQUEST_RECOVERY",
+      "PHILCORE_V2_PURPOSE_CANCEL_RECOVERY",
+      "PHILCORE_V2_PURPOSE_ROTATE_RECOVERY_CONFIG",
+      "PHILCORE_V2_PURPOSE_CANCEL_RECOVERY_CONFIG_ROTATION"
+    ]
+  },
+  "actionTypes": [
+    {
+      "id": 1,
+      "name": "CONFIRM",
+      "nonceKey": 0,
+      "payload": [
+        "address confirmationTarget",
+        "bytes32 confirmationDigest"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_CONFIRM_ACTION"
+      ],
+      "valueMovement": false
+    },
+    {
+      "id": 2,
+      "name": "NATIVE_TRANSFER",
+      "nonceKey": 0,
+      "payload": [
+        "address recipient",
+        "uint256 amountWei"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_TRANSFER_ASSET",
+        "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+        "PHILCORE_V2_PURPOSE_MIGRATE_ASSET"
+      ],
+      "valueMovement": true
+    },
+    {
+      "id": 3,
+      "name": "ERC20_TRANSFER",
+      "nonceKey": 0,
+      "payload": [
+        "address token",
+        "address recipient",
+        "uint256 amount"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_TRANSFER_ASSET",
+        "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+        "PHILCORE_V2_PURPOSE_MIGRATE_ASSET"
+      ],
+      "valueMovement": true
+    },
+    {
+      "id": 4,
+      "name": "ERC721_SAFE_TRANSFER",
+      "nonceKey": 0,
+      "payload": [
+        "address token",
+        "address recipient",
+        "uint256 tokenId",
+        "bytes32 receiverDataHash"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_TRANSFER_ASSET",
+        "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+        "PHILCORE_V2_PURPOSE_MIGRATE_ASSET"
+      ],
+      "valueMovement": true
+    },
+    {
+      "id": 5,
+      "name": "ERC1155_SAFE_TRANSFER",
+      "nonceKey": 0,
+      "payload": [
+        "address token",
+        "address recipient",
+        "uint256 tokenId",
+        "uint256 amount",
+        "bytes32 receiverDataHash"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_TRANSFER_ASSET",
+        "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+        "PHILCORE_V2_PURPOSE_MIGRATE_ASSET"
+      ],
+      "valueMovement": true
+    },
+    {
+      "id": 6,
+      "name": "ENTRYPOINT_DEPOSIT_WITHDRAWAL",
+      "nonceKey": 0,
+      "payload": [
+        "address recipient",
+        "uint256 amountWei"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_WITHDRAW_DEPOSIT",
+        "PHILCORE_V2_PURPOSE_RELEASE_RESIDUAL",
+        "PHILCORE_V2_PURPOSE_MIGRATE_ASSET"
+      ],
+      "valueMovement": true
+    },
+    {
+      "id": 7,
+      "name": "VALIDATOR_ROTATION",
+      "nonceKey": 1,
+      "payload": [
+        "address proposedValidator",
+        "bytes32 proposedValidatorKeyIdBinding",
+        "uint64 proposedValidatorEpoch"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_ROTATE_VALIDATOR"
+      ],
+      "valueMovement": false
+    },
+    {
+      "id": 8,
+      "name": "RECOVERY_REQUEST",
+      "nonceKey": 2,
+      "payload": [
+        "address proposedValidator",
+        "bytes32 proposedValidatorKeyIdBinding",
+        "uint64 proposedValidatorEpoch",
+        "bytes32 recoveryRequestSalt"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_REQUEST_RECOVERY"
+      ],
+      "valueMovement": false
+    },
+    {
+      "id": 9,
+      "name": "RECOVERY_CANCEL",
+      "nonceKey": 2,
+      "payload": [
+        "bytes32 recoveryRequestId"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_CANCEL_RECOVERY"
+      ],
+      "valueMovement": false
+    },
+    {
+      "id": 10,
+      "name": "RECOVERY_CONFIG_ROTATION_REQUEST",
+      "nonceKey": 2,
+      "payload": [
+        "bytes32 proposedRecoveryConfigHash",
+        "address proposedFactor0",
+        "address proposedFactor1",
+        "address proposedFactor2",
+        "uint64 proposedRecoveryEpoch"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_ROTATE_RECOVERY_CONFIG"
+      ],
+      "valueMovement": false
+    },
+    {
+      "id": 11,
+      "name": "RECOVERY_CONFIG_ROTATION_CANCEL",
+      "nonceKey": 2,
+      "payload": [
+        "bytes32 recoveryConfigRotationRequestId"
+      ],
+      "allowedPurposes": [
+        "PHILCORE_V2_PURPOSE_CANCEL_RECOVERY_CONFIG_ROTATION"
+      ],
+      "valueMovement": false
+    }
+  ],
+  "capabilityPolicy": {
+    "includedInV2_0": [
+      "receive native ETH",
+      "receive ERC-721 through ERC721Receiver",
+      "receive ERC-1155 through ERC1155Receiver",
+      "typed confirmation",
+      "typed native transfer",
+      "typed ERC-20 transfer with exact balance-delta checks",
+      "typed ERC-721 safe transfer",
+      "typed ERC-1155 safe transfer",
+      "typed EntryPoint deposit withdrawal",
+      "validator rotation",
+      "delayed threshold recovery",
+      "delayed recovery-config rotation"
+    ],
+    "deferredToNewAccountVersion": [
+      "ERC-20 approvals and allowance changes",
+      "contract capability adapters",
+      "arbitrary contract calls",
+      "batching",
+      "paymasters",
+      "session keys",
+      "new token standards"
+    ],
+    "prohibited": [
+      "generic execute",
+      "delegatecall",
+      "proxy upgrade",
+      "selfdestruct",
+      "direct owner execution",
+      "public sweep",
+      "unrestricted token approval",
+      "hidden administrator",
+      "Account 1 privilege",
+      "Account 2 privilege",
+      "tx.origin authorization"
+    ]
+  },
+  "validatorLifecycle": {
+    "activeExecutionValidators": 1,
+    "productionMeaningfulAssetsRequireStrongerValidatorComposition": true,
+    "creation": {
+      "randomKeyGeneratedInsideDeviceVault": true,
+      "derivedFromIdentitySecret": false,
+      "initialEpoch": 1,
+      "validatorNonzero": true,
+      "keyIdBindingNonzero": true,
+      "validatorCannotEqualRecoveryFactor": true
+    },
+    "rotation": {
+      "nonceKey": 1,
+      "currentValidatorAuthorizationRequired": true,
+      "proposedEpochMustEqualCurrentPlusOne": true,
+      "blockedWhileRecoveryActive": true,
+      "transfersValue": false,
+      "oldEpochImmediatelyInvalidAfterSuccess": true
+    },
+    "revocation": {
+      "zeroValidatorStateAllowed": false,
+      "oldValidatorRevokedOnlyAfterVerifiedRotationOrRecovery": true
+    },
+    "compromiseResponse": [
+      "use independent recovery factors to submit a recovery request",
+      "freeze ordinary and maintenance lanes",
+      "cancel only with the specified cross-authorized cancellation rule",
+      "complete delayed validator rotation",
+      "revoke the old Device Vault record after on-chain verification"
+    ]
+  },
+  "recovery": {
+    "factorCount": 3,
+    "threshold": 2,
+    "factorAlgorithmForV2_0": "secp256k1 ECDSA",
+    "factorRequirements": {
+      "sortedStrictlyIncreasingAddresses": true,
+      "nonzero": true,
+      "unique": true,
+      "independentCustodyRequiredByPolicy": true,
+      "executionValidatorExcluded": true,
+      "identitySecretDerivationProhibited": true,
+      "Account1AndAccount2ProhibitedByDeploymentPolicy": true
+    },
+    "recommendedFactorRoles": [
+      "secondary trusted PhilCore device",
+      "hardware-held recovery key",
+      "offline encrypted recovery credential"
+    ],
+    "delaySeconds": 172800,
+    "expirySecondsAfterRequest": 604800,
+    "onePendingRecoveryOrConfigRotationTotal": true,
+    "request": {
+      "submittedThroughEntryPointNonceKey": 2,
+      "twoOfThreeFactorSignaturesRequired": true,
+      "freezesOrdinaryAndMaintenanceLanesImmediately": true,
+      "bindsExactProposedValidatorAndNextEpoch": true,
+      "transfersValue": false
+    },
+    "cancellation": {
+      "submittedThroughEntryPointNonceKey": 2,
+      "acceptedAuthorizationCombinations": [
+        "two of three recovery factors",
+        "current validator plus one recovery factor"
+      ],
+      "currentValidatorAloneAccepted": false,
+      "allowedWhileRequestActiveEvenAfterExpiry": true,
+      "consumesPendingRequest": true,
+      "transfersValue": false
+    },
+    "completion": {
+      "permissionlessDirectCall": true,
+      "onlyExactPendingRequestId": true,
+      "afterDelay": true,
+      "beforeExpiry": true,
+      "incrementsValidatorEpochExactlyOnce": true,
+      "incrementsRecoveryEpochExactlyOnce": true,
+      "clearsPendingStateBeforeExternalEffects": true,
+      "externalCalls": false,
+      "transfersValue": false,
+      "unfreezesAfterStateTransition": true
+    },
+    "expiryCleanup": {
+      "permissionlessDirectCall": true,
+      "onlyAfterExpiry": true,
+      "installsProposedValidator": false,
+      "clearsPendingState": true,
+      "unfreezesAccount": true,
+      "externalCalls": false,
+      "transfersValue": false
+    },
+    "configRotation": {
+      "currentValidatorAndTwoOfThreeCurrentFactorsRequired": true,
+      "sameDelayAndExpiry": true,
+      "ordinaryActionsRemainAvailable": true,
+      "validatorRotationBlockedWhilePending": true,
+      "mutuallyExclusiveWithRecovery": true,
+      "completionPermissionless": true,
+      "expiryCleanupPermissionless": true,
+      "incrementsRecoveryEpochExactlyOnce": true,
+      "transfersValue": false
+    },
+    "postRecoveryAssetMovementRequiresFreshOrdinaryIntent": true
+  },
+  "nonceModel": {
+    "entryPointComposition": "uint256 nonce = (uint256(uint192 key) << 64) | uint64 sequence",
+    "lanes": {
+      "0": "ordinary action intents",
+      "1": "validator maintenance",
+      "2": "recovery and recovery-configuration maintenance"
+    },
+    "exactKeyRequiredPerAction": true,
+    "sequenceReadFromEntryPoint": true,
+    "actionIdNonzeroAndUniqueOffchain": true,
+    "actionIdMappingStoredOnchain": false,
+    "validatorEpochBound": true,
+    "recoveryEpochBound": true,
+    "expiredUnusedUserOperationsRemainInvalidAfterEpochChange": true,
+    "recoveryFreezeBlocksKeys": [
+      0,
+      1
+    ]
+  },
+  "storageModel": {
+    "nonUpgradeable": true,
+    "immutable": [
+      "EntryPoint",
+      "deployment chain ID",
+      "owner commitment",
+      "factory binding",
+      "account version ID",
+      "security model ID",
+      "confirmation target",
+      "recovery delay",
+      "recovery expiry"
+    ],
+    "mutableLayoutInOrder": [
+      "active validator address, validator epoch, frozen flag, execution lock",
+      "active validator key ID binding",
+      "recovery factor 0 address",
+      "recovery factor 1 address",
+      "recovery factor 2 address",
+      "recovery configuration hash",
+      "recovery epoch",
+      "pending recovery request ID",
+      "pending proposed validator address",
+      "pending proposed validator key ID binding",
+      "pending recovery source/proposed epochs and timestamps",
+      "pending recovery active flag and authorization evidence hash",
+      "pending recovery-config rotation request ID and proposed config hash",
+      "pending recovery-config proposed factor addresses",
+      "pending recovery-config epochs, timestamps, and active flag"
+    ],
+    "mappingsAllowed": false,
+    "arbitraryCapabilityStorageAllowed": false,
+    "zeroOrReservedFieldsMustRemainZero": true
+  },
+  "conceptualInterface": {
+    "entryPointOnly": [
+      "confirmIntent",
+      "transferNative",
+      "transferERC20",
+      "safeTransferERC721",
+      "safeTransferERC1155",
+      "withdrawEntryPointDeposit",
+      "rotateValidator",
+      "requestRecovery",
+      "cancelRecovery",
+      "requestRecoveryConfigRotation",
+      "cancelRecoveryConfigRotation"
+    ],
+    "permissionlessStateTransitions": [
+      "completeRecovery",
+      "completeRecoveryConfigRotation",
+      "expireRecovery",
+      "expireRecoveryConfigRotation"
+    ],
+    "receiveOnly": [
+      "receive",
+      "onERC721Received",
+      "onERC1155Received",
+      "onERC1155BatchReceived"
+    ],
+    "view": [
+      "entryPoint",
+      "accountVersionId",
+      "securityModelId",
+      "activeValidator",
+      "validatorKeyIdBinding",
+      "validatorEpoch",
+      "recoveryConfigHash",
+      "recoveryEpoch",
+      "recoveryFactors",
+      "pendingRecovery",
+      "pendingRecoveryConfigRotation",
+      "getIntentCoreHash",
+      "getAuthorizedIntentHash",
+      "getAuthorizationDigest"
+    ],
+    "prohibitedNames": [
+      "execute",
+      "executeBatch",
+      "delegate",
+      "upgradeTo",
+      "sweep",
+      "approveToken",
+      "setOwner",
+      "setAdmin"
+    ]
+  },
+  "executionRules": {
+    "nativeTransferUsesEmptyCalldata": true,
+    "nativeRecipientCannotBeZeroOrAccount": true,
+    "tokenAddressCannotBeZero": true,
+    "tokenRecipientCannotBeZeroOrAccount": true,
+    "amountMustBeNonzero": true,
+    "erc20RequiresExactSenderDecreaseAndRecipientIncrease": true,
+    "feeOnTransferTokensRejected": true,
+    "erc20FalseOrMalformedReturnRejected": true,
+    "erc721UsesSafeTransferFrom": true,
+    "erc1155UsesSafeTransferFrom": true,
+    "receiverDataHashMustMatchCalldata": true,
+    "executionLockRequiredAroundExternalCalls": true,
+    "stateAndEventRevertOnExternalFailure": true,
+    "intentExecutedEventBindsActionIdAuthorizedIntentHashTypeAndAssetEffect": true
+  },
+  "feeRule": {
+    "paymasterGasIncluded": false,
+    "maximumUserOperationGas": "verificationGasLimit + callGasLimit + preVerificationGas",
+    "feeUpperBoundWei": "maximumUserOperationGas * maxFeePerGas",
+    "requiredComparison": "feeUpperBoundWei <= intentCore.maxTotalFeeWei",
+    "runtimePolicyMaximumAlsoRequired": true,
+    "integerArithmeticOnly": true
+  },
+  "migration": {
+    "model": "identity_and_chain_adapter_version_migration",
+    "proxyUpgrade": false,
+    "newImplementationFactoryAndAddressPerVersion": true,
+    "ownerCommitmentContinuity": true,
+    "V1AssetMigrationPossible": false,
+    "futureAssetMigrationUsesTypedOrdinaryIntents": true,
+    "canonicalAdapterSwitchAfterOldAndNewStateVerification": true,
+    "migrationManifestRequiresEveryKnownNativeDepositTokenAndNftBalance": true,
+    "oldAccountZeroBalancePreferred": true
+  },
+  "fundLifecycle": {
+    "releasePathRequiredBeforeFunding": true,
+    "fullLocalLifecycleRequired": true,
+    "forkLifecycleRequiredOrTechnicalReason": true,
+    "maximumStrandedAmountRequired": true,
+    "residualRecipientRequired": true,
+    "separateReleaseApprovalRequired": true,
+    "finalNativeDepositAndTokenBalancesReconciled": true,
+    "zeroFinalBalancePreferred": true
+  },
+  "implementationAcceptanceTests": [
+    "canonical EIP-712 vectors and independent hash implementation",
+    "every typed action success and action-specific malformed calldata",
+    "wrong action type purpose account chain EntryPoint nonce epoch expiry and fee",
+    "wrong recipient amount token token ID data hash and confirmation target",
+    "direct caller account-self generic call delegatecall upgrade and sweep rejection",
+    "validator creation rotation revocation and old-epoch invalidation",
+    "two-of-three recovery threshold permutations and duplicate factor rejection",
+    "recovery freeze delay cancellation expiry completion replay and epoch transition",
+    "recovery-config rotation authorization delay cancellation completion and replay",
+    "malicious ERC-20 return and balance behavior",
+    "ERC-721 and ERC-1155 callback reentrancy and receiver behavior",
+    "EntryPoint deposit withdrawal and complete fund lifecycle",
+    "bundler and RPC mutation ambiguity and receipt reconciliation",
+    "CREATE2 derivation and source artifact deployment binding",
+    "gas denial and storage invariant fuzzing",
+    "static analysis and external audit before public deployment"
+  ],
+  "resolvedO29Questions": {
+    "nftSelectors": "include ERC-721 and ERC-1155 safe transfer in V2.0",
+    "capabilityAdapters": "defer all contract adapters to a new account version",
+    "executionValidator": "single Device Vault ECDSA for local/test implementation; stronger proof-backed or threshold composition required for production meaningful assets",
+    "recoveryFactors": "exact two-of-three independent secp256k1 factors excluding the execution validator",
+    "recoveryTiming": "48-hour delay and 7-day expiry",
+    "batching": "deferred to a new account version",
+    "paymaster": "disabled and deferred to a new account version",
+    "adapterVersionPublication": "durable PhilCore identity registry first; public publication requires a separate design"
+  },
+  "unresolvedProductionRisks": [
+    "On-chain proof-backed or threshold execution-validator composition remains unselected.",
+    "Recovery-factor independence and human ceremony cannot be enforced fully on-chain.",
+    "Nonstandard or malicious token semantics require denylisting or per-token acceptance.",
+    "User deception remains possible if trusted presentation is compromised.",
+    "RPC and bundler censorship remain availability risks.",
+    "Public chain-adapter version publication and discovery remain a separate design."
+  ],
+  "securityBoundary": {
+    "solidityImplemented": false,
+    "v1Modified": false,
+    "factoryImplemented": false,
+    "accountDeployed": false,
+    "factoryDeployed": false,
+    "accountFunded": false,
+    "liveContractCalled": false,
+    "proofGenerated": false,
+    "runtimeAuthorizationCreated": false,
+    "userPresenceRequested": false,
+    "deviceVaultSigningUsed": false,
+    "userOperationCreated": false,
+    "userOperationSubmitted": false,
+    "publicMutationOccurred": false
+  }
+}

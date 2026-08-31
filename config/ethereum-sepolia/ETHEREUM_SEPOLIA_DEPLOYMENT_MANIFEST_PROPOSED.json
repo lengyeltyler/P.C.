@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "philcore-ethereum-sepolia-deployment-manifest-v1",
+  "status": "proposed",
+  "phase": "O.17",
+  "sourceCommit": "9a7279c9d614df93d685630af44357de5e17f666",
+  "network": {
+    "profileId": "ethereum_sepolia",
+    "name": "Ethereum Sepolia",
+    "chainId": 11155111,
+    "mainnet": false,
+    "baseConfigurationInherited": false
+  },
+  "entryPoint": {
+    "version": "0.7",
+    "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "sourceOfTruth": "@account-abstraction/contracts@0.7.0",
+    "deploymentIdentifier": "canonical ERC-4337 v0.7 EntryPoint",
+    "verified": false
+  },
+  "compiler": {
+    "solidity": "0.8.24",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true
+  },
+  "authorizationModel": {
+    "accountModel": "action_gate_restricted_v0_7",
+    "proofType": "stwo-unlock-keccak-v1",
+    "proofSemantics": "protected_action_authorization",
+    "currentCompatibleFactModel": "ethereum_l1_anchored_proof_input_hash_fact",
+    "localProofOnlyPublicExecutionSupportedByCurrentContracts": false,
+    "paymaster": "disabled",
+    "firstActionValueWei": "0"
+  },
+  "contracts": [
+    {
+      "id": "l1FactAnchor",
+      "contract": "PhilL1ProofInputHashAnchor",
+      "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+      "role": "optional current-compatible Ethereum-visible verified-fact source",
+      "address": null,
+      "constructorArguments": [
+        "<accepted Starknet messaging core>",
+        "<accepted Starknet verifier sender>"
+      ],
+      "bytecodeHash": "0x79e24f71b4790c22276e49a107b4a4bf5308b7f398208be655cc5a9542501f47",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "l1FactVerifier",
+      "contract": "PhilL1FactUnlockProofVerifier",
+      "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+      "role": "reads an anchored proofInputHash fact",
+      "address": null,
+      "constructorArguments": [
+        "<l1FactAnchor>"
+      ],
+      "bytecodeHash": "0x9ef3f2711dace0879d22cbe07ac484ed51358e89223269004a27f38317b45ae9",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "actionGate",
+      "contract": "PhilBaseActionGate",
+      "source": "contracts/base/PhilBaseActionGate.sol",
+      "role": "proof validation, one-time nullifier consumption, and consumer dispatch",
+      "address": null,
+      "constructorArguments": [
+        "<l1FactVerifier>"
+      ],
+      "bytecodeHash": "0x35150635ab1d80a4104a72507a0805cce8bd16c95999483322025343549b496a",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "unlockConsumer",
+      "contract": "PhilUnlockConsumer",
+      "source": "contracts/base/PhilUnlockConsumer.sol",
+      "role": "exact account/target/value/calldata action binding and downstream dispatch",
+      "address": null,
+      "constructorArguments": [
+        "<actionGate>"
+      ],
+      "bytecodeHash": "0x4b593082546c6cc2a88c125fbd740e9c0b23d2e41caac01448a1ef65d3330d05",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "testTarget",
+      "contract": "PhilCoreAuthorizationConfirmationTarget",
+      "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+      "role": "zero-value allowlisted confirmation target",
+      "address": null,
+      "constructorArguments": [
+        "<unlockConsumer>"
+      ],
+      "bytecodeHash": "0xd09b43de4bad04d56d46bdcde062945de60d228f9f6b7ad0b7fb64f702911e2d",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "accountFactory",
+      "contract": "PhilCore4337AccountFactory",
+      "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+      "role": "deterministic CREATE2 account deployment",
+      "address": null,
+      "constructorArguments": [
+        "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "<actionGate>",
+        "<separate approved recovery authority>",
+        "<recovery delay seconds>",
+        "<recovery expiry seconds>"
+      ],
+      "bytecodeHash": "0x0cc943034a629801336118bd3a7321a0d85618672e253e416cb5d601ed7e7014",
+      "deployedCodeHash": null,
+      "deploymentStatus": "not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    },
+    {
+      "id": "accountImplementation",
+      "contract": "PhilCore4337Account",
+      "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+      "role": "non-upgradeable per-account implementation deployed by the factory",
+      "address": null,
+      "constructorArguments": [
+        "<factory-bound EntryPoint>",
+        "<Device Vault execution owner>",
+        "<ownerCommitment>",
+        "<factory-bound actionGate>",
+        "<factory-bound recovery authority>",
+        "<factory-bound recovery delay>",
+        "<factory-bound recovery expiry>"
+      ],
+      "bytecodeHash": "0xfc4fa1ff1e6d44aadee54a3466cc063c6c3a720dc3ed4faae59b9f9b8df41f79",
+      "deployedCodeHash": null,
+      "deploymentStatus": "counterfactual_not_deployed",
+      "verificationStatus": "not_verified",
+      "acceptanceStatus": "not_accepted"
+    }
+  ],
+  "deploymentOrder": [
+    "l1FactAnchor",
+    "l1FactVerifier",
+    "actionGate",
+    "unlockConsumer",
+    "testTarget",
+    "accountFactory",
+    "accountImplementation via first counterfactual UserOperation"
+  ],
+  "roles": {
+    "deployer": "<disposable Ethereum Sepolia deployment account>",
+    "funder": "<separate disposable Sepolia ETH source>",
+    "executionOwner": "<Device Vault ECDSA validator address>",
+    "recoveryAuthority": "<separate approved recovery authority>",
+    "contractAdmin": "none",
+    "upgradeAdmin": "none",
+    "pauser": "none",
+    "withdrawalAdmin": "none"
+  },
+  "salts": {
+    "factoryDeployment": null,
+    "account": "domain-separated deterministic fixture until live human approval",
+    "philArtworkAffectsAddress": false,
+    "displayNameAffectsAddress": false,
+    "philSecretExposed": false
+  },
+  "requiredPostDeploymentAssertions": [
+    "chainId equals 11155111",
+    "EntryPoint equals the canonical v0.7 address",
+    "all deployed code hashes equal accepted manifest hashes",
+    "factory immutable ActionGate equals accepted ActionGate",
+    "account owner and ownerCommitment equal approved public bindings",
+    "account EntryPoint and ActionGate bindings are immutable and exact",
+    "test target immutable unlockConsumer equals accepted unlock consumer",
+    "paymaster remains disabled",
+    "first action value equals zero"
+  ],
+  "rollbackLimitations": [
+    "non-upgradeable contracts cannot be patched in place",
+    "factory configuration is immutable",
+    "account address changes if constructor bindings or salt change",
+    "confirmed public transactions cannot be rolled back by PhilCore"
+  ],
+  "approval": {
+    "acp0002Status": "Proposed",
+    "deploymentApproved": false,
+    "userOperationSubmissionApproved": false,
+    "externalTestingApproved": false,
+    "betaApproved": false,
+    "productionApproved": false,
+    "acceptedAddressesPresent": false
+  }
+}

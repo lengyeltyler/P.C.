@@ -1,0 +1,4 @@
+# Preserve Garaga's exact generated verifier bytes. Its generator emits a
+# trailing blank line in these source files, which is part of the recorded
+# verifier source hash.
+starknet/phil-v1-step3-verifier/src/*.cairo whitespace=-blank-at-eof

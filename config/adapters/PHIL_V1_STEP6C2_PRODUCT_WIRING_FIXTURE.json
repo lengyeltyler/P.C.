@@ -1,0 +1,422 @@
+{
+  "format": "PHIL_V1_STEP6C2_PRODUCT_WIRING_FIXTURE_V3",
+  "generatedAtProtocolTime": "2026-08-22T00:00:00.000Z",
+  "inheritedStep6C1": {
+    "sourceCommit": "6f048eb69ac2ca4bcd6f9649b9a543cf17f0b62c",
+    "sourceTree": "a9032b29802bcd3f4bfc7a2de48f911e9b805063",
+    "acceptedCandidate": "22b5cf31d068104c762c411cd4fa6ad8e0485eae",
+    "acceptedTree": "2b0ff7fdf25f6571852be23853a9ad9c6f3e064f"
+  },
+  "transport": {
+    "protocolVersion": 1,
+    "transcriptLabel": "PHIL_ROUTINE_AUTHORIZATION_TRANSPORT_V1",
+    "hkdfInfo": "PHIL_ROUTINE_AUTHORIZATION_AES256_GCM_V1",
+    "requestAad": "DESKTOP_TO_IPHONE_ROUTINE_AUTHORIZATION_V1",
+    "responseAad": "IPHONE_TO_DESKTOP_ROUTINE_AUTHORIZATION_V1",
+    "beginPath": "/philcore/routine/v1/begin",
+    "completePath": "/philcore/routine/v1/complete",
+    "terminalPath": "/philcore/routine/v1/terminal",
+    "terminalAad": "IPHONE_TO_DESKTOP_ROUTINE_TERMINAL_V1",
+    "terminalAckAad": "DESKTOP_TO_IPHONE_ROUTINE_TERMINAL_ACK_V1",
+    "qrPrefix": "phil-step6c-routine-v1:",
+    "bootstrapBytes": 216,
+    "maximumEncryptedPlaintextBytes": 65503,
+    "maximumHttpBodyBytes": 65536,
+    "qrBootstrapBytes": 216,
+    "bootstrap": {
+      "sessionId": "0xe5e6755050c80119f38107a55de2178a282570adc6b3c21ce70b81f1fbf486e3",
+      "ipv4": "192.168.7.9",
+      "port": 43123,
+      "desktopPublicKeyX963": "0x04591ab771ebbcfd6d9cb9094d106528add1a69d44c2c1f627f089ec58b9c61adf9f4e6abf0d045c0c693a3c68ad7c97ca72be64def4a26fecd263dd98a92780f0",
+      "requestId": "0x4f490e62ecc25b6c40df05c302424f048bc4f9fd0d25adfb1a9bca9dc2903490",
+      "expiresAt": "1800000140"
+    },
+    "qrPayload": "phil-step6c-routine-v1:UEhJTDZDMDEB5eZ1UFDIARnzgQelXeIXiiglcK3Gs8Ic5wuB8fv0huPAqAcJqHN0l_1VsqOlieljnMjL_m1JaEIitJNIyvnsHKVP8zx2GmHqIMhasnM4d4bkS89DJEtoJoZU5gtZEa0xINAkNtisBFkat3HrvP1tnLkJTRBlKK3Rpp1EwsH2J_CJ7Fi5xhrfn05qvw0EXAxpOjxorXyXynK-ZN70om_s0mPdmKkngPBPSQ5i7MJbbEDfBcMCQk8Ei8T5_Q0lrfsam8qdwpA0kAAAAABrSdKM",
+    "iphonePublicKeyX963": "0x0473103ec30b3ccf57daae08e93534aef144a35940cf6bbba12a0cf7cbd5d65a64d82c8c99e9d3c45f9245ba9b27982c9aea8ec1db94b19c44795942c0eb22aa32",
+    "transcriptHash": "0xbfa070c1f657a28c5cf932fa29191f5419a21471aa35d95ba81a3714889324f5",
+    "comparisonFingerprint": "BFA0-70C1-F657-A28C-5CF9-32FA"
+  },
+  "enrollment": {
+    "protocolVersion": 2,
+    "transcriptLabel": "PHIL_ROUTINE_DEVICE_ENROLLMENT_PROOF_V2",
+    "acceptanceLabel": "PHIL_ROUTINE_DEVICE_ENROLLMENT_ACCEPTANCE_V2",
+    "preflightPath": "/philcore/routine-enrollment/v2/preflight",
+    "completePath": "/philcore/routine-enrollment/v2/complete",
+    "qrPrefix": "phil-step6c-routine-enrollment-v2:",
+    "bootstrapBytes": 192,
+    "maximumGeneration": 64,
+    "maximumHttpBodyBytes": 4096,
+    "signatureSuiteId": "0x140f8ea7446c92baefbb03cbe88f45e108b18b111cbe132948c8d41636f7da34",
+    "providerProfileId": "0x5462c1e1f72e6fb3019acd7854d6f1b4c899935ef8616da00fe91c2857219d9d",
+    "wireEncodingId": "0xaecd0161fdadacd890513da0fd14374a2007d469a10cd27a5bca178b5295a624",
+    "bootstrap": {
+      "sessionId": "0x1111111111111111111111111111111111111111111111111111111111111111",
+      "ipv4": "192.168.7.9",
+      "port": 43124,
+      "challenge": "0x2222222222222222222222222222222222222222222222222222222222222222",
+      "expiresAt": "1800000500",
+      "expectedGeneration": "1",
+      "desktopAckPublicKeyX963": "0x0407810ea974cea5773e63b897f37e3be9a09e7a5fe9b971a44d1065ac2a3a9311637e47a4f99464a0fdce44a88ec7d703a9183c1d06552d9e2d6b76069481c577"
+    },
+    "qrPayload": "phil-step6c-routine-enrollment-v2:UEhJTDZDRTECERERERERERERERERERERERERERERERERERERERERERHAqAcJqHSjCqDtQ3yzEZMC7xueywOVxs8TQbWU7WWyBXamvD_97CIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiAAAAAGtJ0_QAAAAAAAAAAQQHgQ6pdM6ldz5juJfzfjvpoJ56X-m5caRNEGWsKjqTEWN-R6T5lGSg_c5EqI7H1wOpGDwdBlUtni1rdgaUgcV3",
+    "comparisonFingerprint": "50D7-CF10-48F4-93DA-3919-0A30",
+    "record": {
+      "schemaVersion": 2,
+      "generation": "1",
+      "deviceId": "0x5c7b39d87dae4df3ee687b4bd7a59bafb2a27848cc92c9797205eb593c13750f",
+      "deviceKeyId": "0xb945e237adbfa47a7093c52d85fb7d3253249d04acccbacadbabafd46f4a140c",
+      "publicKeyX963": "0x04e314d95ae35d27098435c67ab20b30ee05edde043ebd589129bba3d02ce5cabec76be73181d190cef8c6926322957470ef57b92f1ef6cd8e906671526445139c",
+      "signatureSuiteId": "0x140f8ea7446c92baefbb03cbe88f45e108b18b111cbe132948c8d41636f7da34",
+      "providerProfileId": "0x5462c1e1f72e6fb3019acd7854d6f1b4c899935ef8616da00fe91c2857219d9d",
+      "wireEncodingId": "0xaecd0161fdadacd890513da0fd14374a2007d469a10cd27a5bca178b5295a624",
+      "publicKeyFingerprint": "0x9b7208d4558bc49f6f23c0cb841c793c3d68894c91e152cf7829a788e66db83d",
+      "secureEnclaveBacked": false,
+      "userPresenceRequired": false
+    },
+    "proofDigest": "0xfd62824f25ca649e3a3b75baa10c685fa4e5bf9494b9de01ba2c76bfc606d7ef",
+    "acceptanceDigest": "0x98be3cf9f574b855bf7888407013d4240b2c3b4cf7731e502f27abd74c77d93d",
+    "acceptanceResponseJson": "{\"protocolVersion\":2,\"sessionId\":\"0x1111111111111111111111111111111111111111111111111111111111111111\",\"challenge\":\"0x2222222222222222222222222222222222222222222222222222222222222222\",\"enrollmentProofDigest\":\"0xfd62824f25ca649e3a3b75baa10c685fa4e5bf9494b9de01ba2c76bfc606d7ef\",\"acceptanceSignatureDER\":\"0x30450221009abc178547e329bc6f7fa7c2f10dd0d44d928e8e6dd768fc7fb4d01bcb5692aa0220422a57edf2e4ebf33b8eef305faf4fbbbd5027d02f77f8245245a0546862e830\"}",
+    "evidenceClass": "synthetic_source_test"
+  },
+  "focusedAutomatedTests": {
+    "typescriptTransport": 6,
+    "typescriptEnrollment": 3,
+    "desktopHost": 4,
+    "desktopLocalProductRuntime": 2,
+    "desktopProductFlow": 1,
+    "desktopIpc": 6,
+    "desktopStorage": 3,
+    "desktopProductHost": 3,
+    "desktopEnrollmentHost": 1,
+    "desktopUrlSessionIntegration": 1,
+    "desktopUiState": 6,
+    "desktopSecureOrigin": 1,
+    "swiftSimulator": 26,
+    "total": 63
+  },
+  "classifications": {
+    "localPrototype": true,
+    "reviewedSource": false,
+    "physicalDeviceVerified": false,
+    "testnetAdmitted": false,
+    "productionAdmitted": false,
+    "postQuantumEnforced": false,
+    "externalNetwork": false,
+    "meaningfulAssets": false,
+    "productionAuthority": false
+  },
+  "sourceFiles": {
+    "package.json": {
+      "bytes": 45405,
+      "sha256": "a2c83cfd372d5b25e565b3a510bf60f16b4c70f3a991dd262cdaddf49c550e99"
+    },
+    "config/ci/classification.json": {
+      "bytes": 129243,
+      "sha256": "6176807503d672507a39abf6a4abbf52c5545233343ba6057095921310cd631b"
+    },
+    "config/adapters/PHIL_V1_STEP6C_LOCAL_COMPOSITION_FIXTURE.json": {
+      "bytes": 86518,
+      "sha256": "e01ec37d8c7b6dd7d9814b4aceb28a77d4847a80c526a7e39d5d2921dfad6b06"
+    },
+    "README.md": {
+      "bytes": 32488,
+      "sha256": "63b78b372f806b6284df925c3d812bfe8b1b85351589d2f8d277b7222ec8782c"
+    },
+    "docs/CANONICAL_DOCS.md": {
+      "bytes": 48137,
+      "sha256": "51f2a09453fb69d287ac7ef8d7e9196da63793b05032b54dbb128f502d0912e7"
+    },
+    "docs/architecture-changes/ACP-0003-PHIL-V1-SECURE-IDENTITY-ROADMAP.md": {
+      "bytes": 34531,
+      "sha256": "019f71f3f6a6a2a5a7ffd3f8a07dd81d46c4b67e40c6fec878ade83f768556e8"
+    },
+    "docs/reference/PHIL_V1_STEP6C_ROUTINE_AUTHORIZATION_PRODUCT_COMPOSITION_GATE.md": {
+      "bytes": 26009,
+      "sha256": "b5ac6483a2f553ddae37c0da8f84d584889c2338298d0ecc5fddee0f78beb896"
+    },
+    "docs/reference/PHIL_V1_STEP6C_IMPLEMENTATION_PACKET.md": {
+      "bytes": 83917,
+      "sha256": "d68d6151e5eb0cbde2b57ffe863cdd51cc7ce6d4818116e7b2897aef153f21e6"
+    },
+    "docs/reference/PHIL_V1_STEP4_REFERENCE_MANIFEST_MAINTENANCE.md": {
+      "bytes": 20170,
+      "sha256": "4b514bf45d345a275aa8b62c68a35fed66c2c69ad9513823455fb280af26a29e"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_PRODUCT_WIRING_IMPLEMENTATION_REPORT.md": {
+      "bytes": 9481,
+      "sha256": "f710a64b6f9ef10bc0e95f3aa2638f109c6669b367da05ffc76c248286e51637"
+    },
+    "docs/reference/PHIL_V1_STEP6C3_PHYSICAL_FAILURE_AND_CORRECTIVE_REPORT.md": {
+      "bytes": 4762,
+      "sha256": "b32dce00e8a06cd92094af635dca11ad51e1d2645fb4af398ee912be929eb88a"
+    },
+    "docs/reference/PHIL_V1_STEP6C3_CORRECTIVE_REVIEW_6670B93.md": {
+      "bytes": 1577,
+      "sha256": "2495b6933e85e5c56a074f83d5d2274797fab3bef03298ec7998cb074c726e96"
+    },
+    "docs/reference/PHIL_V1_STEP6C3_SUCCESSOR_REVIEW_CAF077E.md": {
+      "bytes": 1425,
+      "sha256": "b74db2c4efaedb8685328f069fbeb2533afb151573d50cd2662e8ad642587aee"
+    },
+    "docs/reference/PHIL_V1_STEP6C3_CORRECTIVE_ACCEPTANCE_C32D8F8.md": {
+      "bytes": 1987,
+      "sha256": "693854a54bf5e856703ac8abe7104e598a836620b446cc540fb3f0f33d24b2fd"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_021E703.md": {
+      "bytes": 2379,
+      "sha256": "0a6dcd6e3a2a57d7d80742cd905da4876806e4689c6a822b4cd3757a6376f04b"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_C40FA2C.md": {
+      "bytes": 2164,
+      "sha256": "3969ad9be9c61dd38cb2def6b3ecbef0fdde1b17af2f6482086b266fde3660cc"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_75785F3.md": {
+      "bytes": 2108,
+      "sha256": "a1869c986ac8827f3efaf3ca6df967540f114582cd87467b1272721b072b44fa"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_965F9ED.md": {
+      "bytes": 2000,
+      "sha256": "2d58c87cd120b6570eb514a81e59368a12bbc6fda9e4187570dd2043b16a285d"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_09E5A9E.md": {
+      "bytes": 2351,
+      "sha256": "be882fc8f3b1f0909615fea5dc856ade27ce32d352d151814d8802cd39359d71"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_8A2D906.md": {
+      "bytes": 2572,
+      "sha256": "d69de8eaffb43bcf9fdb3ee578399cab11d255027dbff153d65d930f18af8cd4"
+    },
+    "docs/reference/PHIL_V1_STEP6C2_INDEPENDENT_REVIEW_4A81B08.md": {
+      "bytes": 2126,
+      "sha256": "6b45deaf78d0e6e81353fac504b16d7c4925aa67e24b657b474b0c024ff78f76"
+    },
+    "docs/security/PHIL_V1_STEP6C_ROUTINE_AUTHORIZATION_THREAT_MODEL.md": {
+      "bytes": 27061,
+      "sha256": "afe58907f837652da242bb56fc76dddd0ad125594090de3004844531572d746b"
+    },
+    "apps/phil-device-sdk/src/routineDeviceEnrollmentTransportV2.ts": {
+      "bytes": 16122,
+      "sha256": "0ce27bf9c30015355c9e50d401e8ae912e3ebb962b2d2b3e9ebaf53d884cd75f"
+    },
+    "hardhat.shared.cjs": {
+      "bytes": 4754,
+      "sha256": "e6748f6fa32ffe0f3a68db6f47eb6a382be74e539fa2db71d860aff5b887ef94"
+    },
+    "hardhat.phil-v1-step6c-product.config.cjs": {
+      "bytes": 643,
+      "sha256": "fd1c2bc53974c5d355418e53553a8233f7ad0c6d0a02f356933b2da7ef7bb893"
+    },
+    "apps/phil-device-sdk/src/routineAuthorizationTransportV1.ts": {
+      "bytes": 17697,
+      "sha256": "233c6c099a59d4c5abedc998a2d6ffc28f87ce6c8a6d9740e7ca86d6d6a374d8"
+    },
+    "apps/phil-device-sdk/src/routineAuthorizationV1.ts": {
+      "bytes": 82065,
+      "sha256": "b15e11b47958553d9c4355bcdc2d9e461f0c25921561ac69f174b1e327c28b59"
+    },
+    "apps/phil-device-sdk/src/runtime/routineAuthorizationJournalV1.ts": {
+      "bytes": 60467,
+      "sha256": "733a2e7a2070084afa4173dac70d1bdec4425c334062fa3412d9bd39ec713211"
+    },
+    "apps/philcore-desktop/src/main/routine-authorization-host.cjs": {
+      "bytes": 23207,
+      "sha256": "d9ead9f2b29eb897c1eff81aaf4642b91255e0ce77478c760ed5f826fae80271"
+    },
+    "apps/philcore-desktop/src/main/routine-authorization-local-product-runtime.cjs": {
+      "bytes": 24473,
+      "sha256": "74c91cfb1e9105b9e4a40a70162e47f792c0e0b5d6fd414dae5176df9dfbb951"
+    },
+    "apps/philcore-desktop/src/main/routine-authorization-product-host.cjs": {
+      "bytes": 6229,
+      "sha256": "038763a2e16224c13b5d27beab77b5848f49784fab794a841e5c42e3a3f10785"
+    },
+    "apps/philcore-desktop/src/main/routine-device-enrollment-host.cjs": {
+      "bytes": 13625,
+      "sha256": "26a9058c9c94a2430adfc206f818522354e0b3830ad4fe603947f3f3585ccc03"
+    },
+    "apps/philcore-desktop/src/main/routine-authorization-ipc.cjs": {
+      "bytes": 5455,
+      "sha256": "631d6df963099edfd5b2ec919ed3dc1abe47c38669fa7db3a749f8b34f01cc26"
+    },
+    "apps/philcore-desktop/src/main/routine-authorization-storage.cjs": {
+      "bytes": 14477,
+      "sha256": "46cd183708a1b06d7118e573fbff70f824537cabd672b7062c8f728415206fb3"
+    },
+    "apps/philcore-desktop/src/main/recovery-secure-origin.cjs": {
+      "bytes": 18077,
+      "sha256": "1f5f97531db212322708fa34e9f6b365fe026090fed32cfa3e86ec3a2791bdba"
+    },
+    "apps/philcore-desktop/src/main/main.cjs": {
+      "bytes": 106034,
+      "sha256": "69f6ac5f54fd215966535dd4ca4975a7e641a4a950d586dbc3f058de8f7b23ba"
+    },
+    "apps/philcore-desktop/scripts/package-local.cjs": {
+      "bytes": 12531,
+      "sha256": "21ba5371d10bb6be727ef13232d00b0a8543f2fca7fc3421fda73d274835a1cd"
+    },
+    "apps/philcore-desktop/scripts/release-utils.cjs": {
+      "bytes": 15084,
+      "sha256": "65b4f8fbbce70837e227b13b30e06e338fda69b4dc7c42174fcd6d34ad7f84bd"
+    },
+    "apps/philcore-desktop/scripts/verify-package.cjs": {
+      "bytes": 15261,
+      "sha256": "5718c44985e92bbfc409d685517c36cad20414da9747f6d55405631d3a452857"
+    },
+    "apps/philcore-desktop/scripts/test-packaged-action-lifecycle.cjs": {
+      "bytes": 3573,
+      "sha256": "3a9bc20f8960560bc38410c0cc8329d5a86ef6b388be66170290ecd97f563c0c"
+    },
+    "apps/philcore-desktop/scripts/test-packaged.cjs": {
+      "bytes": 3505,
+      "sha256": "01eba01675f5bdeea1d6a3658854f59a454004d706cbe09477443b1c2654ac69"
+    },
+    "apps/philcore-desktop/src/preload/preload.cjs": {
+      "bytes": 8925,
+      "sha256": "440099be9ddd106aba7307fd92d75cea5dd59c341c9dd5b39e47ea802fc2d722"
+    },
+    "apps/philcore-desktop/src/shared/bridge-contract.cjs": {
+      "bytes": 39153,
+      "sha256": "63d299ac570daf9dd7d7ba85a1f45ff4be234212fd1544c97dd9c5cac4ca8fa6"
+    },
+    "apps/philcore-desktop/src/renderer/index.html": {
+      "bytes": 4457,
+      "sha256": "d2502ef6fce144023e88e58af589b1e891224d140a17e2b2e5a91c113ccdfc70"
+    },
+    "apps/philcore-desktop/src/renderer/routine-authorization-ui.cjs": {
+      "bytes": 11357,
+      "sha256": "770698daa4478ec44d41858cd1c68d18cce4dee8271478027b946fa00b2ced22"
+    },
+    "apps/philcore-desktop/src/renderer/unlock-transition-policy.cjs": {
+      "bytes": 672,
+      "sha256": "8d19be4851119db2814f6f41921aa1b3008d04729c86a6ffa3097168a573bd1f"
+    },
+    "apps/philcore-desktop/src/renderer/app.js": {
+      "bytes": 199616,
+      "sha256": "de8bf403dd6464af2e1b83534d507b9b6e3e500bd1fa6869ed65ab3d0153750a"
+    },
+    "apps/philcore-desktop/test/desktop-alpha-product.test.cjs": {
+      "bytes": 28587,
+      "sha256": "7b7ed04dc7c5e135ccc3932002102864c268ad8994dabfcb72cee99583ea5530"
+    },
+    "apps/philcore-desktop/test/run-desktop-tests.cjs": {
+      "bytes": 2577,
+      "sha256": "c39c93a2a9f63d5f80ae4f231397276534b0c45d89b50f759ede8c13202095c9"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-ui-state.test.cjs": {
+      "bytes": 15530,
+      "sha256": "dc6af04947785021ba675e69ebe7b0455f2a2e6a7952fe3508869e20afde7fbe"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/Info.plist": {
+      "bytes": 1712,
+      "sha256": "bd8d64ef9302e1d76fde8f1338dddaeda2626abc8807a191db51af15ab252253"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/PhilCoreCompanionApp.swift": {
+      "bytes": 1187,
+      "sha256": "917a3ea85f99a97de45684ecfb68a786af568efa167281bb150107de5f931d0b"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/QRScannerView.swift": {
+      "bytes": 3892,
+      "sha256": "c17581a49254ba9bd93fe822febd0163742e0961d7524d0f7d244d10d189496a"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RoutineAuthorizationTransport.swift": {
+      "bytes": 25598,
+      "sha256": "83f5d4fb739cce282159d690b6d3117c982a31fed35ae676dea872b07426a8a7"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RoutineApprovalKeyManager.swift": {
+      "bytes": 19073,
+      "sha256": "38085ebf1ad284092e3b3b34db8323978f270a730b5db93e923a844a860500c2"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RoutineAuthorizationClient.swift": {
+      "bytes": 25295,
+      "sha256": "061b7592b4890e8330b624bd3065f103fc6dc08688a9ad3e265c47d33a233a1b"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RoutineAuthorizationCanonicalVerifier.swift": {
+      "bytes": 48321,
+      "sha256": "1bc4ac76746babc8815a8a8ee7bfae1f295a11c4f533a2ea4cdd6c3cea9d6e34"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RoutineDeviceEnrollmentClient.swift": {
+      "bytes": 18001,
+      "sha256": "bf7344415d7a650818a8099758d930b57b543aeea47ecf66f8331c90825958a8"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/CompanionModel.swift": {
+      "bytes": 42480,
+      "sha256": "73736e72a5ee13faa97c60b3d043277622a665272a49287a7fc1f252950d65f5"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/RootView.swift": {
+      "bytes": 54047,
+      "sha256": "1d8e0473be3d26f07a086240894900cf684810236cfca15a668c32a8d0925e21"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion/Models.swift": {
+      "bytes": 4348,
+      "sha256": "96a188afd5143c5483172633b2436e80da4333850b1a31a93f3b2553b46e2374"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanion.xcodeproj/project.pbxproj": {
+      "bytes": 30830,
+      "sha256": "5e12d9a663b244689cdbf030aa611f725e8d9b62ec599528313a54b50942e0f1"
+    },
+    "apps/philcore-ios-companion/scripts/test-routine-authorization-simulator.cjs": {
+      "bytes": 8624,
+      "sha256": "93d100df269ebbf5b976df076667ebb8ea76b1a3fe611f9b6b33a050159ecaff"
+    },
+    "test/unit/phil-v1-step6c2-transport.test.cjs": {
+      "bytes": 6443,
+      "sha256": "491abf3b217424500a77b39af250ad5095114b0df2fffdd7ba1fae995e3967d5"
+    },
+    "test/unit/phil-v1-step6c2-enrollment.test.cjs": {
+      "bytes": 5709,
+      "sha256": "3017fc7df858bbd727a9e2aacc2990bc8c0463d729a5c0221adc67d155a11202"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization.test.cjs": {
+      "bytes": 23518,
+      "sha256": "2078ef38d87b51caf71d08c46142265983bb79fbdd8c827bbbe2d344edeff604"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-local-product-runtime.test.cjs": {
+      "bytes": 5322,
+      "sha256": "6b0a64272971fe97493a52b8d108ca6cc7737c70c7a0203b0c0a7e88414806df"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-product-flow.test.cjs": {
+      "bytes": 11183,
+      "sha256": "b50074f23750fe14e6876cabf252d194bb84d097b3eaee0a03c327cb00e39c91"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-product-host.test.cjs": {
+      "bytes": 8984,
+      "sha256": "54ea7779b2082073d0ac610e0b74fab7ee61f5f5d14bffbd9bd9496239d1b9b5"
+    },
+    "apps/philcore-desktop/test/desktop-routine-device-enrollment-host.test.cjs": {
+      "bytes": 14719,
+      "sha256": "aa568f2ec88e6b80d0fc66eb071ec68a92e3d5d432f76c07443efd19b93b94a3"
+    },
+    "apps/philcore-desktop/test/desktop-routine-enrollment-urlsession-integration.test.cjs": {
+      "bytes": 6316,
+      "sha256": "c0543e556a8f562189770fb054fee43be8e95f30f5bee3baafef8f6466abbd5c"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-ipc.test.cjs": {
+      "bytes": 9485,
+      "sha256": "99a8b866213154f3b8674dd4ec8e06b9460230fbddddb701c62fe1013b8ceb3b"
+    },
+    "apps/philcore-desktop/test/desktop-routine-authorization-storage.test.cjs": {
+      "bytes": 7316,
+      "sha256": "39504ed9cbe87b7cc2b9579b60afc58c2f7e0c53b6e3cea90b717ef25a579e92"
+    },
+    "apps/philcore-desktop/test/desktop-recovery-secure-origin.test.cjs": {
+      "bytes": 11077,
+      "sha256": "18f6f609dd61252f34c7eba9f1b2ef3b7b5a52c6b607a5096f0b67f7d6ca1106"
+    },
+    "scripts/ci/run-lane.cjs": {
+      "bytes": 7892,
+      "sha256": "aed1833230056182b5c71ea34bc0958f5f20a64f7450f6f3daac7fc12102573e"
+    },
+    "test/unit/ci-classification.test.cjs": {
+      "bytes": 38913,
+      "sha256": "f043041a414944e76e29c2054b01c48370c69340946d892f141f58f29250517b"
+    },
+    "apps/philcore-ios-companion/PhilCoreCompanionTests/RoutineAuthorizationTests.swift": {
+      "bytes": 92359,
+      "sha256": "196cb9f11b79f15155197d3a12daf38c1075762f0f6fad1ffe33c73de3fc9042"
+    },
+    "scripts/security/generate-phil-v1-step6c2-artifacts.cjs": {
+      "bytes": 13189,
+      "sha256": "768ea3e22b632b636fd867a372e9b124f8ac43904b530c698f805be932091065"
+    }
+  }
+}

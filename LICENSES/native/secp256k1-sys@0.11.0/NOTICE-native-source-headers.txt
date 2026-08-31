@@ -1,0 +1,9 @@
+Supplemental source/header notices for selected native crate. Optional target alternatives are retained conservatively; this does not assert every source file is incorporated.
+
+Source files: depend/secp256k1/src/asm/field_10x26_arm.s
+/***********************************************************************
+ * Copyright (c) 2014 Wladimir J. van der Laan                         *
+ * Distributed under the MIT software license, see the accompanying    *
+ * file COPYING or https://www.opensource.org/licenses/mit-license.php.*
+ ***********************************************************************/
+

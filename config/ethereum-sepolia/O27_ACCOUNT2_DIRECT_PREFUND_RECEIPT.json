@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "philcore-o27-account2-direct-prefund-receipt-v1",
+  "phase": "O.27",
+  "canonicalPhaseName": "O.27 Account 2 Direct Prefunding",
+  "status": "COMPLETE",
+  "proposalDigest": "0x9ff157d194184e38216546071b3f052ddebf41552d33505001811192d005e0e9",
+  "sourceHead": "466b2ffbfb890ce7dc33712e420dde30e449c1da",
+  "evidenceRecordedFromHead": "131a2c62afea625daa7f8e3bb610054c6d905d4b",
+  "chainId": 11155111,
+  "transaction": {
+    "hash": "0x37d191d70cf45cc6a4eaa83c9518a980a6d9a575e211ea70796e28143e51431d",
+    "type": 2,
+    "sender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+    "recoveredSigner": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+    "recipient": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "nonce": "0",
+    "value": {
+      "wei": "5124486704000000",
+      "eth": "0.005124486704"
+    },
+    "calldata": "0x",
+    "gasLimit": "21000",
+    "maxFeePerGas": {
+      "wei": "2562243352",
+      "eth": "0.000000002562243352"
+    },
+    "maxPriorityFeePerGas": {
+      "wei": "1875000",
+      "eth": "0.000000000001875"
+    },
+    "signedOnlyByAccount2": true,
+    "decodedAndMatchedApproval": true
+  },
+  "receipt": {
+    "found": true,
+    "status": "success",
+    "logCount": 0,
+    "blockNumber": "11370545",
+    "blockHash": "0xa699465c8c2db37a571bc95f592c17253c151f856943d23b7ca8fd6f10954dc0",
+    "gasUsed": "21000",
+    "effectiveGasPrice": {
+      "wei": "1105936800",
+      "eth": "0.0000000011059368"
+    },
+    "exactTransactionFee": {
+      "wei": "23224672800000",
+      "eth": "0.0000232246728"
+    },
+    "exactTotalAccount2Debit": {
+      "wei": "5147711376800000",
+      "eth": "0.0051477113768"
+    }
+  },
+  "stateBefore": {
+    "block": {
+      "number": "11370543",
+      "hash": "0xc1670466dc1015ba1d64635ba17d441b254765d44ca4a506781a974946b29364",
+      "timestamp": 1785265824
+    },
+    "infrastructure": {
+      "chainId": 11155111,
+      "entryPoint": {
+        "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+      },
+      "target": {
+        "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+        "securityModelId": "0x23dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4c",
+        "deploymentTransactionHash": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+        "deploymentBlockNumber": "11365970",
+        "deploymentBlockHash": "0x9c12b5880d50e8d4c7ce04b63dfdbf739b2d8b778142eda4432471b153f3f735",
+        "deployedContractAddress": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "deploymentStatus": 1
+      },
+      "factory": {
+        "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "codeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+        "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "expectedChainId": 11155111,
+        "deploymentTransactionHash": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+        "deploymentBlockNumber": "11366062",
+        "deploymentBlockHash": "0x0f910a19e2fbe5784a68ad2a5216e45a3646b8bfc6c0b020a58227d908292879",
+        "deployedContractAddress": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "deploymentStatus": 1
+      },
+      "bindingDigest": "0x36ff9bd100d478441e7f2e7db83844b2c2bd899e375a22d3cf218c4caa864879"
+    },
+    "account": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "locallyDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "factoryDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "codeStatus": "empty",
+      "codeHash": null,
+      "balanceWei": "0",
+      "latestTransactionCount": "0",
+      "pendingTransactionCount": "0",
+      "entryPointNonce": "0",
+      "entryPointDepositWei": "0"
+    },
+    "accounts": {
+      "account1": {
+        "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+        "latestNonce": "3",
+        "pendingNonce": "3",
+        "balanceWei": "270073390298140959"
+      },
+      "account2": {
+        "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+        "latestNonce": "0",
+        "pendingNonce": "0",
+        "balanceWei": "92576112524973299"
+      }
+    }
+  },
+  "stateImmediatelyBeforeBroadcast": {
+    "block": {
+      "number": "11370543",
+      "hash": "0xc1670466dc1015ba1d64635ba17d441b254765d44ca4a506781a974946b29364",
+      "timestamp": 1785265824
+    },
+    "infrastructure": {
+      "chainId": 11155111,
+      "entryPoint": {
+        "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+      },
+      "target": {
+        "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+        "securityModelId": "0x23dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4c",
+        "deploymentTransactionHash": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+        "deploymentBlockNumber": "11365970",
+        "deploymentBlockHash": "0x9c12b5880d50e8d4c7ce04b63dfdbf739b2d8b778142eda4432471b153f3f735",
+        "deployedContractAddress": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "deploymentStatus": 1
+      },
+      "factory": {
+        "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "codeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+        "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "expectedChainId": 11155111,
+        "deploymentTransactionHash": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+        "deploymentBlockNumber": "11366062",
+        "deploymentBlockHash": "0x0f910a19e2fbe5784a68ad2a5216e45a3646b8bfc6c0b020a58227d908292879",
+        "deployedContractAddress": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "deploymentStatus": 1
+      },
+      "bindingDigest": "0x36ff9bd100d478441e7f2e7db83844b2c2bd899e375a22d3cf218c4caa864879"
+    },
+    "account": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "locallyDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "factoryDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "codeStatus": "empty",
+      "codeHash": null,
+      "balanceWei": "0",
+      "latestTransactionCount": "0",
+      "pendingTransactionCount": "0",
+      "entryPointNonce": "0",
+      "entryPointDepositWei": "0"
+    },
+    "accounts": {
+      "account1": {
+        "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+        "latestNonce": "3",
+        "pendingNonce": "3",
+        "balanceWei": "270073390298140959"
+      },
+      "account2": {
+        "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+        "latestNonce": "0",
+        "pendingNonce": "0",
+        "balanceWei": "92576112524973299"
+      }
+    }
+  },
+  "stateAfter": {
+    "block": {
+      "number": "11370546",
+      "hash": "0x2cd8f94baf8cec6399d20a57770f640e91b05abc31285d8b9a3973826ebcaa9b",
+      "timestamp": 1785265860
+    },
+    "infrastructure": {
+      "chainId": 11155111,
+      "entryPoint": {
+        "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+      },
+      "target": {
+        "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+        "securityModelId": "0x23dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4c",
+        "deploymentTransactionHash": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+        "deploymentBlockNumber": "11365970",
+        "deploymentBlockHash": "0x9c12b5880d50e8d4c7ce04b63dfdbf739b2d8b778142eda4432471b153f3f735",
+        "deployedContractAddress": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "deploymentStatus": 1
+      },
+      "factory": {
+        "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "codeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+        "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "expectedChainId": 11155111,
+        "deploymentTransactionHash": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+        "deploymentBlockNumber": "11366062",
+        "deploymentBlockHash": "0x0f910a19e2fbe5784a68ad2a5216e45a3646b8bfc6c0b020a58227d908292879",
+        "deployedContractAddress": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "deploymentStatus": 1
+      },
+      "bindingDigest": "0x36ff9bd100d478441e7f2e7db83844b2c2bd899e375a22d3cf218c4caa864879"
+    },
+    "account": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "locallyDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "factoryDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "codeStatus": "empty",
+      "codeHash": null,
+      "balanceWei": "5124486704000000",
+      "latestTransactionCount": "0",
+      "pendingTransactionCount": "0",
+      "entryPointNonce": "0",
+      "entryPointDepositWei": "0"
+    },
+    "accounts": {
+      "account1": {
+        "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+        "latestNonce": "3",
+        "pendingNonce": "3",
+        "balanceWei": "270073390298140959"
+      },
+      "account2": {
+        "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+        "latestNonce": "1",
+        "pendingNonce": "1",
+        "balanceWei": "87428401148173299"
+      }
+    }
+  },
+  "controls": {
+    "exactApprovalDigestMatched": true,
+    "approvalBoundStateRecheckedBeforeSigning": true,
+    "approvalBoundStateRecheckedBeforeBroadcast": true,
+    "account1Signed": false,
+    "account2Signed": true,
+    "broadcastCount": 1,
+    "automaticRetryPerformed": false,
+    "replacementPerformed": false,
+    "speedUpPerformed": false,
+    "cancellationPerformed": false,
+    "fallbackProviderBroadcastPerformed": false,
+    "secondTransactionPerformed": false,
+    "factoryCallPerformed": false,
+    "entryPointDepositPerformed": false,
+    "proofGenerated": false,
+    "runtimeAuthorizationPerformed": false,
+    "userPresenceEventPerformed": false,
+    "deviceVaultSigningPerformed": false,
+    "userOperationSubmitted": false,
+    "bundlerSubmissionPerformed": false,
+    "paymasterUsed": false,
+    "tokenMovementPerformed": false
+  },
+  "infrastructure": {
+    "targetUnchanged": true,
+    "factoryUnchanged": true,
+    "accountRemainsUndeployed": true,
+    "accountRemainsCodeFree": true,
+    "entryPointNonceRemainsZero": true,
+    "entryPointDepositRemainsZero": true
+  },
+  "publicMutationScope": "one-direct-native-eth-transfer-account2-to-counterfactual-account",
+  "exactPublicMutationCount": 1
+}

@@ -1,0 +1,14 @@
+{
+  "phase": "O.8",
+  "status": "passed",
+  "appPath": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app",
+  "manifestPath": "config/release/philcore-desktop-local-alpha.json",
+  "failures": [],
+  "warnings": [
+    "unsigned_local_alpha_package"
+  ],
+  "codeSigned": false,
+  "notarized": false,
+  "publicNetworkMutation": false,
+  "productionApproved": false
+}

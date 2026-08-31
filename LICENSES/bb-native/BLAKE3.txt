@@ -1,0 +1,29 @@
+/*
+    BLAKE3 reference source code package - C implementations
+
+    Intellectual property:
+
+    The Rust code is copyright Jack O'Connor, 2019-2020.
+    The C code is copyright Samuel Neves and Jack O'Connor, 2019-2020.
+    The assembly code is copyright Samuel Neves, 2019-2020.
+
+    This work is released into the public domain with CC0 1.0. Alternatively, it is licensed under the Apache
+   License 2.0.
+
+    - CC0 1.0 Universal : http://creativecommons.org/publicdomain/zero/1.0
+    - Apache 2.0        : http://www.apache.org/licenses/LICENSE-2.0
+
+    More information about the BLAKE3 hash function can be found at
+    https://github.com/BLAKE3-team/BLAKE3.
+
+
+    NOTE: We have modified the original code from the BLAKE3 reference C implementation.
+    The following code works ONLY for inputs of size less than 1024 bytes. This kind of constraint
+    on the input size greatly simplifies the code and helps us get rid of the recursive merkle-tree
+    like operations on chunks (data of size 1024 bytes). This is because we would always be using BLAKE3
+    hashing for inputs of size 32 bytes (or lesser) in barretenberg. The full C++ version of BLAKE3
+    from the original authors is in the module `../crypto/blake3s_full`.
+
+    Also, the length of the output in this specific implementation is fixed at 32 bytes which is the only
+    version relevant to Barretenberg.
+*/

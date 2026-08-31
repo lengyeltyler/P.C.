@@ -1,0 +1,85 @@
+{
+  "phase": "N.8",
+  "boundary": "philcore_recovery_authority_rotation",
+  "status": "implemented_for_local_alpha",
+  "productionApproved": false,
+  "baseSepoliaBetaApproved": false,
+  "selectedModel": "bounded_delayed_other_authority_cancellable_rotation",
+  "disposableBetaFallbackSelected": false,
+  "contract": {
+    "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+    "requestMethod": "requestRecoveryAuthorityRotation(address,address)",
+    "cancelMethod": "cancelRecoveryAuthorityRotation(bytes32,address)",
+    "completeMethod": "completeRecoveryAuthorityRotation(bytes32,address)",
+    "stateGetter": "recoveryAuthorityRotationRequest()",
+    "onePendingRequestOnly": true,
+    "delayRequired": true,
+    "expiryRequired": true,
+    "completionPermissionlessAfterDelay": true,
+    "externalCallsAllowed": false,
+    "valueTransferAllowed": false
+  },
+  "authorityRules": {
+    "requesters": [
+      "current_execution_owner",
+      "current_recovery_authority"
+    ],
+    "canceller": "other_authority_only",
+    "proposerSelfCancelAllowed": false,
+    "pendingAuthorityMustBeNonzero": true,
+    "pendingAuthorityMayEqualCurrentRecoveryAuthority": false,
+    "pendingAuthorityMayEqualCurrentExecutionOwner": false,
+    "recoveryAuthorityOrdinaryExecutionAuthority": false,
+    "recoveryAuthorityAssetTransferAuthority": false,
+    "recoveryAuthorityActionGateBypass": false
+  },
+  "immutability": {
+    "ownerCommitmentChanged": false,
+    "entryPointChanged": false,
+    "actionGateChanged": false,
+    "executionOwnerChangedByRotation": false,
+    "accountAddressChanged": false,
+    "factoryInitialRecoveryConfigurationStillAddressBinding": true
+  },
+  "deviceVaultCoordination": {
+    "newRecoveryAuthorityRecordStateBeforeCompletion": "pending_rotation",
+    "activateNewRecoveryAuthorityOnlyAfterVerifiedCompletion": true,
+    "revokeOldRecoveryAuthorityOnlyAfterVerifiedCompletion": true,
+    "failedCompletionDoesNotActivateNewRecoveryAuthority": true,
+    "localStateRequiresReceiptOrStateVerification": true
+  },
+  "auditEvents": [
+    "recovery_authority_rotation_requested",
+    "recovery_authority_rotation_cancelled",
+    "recovery_authority_rotation_completed",
+    "recovery_authority_rotation_expired",
+    "recovery_authority_rotation_rejected"
+  ],
+  "tests": {
+    "hardhat": "test/unit/philcore-erc4337-rotation-recovery.test.cjs",
+    "runtimeCandidateCoverage": true,
+    "entryPointRequestCoverage": true,
+    "replayCancelExpiredMismatchCoverage": true,
+    "customInvariants": [
+      "N8-INV-019",
+      "N8-INV-020",
+      "N8-INV-021",
+      "N8-INV-022"
+    ]
+  },
+  "baseSepoliaBetaGateImpact": {
+    "recoveryAuthorityRotationSupported": true,
+    "previousUnsupportedRotationBlockerRemediatedLocally": true,
+    "baseSepoliaBetaStillBlocked": true,
+    "remainingBlockers": [
+      "ACP-0002 remains Proposed",
+      "recovery authority custody is not Beta-approved",
+      "external audit is incomplete",
+      "accepted Base Sepolia deployments are missing",
+      "approved bundler and public submission controls are missing"
+    ]
+  },
+  "localAlphaApproval": true,
+  "baseSepoliaBetaApproval": false,
+  "productionApproval": false
+}

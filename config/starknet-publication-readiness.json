@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "kind": "starknet-verified-fact-publication-readiness",
+  "status": {
+    "toolchain_reproducible": true,
+    "artifacts_reproducible": true,
+    "rust_cairo_parity_verified": true,
+    "cairo_tests_passed": true,
+    "syscall_harness_passed": true,
+    "l1_relay_harness_passed": true,
+    "deployment_ready": false,
+    "production_approved": false
+  },
+  "package": {
+    "name": "phil_starknet_integration",
+    "contractName": "phil_proof_input_hash_verifier",
+    "entrypoint": "verify_proof_input_hash_slice_and_send_to_l1"
+  },
+  "toolchain": {
+    "scarbVersion": "2.15.0",
+    "cairoVersion": "2.15.0",
+    "rustNightlyToolchain": "nightly-2025-07-14",
+    "nodeVersion": "26.0.0",
+    "npmVersion": "11.12.1"
+  },
+  "artifacts": {
+    "sierra": {
+      "path": "starknet_integration/target/dev/phil_starknet_integration_phil_proof_input_hash_verifier.contract_class.json",
+      "present": true,
+      "sha256": "c9230611c25e8c0a80c16b10cf3d7565df992f9d279025873112857180a383ea",
+      "bytes": 3127487
+    },
+    "casm": {
+      "path": "starknet_integration/target/dev/phil_starknet_integration_phil_proof_input_hash_verifier.compiled_contract_class.json",
+      "present": true,
+      "sha256": "5f5d1da5dda4dff283c158395e7391d995822097baf5023aa899d9970831d31d",
+      "bytes": 1392118
+    },
+    "packageSierra": {
+      "path": "starknet_integration/target/dev/phil_starknet_integration.sierra.json",
+      "present": true,
+      "sha256": "ac6d8a7cc69be5386ba49f58de0afd77592b19a80d1747d611cf2ab3e3d84bc9",
+      "bytes": 16268181
+    },
+    "starknetArtifacts": {
+      "path": "starknet_integration/target/dev/phil_starknet_integration.starknet_artifacts.json",
+      "present": true,
+      "sha256": "10b2679483e9e0725f2783363c56572bf4542b137c7fe143be8eb1cbb7220d07",
+      "bytes": 413
+    },
+    "proofInputHashSliceArgs": {
+      "path": "proving/out/cairo_air_adapter_spike/proof_input_hash_slice_verify_args.json",
+      "present": true,
+      "sha256": "c6e00a9dde4c8c8b3cc26ee7c50d1ddcb1458c7f143505917facbddb46328132",
+      "bytes": 1511664
+    },
+    "proofInputHashSliceSummary": {
+      "path": "proving/out/cairo_air_adapter_spike/summary.json",
+      "present": true,
+      "sha256": "22c9e65b05ff9e6d270340a9919894e6f7a17b0822fb8a3d9e0d979c3f1fd36c",
+      "bytes": 2207
+    }
+  },
+  "packages": {
+    "cairo_air_adapter_spike": {
+      "classification": "adapter_spike",
+      "buildRequired": true,
+      "buildPassed": true,
+      "testApplicable": true,
+      "testPassed": true,
+      "productionApproved": false
+    },
+    "starknet_integration": {
+      "classification": "production_candidate_contract",
+      "buildRequired": true,
+      "buildPassed": true,
+      "testApplicable": true,
+      "testPassed": true,
+      "sierraGenerationRequired": true,
+      "sierraGenerated": true,
+      "casmGenerationRequired": true,
+      "casmGenerated": true,
+      "productionApproved": false
+    },
+    "starknet_integration_runner": {
+      "classification": "executable_harness",
+      "buildRequired": true,
+      "buildPassed": true,
+      "testApplicable": false,
+      "testPassed": null,
+      "testApplicabilityReason": "Scarb 2.15.0 cannot test this executable package without changing its required gas-disabled executable compilation mode; real syscall and L1 relay harnesses are mandatory instead.",
+      "executionHarnessRequired": true,
+      "syscallHarnessPassed": true,
+      "l1RelayHarnessPassed": true,
+      "productionApproved": false
+    }
+  },
+  "messageShape": {
+    "payload": "[fact_high, fact_low]",
+    "factHigh": "high128(proofInputHash)",
+    "factLow": "low128(proofInputHash)",
+    "l1RecipientConfiguration": "explicit l1_recipient entrypoint argument",
+    "expectedProofType": "stwo-unlock-keccak-v1",
+    "proofInputHash": "0x8d5607b595200f66c7d24010dc79d646b0c7469cdaca5eecbbabb83d326413d2",
+    "expectedFactPayload": [
+      "0x8d5607b595200f66c7d24010dc79d646",
+      "0xb0c7469cdaca5eecbbabb83d326413d2"
+    ]
+  },
+  "validation": {
+    "proofSummaryIssues": []
+  },
+  "accountModelStatus": "unresolved",
+  "deploymentStatus": "not_deployed",
+  "addressBindingStatus": "unresolved",
+  "readinessBlockers": [
+    "Starknet account/caller model is unresolved.",
+    "No accepted production deployment exists.",
+    "Runtime/Starknet Adapter transaction preparation is not implemented.",
+    "Deployment readiness remains false until publication configuration, address binding, and account/caller decisions are resolved."
+  ]
+}

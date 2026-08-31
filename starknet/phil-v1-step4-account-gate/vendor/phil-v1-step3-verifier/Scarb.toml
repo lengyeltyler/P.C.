@@ -1,0 +1,19 @@
+# Exact Step 3 source snapshot exposed as a library dependency for Step 4.
+[package]
+name = "phil_v1_step3_verifier"
+version = "0.1.0"
+edition = "2024_07"
+
+[lib]
+
+[dependencies]
+garaga = { git = "https://github.com/keep-starknet-strange/garaga.git", tag = "v1.0.1" }
+starknet = "2.14.0"
+
+[cairo]
+sierra-replace-ids = false
+inlining-strategy = 2
+
+[[target.starknet-contract]]
+casm = true
+casm-add-pythonic-hints = true

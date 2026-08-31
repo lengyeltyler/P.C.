@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "philcore-o26-1-refreshed-prefund-proposal-v1",
+  "phase": "O.26.1",
+  "status": "FUNDING_READY_FOR_SEPARATE_APPROVAL",
+  "generatedAt": "2026-07-28T18:59:21.330Z",
+  "sourceHead": "466b2ffbfb890ce7dc33712e420dde30e449c1da",
+  "network": {
+    "name": "ethereum_sepolia",
+    "chainId": 11155111,
+    "blockNumber": "11370487",
+    "blockHash": "0x0326c4fd02280224f287bdc2abfb4c58bbb91ae0d75598b29b1a9524ec3e8166",
+    "observedAt": "2026-07-28T18:59:12.000Z",
+    "expiresAt": "2026-07-28T19:14:12.000Z"
+  },
+  "providerBinding": "98889ba9ec0b646f32d1067d9b2e41855ab4e7c1857b9a6928ade0719778ac19",
+  "gasEstimateBinding": "0xcc46a5c549d281805c3ae928c1b7c0fee8f6e0bfb83c8c8f49c72debbbc68550",
+  "infrastructureBinding": "0xa8aa270fe21becad2f4b4c4368f2c0fed640106ef0a05f807373cb6c55965de2",
+  "feeEvidence": {
+    "baseFeePerGas": {
+      "wei": "1024147341",
+      "gwei": "1.024147341",
+      "eth": "0.000000001024147341"
+    },
+    "gasPrice": {
+      "wei": "1025647341",
+      "gwei": "1.025647341",
+      "eth": "0.000000001025647341"
+    },
+    "rpcSuggestedMaxFeePerGas": {
+      "wei": "2049794682",
+      "gwei": "2.049794682",
+      "eth": "0.000000002049794682"
+    },
+    "rpcSuggestedMaxPriorityFeePerGas": {
+      "wei": "1500000",
+      "gwei": "0.0015",
+      "eth": "0.0000000000015"
+    },
+    "scenarios": {
+      "current": {
+        "label": "current_rpc_observation",
+        "maxFeePerGas": {
+          "wei": "2049794682",
+          "gwei": "2.049794682",
+          "eth": "0.000000002049794682"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1500000",
+          "gwei": "0.0015",
+          "eth": "0.0000000000015"
+        }
+      },
+      "recommended": {
+        "label": "current_rpc_observation_plus_25_percent",
+        "marginBasisPoints": 2500,
+        "maxFeePerGas": {
+          "wei": "2562243352",
+          "gwei": "2.562243352",
+          "eth": "0.000000002562243352"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "1875000",
+          "gwei": "0.001875",
+          "eth": "0.000000000001875"
+        }
+      },
+      "rejectionCeiling": {
+        "label": "absolute_rejection_ceiling_not_a_funding_recommendation",
+        "maxFeePerGas": {
+          "wei": "100000000000",
+          "gwei": "100.0",
+          "eth": "0.0000001"
+        },
+        "maxPriorityFeePerGas": {
+          "wei": "5000000000",
+          "gwei": "5.0",
+          "eth": "0.000000005"
+        }
+      }
+    }
+  },
+  "selectedGas": {
+    "verificationGasLimit": "1500000",
+    "callGasLimit": "300000",
+    "preVerificationGas": "200000",
+    "paymasterVerificationGasLimit": "0",
+    "paymasterPostOpGasLimit": "0",
+    "totalDeclaredGas": "2000000"
+  },
+  "prefund": {
+    "formula": "(verificationGasLimit + callGasLimit + paymasterVerificationGasLimit + paymasterPostOpGasLimit + preVerificationGas) * maxFeePerGas",
+    "estimatedMinimum": {
+      "wei": "4099589364000000",
+      "gwei": "4099589.364",
+      "eth": "0.004099589364"
+    },
+    "recommendedDisposableTestPrefund": {
+      "wei": "5124486704000000",
+      "gwei": "5124486.704",
+      "eth": "0.005124486704"
+    },
+    "proposedMaximumFundingApproval": {
+      "wei": "5124486704000000",
+      "gwei": "5124486.704",
+      "eth": "0.005124486704"
+    },
+    "expectedActualCost": {
+      "wei": "1061309099046570",
+      "gwei": "1061309.09904657",
+      "eth": "0.00106130909904657"
+    },
+    "expectedResidualAfterSuccess": {
+      "wei": "4063177604953430",
+      "gwei": "4063177.60495343",
+      "eth": "0.00406317760495343"
+    },
+    "absoluteRejectionCeilingExposure": {
+      "wei": "200000000000000000",
+      "gwei": "200000000.0",
+      "eth": "0.2"
+    },
+    "residualFundClassification": "RESIDUAL_FUNDS_NONRECOVERABLE_BY_CURRENT_ACCOUNT"
+  },
+  "residualFundClassification": "RESIDUAL_FUNDS_NONRECOVERABLE_BY_CURRENT_ACCOUNT",
+  "fundingProposal": {
+    "schemaVersion": "philcore-o26-1-account2-funding-proposal-v1",
+    "phase": "O.26.1",
+    "status": "proposed_pending_separate_approval",
+    "approved": false,
+    "signed": false,
+    "broadcast": false,
+    "chainId": 11155111,
+    "transactionType": 2,
+    "sender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+    "recipient": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "nonce": "0",
+    "value": {
+      "wei": "5124486704000000",
+      "gwei": "5124486.704",
+      "eth": "0.005124486704"
+    },
+    "calldata": "0x",
+    "gasLimit": "21000",
+    "maxFeePerGas": {
+      "wei": "2562243352",
+      "gwei": "2.562243352",
+      "eth": "0.000000002562243352"
+    },
+    "maxPriorityFeePerGas": {
+      "wei": "1875000",
+      "gwei": "0.001875",
+      "eth": "0.000000000001875"
+    },
+    "maximumGasCost": {
+      "wei": "53807110392000",
+      "gwei": "53807.110392",
+      "eth": "0.000053807110392"
+    },
+    "maximumTotalDebit": {
+      "wei": "5178293814392000",
+      "gwei": "5178293.814392",
+      "eth": "0.005178293814392"
+    },
+    "senderBalanceBefore": {
+      "wei": "92576112524973299",
+      "gwei": "92576112.524973299",
+      "eth": "0.092576112524973299"
+    },
+    "senderBalanceAfterAtMaximumCost": {
+      "wei": "87397818710581299",
+      "gwei": "87397818.710581299",
+      "eth": "0.087397818710581299"
+    },
+    "smartAccountBalanceBefore": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "expectedSmartAccountBalanceAfter": {
+      "wei": "5124486704000000",
+      "gwei": "5124486.704",
+      "eth": "0.005124486704"
+    },
+    "latestBlockNumber": "11370487",
+    "latestBlockHash": "0x0326c4fd02280224f287bdc2abfb4c58bbb91ae0d75598b29b1a9524ec3e8166",
+    "observedAt": "2026-07-28T18:59:12.000Z",
+    "expiresAt": "2026-07-28T19:14:12.000Z",
+    "mechanism": "direct_eth_transfer_to_counterfactual_address",
+    "factoryCall": false,
+    "entryPointCall": false,
+    "accountDeployment": false,
+    "publicMutationAuthorized": false,
+    "publicMutationOccurred": false,
+    "stopConditions": [
+      "wrong chain, recipient, account prediction, or nonce",
+      "target, factory, or EntryPoint deployment binding changed",
+      "smart account code, balance, deposit, or EntryPoint nonce changed",
+      "transaction value or fee envelope changed",
+      "nonempty calldata",
+      "stale evidence",
+      "bundler remains unapproved or incompatible",
+      "first-operation model changed"
+    ],
+    "providerBinding": "98889ba9ec0b646f32d1067d9b2e41855ab4e7c1857b9a6928ade0719778ac19",
+    "gasEstimateBinding": "0xcc46a5c549d281805c3ae928c1b7c0fee8f6e0bfb83c8c8f49c72debbbc68550",
+    "infrastructureBinding": "0xa8aa270fe21becad2f4b4c4368f2c0fed640106ef0a05f807373cb6c55965de2",
+    "fundingReadiness": "FUNDING_READY_FOR_SEPARATE_APPROVAL",
+    "proposalDigest": "0x84a32526b24f1051d5620e52d2a1aca20c75e5590d0ff4ab3ee25506f8a066b7"
+  },
+  "approved": false,
+  "signed": false,
+  "broadcast": false,
+  "account1Signed": false,
+  "account2Signed": false,
+  "ethTransferred": false,
+  "accountDeployed": false,
+  "userOperationSubmitted": false,
+  "publicMutationOccurred": false
+}

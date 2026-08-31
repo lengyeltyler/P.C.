@@ -1,0 +1,18 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/errors.rs
+// Copyright 2017 Jonathan Creekmore
+//
+// Licensed under the MIT license <LICENSE.md or
+// http://opensource.org/licenses/MIT>. This file may not be
+// copied, modified, or distributed except according to those terms.
+
+Files: src/lib.rs
+// Copyright 2016-2017 Jonathan Creekmore
+//
+// Licensed under the MIT license <LICENSE.md or
+// http://opensource.org/licenses/MIT>. This file may not be
+// copied, modified, or distributed except according to those terms.
+
+

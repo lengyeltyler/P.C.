@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "philcore-evidence-provenance-v2-registry",
+  "records": [
+    {
+      "id": "current-v2-sepolia-offline-readiness-7276ee42e94d2c9a08fee3706fb94a6c69c1f822",
+      "recordPath": "config/provenance/v2/7276ee42e94d2c9a08fee3706fb94a6c69c1f822-current-v2-sepolia-offline-readiness.json",
+      "containerCommit": "2c65c05fa477f5d9fce210f5cfe04f54ab8facec",
+      "sourceBaselineCommit": "7276ee42e94d2c9a08fee3706fb94a6c69c1f822",
+      "sourceBaselineTree": "12d658580f0a42bed7947c43c00be8b1f320674b",
+      "recordFileSha256": "fe3ff7f75cb5a45570bd29f2c6bd4cb8d3cfb9a337536d25420cacebf3203eda"
+    }
+  ]
+}

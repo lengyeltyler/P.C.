@@ -1,0 +1,216 @@
+{
+  "format": "philcore-controlled-sepolia-beta-staged-mutation-plan-v1",
+  "status": "TEMPLATE_NOT_APPROVABLE",
+  "network": {
+    "name": "ethereum-sepolia",
+    "chainId": 11155111,
+    "entryPointVersion": "0.7",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "mainnetAllowed": false
+  },
+  "candidate": {
+    "sourceCommit": null,
+    "sourceTree": null,
+    "sourceTreeClean": null,
+    "solcVersion": null,
+    "compilerSettingsDigest": null,
+    "externalReviewDisposition": null,
+    "externalReviewReportSha256": null
+  },
+  "addresses": {
+    "minimumForDeploymentAndFirstAction": 3,
+    "requiredForFullLifecycleMatrix": 5,
+    "deployer": null,
+    "initialExecutionValidator": null,
+    "initialRecoveryAuthority": null,
+    "replacementExecutionValidator": null,
+    "replacementRecoveryAuthority": null,
+    "mintRecipientPolicy": "CURRENT_EXECUTION_OWNER_NO_SEPARATE_ADDRESS",
+    "allFiveMustBeDistinct": true,
+    "disclosedAlphaAddressOrKeyReuseAllowed": false
+  },
+  "fundingSource": {
+    "policy": "LEGACY_DISCLOSED_ALPHA_SOURCE_CAPPED_FUNDING_ONLY",
+    "ownerDirectionRecordedAt": "2026-08-25",
+    "publicAddress": null,
+    "mayHoldAnyBetaAuthority": false,
+    "mayReceiveReleasedBetaFunds": false,
+    "maximumTotalTransferWei": "50000000000000000",
+    "permittedDirectTarget": "BETA_DEPLOYER_ONLY",
+    "authorityAddressesMustRemainUnfunded": true,
+    "exactTransactionRequiresStageApproval": true
+  },
+  "services": {
+    "primaryRpcSanitizedHostname": null,
+    "primaryRpcEndpointSha256": null,
+    "reconciliationRpcSanitizedHostname": null,
+    "reconciliationRpcEndpointSha256": null,
+    "providersMustBeIndependentlyOperated": true,
+    "bundlerSanitizedHostname": null,
+    "bundlerEndpointSha256": null,
+    "bundlerEntryPointV07Accepted": null,
+    "automaticRetryAllowed": false
+  },
+  "contracts": {
+    "PhilSepoliaMintPassConsumerV1": {
+      "creationCodeHash": null,
+      "runtimeCodeHash": null,
+      "constructorArguments": null,
+      "predictedAddress": null
+    },
+    "PhilSepoliaLocalComposedActionGateV1": {
+      "creationCodeHash": null,
+      "runtimeCodeHash": null,
+      "constructorArguments": null,
+      "authorizedAccount": null,
+      "predictedAddress": null
+    },
+    "PhilCore4337AccountFactory": {
+      "creationCodeHash": null,
+      "runtimeCodeHash": null,
+      "constructorArguments": null,
+      "predictedAddress": null
+    },
+    "PhilCore4337Account": {
+      "creationCodeHash": null,
+      "runtimeCodeHash": null,
+      "ownerCommitment": null,
+      "accountSalt": null,
+      "predictedAddress": null
+    }
+  },
+  "limits": {
+    "maximumOperatorExposureWei": "50000000000000000",
+    "maximumAccountNativeBalanceWei": "10000000000000000",
+    "maximumEntryPointDepositWei": "10000000000000000",
+    "maximumOperationFeeWei": "5000000000000000",
+    "ordinaryActionValueWei": "0",
+    "paymasterAllowed": false,
+    "meaningfulAssetsAllowed": false
+  },
+  "livePreflight": {
+    "observedAt": null,
+    "entryPointCodeHash": null,
+    "deployerStartingNonce": null,
+    "deployerBalanceWei": null,
+    "gasPriceWei": null,
+    "providerAgreement": null,
+    "addressCollisionChecksPassed": null,
+    "bundlerMethodsAccepted": null,
+    "publicMutationCount": 0
+  },
+  "stages": [
+    {
+      "stageId": "P0",
+      "name": "READ_ONLY_QUALIFICATION",
+      "expectedPublicMutationCount": 0,
+      "planDigest": null,
+      "approvalRequired": false,
+      "ready": false
+    },
+    {
+      "stageId": "P1",
+      "name": "INFRASTRUCTURE_DEPLOYMENT",
+      "expectedPublicMutationCount": 4,
+      "orderedMutations": [
+        "FUND_BETA_DEPLOYER_FROM_LEGACY_ALPHA_SOURCE",
+        "DEPLOY_PhilSepoliaMintPassConsumerV1",
+        "DEPLOY_PhilSepoliaLocalComposedActionGateV1",
+        "DEPLOY_PhilCore4337AccountFactory"
+      ],
+      "startingNonce": null,
+      "transactions": null,
+      "maximumStageCostWei": null,
+      "planDigest": null,
+      "approvalRequired": true,
+      "ready": false
+    },
+    {
+      "stageId": "P2",
+      "name": "ACCOUNT_FUNDING_AND_FIRST_ACTION",
+      "expectedPublicMutationCount": 2,
+      "orderedMutations": [
+        "FUND_COUNTERFACTUAL_ACCOUNT",
+        "SUBMIT_FIRST_USER_OPERATION_WITH_FACTORY_DATA"
+      ],
+      "fundingTransaction": null,
+      "userOperation": null,
+      "userOperationHash": null,
+      "authorizationEnvelopeDigest": null,
+      "validUntil": null,
+      "planDigest": null,
+      "approvalRequired": true,
+      "ready": false
+    },
+    {
+      "stageId": "P3",
+      "name": "SECOND_ACTION_AND_REPLAY_PROOF",
+      "expectedPublicMutationCount": 1,
+      "orderedMutations": [
+        "SUBMIT_SECOND_USER_OPERATION_WITH_EMPTY_INIT_CODE"
+      ],
+      "entryPointNonce": null,
+      "userOperation": null,
+      "userOperationHash": null,
+      "authorizationEnvelopeDigest": null,
+      "validUntil": null,
+      "staleReplayExpectedResult": "REJECT_WITHOUT_NEW_VALID_MUTATION",
+      "planDigest": null,
+      "approvalRequired": true,
+      "ready": false
+    },
+    {
+      "stageId": "P4",
+      "name": "RECOVERY_AND_AUTHORITY_ROTATION_SUBPLANS",
+      "expectedPublicMutationCount": null,
+      "orderedMutations": null,
+      "recoveryDelaySeconds": "172800",
+      "recoveryExpirySeconds": "604800",
+      "subplanDigests": null,
+      "approvalRequiredPerSubplan": true,
+      "ready": false
+    },
+    {
+      "stageId": "P5",
+      "name": "TEST_FUND_RELEASE_AND_FINAL_RECONCILIATION",
+      "expectedPublicMutationCount": 1,
+      "orderedMutations": [
+        "SUBMIT_P5_RELEASE_TEST_FUNDS_USER_OPERATION"
+      ],
+      "releaseRecipientPolicy": "CURRENT_EXECUTION_OWNER_ONLY",
+      "maximumAdditionalFundingWei": "0",
+      "automaticRetryAllowed": false,
+      "terminalDepositPolicy": {
+        "exactZeroPromised": false,
+        "maximumBoundFormula": "maximumTerminalEntryPointDepositWei=maximumPrefundWei",
+        "exactBoundRequiredInLaterPlan": true,
+        "ownerAcceptanceRequired": true
+      },
+      "planDigest": null,
+      "approvalRequired": true,
+      "ready": false
+    }
+  ],
+  "stopConditions": [
+    "SOURCE_OR_BYTECODE_MISMATCH",
+    "CHAIN_OR_ENTRYPOINT_MISMATCH",
+    "ADDRESS_COLLISION_OR_NONCE_DRIFT",
+    "PROVIDER_DISAGREEMENT",
+    "BUNDLER_FIELD_MUTATION_OR_PAYMASTER_INSERTION",
+    "FEE_OR_EXPOSURE_CAP_EXCEEDED",
+    "TIMEOUT_OR_AMBIGUOUS_SUBMISSION",
+    "RECEIPT_OR_RUNTIME_CODE_MISMATCH",
+    "REPLAY_RESERVATION_OR_CEREMONY_STATE_MISMATCH",
+    "AUDIT_DISPOSITION_INVALIDATED"
+  ],
+  "approval": {
+    "digestAlgorithm": "SHA256_CANONICAL_JSON_BODY_WITHOUT_PLAN_DIGEST",
+    "literalFormat": "I_APPROVE_PHILCORE_CONTROLLED_SEPOLIA_BETA_<STAGE_ID>_<64_HEX_PLAN_DIGEST>",
+    "templateApprovalAuthorizesMutation": false,
+    "priorAlphaApprovalAuthorizesMutation": false,
+    "oneStageApprovalAuthorizesAnotherStage": false
+  },
+  "approvable": false,
+  "publicMutationAuthorized": false,
+  "betaReady": false
+}

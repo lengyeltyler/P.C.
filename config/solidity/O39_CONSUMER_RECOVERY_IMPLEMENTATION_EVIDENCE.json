@@ -1,0 +1,162 @@
+{
+  "phase": "O.39",
+  "canonicalPhase": "O.39 Consumer Recovery Model Revision, Implementation, and Initialization Readiness",
+  "classification": "LOCAL_ONLY_RECOVERY_ARCHITECTURE_IMPLEMENTATION_AND_INTEGRATION",
+  "sourceHeadAtPhaseStart": "25bffe61ff008a85e29c24a32e8ca2f5550c4855",
+  "publicMutationCount": 0,
+  "rpcAccessed": false,
+  "sepoliaAccessed": false,
+  "productionCredentialsCreated": false,
+  "readinessClassification": "B_RECOVERY_ENROLLMENT_FOUNDATION_COMPLETE_USER_CEREMONY_REQUIRED",
+  "baseline": {
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "acceptedO38RuntimeKeccak256": {
+      "verifier": "0x4597c97018b1fe4b941a035275e229ea5c163db9801545217aa3a93614b1b5be",
+      "account": "0x4f0ea630700c155eb69d7661161abebdcf74dc734127131ad2dfa48dd141e3c5",
+      "factory": "0x4359422db2c5320d3c7914a414766fff29779fa45859e0fe28b4af0a67860e90"
+    },
+    "actualO39PreChangeRuntimeKeccak256": {
+      "verifier": "0x4597c97018b1fe4b941a035275e229ea5c163db9801545217aa3a93614b1b5be",
+      "account": "0x4f0ea630700c155eb69d7661161abebdcf74dc734127131ad2dfa48dd141e3c5",
+      "factory": "0x4359422db2c5320d3c7914a414766fff29779fa45859e0fe28b4af0a67860e90"
+    },
+    "historicallyReportedInitialV2RuntimeKeccak256Incorrect": {
+      "verifier": "0x4597f14309786bf27cbe50d4193cce030ad34a9e9b0de8acb7d93602cfa0b5be",
+      "account": "0x4f0e49bc58069857b49fc62e24c2bf149277d21c1f73583a5d2012813db1e3c5",
+      "factory": "0x4359e7e5de4e81ad62c72bded6173bcdd6e9fa1a7bde376160f6b91436530e90"
+    },
+    "discrepancyDisposition": "O.39 reporting transcription error; historical values retained above as incorrect, while O.38 commit 25bffe61ff008a85e29c24a32e8ca2f5550c4855 reproduces the accepted hashes exactly"
+  },
+  "recoveryModel": {
+    "descriptorVersion": 3,
+    "recoveryConfigurationVersion": 3,
+    "independenceBindingVersion": 2,
+    "threshold": 2,
+    "validBitmaps": [
+      3,
+      5,
+      6
+    ],
+    "role0": "PRIMARY_RECOVERY_ONLY_DEVICE_CREDENTIAL",
+    "role1": "INDEPENDENT_SECONDARY_AUTHENTICATOR",
+    "role2": "INDEPENDENT_OFFLINE_RECOVERY_FACTOR",
+    "syncedRole1Deployable": false,
+    "outerAuthorityTransportChanged": false
+  },
+  "contracts": {
+    "PhilCoreV2StaticAuthorityVerifier": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2StaticAuthorityVerifier.sol",
+      "sourceSha256": "a7271408aafdd342480258a6a6e35b26ab7b12ff454f8cd49f99066f7fac7f36",
+      "runtimeBytes": 13048,
+      "runtimeKeccak256": "0x665910b9989f3b83c3f025314fb127755d5abfc46e66ee386fbcbbfefc864dd7",
+      "creationBytes": 13074,
+      "creationKeccak256": "0xe77412fbb2d5c2e3bc44881822442e38d3fcc7f2e2dd992742111db6f4511494",
+      "abiKeccak256": "0xc508c5fe01e267ec247080f3aae1daccb6d518a8eab63f6298160b40f8d4747e",
+      "storageEntryCount": 0,
+      "occupiedStorageSlotCount": 0,
+      "storageLayoutKeccak256": "0x701ba858aec7af048411d54bb95a504061943584754e8d7a818ce23761d99d6d",
+      "sizeGate": {
+        "limit": 20480,
+        "passed": true
+      }
+    },
+    "PhilCoreV2MinimalAccountV2": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+      "sourceSha256": "395691b6dc98df0449a9caa4c43fa8481fb0c6f049ef75e214ee808b0e01e821",
+      "runtimeBytes": 13811,
+      "runtimeKeccak256": "0x4681ca917e3b5c3fff72bb6020f3fb278a43ab893beb05e36865b50422f64519",
+      "creationBytes": 15630,
+      "creationKeccak256": "0x7fa7fd5dd4a886e6df8ca13223c5dd3cb167c358e0abf9b0297c2a4624cb4882",
+      "abiKeccak256": "0xf2efaddf183a684e562559a67ae68646d0f9a7db6ec7381568c3352e58edfd63",
+      "storageEntryCount": 25,
+      "occupiedStorageSlotCount": 15,
+      "storageLayoutKeccak256": "0x463ff40c47ca095f0f0c83ae7ac9bebc1c1b697dd59d505405d5a4269e8ff053",
+      "sizeGate": {
+        "runtimeLimit": 15360,
+        "creationLimit": 18432,
+        "passed": true
+      }
+    },
+    "PhilCoreV2MinimalAccountFactoryV2": {
+      "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountFactoryV2.sol",
+      "sourceSha256": "1a76877449939bc45323fbc4046c7039db54e323b70306508fb308e57f38ce51",
+      "runtimeBytes": 18317,
+      "runtimeKeccak256": "0x15eca82e16f99f3ea5d9f8443871fc059bb050a8f30856d017be49d0e97c0d95",
+      "creationBytes": 18692,
+      "creationKeccak256": "0xe069c2fe769777cb53c785a05f57aee1b73188a8ea343d0d097503806fe9af84",
+      "abiKeccak256": "0x7f24824a16ae338680756470e53d1633ab1a518b880d5c278d12525f43ff943b",
+      "storageEntryCount": 0,
+      "occupiedStorageSlotCount": 0,
+      "storageLayoutKeccak256": "0x701ba858aec7af048411d54bb95a504061943584754e8d7a818ce23761d99d6d",
+      "sizeGate": {
+        "eip170RuntimeLimit": 24576,
+        "passed": true
+      }
+    }
+  },
+  "fixtures": {
+    "path": "config/cryptography/O39_CONSUMER_RECOVERY_FIXTURES.json",
+    "sha256": "b86784290b99b893d6d3433550748da52a7bc3c3bb57c5c64d2a917b1c5f0a38",
+    "profiles": [
+      "STANDARD",
+      "ENHANCED"
+    ],
+    "validPairCount": 6,
+    "invalidCaseCount": 16,
+    "syntheticTestOnly": true,
+    "privateMaterialCommitted": false
+  },
+  "tests": {
+    "o32ThroughO39Passing": 229,
+    "o32ThroughO39Failing": 0,
+    "o39FocusedPassing": 13,
+    "deterministicVectorPackagesVerified": [
+      "O.32",
+      "O.33",
+      "O.37.1",
+      "O.37.2",
+      "O.37.4",
+      "O.39"
+    ],
+    "typecheckPassed": true,
+    "solidityCompilePassed": true
+  },
+  "initialization": {
+    "tupleFieldCount": 20,
+    "locallyDryRunCompleteWithSyntheticValues": true,
+    "productionValuesComplete": false,
+    "missingProductionActions": [
+      "enroll primary recovery-only credential",
+      "enroll independent secondary authenticator",
+      "generate, export, and drill offline recovery factor",
+      "choose deployment infrastructure",
+      "generate external user salt"
+    ],
+    "o38ReadinessInvalidated": true
+  },
+  "security": {
+    "slither": {
+      "version": "0.10.4",
+      "v2DetectorOccurrences": 23,
+      "byImpact": {
+        "High": 1,
+        "Medium": 6,
+        "Low": 7,
+        "Informational": 8,
+        "Optimization": 1
+      },
+      "newDetectorFamilies": [],
+      "disposition": "same reviewed O.38 families; guarded bounded calls and informational or optimization findings"
+    },
+    "exactTwoOfThreePreserved": true,
+    "validatorExcludedFromFactorCount": true,
+    "noAdmin": true,
+    "noUpgrade": true,
+    "noArbitraryExecution": true,
+    "noMutableVerifier": true,
+    "nativeEthOnly": true,
+    "highFindings": 0,
+    "criticalFindings": 0
+  }
+}

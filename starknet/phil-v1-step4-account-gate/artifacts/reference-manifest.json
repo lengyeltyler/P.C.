@@ -1,0 +1,188 @@
+{
+  "format": "phil-v1-step4-composed-account-artifact-manifest-v1",
+  "status": "accepted-exact-candidate-3377606d404312ef7f7dcfec37a11c046f2c907e",
+  "acceptedStep3Candidate": "11234ea623a6b8883eed0036f3d95174cef90627",
+  "productionBackendSelected": false,
+  "productionAuthority": false,
+  "networkActivity": false,
+  "physicalDeviceUsed": false,
+  "toolchain": {
+    "cairo": "2.14.0",
+    "starknet": "2.14.0",
+    "scarb": {
+      "version": "2.14.0",
+      "executableSha256": "2e20da95b4cd51c030c54c0e5977a3a398ca18c8b68eefe6dc6e000d91467488"
+    },
+    "starknetFoundry": {
+      "version": "0.53.0",
+      "snforgeExecutableSha256": "fb2d19e2c4befbdf2ffd9937351b6a6d9363421c50aafe86d252a92d19442d72"
+    },
+    "universalSierraCompiler": {
+      "version": "2.10.0",
+      "executableSha256": "de6d1d4e03b8398cd895238ff2205d848b73488b0c2e8b8c7fec427a0281c4f1"
+    },
+    "garaga": {
+      "version": "1.0.1",
+      "sourceCommit": "aa91b6504c86995789edb4e78f9f9ba20571625c"
+    }
+  },
+  "compiledClasses": {
+    "acceptedStep3Verifier": {
+      "sierraClassHash": "0x271bf805307ed1a7720fbd8364767eba0ccbd74c6799c975ae83f7f922ee5bd",
+      "compiledClassHash": "0x154b6afe8acf0e963177e9e80f46b7c760d2b554245f41aec3d2d78710d8911",
+      "sierraJsonBytes": 1691441,
+      "casmJsonBytes": 1221983
+    },
+    "step4ComposedAccountGate": {
+      "sierraClassHash": "0x0453ab1f858031f49d19dc3cb431af0d80e81d0bb958372dfe88666173360669",
+      "compiledClassHash": "0x36a5bb9774da5922be5d06473ff0c0e5915ab6404c277619c635563718c1a90",
+      "sierraJsonBytes": 629434,
+      "casmJsonBytes": 279456
+    }
+  },
+  "measurements": {
+    "cairoTests": 60,
+    "typescriptTests": 3,
+    "validCompositionApproximateL2Gas": 314221414,
+    "validCompositionSierraGas": 314139494,
+    "validCompositionApproximateL1DataGas": 5472,
+    "note": "local Starknet Foundry evidence, not a network fee quote"
+  },
+  "artifacts": [
+    {
+      "path": "apps/phil-device-sdk/src/composedAccountAuthorizationV1.ts",
+      "bytes": 3535,
+      "sha256": "60aa34fdb16608860ae401b12c132866c7d89dced8be470c985716f99995c47a"
+    },
+    {
+      "path": "docs/CANONICAL_DOCS.md",
+      "bytes": 48137,
+      "sha256": "51f2a09453fb69d287ac7ef8d7e9196da63793b05032b54dbb128f502d0912e7"
+    },
+    {
+      "path": "docs/architecture-changes/ACP-0003-PHIL-V1-SECURE-IDENTITY-ROADMAP.md",
+      "bytes": 34531,
+      "sha256": "019f71f3f6a6a2a5a7ffd3f8a07dd81d46c4b67e40c6fec878ade83f768556e8"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP4_COMPOSED_ACCOUNT_AUTHORIZATION_GATE.md",
+      "bytes": 6718,
+      "sha256": "034e05351b6bc5b94cd6c1f340b33ba59275d305295e10ddc829a1d452964ad1"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP4_INDEPENDENT_REVIEW_895320F.md",
+      "bytes": 2706,
+      "sha256": "a59f11443c60cd225cd0da0f6f4bff976d18d39fa21e6aaf7094c24b8e1f20c2"
+    },
+    {
+      "path": "docs/security/PHIL_V1_STEP4_CORRECTIVE_IMPLEMENTATION_REPORT.md",
+      "bytes": 3201,
+      "sha256": "5d9987dff9b133aef974e4a6760a4e219447ed0870dd1cad993604156183badc"
+    },
+    {
+      "path": "docs/security/PHIL_V1_STEP4_COMPOSED_ACCOUNT_THREAT_MODEL.md",
+      "bytes": 2322,
+      "sha256": "4d12d937a009c8b95d9e11c521c5ccdbe0d8ee1075985a9ec536d9eb5a6c7106"
+    },
+    {
+      "path": "docs/security/PHIL_V1_STEP4_COMPOSED_ACCOUNT_IMPLEMENTATION_EVIDENCE.md",
+      "bytes": 4208,
+      "sha256": "003a3c6485796e43b533604a914a41ee9f16d8bdbc8f49e1b50da29a6476d5c1"
+    },
+    {
+      "path": "scripts/security/generate-phil-v1-step4-artifacts.cjs",
+      "bytes": 16246,
+      "sha256": "aa4ea582b37f3ca894e9d871fe5ad19413eb95ab0222c80ce26c7a3f282aed8d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 45405,
+      "sha256": "a2c83cfd372d5b25e565b3a510bf60f16b4c70f3a991dd262cdaddf49c550e99"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/.tool-versions",
+      "bytes": 37,
+      "sha256": "3628d59ab756404db9729fff5b20a108cff403880c76d812e11d7cf5f236cc34"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/README.md",
+      "bytes": 2320,
+      "sha256": "f73548ec4feb6876724bb0a63b626492aecb80851419292d153ec3c361ade9b3"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/Scarb.lock",
+      "bytes": 1062,
+      "sha256": "bba27aeaedafa037cd709c0d259afdc150d2ec728c6c47861bb90ad29c6cf7e9"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/Scarb.toml",
+      "bytes": 668,
+      "sha256": "91f0a6579363dbe2a9f981dcbf8eda4e5c61659f1793a11a66dbfaa29e57ec42"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/src/composed_account_gate.cairo",
+      "bytes": 25977,
+      "sha256": "0e9ce935d530a77d49e9b37929a208f0d353546bfe4f8f81dc0a6d52735bfda9"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/src/lib.cairo",
+      "bytes": 31,
+      "sha256": "8dea191ef7fa5da93e75e59d7febcfc658df201f3158d44d305ab926e04dc2a4"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/tests/lib.cairo",
+      "bytes": 55,
+      "sha256": "b1814e4eaf00201a7d0fa09686eb180636d2f788d94961fc3b2e97a045229fc8"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/tests/composed_account_gate_test.cairo",
+      "bytes": 25908,
+      "sha256": "33de958ac87fb02a2fb7872cb1bd0f6007f2289e3ae9183f1b99ffbecea75d25"
+    },
+    {
+      "path": "test/unit/phil-v1-step4-composed-account-authorization.test.cjs",
+      "bytes": 5838,
+      "sha256": "0cb7216da880ba87775010296ca6fec19669e0cda07fe97cd2ef5e26009fc3fc"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/vendor/phil-v1-step3-verifier/src/honk_verifier.cairo",
+      "bytes": 13496,
+      "sha256": "341f3f302867925218f3a0ac98833d3ce0ecae652a80016fb4ae3142c7a1a941"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/vendor/phil-v1-step3-verifier/src/honk_verifier_circuits.cairo",
+      "bytes": 142287,
+      "sha256": "d35766fb81f84ff5c4c1950b7f8c6026df38535ca6c8a8b2b54fc4b142b1c673"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/vendor/phil-v1-step3-verifier/src/honk_verifier_constants.cairo",
+      "bytes": 130670,
+      "sha256": "7ae6836eb21ba9cb162cf7407c25e63366be9dde5fbc87651f0ebb25d8ea6d71"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/vendor/phil-v1-step3-verifier/src/lib.cairo",
+      "bytes": 126,
+      "sha256": "5f85e3415e624ba01647b327f1eff2f45ef1ee4e48a9e96d3e39c7bb7dfd9dca"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/vendor/phil-v1-step3-verifier/Scarb.toml",
+      "bytes": 418,
+      "sha256": "60b1f274e57b54b6e00414c0d0d3163ba6830d7dfa934e55c07825eb39a2fd45"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/fixtures/canonical-vector.json",
+      "bytes": 4812,
+      "sha256": "0e1138a91e398712b6c18fc66aa62b7778a02536bfd8f366baca68677d711bc5"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/tests/canonical_fixture.cairo",
+      "bytes": 7268,
+      "sha256": "c089c4560140d138c66cfc7f548750010bb325b3abfd55ef6ff38ce09f38ac86"
+    },
+    {
+      "path": "starknet/phil-v1-step4-account-gate/tests/proof_calldata.txt",
+      "bytes": 77538,
+      "sha256": "f57b9171f9553d544a132d139df31adb9541493463085a0fc716e5266a92143d"
+    }
+  ]
+}

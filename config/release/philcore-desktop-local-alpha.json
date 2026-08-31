@@ -1,0 +1,171 @@
+{
+  "phase": "O.8",
+  "packageProfile": "local_alpha_unsigned",
+  "productName": "PhilCore Desktop Local Alpha",
+  "executableName": "PhilCore Desktop Local Alpha",
+  "bundleIdentifier": "com.philcore.desktop.localalpha",
+  "version": "0.1.0",
+  "buildNumber": "0.6.0-local-alpha",
+  "releaseChannel": "local-alpha",
+  "generatedAt": "2026-08-23T20:59:31.777Z",
+  "sourceCommit": "cc35294",
+  "sourceTree": {
+    "checked": true,
+    "dirty": false,
+    "changedPathCount": 0
+  },
+  "electronVersion": "41.10.3",
+  "nodeVersion": "v26.5.1",
+  "targetArchitecture": "darwin-arm64",
+  "packageTool": {
+    "selected": "custom_macos_packager",
+    "electronBuilderEvaluatedVersion": "26.15.3",
+    "electronForgeEvaluated": true,
+    "rationale": "Existing desktop build is custom and O.5 still requires a precise local-alpha resource set; O.7 adds native user-presence helper packaging and guarded signed release-candidate paths."
+  },
+  "artifact": {
+    "appPath": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app",
+    "exists": true,
+    "executablePath": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/MacOS/PhilCore Desktop Local Alpha",
+    "appSizeBytes": 390003328
+  },
+  "signing": {
+    "codeSigned": false,
+    "hardenedRuntimeConfigured": true,
+    "notarized": false,
+    "notarizationClaimed": false,
+    "identitySummary": "not_configured",
+    "signature": {
+      "checked": true,
+      "signed": false,
+      "status": 1,
+      "stderr": "<repo>/apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app: code has no resources but signature indicates they must be present"
+    }
+  },
+  "publicNetwork": {
+    "publicUserOperationSubmission": false,
+    "publicStarknetPublication": false,
+    "ethereumL1Anchoring": false,
+    "l1ToBaseRelay": false,
+    "publicBaseSubmission": false,
+    "paymaster": false
+  },
+  "securityStatus": {
+    "acp0002": "Proposed",
+    "baseSepoliaBetaGate": "blocked",
+    "productionApproved": false,
+    "externalAudit": "not_completed",
+    "meaningfulAssets": "not_allowed"
+  },
+  "bundledResources": {
+    "prover": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/Resources/app/bin/darwin-arm64/generate-unlock-proof-json",
+      "sha256": "624a4a1f6f51333ec361df5fb74d6acc6802a884bcdb38958ecfff26062f63cd",
+      "bytes": 1730776
+    },
+    "verifier": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/Resources/app/bin/darwin-arm64/verify-unlock-proof-json",
+      "sha256": "c6cb783a2865d61ea14951f238aa045beb9f77539a8684a5af05ca22564bc10a",
+      "bytes": 1226328
+    },
+    "userPresenceHelper": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/Resources/app/bin/darwin-arm64/PhilCoreUserPresenceHelper",
+      "sha256": "ab15d1fb1c10194218e6b91d356e588ea70c38d406011d222c275e74e799836b",
+      "bytes": 81752
+    },
+    "entryPointArtifact": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/Resources/app/node_modules/@account-abstraction/contracts/artifacts/EntryPoint.json",
+      "sha256": "952e7ce1e69354b9e80d0e68e0cbcc64f9304dd25c17170c3732114ea5421b04",
+      "bytes": 88861
+    },
+    "actionGateArtifact": {
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app/Contents/Resources/app/artifacts/contracts/base/PhilBaseActionGate.sol/PhilBaseActionGate.json",
+      "sha256": "746c1e5a36ecdd827b01ce69a05e614520b5589a2d17c2c15322af069cfcd9b7",
+      "bytes": 22432
+    }
+  },
+  "userPresence": {
+    "selectedModel": "small_signed_swift_helper",
+    "nativeUserPresenceStatus": "helper_bundled",
+    "touchIdClaimed": false,
+    "broadDeviceOwnerPolicy": true,
+    "safeStorageAloneSatisfiesReleaseCandidateSigning": false,
+    "fixtureUsedForAutomatedTests": true
+  },
+  "limitations": [
+    "local_alpha_only",
+    "unsigned_unless_external_developer_id_identity_is_supplied",
+    "not_notarized_in_o7_without_explicit_credentials_and_command",
+    "local_hardhat_fixture_bundled_for_o5_path",
+    "public_network_mutation_disabled"
+  ],
+  "packagedAt": "2026-08-23T20:59:31.764Z",
+  "packagedResourcesPolicy": {
+    "repositoryRequiredAtRuntime": false,
+    "cargoRequiredAtRuntime": false,
+    "hardhatFixtureBundled": true,
+    "rendererControlledPaths": false,
+    "bundledProofBinaries": true,
+    "targetNativePackage": "darwin-arm64",
+    "retainedRuntimeTooling": [
+      "@esbuild/darwin-arm64",
+      "@nomicfoundation/edr",
+      "@nomicfoundation/edr-darwin-arm64",
+      "esbuild",
+      "hardhat",
+      "tsx"
+    ],
+    "packageTimePruning": {
+      "excludedEdrPlatformPackages": [
+        "@nomicfoundation/edr-darwin-x64",
+        "@nomicfoundation/edr-linux-arm64-gnu",
+        "@nomicfoundation/edr-linux-arm64-musl",
+        "@nomicfoundation/edr-linux-x64-gnu",
+        "@nomicfoundation/edr-linux-x64-musl",
+        "@nomicfoundation/edr-win32-x64-msvc"
+      ],
+      "excludedSolidityAnalyzerPackages": [
+        "@nomicfoundation/solidity-analyzer",
+        "@nomicfoundation/solidity-analyzer-darwin-arm64",
+        "@nomicfoundation/solidity-analyzer-darwin-x64",
+        "@nomicfoundation/solidity-analyzer-linux-arm64-gnu",
+        "@nomicfoundation/solidity-analyzer-linux-arm64-musl",
+        "@nomicfoundation/solidity-analyzer-linux-x64-gnu",
+        "@nomicfoundation/solidity-analyzer-linux-x64-musl",
+        "@nomicfoundation/solidity-analyzer-win32-x64-msvc"
+      ],
+      "excludedBuildTimeOnlyPackages": [
+        "solc",
+        "typescript"
+      ],
+      "excludedDuplicateEsbuildBinary": true,
+      "excludedHardhatBuildInfo": true,
+      "excludedHardhatDebugArtifacts": true,
+      "retainedEsbuildRuntimeReason": "hardhat.shared.cjs loads tsx/cjs in the packaged local fixture path; tsx depends on esbuild."
+    }
+  },
+  "userPresenceHelper": {
+    "bundled": true,
+    "sha256": "ab15d1fb1c10194218e6b91d356e588ea70c38d406011d222c275e74e799836b",
+    "policy": "device_owner_authentication"
+  },
+  "qrHelper": {
+    "bundled": true,
+    "sha256": "a6b3864dd65431de3fc815123645c3ec546c703afd7e0a07371f8e2cac335f65",
+    "payload": "expiring_public_pairing_request_only"
+  },
+  "producedArtifacts": [
+    {
+      "kind": "macos_app",
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app",
+      "signed": false,
+      "notarized": false
+    },
+    {
+      "kind": "zip",
+      "path": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha-0.1.0-local-alpha-macos-darwin-arm64.zip",
+      "signed": false,
+      "notarized": false
+    }
+  ]
+}

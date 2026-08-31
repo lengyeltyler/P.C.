@@ -1,0 +1,81 @@
+pub const STWO_UNLOCK_PROOF_VERSION: &str = "v1";
+pub const STWO_UNLOCK_PROOF_TYPE: &str = "stwo-unlock-keccak-v1";
+pub const STWO_UNLOCK_ARTIFACT_VERSION: &str = "phil-s2-proof-envelope-v1";
+pub const STWO_UNLOCK_RAW_PROOF_CODEC: &str = "phil-stwo-unlock-raw-proof-bincode-v1";
+pub const STWO_UNLOCK_VERIFIER_KEY_LABEL: &str = "PHIL_STWO_UNLOCK_VERIFIER_KEY_V1";
+pub const LOG_N_ROWS: u32 = 8;
+
+pub const DOMAIN_IDENTITY_ROOT: &str = "PHIL_IDENTITY_ROOT_V1";
+pub const DOMAIN_OWNER_COMMITMENT: &str = "PHIL_OWNER_COMMITMENT_CANONICAL_V1";
+pub const DOMAIN_NULLIFIER: &str = "PHIL_NULLIFIER_V1";
+pub const DOMAIN_UNLOCK_PROOF_INPUTS: &str = "PHIL_UNLOCK_PROOF_INPUTS_V1";
+
+pub const IDENTITY_ROOT_PREIMAGE_LEN: usize = 64;
+pub const OWNER_COMMITMENT_PREIMAGE_LEN: usize = 64;
+pub const NULLIFIER_PREIMAGE_LEN: usize = 160;
+pub const PROOF_INPUT_HASH_PREIMAGE_LEN: usize = 416;
+pub const DIGEST_LEN: usize = 32;
+pub const DIGEST_BITS: usize = DIGEST_LEN * 8;
+pub const RATE_BYTES: usize = 136;
+pub const RATE_BITS: usize = RATE_BYTES * 8;
+pub const STATE_BITS: usize = 1600;
+pub const STATE_LANES: usize = 25;
+pub const LANE_BITS: usize = 64;
+pub const RATE_LANES: usize = RATE_BYTES / 8;
+pub const BLOCK_ROWS: usize = 25;
+pub const KECCAK_ROUNDS: usize = 24;
+pub const TOTAL_USED_ROWS: usize = 200;
+pub const TOTAL_TRACE_ROWS: usize = 256;
+pub const UNUSED_TRACE_ROWS: usize = TOTAL_TRACE_ROWS - TOTAL_USED_ROWS;
+
+pub const IDENTITY_BLOCKS: usize = 1;
+pub const OWNER_BLOCKS: usize = 1;
+pub const NULLIFIER_BLOCKS: usize = 2;
+pub const PROOF_INPUT_BLOCKS: usize = 4;
+pub const TOTAL_HASH_BLOCKS: usize =
+    IDENTITY_BLOCKS + OWNER_BLOCKS + NULLIFIER_BLOCKS + PROOF_INPUT_BLOCKS;
+
+pub const IDENTITY_START_ROW: usize = 0;
+pub const OWNER_START_ROW: usize = 25;
+pub const NULLIFIER_BLOCK0_START_ROW: usize = 50;
+pub const NULLIFIER_BLOCK1_START_ROW: usize = 75;
+pub const PROOF_INPUT_BLOCK0_START_ROW: usize = 100;
+pub const PROOF_INPUT_BLOCK1_START_ROW: usize = 125;
+pub const PROOF_INPUT_BLOCK2_START_ROW: usize = 150;
+pub const PROOF_INPUT_BLOCK3_START_ROW: usize = 175;
+
+pub const IDENTITY_FINAL_ROW: usize = 24;
+pub const OWNER_FINAL_ROW: usize = 49;
+pub const NULLIFIER_FINAL_ROW: usize = 99;
+pub const PROOF_INPUT_FINAL_ROW: usize = 199;
+
+pub const KECCAK_RHO_OFFSETS: [usize; 25] = [
+    0, 1, 62, 28, 27, 36, 44, 6, 55, 20, 3, 10, 43, 25, 39, 41, 45, 15, 21, 8, 18, 2, 61, 56, 14,
+];
+
+pub const KECCAK_ROUND_CONSTANTS: [u64; 24] = [
+    0x0000000000000001,
+    0x0000000000008082,
+    0x800000000000808a,
+    0x8000000080008000,
+    0x000000000000808b,
+    0x0000000080000001,
+    0x8000000080008081,
+    0x8000000000008009,
+    0x000000000000008a,
+    0x0000000000000088,
+    0x0000000080008009,
+    0x000000008000000a,
+    0x000000008000808b,
+    0x800000000000008b,
+    0x8000000000008089,
+    0x8000000000008003,
+    0x8000000000008002,
+    0x8000000000000080,
+    0x000000000000800a,
+    0x800000008000000a,
+    0x8000000080008081,
+    0x8000000000008080,
+    0x0000000080000001,
+    0x8000000080008008,
+];

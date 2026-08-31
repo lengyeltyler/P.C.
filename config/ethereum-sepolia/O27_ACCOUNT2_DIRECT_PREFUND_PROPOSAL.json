@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "philcore-o27-account2-direct-prefund-proposal-v1",
+  "phase": "O.27",
+  "canonicalPhaseName": "O.27 Account 2 Direct Prefunding",
+  "status": "AWAITING_EXPLICIT_APPROVAL",
+  "generatedAt": "2026-07-28T18:59:12.000Z",
+  "expiresAt": "2026-07-28T19:14:12.000Z",
+  "sourceHead": "466b2ffbfb890ce7dc33712e420dde30e449c1da",
+  "branch": "codex/device-identity-v1",
+  "chainId": 11155111,
+  "transactionType": 2,
+  "sender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+  "verifiedDerivedSender": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+  "senderNonce": "0",
+  "recipient": "0xF7212776373B51c1514Dd9C4490048270056C150",
+  "recipientBalanceBefore": {
+    "wei": "0",
+    "eth": "0.0"
+  },
+  "recipientCodeStatusBefore": "empty",
+  "calldata": "0x",
+  "gasLimit": "21000",
+  "maxFeePerGas": {
+    "wei": "2562243352",
+    "eth": "0.000000002562243352"
+  },
+  "maxPriorityFeePerGas": {
+    "wei": "1875000",
+    "eth": "0.000000000001875"
+  },
+  "transferValue": {
+    "wei": "5124486704000000",
+    "eth": "0.005124486704"
+  },
+  "maximumTransactionFee": {
+    "wei": "53807110392000",
+    "eth": "0.000053807110392"
+  },
+  "maximumTotalAccount2Debit": {
+    "wei": "5178293814392000",
+    "eth": "0.005178293814392"
+  },
+  "account2BalanceBefore": {
+    "wei": "92576112524973299",
+    "eth": "0.092576112524973299"
+  },
+  "expectedRecipientBalanceAfter": {
+    "wei": "5124486704000000",
+    "eth": "0.005124486704"
+  },
+  "expectedFutureOperationCost": {
+    "wei": "1061309099046570",
+    "eth": "0.00106130909904657"
+  },
+  "expectedResidualAfterSuccessfulOperation": {
+    "wei": "4063177604953430",
+    "eth": "0.00406317760495343"
+  },
+  "residualRiskClassification": "RESIDUAL_FUNDS_NONRECOVERABLE_BY_CURRENT_ACCOUNT",
+  "strandedFundsWarning": "ETH sent to this counterfactual address can become permanently stranded if the account is never successfully deployed or cannot execute an approved recovery path.",
+  "prefundRationale": {
+    "o261CompatibilityBinding": "98889ba9ec0b646f32d1067d9b2e41855ab4e7c1857b9a6928ade0719778ac19",
+    "o261GasEstimateBinding": "0xcc46a5c549d281805c3ae928c1b7c0fee8f6e0bfb83c8c8f49c72debbbc68550",
+    "remoteDeclaredGas": {
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0",
+      "totalDeclaredGas": "2000000"
+    },
+    "estimatedMinimumPrefundWei": "4099589364000000",
+    "recommendedDisposablePrefundWei": "5124486704000000",
+    "selectedRecommendationMargin": "canonical_o26_1_current_fee_plus_25_percent",
+    "paymasterRequired": false
+  },
+  "snapshot": {
+    "blockNumber": "11370487",
+    "blockHash": "0x0326c4fd02280224f287bdc2abfb4c58bbb91ae0d75598b29b1a9524ec3e8166",
+    "infrastructureBinding": "0x36ff9bd100d478441e7f2e7db83844b2c2bd899e375a22d3cf218c4caa864879",
+    "account": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "locallyDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "factoryDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "codeStatus": "empty",
+      "codeHash": null,
+      "balanceWei": "0",
+      "latestTransactionCount": "0",
+      "pendingTransactionCount": "0",
+      "entryPointNonce": "0",
+      "entryPointDepositWei": "0"
+    },
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "3",
+      "pendingNonce": "3",
+      "balanceWei": "270073390298140959"
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balanceWei": "92576112524973299"
+    }
+  },
+  "approval": {
+    "approved": false,
+    "approvalReceived": false,
+    "reusableApprovalArtifact": false,
+    "exactYesOrNoRequired": true,
+    "approvalInvalidatedByStateChange": true
+  },
+  "authority": {
+    "account1UseAuthorized": false,
+    "account2DirectEthTransferAuthorized": false,
+    "factoryCallAuthorized": false,
+    "accountDeploymentAuthorized": false,
+    "entryPointDepositAuthorized": false,
+    "protectedRuntimeAuthorized": false,
+    "proofGenerationAuthorized": false,
+    "deviceVaultSigningAuthorized": false,
+    "userOperationSubmissionAuthorized": false,
+    "bundlerSubmissionAuthorized": false,
+    "paymasterAuthorized": false,
+    "tokenMovementAuthorized": false,
+    "secondTransactionAuthorized": false
+  },
+  "signed": false,
+  "broadcast": false,
+  "publicMutationOccurred": false,
+  "proposalDigest": "0x9ff157d194184e38216546071b3f052ddebf41552d33505001811192d005e0e9"
+}

@@ -1,0 +1,268 @@
+{
+  "phase": "O.7",
+  "status": "audited",
+  "appPath": "apps/philcore-desktop/release/local-alpha/PhilCore Desktop Local Alpha.app",
+  "totalBytes": 359232364,
+  "totalMiB": 342.59,
+  "breakdown": [
+    {
+      "label": "Electron framework",
+      "path": "Contents/Frameworks",
+      "bytes": 266456805,
+      "mib": 254.11,
+      "classification": "required_at_runtime"
+    },
+    {
+      "label": "Main executable",
+      "path": "Contents/MacOS",
+      "bytes": 33968,
+      "mib": 0.03,
+      "classification": "required_at_runtime"
+    },
+    {
+      "label": "Application source",
+      "path": "Contents/Resources/app/apps",
+      "bytes": 3462303,
+      "mib": 3.3,
+      "classification": "required_at_runtime"
+    },
+    {
+      "label": "Node modules",
+      "path": "Contents/Resources/app/node_modules",
+      "bytes": 85631254,
+      "mib": 81.66,
+      "classification": "required_at_runtime_for_local_fixture"
+    },
+    {
+      "label": "Contract artifacts",
+      "path": "Contents/Resources/app/artifacts",
+      "bytes": 371310,
+      "mib": 0.35,
+      "classification": "required_for_local_entrypoint_fixture"
+    },
+    {
+      "label": "Contract sources",
+      "path": "Contents/Resources/app/contracts",
+      "bytes": 78049,
+      "mib": 0.07,
+      "classification": "required_for_hardhat_local_fixture"
+    },
+    {
+      "label": "Bundled binaries",
+      "path": "Contents/Resources/app/bin",
+      "bytes": 2630360,
+      "mib": 2.51,
+      "classification": "required_at_runtime"
+    },
+    {
+      "label": "Release config",
+      "path": "Contents/Resources/app/config",
+      "bytes": 6564,
+      "mib": 0.01,
+      "classification": "required_for_integrity_status"
+    }
+  ],
+  "packageBreakdown": [
+    {
+      "label": "@nomicfoundation/edr-darwin-arm64",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-darwin-arm64",
+      "bytes": 21356367,
+      "mib": 20.37,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-darwin-x64",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-darwin-x64",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-linux-arm64-gnu",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-linux-arm64-gnu",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-linux-arm64-musl",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-linux-arm64-musl",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-linux-x64-gnu",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-linux-x64-gnu",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-linux-x64-musl",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-linux-x64-musl",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/edr-win32-x64-msvc",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/edr-win32-x64-msvc",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-darwin-arm64",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-darwin-arm64",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-darwin-x64",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-darwin-x64",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-linux-arm64-gnu",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-linux-arm64-gnu",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-linux-arm64-musl",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-linux-arm64-musl",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-linux-x64-gnu",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-linux-x64-gnu",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-linux-x64-musl",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-linux-x64-musl",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "@nomicfoundation/solidity-analyzer-win32-x64-msvc",
+      "path": "Contents/Resources/app/node_modules/@nomicfoundation/solidity-analyzer-win32-x64-msvc",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "solc",
+      "path": "Contents/Resources/app/node_modules/solc",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "typescript",
+      "path": "Contents/Resources/app/node_modules/typescript",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "node_module"
+    },
+    {
+      "label": "tsx",
+      "path": "Contents/Resources/app/node_modules/tsx",
+      "bytes": 431142,
+      "mib": 0.41,
+      "classification": "node_module"
+    },
+    {
+      "label": "esbuild",
+      "path": "Contents/Resources/app/node_modules/esbuild",
+      "bytes": 91265,
+      "mib": 0.09,
+      "classification": "node_module"
+    },
+    {
+      "label": "@esbuild/darwin-arm64",
+      "path": "Contents/Resources/app/node_modules/@esbuild/darwin-arm64",
+      "bytes": 9935217,
+      "mib": 9.47,
+      "classification": "node_module"
+    },
+    {
+      "label": "Hardhat build-info",
+      "path": "Contents/Resources/app/artifacts/build-info",
+      "bytes": 0,
+      "mib": 0,
+      "classification": "pruned_when_absent"
+    }
+  ],
+  "removedOrExcludedClasses": [
+    "node_modules_tests",
+    "node_modules_docs_except_license_notices",
+    "source_maps",
+    "electron_package_dependency",
+    "scarb_cargo_targets",
+    "repository_docs",
+    "desktop_test_sources",
+    "incompatible_edr_platform_packages",
+    "solidity_analyzer_runtime_compile_path",
+    "typescript_compiler_package",
+    "solc_runtime_compiler_package",
+    "hardhat_build_info",
+    "hardhat_debug_artifacts",
+    "duplicate_esbuild_root_binary"
+  ],
+  "retainedLargeClasses": [
+    "electron_framework",
+    "hardhat_local_fixture_dependency_tree",
+    "ethers_and_hardhat_tooling_required_by_current_local_fixture",
+    "edr_darwin-arm64",
+    "tsx_and_esbuild_required_by_current_hardhat_shared_config",
+    "bundled_prover_and_verifier"
+  ],
+  "pruningPolicy": {
+    "targetNativePackage": "darwin-arm64",
+    "excludedEdrPlatformPackages": [
+      "@nomicfoundation/edr-darwin-x64",
+      "@nomicfoundation/edr-linux-arm64-gnu",
+      "@nomicfoundation/edr-linux-arm64-musl",
+      "@nomicfoundation/edr-linux-x64-gnu",
+      "@nomicfoundation/edr-linux-x64-musl",
+      "@nomicfoundation/edr-win32-x64-msvc"
+    ],
+    "excludedSolidityAnalyzerPackages": [
+      "@nomicfoundation/solidity-analyzer",
+      "@nomicfoundation/solidity-analyzer-darwin-arm64",
+      "@nomicfoundation/solidity-analyzer-darwin-x64",
+      "@nomicfoundation/solidity-analyzer-linux-arm64-gnu",
+      "@nomicfoundation/solidity-analyzer-linux-arm64-musl",
+      "@nomicfoundation/solidity-analyzer-linux-x64-gnu",
+      "@nomicfoundation/solidity-analyzer-linux-x64-musl",
+      "@nomicfoundation/solidity-analyzer-win32-x64-msvc"
+    ],
+    "excludedBuildTimeOnlyPackages": [
+      "solc",
+      "typescript"
+    ],
+    "esbuildRootBinaryExcluded": true
+  },
+  "packagedSourceMaps": 0,
+  "packagedTestFiles": 0,
+  "packagedDocsOrMarkdownFiles": 32,
+  "publicNetworkMutation": false
+}

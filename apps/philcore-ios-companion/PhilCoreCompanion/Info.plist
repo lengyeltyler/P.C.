@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleExecutable</key>
+  <string>$(EXECUTABLE_NAME)</string>
+  <key>CFBundleIdentifier</key>
+  <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleName</key>
+  <string>$(PRODUCT_NAME)</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleDisplayName</key>
+  <string>Phil — Controlled Sepolia Beta</string>
+  <key>CFBundleShortVersionString</key>
+  <string>0.1.0</string>
+	<key>PhilCoreSourceCommit</key>
+	<string>$(PHILCORE_SOURCE_COMMIT)</string>
+	<key>PhilCoreSourceTree</key>
+	<string>$(PHILCORE_SOURCE_TREE)</string>
+	<key>PhilCoreSourceTreeClean</key>
+	<string>$(PHILCORE_SOURCE_TREE_CLEAN)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+  <key>NSCameraUsageDescription</key>
+  <string>PhilCore scans a short-lived desktop pairing request. No photo is retained.</string>
+  <key>NSFaceIDUsageDescription</key>
+	<string>PhilCore requires your approval before a device-bound key can approve an exact bounded local request.</string>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>PhilCore connects directly to your Mac to enroll a device key and approve short-lived local requests.</string>
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+  </dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PixelifySans-wght.ttf</string>
+	</array>
+	<key>UILaunchScreen</key>
+  <dict/>
+</dict>
+</plist>

@@ -1,0 +1,3056 @@
+{
+  "format": "phil-v1-step6c-artifact-manifest-v1",
+  "sourceCommit": "e596f41e32c86c3fa216c59cb8289c9f02ccafe3",
+  "sourceTree": "df6e90c3a2ee077e20677a978673d022f80bbf71",
+  "implementationHash": "0xfc07c8d37653d49dccbb96e3e7ab13eb206e3b5b5ed82afe50f5baa852c68576",
+  "auditStatusHash": "0x5690d43a8a517928334d505a2082f4a89230af2a16d3b59f40075d678eb5771a",
+  "candidateFiles": [
+    {
+      "path": "apps/phil-device-sdk/src/p256SignatureWireV2.ts",
+      "bytes": 7875,
+      "sha256": "4a6d3854cca54546aace5b43843eea2ad50b8e9f44f6cc5594a13a8be378bb81"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/routineAuthorizationV1.ts",
+      "bytes": 82065,
+      "sha256": "b15e11b47958553d9c4355bcdc2d9e461f0c25921561ac69f174b1e327c28b59"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/routineSignatureRegistryV2.ts",
+      "bytes": 3812,
+      "sha256": "4b2283bf2d3c1acc792529f33afc33a0eef3bda3e9739425edf3d639ac78ed6b"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/runtime/routineAuthorizationJournalV1.ts",
+      "bytes": 60467,
+      "sha256": "733a2e7a2070084afa4173dac70d1bdec4425c334062fa3412d9bd39ec713211"
+    },
+    {
+      "path": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+      "bytes": 36158,
+      "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+    },
+    {
+      "path": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+      "bytes": 931,
+      "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+    },
+    {
+      "path": "test/helpers/phil-v1-step6c-fixture.cjs",
+      "bytes": 13934,
+      "sha256": "c1cbeae5057225918be984f4856fb68e5b378011ad0a0d7d859cc5580f6884bd"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-wire.test.cjs",
+      "bytes": 4342,
+      "sha256": "e8515e38b53d10f55ad72602a2d5d73a055950521058001dd484ff6d63a56d7b"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-records.test.cjs",
+      "bytes": 12090,
+      "sha256": "c9fae273175810d399681b8216c8f485a50f5d8865b801341543e17588cf9777"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-entrypoint.test.cjs",
+      "bytes": 21469,
+      "sha256": "0cd4f32db4737f7d40107d1c4b85e3688c26d3a119bd18e586cf8f9d236e6e58"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-journal.test.cjs",
+      "bytes": 11268,
+      "sha256": "cf3a74fc8e128c33a1f8b3253f5f916577373a43e13462586f87b620c9217d7d"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-desktop.test.cjs",
+      "bytes": 45746,
+      "sha256": "faad8fdc658690e79daa8fb4bf811729fe19119a5021915575e3a882161a3acb"
+    },
+    {
+      "path": "test/unit/phil-v1-step6c-ios-synthetic.test.cjs",
+      "bytes": 2869,
+      "sha256": "3c29f65e1f8d333da91910d16750290cf36ac067d77e9359a7d1222d7993359b"
+    },
+    {
+      "path": "hardhat.phil-v1-step6c.config.cjs",
+      "bytes": 546,
+      "sha256": "79ae8f72be6bcadea0cae1046c8220e164bebe4dcb9dfef5333f331edbb97d4e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 45405,
+      "sha256": "a2c83cfd372d5b25e565b3a510bf60f16b4c70f3a991dd262cdaddf49c550e99"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 153273,
+      "sha256": "030f8a95dc90b91d939da1c8d7735553320b2b3c3f0a4e0f0fac54c8114dc3ec"
+    },
+    {
+      "path": "config/ci/classification.json",
+      "bytes": 129243,
+      "sha256": "6176807503d672507a39abf6a4abbf52c5545233343ba6057095921310cd631b"
+    },
+    {
+      "path": "scripts/security/generate-phil-v1-step6c-artifacts.cjs",
+      "bytes": 27803,
+      "sha256": "de12deed8778d779ee36c4434b58065b22d34e6dc2d5eb091d25492091d057f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 32488,
+      "sha256": "63b78b372f806b6284df925c3d812bfe8b1b85351589d2f8d277b7222ec8782c"
+    },
+    {
+      "path": "docs/CANONICAL_DOCS.md",
+      "bytes": 48137,
+      "sha256": "51f2a09453fb69d287ac7ef8d7e9196da63793b05032b54dbb128f502d0912e7"
+    },
+    {
+      "path": "docs/PHIL_V1_SECURE_IDENTITY_ARCHITECTURE.md",
+      "bytes": 38713,
+      "sha256": "48e1323523b338a77771218405365e256548825652e2f740acb938f02daf4b12"
+    },
+    {
+      "path": "docs/architecture-changes/ACP-0003-PHIL-V1-SECURE-IDENTITY-ROADMAP.md",
+      "bytes": 34531,
+      "sha256": "019f71f3f6a6a2a5a7ffd3f8a07dd81d46c4b67e40c6fec878ade83f768556e8"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP4_REFERENCE_MANIFEST_MAINTENANCE.md",
+      "bytes": 20170,
+      "sha256": "4b514bf45d345a275aa8b62c68a35fed66c2c69ad9513823455fb280af26a29e"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6B_LOCAL_SMART_ACCOUNT_GATE.md",
+      "bytes": 8143,
+      "sha256": "8593ff03776c2a69b63bbb4af1b05a01d30491b9e771283bfcaf7b9004f958ff"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_IMPLEMENTATION_BLOCKER_NONCE_CATALOG.md",
+      "bytes": 4878,
+      "sha256": "bf477f7dc55d20800540263147885513457fba351259f8b3729c2862e8eee9d2"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_INDEPENDENT_REVIEW_A158688.md",
+      "bytes": 2164,
+      "sha256": "fa16cd8ef92d04590e874c1095d8fb3e024718a9d5bf0f3da824de0fa9fc2753"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_INDEPENDENT_REVIEW_AEA7359.md",
+      "bytes": 2280,
+      "sha256": "1eda340ffabd3db17be27893b1669c776c9abd850d15d59f85002382956e3660"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_INDEPENDENT_REVIEW_591F6B6.md",
+      "bytes": 2066,
+      "sha256": "1f86b8cb2c41bcb173760baabcdc27692567a131d2136d2c4c0f1a5c4eb5440f"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_INDEPENDENT_REVIEW_5AB4650.md",
+      "bytes": 1994,
+      "sha256": "0273322fc7b15d284b7877723160dd546d52da0d635047df160a941509d6c29f"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_INDEPENDENT_REVIEW_22B5CF3.md",
+      "bytes": 2074,
+      "sha256": "8335dc6edcf6cdbf19c6257816c14b441cd467031b72dbb9a3d7af6a0df822c0"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_IMPLEMENTATION_PACKET.md",
+      "bytes": 83917,
+      "sha256": "d68d6151e5eb0cbde2b57ffe863cdd51cc7ce6d4818116e7b2897aef153f21e6"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_IMPLEMENTATION_REPORT.md",
+      "bytes": 8677,
+      "sha256": "41fe8a595faceef7bb5d15b01bbdc415b5bb9d20eb89d7fc1ebc4210e369d259"
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_ROUTINE_AUTHORIZATION_PRODUCT_COMPOSITION_GATE.md",
+      "bytes": 26009,
+      "sha256": "b5ac6483a2f553ddae37c0da8f84d584889c2338298d0ecc5fddee0f78beb896"
+    },
+    {
+      "path": "docs/security/PHIL_V1_STEP6C_ROUTINE_AUTHORIZATION_THREAT_MODEL.md",
+      "bytes": 27061,
+      "sha256": "afe58907f837652da242bb56fc76dddd0ad125594090de3004844531572d746b"
+    }
+  ],
+  "fixture": {
+    "path": "config/adapters/PHIL_V1_STEP6C_LOCAL_COMPOSITION_FIXTURE.json",
+    "bytes": 86518,
+    "sha256": "e01ec37d8c7b6dd7d9814b4aceb28a77d4847a80c526a7e39d5d2921dfad6b06"
+  },
+  "compiledContracts": [
+    {
+      "artifact": "artifacts/@account-abstraction/contracts/core/EntryPoint.sol/EntryPoint.json",
+      "creationCodeBytes": 12570,
+      "creationCodeHash": "0x4a7e803954af1c5d9f6ee3c6e1be6361bc7743a5a95ade8c2670f3d15ab24b5b",
+      "runtimeCodeBytes": 12057,
+      "runtimeCodeHash": "0x6d55770058f768b7f2f0d80a31a680d6013e71145643054013398bd5fa703160",
+      "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+      "sourceSha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e",
+      "buildInfoSha256": "d4c8f6c931d9721e97a3ec0c8e7043ebb6b86cca8bdf8bcd5480e7951a28a0aa",
+      "compilerInputSources": [
+        {
+          "source": "@account-abstraction/contracts/core/BaseAccount.sol",
+          "bytes": 4741,
+          "sha256": "d48e2cd1ccc779369ddf08716e0099133c703a4c52f52f0594c1220cb64fadc0"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+          "bytes": 31135,
+          "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/Helpers.sol",
+          "bytes": 3359,
+          "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/NonceManager.sol",
+          "bytes": 1425,
+          "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+          "bytes": 1232,
+          "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/StakeManager.sol",
+          "bytes": 5150,
+          "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/UserOperationLib.sol",
+          "bytes": 4997,
+          "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccount.sol",
+          "bytes": 2604,
+          "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+          "bytes": 710,
+          "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+          "bytes": 1871,
+          "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+          "bytes": 9185,
+          "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/INonceManager.sol",
+          "bytes": 1112,
+          "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IPaymaster.sol",
+          "bytes": 3300,
+          "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IStakeManager.sol",
+          "bytes": 3616,
+          "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+          "bytes": 1469,
+          "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+        },
+        {
+          "source": "@account-abstraction/contracts/utils/Exec.sol",
+          "bytes": 2043,
+          "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Base64.sol",
+          "bytes": 10656,
+          "sha256": "1c143572893f50f04fe8e507d89f9997cd3242102ba4200c8de0803ecbaf8cec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "bytes": 14737,
+          "sha256": "3ce9120a27934c75a074cb785d3a88868069ef6529dbe4dc6b845af0836f3c70"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Create2.sol",
+          "bytes": 4372,
+          "sha256": "9623aa59745a23a72f313adc5adbf583968bf366a7cbf3fc43c1148d7d2c3c86"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+          "bytes": 12152,
+          "sha256": "ba7c2d314fcd61c9783e0b3f0c664d004b76b408fda6a84edc8267d17c5012d6"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+          "bytes": 8631,
+          "sha256": "538a0d7c4f0ec5a8562f58561890f7b49d14580674ecf58bc5f505b45c73df65"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/P256.sol",
+          "bytes": 19341,
+          "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Errors.sol",
+          "bytes": 896,
+          "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "bytes": 879,
+          "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "bytes": 871,
+          "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/LowLevelCall.sol",
+          "bytes": 5547,
+          "sha256": "e128cbe9c6c406d5a42c26e4079c0a95b369ce552f2d0c3dfd2fcb836c5708f2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "bytes": 32664,
+          "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "bytes": 34940,
+          "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "bytes": 2613,
+          "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "bytes": 1973,
+          "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+          "bytes": 4766,
+          "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/StorageSlot.sol",
+          "bytes": 4182,
+          "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "bytes": 21538,
+          "sha256": "e318709bbe73a7831d64c1351e8bdc43780b245f25191234e361e6ab9b98c67b"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 362,
+          "sha256": "a5d1d83b78f767abe9be1bb360a14aba36885bbacf2c2f4ebbcdf92eb8249a19"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 194,
+          "sha256": "4ff303c1b36661468302c3fff0ef1da2da2baa1f1f0c0283117312232096f466"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+          "bytes": 20626,
+          "sha256": "f0981e45d10453c3b81eff43a1aad0aa8a4b7ad584ebc7f557b269e8d10fbed4"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+          "bytes": 3787,
+          "sha256": "f4845a1a5cd76f054013ac566c2b801972ca673e6d67ac1823056377544f55ac"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+          "bytes": 2896,
+          "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+          "bytes": 7119,
+          "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 2291,
+          "sha256": "6fc51e8bd32d3a2c4b7fd011dd093f404ddba9b7b5e54fe281482d40b0958553"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+          "bytes": 3776,
+          "sha256": "98b53cc400d040a3df9774902329aa3a057edf03a0d2d2d80d7d039039078406"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6BLocalAccount.sol",
+          "bytes": 21459,
+          "sha256": "3bd20a05efcb2d552d767267822210bedf04a6661eca18c6dba11fad50ca174c"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+          "bytes": 36158,
+          "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+          "bytes": 931,
+          "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+        },
+        {
+          "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+          "bytes": 971,
+          "sha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2MinimalAccountV2.sol",
+          "bytes": 5545,
+          "sha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2StaticAuthorityVerifier.sol",
+          "bytes": 963,
+          "sha256": "d924648e48b8613c1e980f97605728e34ea6bff05bd6369c32271c0caaee8368"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2ConfirmationTargetV1.sol",
+          "bytes": 5514,
+          "sha256": "3c24c24eefdb56488ae392b0e3ae466b75c51200a08c045d7c0a93d7c80287ff"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+          "bytes": 52011,
+          "sha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9"
+        },
+        {
+          "source": "contracts/base/interfaces/IBaseCrossDomainMessenger.sol",
+          "bytes": 271,
+          "sha256": "e97f20c2f3f387fd2e0d2fb5d58359fb1557da1f7fd54e8d6d65398ef47e7fef"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationConsumer.sol",
+          "bytes": 383,
+          "sha256": "0c9909684124a0c44d259d1d8a45bad1bc52ec5dcd9e7c853b049c57829fc456"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationTypes.sol",
+          "bytes": 877,
+          "sha256": "480b9ffe134e642a5fbe9a85a6f0a614ea2cc46ad13e533490ca058b95d71ead"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilBaseProofInputHashMirror.sol",
+          "bytes": 291,
+          "sha256": "ab356c5065d453f90212e077a741c269d43bf058a545a07afdfe4ee46143fc30"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+          "bytes": 304,
+          "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCrossDomainMessenger.sol",
+          "bytes": 243,
+          "sha256": "3b4d9a30897689ae9d87be11b791e77463aa88e16c8dcbf7291b7560d71361b3"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilL1ProofInputHashAnchor.sol",
+          "bytes": 205,
+          "sha256": "ee6f17687d80c6438f96c5e5b08c05989badc13853d2cd76d92746ed25013ac9"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilUnlockProofVerifier.sol",
+          "bytes": 868,
+          "sha256": "244839f1c2d62dea04107cfb9fabf7d6c9304c1ca635fbf2152d3107697f6a26"
+        },
+        {
+          "source": "contracts/base/mocks/MockBaseCrossDomainMessenger.sol",
+          "bytes": 1128,
+          "sha256": "f89527980d73adee3575262757285233d708af95d994b13e281d0ca6c8448e6b"
+        },
+        {
+          "source": "contracts/base/mocks/MockPhilCrossDomainMessenger.sol",
+          "bytes": 870,
+          "sha256": "318732e2e72a3c993ccd03a420c75427705d886606a2cb6c57d7104532a97306"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAdversarialAuthorizationConsumer.sol",
+          "bytes": 3823,
+          "sha256": "3bf10b9a5bf451f864bc3c4b2674a34c1581230c40346b420c9b5b5c028c302a"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAuthorizationConsumerMock.sol",
+          "bytes": 982,
+          "sha256": "a7601c8d0ad1c6958cfcab08dd8c010cbe149566ce20bfdf4fcca97692511d90"
+        },
+        {
+          "source": "contracts/base/mocks/PhilHashHarness.sol",
+          "bytes": 2604,
+          "sha256": "451ec1909f761708e5742cdb52abb8136ea7a0df84d5c044d1d8219c9e33c91c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilSmartAccountExecutionTarget.sol",
+          "bytes": 564,
+          "sha256": "d372dd8657a9f21cc7228bc5bb79e64b98c7e9baf9f636597b5d85b925ad323c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilV1Step6BLocalEntryPointHarness.sol",
+          "bytes": 2304,
+          "sha256": "7c8ea0958526553d7c8d1ed08f79c5a0c1314556b8cd0680cf931e3176711316"
+        },
+        {
+          "source": "contracts/base/PhilAuthorizationHashing.sol",
+          "bytes": 3837,
+          "sha256": "64673f56d877c376a24df255d9515f7ef6051ac5cb049c86b264a0d2a7c5d40f"
+        },
+        {
+          "source": "contracts/base/PhilBaseActionGate.sol",
+          "bytes": 4897,
+          "sha256": "a86b2e359804304d6d56c85dcf4a652c66a6d1dc2a974ef3a18908d03400cc2d"
+        },
+        {
+          "source": "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+          "bytes": 2582,
+          "sha256": "f33d4eac94b8feed3e3278a1012b64097cffdd323b90f5d20e812c9475a9ad38"
+        },
+        {
+          "source": "contracts/base/PhilBaseProofInputHashMirror.sol",
+          "bytes": 1900,
+          "sha256": "840cc1ef22079245c333f44ae73762bcfa5d731432c636fe59a51b753d3689cf"
+        },
+        {
+          "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+          "bytes": 1752,
+          "sha256": "708776ba0e3482eaa4480544ead7fc574332f4a9eacf9c96f203d1dc5b71d6fe"
+        },
+        {
+          "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+          "bytes": 2186,
+          "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+        },
+        {
+          "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+          "bytes": 2572,
+          "sha256": "c9030ea2eac8fcc530b093b4236cc1314a701a0c67adbb7dd16aba8a121514e9"
+        },
+        {
+          "source": "contracts/base/PhilMintPassConsumer.sol",
+          "bytes": 4168,
+          "sha256": "04f24602eb7b463b80935cc643662230311dbf9f829908b0df29df4d31412fff"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 4916,
+          "sha256": "d7fcea5137ff525d6398967cf861a8a4e724c92faa1580efac78594ac29655cf"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+          "bytes": 1971,
+          "sha256": "9ff16c00cfad5b1356ac8e447dcba3207d3d6bbbcbf3f7e1224df2327ea2933d"
+        },
+        {
+          "source": "contracts/base/PhilUnlockConsumer.sol",
+          "bytes": 2614,
+          "sha256": "5cf96fe010de9ea846e4ea431144d8ece60c29574171218e25007468fc8fb60d"
+        },
+        {
+          "source": "contracts/l1/interfaces/IStarknetMessaging.sol",
+          "bytes": 202,
+          "sha256": "28976fb8c0212ffa3703fff22cfece5be1d7202104452ce2697066f6245f8452"
+        },
+        {
+          "source": "contracts/l1/mocks/MockStarknetMessaging.sol",
+          "bytes": 1658,
+          "sha256": "c806b39d56bc99e63451c3e7893300b7b51a0dffcb8bf93e84d336b27387df01"
+        },
+        {
+          "source": "contracts/l1/PhilBaseCrossDomainMessengerAdapter.sol",
+          "bytes": 1100,
+          "sha256": "bd8b128891471fa0e3d585bdf7ea98396e164b366026ca3ddb02f06f7d016d31"
+        },
+        {
+          "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+          "bytes": 1467,
+          "sha256": "c7e6e3d998699195d744e3a7d7499bb5c3ce8603153e8264446fe71a4b62ba3c"
+        },
+        {
+          "source": "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol",
+          "bytes": 1732,
+          "sha256": "73528fcdde514d7dd3877fbde480571c691a4b4d406a1d6677b8be092e608878"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2ConfirmationTargetTestMocks.sol",
+          "bytes": 4983,
+          "sha256": "00c7b78d188676898b47e343d636b0e7a28bbd0041e38bf5700f77582e500aec"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2MinimalAccountTestMocks.sol",
+          "bytes": 2978,
+          "sha256": "11b6fbf0c2833822dee34de5cbf016e57150c80e3053210d64647838263a2665"
+        }
+      ]
+    },
+    {
+      "artifact": "artifacts/@account-abstraction/contracts/core/SenderCreator.sol/SenderCreator.json",
+      "creationCodeBytes": 359,
+      "creationCodeHash": "0x406c2dc3ebec5b6831769268a8df338b0dbd5b52281ff7d5d462aa06e5a859c2",
+      "runtimeCodeBytes": 333,
+      "runtimeCodeHash": "0x765c2e0998eaa648f44f0fd8d40828814dac666e610457adcb1c530b2ff2252c",
+      "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+      "sourceSha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3",
+      "buildInfoSha256": "d4c8f6c931d9721e97a3ec0c8e7043ebb6b86cca8bdf8bcd5480e7951a28a0aa",
+      "compilerInputSources": [
+        {
+          "source": "@account-abstraction/contracts/core/BaseAccount.sol",
+          "bytes": 4741,
+          "sha256": "d48e2cd1ccc779369ddf08716e0099133c703a4c52f52f0594c1220cb64fadc0"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+          "bytes": 31135,
+          "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/Helpers.sol",
+          "bytes": 3359,
+          "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/NonceManager.sol",
+          "bytes": 1425,
+          "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+          "bytes": 1232,
+          "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/StakeManager.sol",
+          "bytes": 5150,
+          "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/UserOperationLib.sol",
+          "bytes": 4997,
+          "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccount.sol",
+          "bytes": 2604,
+          "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+          "bytes": 710,
+          "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+          "bytes": 1871,
+          "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+          "bytes": 9185,
+          "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/INonceManager.sol",
+          "bytes": 1112,
+          "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IPaymaster.sol",
+          "bytes": 3300,
+          "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IStakeManager.sol",
+          "bytes": 3616,
+          "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+          "bytes": 1469,
+          "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+        },
+        {
+          "source": "@account-abstraction/contracts/utils/Exec.sol",
+          "bytes": 2043,
+          "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Base64.sol",
+          "bytes": 10656,
+          "sha256": "1c143572893f50f04fe8e507d89f9997cd3242102ba4200c8de0803ecbaf8cec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "bytes": 14737,
+          "sha256": "3ce9120a27934c75a074cb785d3a88868069ef6529dbe4dc6b845af0836f3c70"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Create2.sol",
+          "bytes": 4372,
+          "sha256": "9623aa59745a23a72f313adc5adbf583968bf366a7cbf3fc43c1148d7d2c3c86"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+          "bytes": 12152,
+          "sha256": "ba7c2d314fcd61c9783e0b3f0c664d004b76b408fda6a84edc8267d17c5012d6"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+          "bytes": 8631,
+          "sha256": "538a0d7c4f0ec5a8562f58561890f7b49d14580674ecf58bc5f505b45c73df65"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/P256.sol",
+          "bytes": 19341,
+          "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Errors.sol",
+          "bytes": 896,
+          "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "bytes": 879,
+          "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "bytes": 871,
+          "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/LowLevelCall.sol",
+          "bytes": 5547,
+          "sha256": "e128cbe9c6c406d5a42c26e4079c0a95b369ce552f2d0c3dfd2fcb836c5708f2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "bytes": 32664,
+          "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "bytes": 34940,
+          "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "bytes": 2613,
+          "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "bytes": 1973,
+          "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+          "bytes": 4766,
+          "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/StorageSlot.sol",
+          "bytes": 4182,
+          "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "bytes": 21538,
+          "sha256": "e318709bbe73a7831d64c1351e8bdc43780b245f25191234e361e6ab9b98c67b"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 362,
+          "sha256": "a5d1d83b78f767abe9be1bb360a14aba36885bbacf2c2f4ebbcdf92eb8249a19"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 194,
+          "sha256": "4ff303c1b36661468302c3fff0ef1da2da2baa1f1f0c0283117312232096f466"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+          "bytes": 20626,
+          "sha256": "f0981e45d10453c3b81eff43a1aad0aa8a4b7ad584ebc7f557b269e8d10fbed4"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+          "bytes": 3787,
+          "sha256": "f4845a1a5cd76f054013ac566c2b801972ca673e6d67ac1823056377544f55ac"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+          "bytes": 2896,
+          "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+          "bytes": 7119,
+          "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 2291,
+          "sha256": "6fc51e8bd32d3a2c4b7fd011dd093f404ddba9b7b5e54fe281482d40b0958553"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+          "bytes": 3776,
+          "sha256": "98b53cc400d040a3df9774902329aa3a057edf03a0d2d2d80d7d039039078406"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6BLocalAccount.sol",
+          "bytes": 21459,
+          "sha256": "3bd20a05efcb2d552d767267822210bedf04a6661eca18c6dba11fad50ca174c"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+          "bytes": 36158,
+          "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+          "bytes": 931,
+          "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+        },
+        {
+          "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+          "bytes": 971,
+          "sha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2MinimalAccountV2.sol",
+          "bytes": 5545,
+          "sha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2StaticAuthorityVerifier.sol",
+          "bytes": 963,
+          "sha256": "d924648e48b8613c1e980f97605728e34ea6bff05bd6369c32271c0caaee8368"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2ConfirmationTargetV1.sol",
+          "bytes": 5514,
+          "sha256": "3c24c24eefdb56488ae392b0e3ae466b75c51200a08c045d7c0a93d7c80287ff"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+          "bytes": 52011,
+          "sha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9"
+        },
+        {
+          "source": "contracts/base/interfaces/IBaseCrossDomainMessenger.sol",
+          "bytes": 271,
+          "sha256": "e97f20c2f3f387fd2e0d2fb5d58359fb1557da1f7fd54e8d6d65398ef47e7fef"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationConsumer.sol",
+          "bytes": 383,
+          "sha256": "0c9909684124a0c44d259d1d8a45bad1bc52ec5dcd9e7c853b049c57829fc456"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationTypes.sol",
+          "bytes": 877,
+          "sha256": "480b9ffe134e642a5fbe9a85a6f0a614ea2cc46ad13e533490ca058b95d71ead"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilBaseProofInputHashMirror.sol",
+          "bytes": 291,
+          "sha256": "ab356c5065d453f90212e077a741c269d43bf058a545a07afdfe4ee46143fc30"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+          "bytes": 304,
+          "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCrossDomainMessenger.sol",
+          "bytes": 243,
+          "sha256": "3b4d9a30897689ae9d87be11b791e77463aa88e16c8dcbf7291b7560d71361b3"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilL1ProofInputHashAnchor.sol",
+          "bytes": 205,
+          "sha256": "ee6f17687d80c6438f96c5e5b08c05989badc13853d2cd76d92746ed25013ac9"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilUnlockProofVerifier.sol",
+          "bytes": 868,
+          "sha256": "244839f1c2d62dea04107cfb9fabf7d6c9304c1ca635fbf2152d3107697f6a26"
+        },
+        {
+          "source": "contracts/base/mocks/MockBaseCrossDomainMessenger.sol",
+          "bytes": 1128,
+          "sha256": "f89527980d73adee3575262757285233d708af95d994b13e281d0ca6c8448e6b"
+        },
+        {
+          "source": "contracts/base/mocks/MockPhilCrossDomainMessenger.sol",
+          "bytes": 870,
+          "sha256": "318732e2e72a3c993ccd03a420c75427705d886606a2cb6c57d7104532a97306"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAdversarialAuthorizationConsumer.sol",
+          "bytes": 3823,
+          "sha256": "3bf10b9a5bf451f864bc3c4b2674a34c1581230c40346b420c9b5b5c028c302a"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAuthorizationConsumerMock.sol",
+          "bytes": 982,
+          "sha256": "a7601c8d0ad1c6958cfcab08dd8c010cbe149566ce20bfdf4fcca97692511d90"
+        },
+        {
+          "source": "contracts/base/mocks/PhilHashHarness.sol",
+          "bytes": 2604,
+          "sha256": "451ec1909f761708e5742cdb52abb8136ea7a0df84d5c044d1d8219c9e33c91c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilSmartAccountExecutionTarget.sol",
+          "bytes": 564,
+          "sha256": "d372dd8657a9f21cc7228bc5bb79e64b98c7e9baf9f636597b5d85b925ad323c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilV1Step6BLocalEntryPointHarness.sol",
+          "bytes": 2304,
+          "sha256": "7c8ea0958526553d7c8d1ed08f79c5a0c1314556b8cd0680cf931e3176711316"
+        },
+        {
+          "source": "contracts/base/PhilAuthorizationHashing.sol",
+          "bytes": 3837,
+          "sha256": "64673f56d877c376a24df255d9515f7ef6051ac5cb049c86b264a0d2a7c5d40f"
+        },
+        {
+          "source": "contracts/base/PhilBaseActionGate.sol",
+          "bytes": 4897,
+          "sha256": "a86b2e359804304d6d56c85dcf4a652c66a6d1dc2a974ef3a18908d03400cc2d"
+        },
+        {
+          "source": "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+          "bytes": 2582,
+          "sha256": "f33d4eac94b8feed3e3278a1012b64097cffdd323b90f5d20e812c9475a9ad38"
+        },
+        {
+          "source": "contracts/base/PhilBaseProofInputHashMirror.sol",
+          "bytes": 1900,
+          "sha256": "840cc1ef22079245c333f44ae73762bcfa5d731432c636fe59a51b753d3689cf"
+        },
+        {
+          "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+          "bytes": 1752,
+          "sha256": "708776ba0e3482eaa4480544ead7fc574332f4a9eacf9c96f203d1dc5b71d6fe"
+        },
+        {
+          "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+          "bytes": 2186,
+          "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+        },
+        {
+          "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+          "bytes": 2572,
+          "sha256": "c9030ea2eac8fcc530b093b4236cc1314a701a0c67adbb7dd16aba8a121514e9"
+        },
+        {
+          "source": "contracts/base/PhilMintPassConsumer.sol",
+          "bytes": 4168,
+          "sha256": "04f24602eb7b463b80935cc643662230311dbf9f829908b0df29df4d31412fff"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 4916,
+          "sha256": "d7fcea5137ff525d6398967cf861a8a4e724c92faa1580efac78594ac29655cf"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+          "bytes": 1971,
+          "sha256": "9ff16c00cfad5b1356ac8e447dcba3207d3d6bbbcbf3f7e1224df2327ea2933d"
+        },
+        {
+          "source": "contracts/base/PhilUnlockConsumer.sol",
+          "bytes": 2614,
+          "sha256": "5cf96fe010de9ea846e4ea431144d8ece60c29574171218e25007468fc8fb60d"
+        },
+        {
+          "source": "contracts/l1/interfaces/IStarknetMessaging.sol",
+          "bytes": 202,
+          "sha256": "28976fb8c0212ffa3703fff22cfece5be1d7202104452ce2697066f6245f8452"
+        },
+        {
+          "source": "contracts/l1/mocks/MockStarknetMessaging.sol",
+          "bytes": 1658,
+          "sha256": "c806b39d56bc99e63451c3e7893300b7b51a0dffcb8bf93e84d336b27387df01"
+        },
+        {
+          "source": "contracts/l1/PhilBaseCrossDomainMessengerAdapter.sol",
+          "bytes": 1100,
+          "sha256": "bd8b128891471fa0e3d585bdf7ea98396e164b366026ca3ddb02f06f7d016d31"
+        },
+        {
+          "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+          "bytes": 1467,
+          "sha256": "c7e6e3d998699195d744e3a7d7499bb5c3ce8603153e8264446fe71a4b62ba3c"
+        },
+        {
+          "source": "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol",
+          "bytes": 1732,
+          "sha256": "73528fcdde514d7dd3877fbde480571c691a4b4d406a1d6677b8be092e608878"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2ConfirmationTargetTestMocks.sol",
+          "bytes": 4983,
+          "sha256": "00c7b78d188676898b47e343d636b0e7a28bbd0041e38bf5700f77582e500aec"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2MinimalAccountTestMocks.sol",
+          "bytes": 2978,
+          "sha256": "11b6fbf0c2833822dee34de5cbf016e57150c80e3053210d64647838263a2665"
+        }
+      ]
+    },
+    {
+      "artifact": "artifacts/contracts/base/erc4337/PhilV1Step6CAccount.sol/PhilV1Step6CAccount.json",
+      "creationCodeBytes": 24769,
+      "creationCodeHash": "0x995e3f82bdfbcfc490424603f70d2d91b3fa7d1984b5578c113f2aed3303064e",
+      "runtimeCodeBytes": 19767,
+      "runtimeCodeHash": "0x430d4ee62e08e7df513c764beb5a0154dae619609bf36a09cf8717923bc33e42",
+      "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+      "sourceSha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b",
+      "buildInfoSha256": "d4c8f6c931d9721e97a3ec0c8e7043ebb6b86cca8bdf8bcd5480e7951a28a0aa",
+      "compilerInputSources": [
+        {
+          "source": "@account-abstraction/contracts/core/BaseAccount.sol",
+          "bytes": 4741,
+          "sha256": "d48e2cd1ccc779369ddf08716e0099133c703a4c52f52f0594c1220cb64fadc0"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+          "bytes": 31135,
+          "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/Helpers.sol",
+          "bytes": 3359,
+          "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/NonceManager.sol",
+          "bytes": 1425,
+          "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+          "bytes": 1232,
+          "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/StakeManager.sol",
+          "bytes": 5150,
+          "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/UserOperationLib.sol",
+          "bytes": 4997,
+          "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccount.sol",
+          "bytes": 2604,
+          "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+          "bytes": 710,
+          "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+          "bytes": 1871,
+          "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+          "bytes": 9185,
+          "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/INonceManager.sol",
+          "bytes": 1112,
+          "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IPaymaster.sol",
+          "bytes": 3300,
+          "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IStakeManager.sol",
+          "bytes": 3616,
+          "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+          "bytes": 1469,
+          "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+        },
+        {
+          "source": "@account-abstraction/contracts/utils/Exec.sol",
+          "bytes": 2043,
+          "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Base64.sol",
+          "bytes": 10656,
+          "sha256": "1c143572893f50f04fe8e507d89f9997cd3242102ba4200c8de0803ecbaf8cec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "bytes": 14737,
+          "sha256": "3ce9120a27934c75a074cb785d3a88868069ef6529dbe4dc6b845af0836f3c70"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Create2.sol",
+          "bytes": 4372,
+          "sha256": "9623aa59745a23a72f313adc5adbf583968bf366a7cbf3fc43c1148d7d2c3c86"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+          "bytes": 12152,
+          "sha256": "ba7c2d314fcd61c9783e0b3f0c664d004b76b408fda6a84edc8267d17c5012d6"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+          "bytes": 8631,
+          "sha256": "538a0d7c4f0ec5a8562f58561890f7b49d14580674ecf58bc5f505b45c73df65"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/P256.sol",
+          "bytes": 19341,
+          "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Errors.sol",
+          "bytes": 896,
+          "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "bytes": 879,
+          "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "bytes": 871,
+          "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/LowLevelCall.sol",
+          "bytes": 5547,
+          "sha256": "e128cbe9c6c406d5a42c26e4079c0a95b369ce552f2d0c3dfd2fcb836c5708f2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "bytes": 32664,
+          "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "bytes": 34940,
+          "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "bytes": 2613,
+          "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "bytes": 1973,
+          "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+          "bytes": 4766,
+          "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/StorageSlot.sol",
+          "bytes": 4182,
+          "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "bytes": 21538,
+          "sha256": "e318709bbe73a7831d64c1351e8bdc43780b245f25191234e361e6ab9b98c67b"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 362,
+          "sha256": "a5d1d83b78f767abe9be1bb360a14aba36885bbacf2c2f4ebbcdf92eb8249a19"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 194,
+          "sha256": "4ff303c1b36661468302c3fff0ef1da2da2baa1f1f0c0283117312232096f466"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+          "bytes": 20626,
+          "sha256": "f0981e45d10453c3b81eff43a1aad0aa8a4b7ad584ebc7f557b269e8d10fbed4"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+          "bytes": 3787,
+          "sha256": "f4845a1a5cd76f054013ac566c2b801972ca673e6d67ac1823056377544f55ac"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+          "bytes": 2896,
+          "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+          "bytes": 7119,
+          "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 2291,
+          "sha256": "6fc51e8bd32d3a2c4b7fd011dd093f404ddba9b7b5e54fe281482d40b0958553"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+          "bytes": 3776,
+          "sha256": "98b53cc400d040a3df9774902329aa3a057edf03a0d2d2d80d7d039039078406"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6BLocalAccount.sol",
+          "bytes": 21459,
+          "sha256": "3bd20a05efcb2d552d767267822210bedf04a6661eca18c6dba11fad50ca174c"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+          "bytes": 36158,
+          "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+          "bytes": 931,
+          "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+        },
+        {
+          "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+          "bytes": 971,
+          "sha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2MinimalAccountV2.sol",
+          "bytes": 5545,
+          "sha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2StaticAuthorityVerifier.sol",
+          "bytes": 963,
+          "sha256": "d924648e48b8613c1e980f97605728e34ea6bff05bd6369c32271c0caaee8368"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2ConfirmationTargetV1.sol",
+          "bytes": 5514,
+          "sha256": "3c24c24eefdb56488ae392b0e3ae466b75c51200a08c045d7c0a93d7c80287ff"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+          "bytes": 52011,
+          "sha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9"
+        },
+        {
+          "source": "contracts/base/interfaces/IBaseCrossDomainMessenger.sol",
+          "bytes": 271,
+          "sha256": "e97f20c2f3f387fd2e0d2fb5d58359fb1557da1f7fd54e8d6d65398ef47e7fef"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationConsumer.sol",
+          "bytes": 383,
+          "sha256": "0c9909684124a0c44d259d1d8a45bad1bc52ec5dcd9e7c853b049c57829fc456"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationTypes.sol",
+          "bytes": 877,
+          "sha256": "480b9ffe134e642a5fbe9a85a6f0a614ea2cc46ad13e533490ca058b95d71ead"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilBaseProofInputHashMirror.sol",
+          "bytes": 291,
+          "sha256": "ab356c5065d453f90212e077a741c269d43bf058a545a07afdfe4ee46143fc30"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+          "bytes": 304,
+          "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCrossDomainMessenger.sol",
+          "bytes": 243,
+          "sha256": "3b4d9a30897689ae9d87be11b791e77463aa88e16c8dcbf7291b7560d71361b3"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilL1ProofInputHashAnchor.sol",
+          "bytes": 205,
+          "sha256": "ee6f17687d80c6438f96c5e5b08c05989badc13853d2cd76d92746ed25013ac9"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilUnlockProofVerifier.sol",
+          "bytes": 868,
+          "sha256": "244839f1c2d62dea04107cfb9fabf7d6c9304c1ca635fbf2152d3107697f6a26"
+        },
+        {
+          "source": "contracts/base/mocks/MockBaseCrossDomainMessenger.sol",
+          "bytes": 1128,
+          "sha256": "f89527980d73adee3575262757285233d708af95d994b13e281d0ca6c8448e6b"
+        },
+        {
+          "source": "contracts/base/mocks/MockPhilCrossDomainMessenger.sol",
+          "bytes": 870,
+          "sha256": "318732e2e72a3c993ccd03a420c75427705d886606a2cb6c57d7104532a97306"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAdversarialAuthorizationConsumer.sol",
+          "bytes": 3823,
+          "sha256": "3bf10b9a5bf451f864bc3c4b2674a34c1581230c40346b420c9b5b5c028c302a"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAuthorizationConsumerMock.sol",
+          "bytes": 982,
+          "sha256": "a7601c8d0ad1c6958cfcab08dd8c010cbe149566ce20bfdf4fcca97692511d90"
+        },
+        {
+          "source": "contracts/base/mocks/PhilHashHarness.sol",
+          "bytes": 2604,
+          "sha256": "451ec1909f761708e5742cdb52abb8136ea7a0df84d5c044d1d8219c9e33c91c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilSmartAccountExecutionTarget.sol",
+          "bytes": 564,
+          "sha256": "d372dd8657a9f21cc7228bc5bb79e64b98c7e9baf9f636597b5d85b925ad323c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilV1Step6BLocalEntryPointHarness.sol",
+          "bytes": 2304,
+          "sha256": "7c8ea0958526553d7c8d1ed08f79c5a0c1314556b8cd0680cf931e3176711316"
+        },
+        {
+          "source": "contracts/base/PhilAuthorizationHashing.sol",
+          "bytes": 3837,
+          "sha256": "64673f56d877c376a24df255d9515f7ef6051ac5cb049c86b264a0d2a7c5d40f"
+        },
+        {
+          "source": "contracts/base/PhilBaseActionGate.sol",
+          "bytes": 4897,
+          "sha256": "a86b2e359804304d6d56c85dcf4a652c66a6d1dc2a974ef3a18908d03400cc2d"
+        },
+        {
+          "source": "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+          "bytes": 2582,
+          "sha256": "f33d4eac94b8feed3e3278a1012b64097cffdd323b90f5d20e812c9475a9ad38"
+        },
+        {
+          "source": "contracts/base/PhilBaseProofInputHashMirror.sol",
+          "bytes": 1900,
+          "sha256": "840cc1ef22079245c333f44ae73762bcfa5d731432c636fe59a51b753d3689cf"
+        },
+        {
+          "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+          "bytes": 1752,
+          "sha256": "708776ba0e3482eaa4480544ead7fc574332f4a9eacf9c96f203d1dc5b71d6fe"
+        },
+        {
+          "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+          "bytes": 2186,
+          "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+        },
+        {
+          "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+          "bytes": 2572,
+          "sha256": "c9030ea2eac8fcc530b093b4236cc1314a701a0c67adbb7dd16aba8a121514e9"
+        },
+        {
+          "source": "contracts/base/PhilMintPassConsumer.sol",
+          "bytes": 4168,
+          "sha256": "04f24602eb7b463b80935cc643662230311dbf9f829908b0df29df4d31412fff"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 4916,
+          "sha256": "d7fcea5137ff525d6398967cf861a8a4e724c92faa1580efac78594ac29655cf"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+          "bytes": 1971,
+          "sha256": "9ff16c00cfad5b1356ac8e447dcba3207d3d6bbbcbf3f7e1224df2327ea2933d"
+        },
+        {
+          "source": "contracts/base/PhilUnlockConsumer.sol",
+          "bytes": 2614,
+          "sha256": "5cf96fe010de9ea846e4ea431144d8ece60c29574171218e25007468fc8fb60d"
+        },
+        {
+          "source": "contracts/l1/interfaces/IStarknetMessaging.sol",
+          "bytes": 202,
+          "sha256": "28976fb8c0212ffa3703fff22cfece5be1d7202104452ce2697066f6245f8452"
+        },
+        {
+          "source": "contracts/l1/mocks/MockStarknetMessaging.sol",
+          "bytes": 1658,
+          "sha256": "c806b39d56bc99e63451c3e7893300b7b51a0dffcb8bf93e84d336b27387df01"
+        },
+        {
+          "source": "contracts/l1/PhilBaseCrossDomainMessengerAdapter.sol",
+          "bytes": 1100,
+          "sha256": "bd8b128891471fa0e3d585bdf7ea98396e164b366026ca3ddb02f06f7d016d31"
+        },
+        {
+          "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+          "bytes": 1467,
+          "sha256": "c7e6e3d998699195d744e3a7d7499bb5c3ce8603153e8264446fe71a4b62ba3c"
+        },
+        {
+          "source": "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol",
+          "bytes": 1732,
+          "sha256": "73528fcdde514d7dd3877fbde480571c691a4b4d406a1d6677b8be092e608878"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2ConfirmationTargetTestMocks.sol",
+          "bytes": 4983,
+          "sha256": "00c7b78d188676898b47e343d636b0e7a28bbd0041e38bf5700f77582e500aec"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2MinimalAccountTestMocks.sol",
+          "bytes": 2978,
+          "sha256": "11b6fbf0c2833822dee34de5cbf016e57150c80e3053210d64647838263a2665"
+        }
+      ]
+    },
+    {
+      "artifact": "artifacts/contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol/PhilV1Step6CHarmlessTarget.json",
+      "creationCodeBytes": 436,
+      "creationCodeHash": "0xc09b83b9ee972c53f07bd5d21a223bb8021d8d43d7636d5393f94d4d7be59d62",
+      "runtimeCodeBytes": 410,
+      "runtimeCodeHash": "0x5b4eb2633a217ce3bf69eb67ed94a41a559a92920d00ea47193702eee75c2e84",
+      "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+      "sourceSha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21",
+      "buildInfoSha256": "d4c8f6c931d9721e97a3ec0c8e7043ebb6b86cca8bdf8bcd5480e7951a28a0aa",
+      "compilerInputSources": [
+        {
+          "source": "@account-abstraction/contracts/core/BaseAccount.sol",
+          "bytes": 4741,
+          "sha256": "d48e2cd1ccc779369ddf08716e0099133c703a4c52f52f0594c1220cb64fadc0"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+          "bytes": 31135,
+          "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/Helpers.sol",
+          "bytes": 3359,
+          "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/NonceManager.sol",
+          "bytes": 1425,
+          "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+          "bytes": 1232,
+          "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/StakeManager.sol",
+          "bytes": 5150,
+          "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/UserOperationLib.sol",
+          "bytes": 4997,
+          "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccount.sol",
+          "bytes": 2604,
+          "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+          "bytes": 710,
+          "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+          "bytes": 1871,
+          "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+          "bytes": 9185,
+          "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/INonceManager.sol",
+          "bytes": 1112,
+          "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IPaymaster.sol",
+          "bytes": 3300,
+          "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IStakeManager.sol",
+          "bytes": 3616,
+          "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+          "bytes": 1469,
+          "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+        },
+        {
+          "source": "@account-abstraction/contracts/utils/Exec.sol",
+          "bytes": 2043,
+          "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Base64.sol",
+          "bytes": 10656,
+          "sha256": "1c143572893f50f04fe8e507d89f9997cd3242102ba4200c8de0803ecbaf8cec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "bytes": 14737,
+          "sha256": "3ce9120a27934c75a074cb785d3a88868069ef6529dbe4dc6b845af0836f3c70"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Create2.sol",
+          "bytes": 4372,
+          "sha256": "9623aa59745a23a72f313adc5adbf583968bf366a7cbf3fc43c1148d7d2c3c86"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+          "bytes": 12152,
+          "sha256": "ba7c2d314fcd61c9783e0b3f0c664d004b76b408fda6a84edc8267d17c5012d6"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+          "bytes": 8631,
+          "sha256": "538a0d7c4f0ec5a8562f58561890f7b49d14580674ecf58bc5f505b45c73df65"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/P256.sol",
+          "bytes": 19341,
+          "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Errors.sol",
+          "bytes": 896,
+          "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "bytes": 879,
+          "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "bytes": 871,
+          "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/LowLevelCall.sol",
+          "bytes": 5547,
+          "sha256": "e128cbe9c6c406d5a42c26e4079c0a95b369ce552f2d0c3dfd2fcb836c5708f2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "bytes": 32664,
+          "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "bytes": 34940,
+          "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "bytes": 2613,
+          "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "bytes": 1973,
+          "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+          "bytes": 4766,
+          "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/StorageSlot.sol",
+          "bytes": 4182,
+          "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "bytes": 21538,
+          "sha256": "e318709bbe73a7831d64c1351e8bdc43780b245f25191234e361e6ab9b98c67b"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 362,
+          "sha256": "a5d1d83b78f767abe9be1bb360a14aba36885bbacf2c2f4ebbcdf92eb8249a19"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 194,
+          "sha256": "4ff303c1b36661468302c3fff0ef1da2da2baa1f1f0c0283117312232096f466"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+          "bytes": 20626,
+          "sha256": "f0981e45d10453c3b81eff43a1aad0aa8a4b7ad584ebc7f557b269e8d10fbed4"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+          "bytes": 3787,
+          "sha256": "f4845a1a5cd76f054013ac566c2b801972ca673e6d67ac1823056377544f55ac"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+          "bytes": 2896,
+          "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+          "bytes": 7119,
+          "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 2291,
+          "sha256": "6fc51e8bd32d3a2c4b7fd011dd093f404ddba9b7b5e54fe281482d40b0958553"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+          "bytes": 3776,
+          "sha256": "98b53cc400d040a3df9774902329aa3a057edf03a0d2d2d80d7d039039078406"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6BLocalAccount.sol",
+          "bytes": 21459,
+          "sha256": "3bd20a05efcb2d552d767267822210bedf04a6661eca18c6dba11fad50ca174c"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+          "bytes": 36158,
+          "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+          "bytes": 931,
+          "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+        },
+        {
+          "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+          "bytes": 971,
+          "sha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2MinimalAccountV2.sol",
+          "bytes": 5545,
+          "sha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2StaticAuthorityVerifier.sol",
+          "bytes": 963,
+          "sha256": "d924648e48b8613c1e980f97605728e34ea6bff05bd6369c32271c0caaee8368"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2ConfirmationTargetV1.sol",
+          "bytes": 5514,
+          "sha256": "3c24c24eefdb56488ae392b0e3ae466b75c51200a08c045d7c0a93d7c80287ff"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+          "bytes": 52011,
+          "sha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9"
+        },
+        {
+          "source": "contracts/base/interfaces/IBaseCrossDomainMessenger.sol",
+          "bytes": 271,
+          "sha256": "e97f20c2f3f387fd2e0d2fb5d58359fb1557da1f7fd54e8d6d65398ef47e7fef"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationConsumer.sol",
+          "bytes": 383,
+          "sha256": "0c9909684124a0c44d259d1d8a45bad1bc52ec5dcd9e7c853b049c57829fc456"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationTypes.sol",
+          "bytes": 877,
+          "sha256": "480b9ffe134e642a5fbe9a85a6f0a614ea2cc46ad13e533490ca058b95d71ead"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilBaseProofInputHashMirror.sol",
+          "bytes": 291,
+          "sha256": "ab356c5065d453f90212e077a741c269d43bf058a545a07afdfe4ee46143fc30"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+          "bytes": 304,
+          "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCrossDomainMessenger.sol",
+          "bytes": 243,
+          "sha256": "3b4d9a30897689ae9d87be11b791e77463aa88e16c8dcbf7291b7560d71361b3"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilL1ProofInputHashAnchor.sol",
+          "bytes": 205,
+          "sha256": "ee6f17687d80c6438f96c5e5b08c05989badc13853d2cd76d92746ed25013ac9"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilUnlockProofVerifier.sol",
+          "bytes": 868,
+          "sha256": "244839f1c2d62dea04107cfb9fabf7d6c9304c1ca635fbf2152d3107697f6a26"
+        },
+        {
+          "source": "contracts/base/mocks/MockBaseCrossDomainMessenger.sol",
+          "bytes": 1128,
+          "sha256": "f89527980d73adee3575262757285233d708af95d994b13e281d0ca6c8448e6b"
+        },
+        {
+          "source": "contracts/base/mocks/MockPhilCrossDomainMessenger.sol",
+          "bytes": 870,
+          "sha256": "318732e2e72a3c993ccd03a420c75427705d886606a2cb6c57d7104532a97306"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAdversarialAuthorizationConsumer.sol",
+          "bytes": 3823,
+          "sha256": "3bf10b9a5bf451f864bc3c4b2674a34c1581230c40346b420c9b5b5c028c302a"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAuthorizationConsumerMock.sol",
+          "bytes": 982,
+          "sha256": "a7601c8d0ad1c6958cfcab08dd8c010cbe149566ce20bfdf4fcca97692511d90"
+        },
+        {
+          "source": "contracts/base/mocks/PhilHashHarness.sol",
+          "bytes": 2604,
+          "sha256": "451ec1909f761708e5742cdb52abb8136ea7a0df84d5c044d1d8219c9e33c91c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilSmartAccountExecutionTarget.sol",
+          "bytes": 564,
+          "sha256": "d372dd8657a9f21cc7228bc5bb79e64b98c7e9baf9f636597b5d85b925ad323c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilV1Step6BLocalEntryPointHarness.sol",
+          "bytes": 2304,
+          "sha256": "7c8ea0958526553d7c8d1ed08f79c5a0c1314556b8cd0680cf931e3176711316"
+        },
+        {
+          "source": "contracts/base/PhilAuthorizationHashing.sol",
+          "bytes": 3837,
+          "sha256": "64673f56d877c376a24df255d9515f7ef6051ac5cb049c86b264a0d2a7c5d40f"
+        },
+        {
+          "source": "contracts/base/PhilBaseActionGate.sol",
+          "bytes": 4897,
+          "sha256": "a86b2e359804304d6d56c85dcf4a652c66a6d1dc2a974ef3a18908d03400cc2d"
+        },
+        {
+          "source": "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+          "bytes": 2582,
+          "sha256": "f33d4eac94b8feed3e3278a1012b64097cffdd323b90f5d20e812c9475a9ad38"
+        },
+        {
+          "source": "contracts/base/PhilBaseProofInputHashMirror.sol",
+          "bytes": 1900,
+          "sha256": "840cc1ef22079245c333f44ae73762bcfa5d731432c636fe59a51b753d3689cf"
+        },
+        {
+          "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+          "bytes": 1752,
+          "sha256": "708776ba0e3482eaa4480544ead7fc574332f4a9eacf9c96f203d1dc5b71d6fe"
+        },
+        {
+          "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+          "bytes": 2186,
+          "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+        },
+        {
+          "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+          "bytes": 2572,
+          "sha256": "c9030ea2eac8fcc530b093b4236cc1314a701a0c67adbb7dd16aba8a121514e9"
+        },
+        {
+          "source": "contracts/base/PhilMintPassConsumer.sol",
+          "bytes": 4168,
+          "sha256": "04f24602eb7b463b80935cc643662230311dbf9f829908b0df29df4d31412fff"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 4916,
+          "sha256": "d7fcea5137ff525d6398967cf861a8a4e724c92faa1580efac78594ac29655cf"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+          "bytes": 1971,
+          "sha256": "9ff16c00cfad5b1356ac8e447dcba3207d3d6bbbcbf3f7e1224df2327ea2933d"
+        },
+        {
+          "source": "contracts/base/PhilUnlockConsumer.sol",
+          "bytes": 2614,
+          "sha256": "5cf96fe010de9ea846e4ea431144d8ece60c29574171218e25007468fc8fb60d"
+        },
+        {
+          "source": "contracts/l1/interfaces/IStarknetMessaging.sol",
+          "bytes": 202,
+          "sha256": "28976fb8c0212ffa3703fff22cfece5be1d7202104452ce2697066f6245f8452"
+        },
+        {
+          "source": "contracts/l1/mocks/MockStarknetMessaging.sol",
+          "bytes": 1658,
+          "sha256": "c806b39d56bc99e63451c3e7893300b7b51a0dffcb8bf93e84d336b27387df01"
+        },
+        {
+          "source": "contracts/l1/PhilBaseCrossDomainMessengerAdapter.sol",
+          "bytes": 1100,
+          "sha256": "bd8b128891471fa0e3d585bdf7ea98396e164b366026ca3ddb02f06f7d016d31"
+        },
+        {
+          "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+          "bytes": 1467,
+          "sha256": "c7e6e3d998699195d744e3a7d7499bb5c3ce8603153e8264446fe71a4b62ba3c"
+        },
+        {
+          "source": "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol",
+          "bytes": 1732,
+          "sha256": "73528fcdde514d7dd3877fbde480571c691a4b4d406a1d6677b8be092e608878"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2ConfirmationTargetTestMocks.sol",
+          "bytes": 4983,
+          "sha256": "00c7b78d188676898b47e343d636b0e7a28bbd0041e38bf5700f77582e500aec"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2MinimalAccountTestMocks.sol",
+          "bytes": 2978,
+          "sha256": "11b6fbf0c2833822dee34de5cbf016e57150c80e3053210d64647838263a2665"
+        }
+      ]
+    },
+    {
+      "artifact": "artifacts/contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol/PhilV1Step6CReentrantTarget.json",
+      "creationCodeBytes": 718,
+      "creationCodeHash": "0x35c9b5927f446b41b308a9fa1dc28960fb868ed014457f4f3737d70525ac30eb",
+      "runtimeCodeBytes": 692,
+      "runtimeCodeHash": "0x20983c4679c4264fd5712ad5fbc1da0a2b5abcd0238186086b34ef497c8a1566",
+      "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+      "sourceSha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962",
+      "buildInfoSha256": "d4c8f6c931d9721e97a3ec0c8e7043ebb6b86cca8bdf8bcd5480e7951a28a0aa",
+      "compilerInputSources": [
+        {
+          "source": "@account-abstraction/contracts/core/BaseAccount.sol",
+          "bytes": 4741,
+          "sha256": "d48e2cd1ccc779369ddf08716e0099133c703a4c52f52f0594c1220cb64fadc0"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/EntryPoint.sol",
+          "bytes": 31135,
+          "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/Helpers.sol",
+          "bytes": 3359,
+          "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/NonceManager.sol",
+          "bytes": 1425,
+          "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/SenderCreator.sol",
+          "bytes": 1232,
+          "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/StakeManager.sol",
+          "bytes": 5150,
+          "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+        },
+        {
+          "source": "@account-abstraction/contracts/core/UserOperationLib.sol",
+          "bytes": 4997,
+          "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccount.sol",
+          "bytes": 2604,
+          "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+          "bytes": 710,
+          "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+          "bytes": 1871,
+          "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+          "bytes": 9185,
+          "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/INonceManager.sol",
+          "bytes": 1112,
+          "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IPaymaster.sol",
+          "bytes": 3300,
+          "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/IStakeManager.sol",
+          "bytes": 3616,
+          "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+        },
+        {
+          "source": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+          "bytes": 1469,
+          "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+        },
+        {
+          "source": "@account-abstraction/contracts/utils/Exec.sol",
+          "bytes": 2043,
+          "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Base64.sol",
+          "bytes": 10656,
+          "sha256": "1c143572893f50f04fe8e507d89f9997cd3242102ba4200c8de0803ecbaf8cec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Bytes.sol",
+          "bytes": 14737,
+          "sha256": "3ce9120a27934c75a074cb785d3a88868069ef6529dbe4dc6b845af0836f3c70"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Create2.sol",
+          "bytes": 4372,
+          "sha256": "9623aa59745a23a72f313adc5adbf583968bf366a7cbf3fc43c1148d7d2c3c86"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+          "bytes": 12152,
+          "sha256": "ba7c2d314fcd61c9783e0b3f0c664d004b76b408fda6a84edc8267d17c5012d6"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
+          "bytes": 8631,
+          "sha256": "538a0d7c4f0ec5a8562f58561890f7b49d14580674ecf58bc5f505b45c73df65"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/cryptography/P256.sol",
+          "bytes": 19341,
+          "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Errors.sol",
+          "bytes": 896,
+          "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+          "bytes": 879,
+          "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+          "bytes": 871,
+          "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/LowLevelCall.sol",
+          "bytes": 5547,
+          "sha256": "e128cbe9c6c406d5a42c26e4079c0a95b369ce552f2d0c3dfd2fcb836c5708f2"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/Math.sol",
+          "bytes": 32664,
+          "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+          "bytes": 34940,
+          "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+          "bytes": 2613,
+          "sha256": "1ed50b1056af886752f0fb48a0165d381e69bb4a4b18b893b066dc144a7e08d7"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Panic.sol",
+          "bytes": 1973,
+          "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+          "bytes": 4766,
+          "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/StorageSlot.sol",
+          "bytes": 4182,
+          "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+        },
+        {
+          "source": "@openzeppelin/contracts/utils/Strings.sol",
+          "bytes": 21538,
+          "sha256": "e318709bbe73a7831d64c1351e8bdc43780b245f25191234e361e6ab9b98c67b"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 362,
+          "sha256": "a5d1d83b78f767abe9be1bb360a14aba36885bbacf2c2f4ebbcdf92eb8249a19"
+        },
+        {
+          "source": "contracts/base/erc4337/interfaces/IPhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 194,
+          "sha256": "4ff303c1b36661468302c3fff0ef1da2da2baa1f1f0c0283117312232096f466"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337Account.sol",
+          "bytes": 20626,
+          "sha256": "f0981e45d10453c3b81eff43a1aad0aa8a4b7ad584ebc7f557b269e8d10fbed4"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+          "bytes": 3787,
+          "sha256": "f4845a1a5cd76f054013ac566c2b801972ca673e6d67ac1823056377544f55ac"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+          "bytes": 2896,
+          "sha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+          "bytes": 7119,
+          "sha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+          "bytes": 2291,
+          "sha256": "6fc51e8bd32d3a2c4b7fd011dd093f404ddba9b7b5e54fe281482d40b0958553"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+          "bytes": 3776,
+          "sha256": "98b53cc400d040a3df9774902329aa3a057edf03a0d2d2d80d7d039039078406"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6BLocalAccount.sol",
+          "bytes": 21459,
+          "sha256": "3bd20a05efcb2d552d767267822210bedf04a6661eca18c6dba11fad50ca174c"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+          "bytes": 36158,
+          "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+        },
+        {
+          "source": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+          "bytes": 931,
+          "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+        },
+        {
+          "source": "contracts/base/erc4337/test/PhilV1Step6CReentrantTarget.sol",
+          "bytes": 971,
+          "sha256": "94c000b2585768ba8362f21f11aff34d3e6131c1510d3940a90dd7fd1fdff962"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2MinimalAccountV2.sol",
+          "bytes": 5545,
+          "sha256": "76153fc9794655ab298a4af2fc9e83ac0d4d69c15e793ee068a416c7017f43a9"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/IPhilCoreV2StaticAuthorityVerifier.sol",
+          "bytes": 963,
+          "sha256": "d924648e48b8613c1e980f97605728e34ea6bff05bd6369c32271c0caaee8368"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2ConfirmationTargetV1.sol",
+          "bytes": 5514,
+          "sha256": "3c24c24eefdb56488ae392b0e3ae466b75c51200a08c045d7c0a93d7c80287ff"
+        },
+        {
+          "source": "contracts/base/erc4337/v2/PhilCoreV2MinimalAccountV2.sol",
+          "bytes": 52011,
+          "sha256": "e5e855e8f41e8505b6640c1bf789745d358d9149855db2445a4376d92ddcc0b9"
+        },
+        {
+          "source": "contracts/base/interfaces/IBaseCrossDomainMessenger.sol",
+          "bytes": 271,
+          "sha256": "e97f20c2f3f387fd2e0d2fb5d58359fb1557da1f7fd54e8d6d65398ef47e7fef"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationConsumer.sol",
+          "bytes": 383,
+          "sha256": "0c9909684124a0c44d259d1d8a45bad1bc52ec5dcd9e7c853b049c57829fc456"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilAuthorizationTypes.sol",
+          "bytes": 877,
+          "sha256": "480b9ffe134e642a5fbe9a85a6f0a614ea2cc46ad13e533490ca058b95d71ead"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilBaseProofInputHashMirror.sol",
+          "bytes": 291,
+          "sha256": "ab356c5065d453f90212e077a741c269d43bf058a545a07afdfe4ee46143fc30"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCoreLocalProofAccountV1.sol",
+          "bytes": 304,
+          "sha256": "6f1560e64359e5ab1ae0d98d342dc61f1253bdf9afba9cb984853e1b6e935340"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilCrossDomainMessenger.sol",
+          "bytes": 243,
+          "sha256": "3b4d9a30897689ae9d87be11b791e77463aa88e16c8dcbf7291b7560d71361b3"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilL1ProofInputHashAnchor.sol",
+          "bytes": 205,
+          "sha256": "ee6f17687d80c6438f96c5e5b08c05989badc13853d2cd76d92746ed25013ac9"
+        },
+        {
+          "source": "contracts/base/interfaces/IPhilUnlockProofVerifier.sol",
+          "bytes": 868,
+          "sha256": "244839f1c2d62dea04107cfb9fabf7d6c9304c1ca635fbf2152d3107697f6a26"
+        },
+        {
+          "source": "contracts/base/mocks/MockBaseCrossDomainMessenger.sol",
+          "bytes": 1128,
+          "sha256": "f89527980d73adee3575262757285233d708af95d994b13e281d0ca6c8448e6b"
+        },
+        {
+          "source": "contracts/base/mocks/MockPhilCrossDomainMessenger.sol",
+          "bytes": 870,
+          "sha256": "318732e2e72a3c993ccd03a420c75427705d886606a2cb6c57d7104532a97306"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAdversarialAuthorizationConsumer.sol",
+          "bytes": 3823,
+          "sha256": "3bf10b9a5bf451f864bc3c4b2674a34c1581230c40346b420c9b5b5c028c302a"
+        },
+        {
+          "source": "contracts/base/mocks/PhilAuthorizationConsumerMock.sol",
+          "bytes": 982,
+          "sha256": "a7601c8d0ad1c6958cfcab08dd8c010cbe149566ce20bfdf4fcca97692511d90"
+        },
+        {
+          "source": "contracts/base/mocks/PhilHashHarness.sol",
+          "bytes": 2604,
+          "sha256": "451ec1909f761708e5742cdb52abb8136ea7a0df84d5c044d1d8219c9e33c91c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilSmartAccountExecutionTarget.sol",
+          "bytes": 564,
+          "sha256": "d372dd8657a9f21cc7228bc5bb79e64b98c7e9baf9f636597b5d85b925ad323c"
+        },
+        {
+          "source": "contracts/base/mocks/PhilV1Step6BLocalEntryPointHarness.sol",
+          "bytes": 2304,
+          "sha256": "7c8ea0958526553d7c8d1ed08f79c5a0c1314556b8cd0680cf931e3176711316"
+        },
+        {
+          "source": "contracts/base/PhilAuthorizationHashing.sol",
+          "bytes": 3837,
+          "sha256": "64673f56d877c376a24df255d9515f7ef6051ac5cb049c86b264a0d2a7c5d40f"
+        },
+        {
+          "source": "contracts/base/PhilBaseActionGate.sol",
+          "bytes": 4897,
+          "sha256": "a86b2e359804304d6d56c85dcf4a652c66a6d1dc2a974ef3a18908d03400cc2d"
+        },
+        {
+          "source": "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+          "bytes": 2582,
+          "sha256": "f33d4eac94b8feed3e3278a1012b64097cffdd323b90f5d20e812c9475a9ad38"
+        },
+        {
+          "source": "contracts/base/PhilBaseProofInputHashMirror.sol",
+          "bytes": 1900,
+          "sha256": "840cc1ef22079245c333f44ae73762bcfa5d731432c636fe59a51b753d3689cf"
+        },
+        {
+          "source": "contracts/base/PhilCoreAuthorizationConfirmationTarget.sol",
+          "bytes": 1752,
+          "sha256": "708776ba0e3482eaa4480544ead7fc574332f4a9eacf9c96f203d1dc5b71d6fe"
+        },
+        {
+          "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+          "bytes": 2186,
+          "sha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6"
+        },
+        {
+          "source": "contracts/base/PhilL1FactUnlockProofVerifier.sol",
+          "bytes": 2572,
+          "sha256": "c9030ea2eac8fcc530b093b4236cc1314a701a0c67adbb7dd16aba8a121514e9"
+        },
+        {
+          "source": "contracts/base/PhilMintPassConsumer.sol",
+          "bytes": 4168,
+          "sha256": "04f24602eb7b463b80935cc643662230311dbf9f829908b0df29df4d31412fff"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+          "bytes": 4916,
+          "sha256": "d7fcea5137ff525d6398967cf861a8a4e724c92faa1580efac78594ac29655cf"
+        },
+        {
+          "source": "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+          "bytes": 1971,
+          "sha256": "9ff16c00cfad5b1356ac8e447dcba3207d3d6bbbcbf3f7e1224df2327ea2933d"
+        },
+        {
+          "source": "contracts/base/PhilUnlockConsumer.sol",
+          "bytes": 2614,
+          "sha256": "5cf96fe010de9ea846e4ea431144d8ece60c29574171218e25007468fc8fb60d"
+        },
+        {
+          "source": "contracts/l1/interfaces/IStarknetMessaging.sol",
+          "bytes": 202,
+          "sha256": "28976fb8c0212ffa3703fff22cfece5be1d7202104452ce2697066f6245f8452"
+        },
+        {
+          "source": "contracts/l1/mocks/MockStarknetMessaging.sol",
+          "bytes": 1658,
+          "sha256": "c806b39d56bc99e63451c3e7893300b7b51a0dffcb8bf93e84d336b27387df01"
+        },
+        {
+          "source": "contracts/l1/PhilBaseCrossDomainMessengerAdapter.sol",
+          "bytes": 1100,
+          "sha256": "bd8b128891471fa0e3d585bdf7ea98396e164b366026ca3ddb02f06f7d016d31"
+        },
+        {
+          "source": "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+          "bytes": 1467,
+          "sha256": "c7e6e3d998699195d744e3a7d7499bb5c3ce8603153e8264446fe71a4b62ba3c"
+        },
+        {
+          "source": "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol",
+          "bytes": 1732,
+          "sha256": "73528fcdde514d7dd3877fbde480571c691a4b4d406a1d6677b8be092e608878"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2ConfirmationTargetTestMocks.sol",
+          "bytes": 4983,
+          "sha256": "00c7b78d188676898b47e343d636b0e7a28bbd0041e38bf5700f77582e500aec"
+        },
+        {
+          "source": "contracts/test/PhilCoreV2MinimalAccountTestMocks.sol",
+          "bytes": 2978,
+          "sha256": "11b6fbf0c2833822dee34de5cbf016e57150c80e3053210d64647838263a2665"
+        }
+      ]
+    }
+  ],
+  "transitiveImportedSources": [
+    {
+      "path": "apps/phil-device-sdk/src/authorizationEnvelopeV1.ts",
+      "bytes": 11568,
+      "sha256": "a7f1285f01665f598cfe8480f49308a3c7bf64fe1540f8ed772aca3f23527fec"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/deviceApprovalV1.ts",
+      "bytes": 12197,
+      "sha256": "48b572cf2d583f438252ddc8f06007dcab3c280df61e32127f46e9c4227e1ee4"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/hashes.ts",
+      "bytes": 8811,
+      "sha256": "0e846a3a4190ed20781a90af4f9fa9f5eec5db401101c47206646f1c982debbb"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/networkAdapterV1.ts",
+      "bytes": 26459,
+      "sha256": "16a547a833e8fbe459ce3ac8faef75336a593a3e2c2ea8968cbe981569dd8d3d"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/p256SignatureWireV2.ts",
+      "bytes": 7875,
+      "sha256": "4a6d3854cca54546aace5b43843eea2ad50b8e9f44f6cc5594a13a8be378bb81"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/postQuantumMigrationV1.ts",
+      "bytes": 55065,
+      "sha256": "d5354fbbb1fb869ba5decbfc79fa5c6ee7de6b8deda59d2590ef22cf08b25d28"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/routineAuthorizationV1.ts",
+      "bytes": 82065,
+      "sha256": "b15e11b47958553d9c4355bcdc2d9e461f0c25921561ac69f174b1e327c28b59"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/routineSignatureRegistryV2.ts",
+      "bytes": 3812,
+      "sha256": "4b2283bf2d3c1acc792529f33afc33a0eef3bda3e9739425edf3d639ac78ed6b"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/runtime/routineAuthorizationJournalV1.ts",
+      "bytes": 60467,
+      "sha256": "733a2e7a2070084afa4173dac70d1bdec4425c334062fa3412d9bd39ec713211"
+    },
+    {
+      "path": "apps/phil-device-sdk/src/secureIdentityV1.ts",
+      "bytes": 13704,
+      "sha256": "b3e5bfc6a691ef902eb454c01dfc4f3b84ab2a9d62623e5bd1a62bee143ee93e"
+    },
+    {
+      "path": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+      "bytes": 36158,
+      "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+    },
+    {
+      "path": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+      "bytes": 931,
+      "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/EntryPoint.sol",
+      "bytes": 31135,
+      "sha256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/Helpers.sol",
+      "bytes": 3359,
+      "sha256": "4ec549dbe1685def37cbe8699eb5376ce4466dcd0c6ffffd7c0d7e0f7a5b89a3"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/NonceManager.sol",
+      "bytes": 1425,
+      "sha256": "fbb29dadcaaa4df16a38d5bbe642737034b2a3b8318a7d8c75b4936892b10366"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/SenderCreator.sol",
+      "bytes": 1232,
+      "sha256": "84b46309bf6d890c13362c9c449ff927fa72465741517fc405c8c24baae2d1a3"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/StakeManager.sol",
+      "bytes": 5150,
+      "sha256": "56ef93b31c8fb80d1806c69aad5d65f86951df0b145664b5c49018958239b644"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/core/UserOperationLib.sol",
+      "bytes": 4997,
+      "sha256": "43faeb07191dea518fe9dd1111b775911af572427c6d6a51bfa6cc4c5b08c9aa"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IAccount.sol",
+      "bytes": 2604,
+      "sha256": "0c44401dd9df8d5b02d6a03170e163f2ca3434c382d41a31e022ceb789cf95ef"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IAccountExecute.sol",
+      "bytes": 710,
+      "sha256": "a96aabf8dcfa68a83325678e23200956c667a91ce448f2d63efb10ca947edc3e"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IAggregator.sol",
+      "bytes": 1871,
+      "sha256": "bc6df43d690bcaf2da8255748070e880eb7390e74ea98f6e36eb0a9f4b128ac1"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IEntryPoint.sol",
+      "bytes": 9185,
+      "sha256": "06f97dfe27d09b478a1e82855ab57485b11ea68e3804b03e879f184bbc667fb7"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/INonceManager.sol",
+      "bytes": 1112,
+      "sha256": "4a600598dca29462afaebf27de758c83344d9d9871a53c1cdbe448510491d0e3"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IPaymaster.sol",
+      "bytes": 3300,
+      "sha256": "14bfb45b3ade4fad4ae09a19c5270e00c75ed0d9d0bf15e0dd499371a111cd23"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/IStakeManager.sol",
+      "bytes": 3616,
+      "sha256": "6334881d2273350b92fd4b0ecabbed9a844ef5d114832097ecd2b631010b6033"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
+      "bytes": 1469,
+      "sha256": "40fcd99da0814312f0353417de64f70805f4cd7ec4cb4573c8b4c4d48540f562"
+    },
+    {
+      "path": "node_modules/@account-abstraction/contracts/utils/Exec.sol",
+      "bytes": 2043,
+      "sha256": "8ccaa8a5230a7e7722d25f070ab6e1ce9ada315d9649da34cce3a061c1b985cc"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/Errors.sol",
+      "bytes": 896,
+      "sha256": "0704b9d6c032cca8512a3bc3f30f49f86f1f03102d2896a3d23e794b82efea66"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/Panic.sol",
+      "bytes": 1973,
+      "sha256": "270fc8401c1a13fae6a7a4a2dd6e381b95d658896701e51f0d3e2688acab3dec"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "bytes": 4766,
+      "sha256": "94e409e8f6e3184236651a6cc2b1a6a3ea0f0a25eb85b71e524ad5791bb2fbc8"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/StorageSlot.sol",
+      "bytes": 4182,
+      "sha256": "75704538dcb223239280c6726d9a31cf769a7816718517c997fc7d63bdb70778"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/cryptography/P256.sol",
+      "bytes": 19341,
+      "sha256": "0d7bb2f2b5e0ceb0e1a28523ee179c1aee5980cb793df739dd9ccf87170dffe2"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "bytes": 879,
+      "sha256": "61a2b12c96857aaa35f48aeda67a4281637a42494c0b3795be0ae976aa7b3793"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "bytes": 871,
+      "sha256": "9055c2994b37dea1a41b7b7926dcb510f05dbe2540b0aafc5fbee9558fffd0ca"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/math/Math.sol",
+      "bytes": 32664,
+      "sha256": "bdfdbe133991c0c78042957ff5cd97167926fcaf6d15664f3835a076cb066457"
+    },
+    {
+      "path": "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "bytes": 34940,
+      "sha256": "5779bc848bde39f1ad7bc02b4f708a0040888e0083b1a33f119cd94639350134"
+    }
+  ],
+  "constructorStorageAssertions": {
+    "entryPoint": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "chainId": "31337",
+    "executionEnvironmentHash": "0xd704b092f6cddaaa570c99dd297d0541faf7cc3af7c38d450027c1ad07b642bf",
+    "adapterManifestHash": "0x89fc6256871fb15afa94ec4ee77bd29712023cc91524793503fc9fe2f94c3f94",
+    "signatureRegistryHash": "0xac2d2419d6829056cfbaf4e6cb17a2e3829c4fc56556a82ccf3b5838553c1f2e",
+    "deviceEnrollmentHash": "0x3cf95d3a15f328b1e6967b280626cdc118d8a9506262a186c80882785bb87cbe",
+    "accountConfigurationHash": "0x8e3dc9fa6499eb32462fc8667c3536fd734da56647881f099ce648bb837bbc4b",
+    "accountRuntimeCodeHash": "0x430d4ee62e08e7df513c764beb5a0154dae619609bf36a09cf8717923bc33e42",
+    "catalogHash": "0x54d403edff3e4f66a43b8fe19bbb7b66d6748c9b65ab8969fea382cd39e5b014",
+    "capabilityPolicyHash": "0xcb2fce7f49980e255bcf101b500ad4978737ddcb31e8485b608370cb9f2bbe5a",
+    "parameterSchemaId": "0xf38001fa6605ff3551a929a25d5b3d277d8c1154a34bf25788657a1153649feb",
+    "applicationId": "0xf3d9002320a431d155cb7e92f26466dcdeea85d42f4ce7152cabd8bbbef93b16",
+    "principalIdHash": "0xa6511a8025fbe1221ab2ef31600a0d191198ae3ee757faa369f199a295a2fdc7",
+    "scopedOwnerCommitment": "0x27b8b01fb379aaa1dc87a1091f3e6a0ceac03ef3523ef83b54323b4848f11bda",
+    "scopeId": "0xed0fb56b3156590398152ce99ad81b27b0fd8c6924a5255c6a29c6c3901c5e99",
+    "scopeInstance": "0xa5df9f4f706d12fd2d3ff3d5e748df57577af1ccc87b150c58b856589476877f",
+    "scopeEpoch": "1",
+    "capabilityId": "0xf47fda76c53a70ea539054f61bd6172eb3e15ca1ef770c35d3c81ca8177f9d4a",
+    "capabilityEpoch": "1",
+    "policyEpoch": "1",
+    "deviceId": "0x5c7b39d87dae4df3ee687b4bd7a59bafb2a27848cc92c9797205eb593c13750f",
+    "deviceKeyId": "0xb945e237adbfa47a7093c52d85fb7d3253249d04acccbacadbabafd46f4a140c",
+    "deviceEpoch": "1",
+    "signatureSuiteId": "0x140f8ea7446c92baefbb03cbe88f45e108b18b111cbe132948c8d41636f7da34",
+    "providerProfileId": "0x5462c1e1f72e6fb3019acd7854d6f1b4c899935ef8616da00fe91c2857219d9d",
+    "wireEncodingId": "0xaecd0161fdadacd890513da0fd14374a2007d469a10cd27a5bca178b5295a624",
+    "devicePublicKeyX": "0xe314d95ae35d27098435c67ab20b30ee05edde043ebd589129bba3d02ce5cabe",
+    "devicePublicKeyY": "0xc76be73181d190cef8c6926322957470ef57b92f1ef6cd8e906671526445139c",
+    "recoveryEpoch": "1",
+    "validatorEpoch": "1",
+    "approvedTarget": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "approvedTargetRuntimeCodeHash": "0x5b4eb2633a217ce3bf69eb67ed94a41a559a92920d00ea47193702eee75c2e84",
+    "actionTypeHash": "0x78f6f3a65d2e0b414fb964241ce5a04c87e31659d61f8832b984c71f6cd8e9c5",
+    "nonceKey": "0",
+    "maximumValueWei": "0",
+    "maximumTotalFeeWei": "20000000",
+    "profilePolicyValidAfter": "1800000002",
+    "profilePolicyValidUntil": "1800086402",
+    "catalogDisplayTextHashes": [
+      "0x8751d0b967b8172dec0598a335857e0ac7051b4eba83e9122d1222ff7d9cdd8c",
+      "0x51fba215d9099c6f84664bd8e1df361fe9a5da80f0cceee7f2fd993254cd5996",
+      "0x7ef878ab1acf73b2e9bfb49349c846746eb497895abf2de18e9831be39c8751a",
+      "0x065a873dff30b4d359e16f9157f4157fe8022a584106e098cb5855bbbb23c83f",
+      "0xc428221b25f4b10e9729dc0dde29b694a0d7a4cad9a187b3d7b1a7f728438909",
+      "0xfa7b9e03c3493b61d2fdd02b128aa23178b31aeb7e3503a4d7907b4ee0a585cc"
+    ]
+  },
+  "inheritedIdentities": {
+    "step5RegistryHash": "0xc8c047f325c09f68c50795a4f261b87ed2b5ca0a3a99e669e632727389b87b79",
+    "step5RegistryEpoch": "1",
+    "routineRegistryHash": "0xac2d2419d6829056cfbaf4e6cb17a2e3829c4fc56556a82ccf3b5838553c1f2e",
+    "routineRegistryEpoch": "2"
+  },
+  "semanticIdentities": {
+    "domainHashes": {
+      "EXECUTION_ENVIRONMENT": "0x8a6b8b188abf2d8be3d69f016612bb90a5658a1522681d67b083e24cd24197d5",
+      "DEVICE_ENROLLMENT": "0x798a3e18644418c82bd2a87c868f69a5587add117b61a851fff48612a84ac65d",
+      "ACCOUNT_CONFIGURATION": "0xca6b02a1217a68e470aab8f6a171f2433c80eca7dbed0b6d5e965ad4fb23a3d9",
+      "APPLICATION_PRINCIPAL": "0x9b567470fca0ee71b2b60c6ff2cf3478f7b45d0cdb74ae6e763dc4d389b185d3",
+      "SCOPE_INSTANCE": "0x07ef38747ededf0d53e8c6f808566f65a87e82d9978e35f09e910ea56f16ccbf",
+      "CAPABILITY": "0x335a168faf7c4da5c89f7003ce61d04988d2bb61d74c62ff2eee137d41367774",
+      "PARAMETER_SCHEMA": "0xcebf7aec2aa652e1132d57a130f2c5d92ad8f9ce0f17d87e9076a0dad87718ca",
+      "CATALOG_ENTRY": "0xbd36eab0dc91197d06ba2b98924b4ce7169b6cc76b1c597c82396737956a41bf",
+      "CATALOG": "0xa4f14609112b5207eecb9453127d80f996324938a5eedc219050e0d3a12604a8",
+      "CAPABILITY_POLICY": "0x36f234232612ca00940f1fa729700d586d73f4a48881314b8114eda2ec62247d",
+      "HUMAN_PRESENTATION": "0x3d63b99690e97139836a6f8574b360bedd8a995fa3f7c1f74fa6ad00a9ae3de0",
+      "AUTHORIZATION_CORE": "0x1894dbe10b49eda3b7ad51ec4fdd8dfb2f2f3b976c82f667cb29cd8bce142892",
+      "APPROVAL_NONCE": "0xf7f515d3082dec64f52635a44c02c8dbc6eb7154a0e676dc10516121bddfd36d",
+      "AUTHORIZATION_REQUEST": "0xa5ede85d2364d68545140f0d8efe9def746f8cf440d4cbf186cc0b54406ebaba",
+      "AUTHORIZATION_RESPONSE": "0xfac011c46a49018c309c46f8d1d53611015b7fb750ce86f4b66ad3f0709916e6",
+      "AUTHORIZATION_RECEIPT": "0xd4368da34e9919555dae47367eaab6f0de2d75d2fa38d3be63d10cdcddf0ec22",
+      "TRANSPORT": "0x6ef02aee58048e29da06b092ef3f350c2f517741d55bf71a36f990d5e9de8ba1",
+      "IMPLEMENTATION_SET": "0x1e4c6c281288cc6fe402ad46f8d60d0abc4f6df53084d5b0e5c61fb8cee98f0f",
+      "AUDIT_STATUS": "0x27e59d71422904fd81ed64559a59f75365bf318fdf28fb09bb6b86bb0ff03ff6"
+    },
+    "parameterSchemaId": "0xf38001fa6605ff3551a929a25d5b3d277d8c1154a34bf25788657a1153649feb",
+    "capabilityId": "0xf47fda76c53a70ea539054f61bd6172eb3e15ca1ef770c35d3c81ca8177f9d4a",
+    "catalogHash": "0x54d403edff3e4f66a43b8fe19bbb7b66d6748c9b65ab8969fea382cd39e5b014",
+    "catalogEntries": [
+      {
+        "kind": 1,
+        "entryId": "0xf3d9002320a431d155cb7e92f26466dcdeea85d42f4ce7152cabd8bbbef93b16",
+        "displayText": "Phil Step 6C Local Harmless App",
+        "displayTextHash": "0x8751d0b967b8172dec0598a335857e0ac7051b4eba83e9122d1222ff7d9cdd8c",
+        "boundValueHash": "0xf3d9002320a431d155cb7e92f26466dcdeea85d42f4ce7152cabd8bbbef93b16",
+        "entryHash": "0x8c04b45f6cecc8440e153b662b9afb68fa6eb1d18a98cd3bb9c8ca80b3d290c8"
+      },
+      {
+        "kind": 2,
+        "entryId": "0x47530b36c37754e6fa9f3c8490403b0e9e33ee28584bfa74093a1cad5e48343f",
+        "displayText": "Local Hardhat Chain 31337",
+        "displayTextHash": "0x51fba215d9099c6f84664bd8e1df361fe9a5da80f0cceee7f2fd993254cd5996",
+        "boundValueHash": "0xd704b092f6cddaaa570c99dd297d0541faf7cc3af7c38d450027c1ad07b642bf",
+        "entryHash": "0x3349eb9ce3759371482d5b90d4075ff6e909a98b6519051ade797e92627b8987"
+      },
+      {
+        "kind": 3,
+        "entryId": "0xdd0e16b24e763f717e3a6e859aeb01866ae652ce52028d0531484c5918ce49fb",
+        "displayText": "Disposable Phil Routine Account",
+        "displayTextHash": "0x7ef878ab1acf73b2e9bfb49349c846746eb497895abf2de18e9831be39c8751a",
+        "boundValueHash": "0xdd0e16b24e763f717e3a6e859aeb01866ae652ce52028d0531484c5918ce49fb",
+        "entryHash": "0x2326c229545d7f4a80edc17c0471436519d2dcc49553361da620042f06fff6b3"
+      },
+      {
+        "kind": 4,
+        "entryId": "0x9e4202ce2e9b5c0d97da3735ab0d13a3d2fc56061a2d735dda02e05da79fc874",
+        "displayText": "Harmless Local Record Target",
+        "displayTextHash": "0x065a873dff30b4d359e16f9157f4157fe8022a584106e098cb5855bbbb23c83f",
+        "boundValueHash": "0x9e4202ce2e9b5c0d97da3735ab0d13a3d2fc56061a2d735dda02e05da79fc874",
+        "entryHash": "0xa3a8c54965b5abe2ad7c7a91cac0625259a8742a1b1c5146320368448e11f699"
+      },
+      {
+        "kind": 5,
+        "entryId": "0x78f6f3a65d2e0b414fb964241ce5a04c87e31659d61f8832b984c71f6cd8e9c5",
+        "displayText": "Record Harmless Local Value",
+        "displayTextHash": "0xc428221b25f4b10e9729dc0dde29b694a0d7a4cad9a187b3d7b1a7f728438909",
+        "boundValueHash": "0x78f6f3a65d2e0b414fb964241ce5a04c87e31659d61f8832b984c71f6cd8e9c5",
+        "entryHash": "0xf9f1c959d6c6e2be60a6cbc14803fa3bd762f9e934e255969a58f67fde53efa6"
+      },
+      {
+        "kind": 6,
+        "entryId": "0xf38001fa6605ff3551a929a25d5b3d277d8c1154a34bf25788657a1153649feb",
+        "displayText": "Harmless Record Parameters",
+        "displayTextHash": "0xfa7b9e03c3493b61d2fdd02b128aa23178b31aeb7e3503a4d7907b4ee0a585cc",
+        "boundValueHash": "0xf38001fa6605ff3551a929a25d5b3d277d8c1154a34bf25788657a1153649feb",
+        "entryHash": "0x5cc8d179e3e77c5b9ada17a8e25a8aebf3202d6e7de0b76db04a26477260ddbc"
+      }
+    ],
+    "capabilityPolicyHash": "0xcb2fce7f49980e255bcf101b500ad4978737ddcb31e8485b608370cb9f2bbe5a",
+    "profilePolicySeconds": "86400",
+    "requestSeconds": "120"
+  },
+  "abiTypeInventory": {
+    "implementationIdentity": [
+      "bytes32",
+      "bytes32[6]"
+    ],
+    "executionEnvironment": [
+      "bytes32",
+      "uint8",
+      "uint256",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "address",
+      "bytes32",
+      "address",
+      "bytes32",
+      "bool",
+      "bool",
+      "bool"
+    ],
+    "deviceEnrollment": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bool",
+      "bool",
+      "uint8"
+    ],
+    "applicationPrincipal": [
+      "bytes32",
+      "bytes32"
+    ],
+    "scopeInstance": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "address"
+    ],
+    "parameterSchema": [
+      "bytes32",
+      "address",
+      "bytes32",
+      "bytes4",
+      "bytes32"
+    ],
+    "capability": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "address",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "accountConfiguration": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "uint64",
+      "address",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "address",
+      "bytes32",
+      "bytes32",
+      "uint192",
+      "uint256",
+      "uint256"
+    ],
+    "catalogEntry": [
+      "bytes32",
+      "uint8",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "catalog": [
+      "bytes32",
+      "bytes32[6]"
+    ],
+    "capabilityPolicy": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "uint64",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "address",
+      "bytes32",
+      "bytes32",
+      "uint256",
+      "uint256",
+      "uint48",
+      "uint48",
+      "bool"
+    ],
+    "humanPresentation": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "address",
+      "bytes32",
+      "address",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint256",
+      "uint256",
+      "uint48",
+      "uint48",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "uint64",
+      "bool",
+      "bool",
+      "bool"
+    ],
+    "authorizationCore": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "approvalNonce": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "authorizationRequest": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "authorizationResponse": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32"
+    ],
+    "authorizationReceipt": [
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint256",
+      "uint256",
+      "uint64",
+      "bool",
+      "bool",
+      "bool",
+      "bool"
+    ],
+    "eventCommitment": [
+      "address",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint256",
+      "bytes32",
+      "bytes32"
+    ],
+    "journalRecord": [
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint8",
+      "address",
+      "address",
+      "uint256",
+      "bytes32",
+      "bytes32",
+      "bytes",
+      "address",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "bytes32"
+    ],
+    "platformSigningPrehash": [
+      "bytes32",
+      "bytes32"
+    ],
+    "packedUserOperationV07": [
+      "address",
+      "uint256",
+      "bytes",
+      "bytes",
+      "bytes32",
+      "uint256",
+      "bytes32",
+      "bytes",
+      "bytes"
+    ],
+    "officialUserOperationHashV07": [
+      "bytes32",
+      "address",
+      "uint256"
+    ],
+    "journalFrameAad": [
+      "bytes32",
+      "bytes32",
+      "uint64"
+    ],
+    "targetPreState": [
+      "address",
+      "bytes32",
+      "bytes32",
+      "uint64",
+      "uint64",
+      "bytes32"
+    ],
+    "finalTargetState": [
+      "address",
+      "bytes32",
+      "uint64",
+      "bytes32",
+      "bytes32"
+    ],
+    "routineSignatureRegistryV2": [
+      "bytes32",
+      "uint64",
+      "uint64",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "bytes32",
+      "uint8",
+      "bool",
+      "bool"
+    ]
+  },
+  "testMatrix": {
+    "focusedFiles": [
+      "test/unit/phil-v1-step6c-wire.test.cjs",
+      "test/unit/phil-v1-step6c-records.test.cjs",
+      "test/unit/phil-v1-step6c-entrypoint.test.cjs",
+      "test/unit/phil-v1-step6c-journal.test.cjs",
+      "test/unit/phil-v1-step6c-desktop.test.cjs",
+      "test/unit/phil-v1-step6c-ios-synthetic.test.cjs"
+    ],
+    "literalMochaCases": 37,
+    "categoriesRequiredByDefinition": 20,
+    "literalCategoryMap": {
+      "1": [
+        "records: constructs the acyclic local profile and independently validates every derived request hash"
+      ],
+      "2": [
+        "records: keeps schema, capability, catalog, and policy stable while every nonce-bearing request identity changes",
+        "records: rejects an independent substitution of every authorization-core field"
+      ],
+      "3": [
+        "records: rejects unknown, duplicate, BOM, alternate-scalar, nested, and response JSON substitutions"
+      ],
+      "4": [
+        "wire: validates X9.63 keys and verifies exactly one raw low-S signature without a second prehash",
+        "wire: strictly parses DER and normalizes high-S while raw input rejects high-S",
+        "wire: rejects nonminimal, negative, zero, trailing, wrong-length, and invalid-key encodings"
+      ],
+      "5": [
+        "records: rejects independent raw-record and top-level derived-identity substitutions",
+        "EntryPoint: fails closed before execution for wrong signature and packed-operation substitution"
+      ],
+      "6": [
+        "iOS: derives every displayed field from admitted records and raw calldata",
+        "iOS: rejects selector, value, boolean, trailing-byte, summary, and signing-digest substitution"
+      ],
+      "7": [
+        "records: rejects calldata, action, request-window, Base-profile, and derived-hash substitution"
+      ],
+      "8": [
+        "wire: freezes the distinct suite, provider, wire, and terminal SHA-256 prehash identities",
+        "records: constructs the acyclic local profile and independently validates every derived request hash"
+      ],
+      "9": [
+        "EntryPoint: normally deploys official v0.7 constructor state and the bound local profile"
+      ],
+      "10": [
+        "EntryPoint: consumes failed nonce n and accepts a fresh signed success at n+1 without a second nonce"
+      ],
+      "11": [
+        "EntryPoint: consumes failed nonce n and accepts a fresh signed success at n+1 without a second nonce"
+      ],
+      "12": [
+        "Desktop: snapshots simulation evidence and terminally records an ambiguous submission outcome",
+        "Desktop: fails terminally on policy drift, lock/session replacement, and pre-state drift before commit"
+      ],
+      "13": [
+        "journal: admits every declared public transition and rejects every other public state pair",
+        "journal: enforces a hash-chained CAS and an evidence-complete point of no return",
+        "journal: round-trips strict journal-record and outer-frame JSON with fresh canonical AES-256-GCM nonces",
+        "journal: publishes a CAS transition only after its injected durable flush succeeds",
+        "Desktop: reconciles a restored state-6 commit to unknown and admits only exact late failed-event evidence",
+        "Desktop: reconciles every pre-submission crash and both submitted receipt outcomes without resubmission",
+        "Desktop: covers the remaining state-6 failure, state-7 unknown, and restored state-8 verifier transitions"
+      ],
+      "14": [
+        "journal: allows cancellation before commit and makes every post-commit cancellation impossible",
+        "Desktop: serializes cancellation and expiry ahead of any response or submission authority"
+      ],
+      "15": [
+        "Desktop: serializes response, simulation, commit, execution, cancellation, and restart through the protected lifecycle",
+        "Desktop: serializes cancellation and expiry ahead of any response or submission authority",
+        "Desktop: serializes actual cancel-versus-submission and cancel-versus-receipt races at the point of no return",
+        "Desktop: fails terminally on policy drift, lock/session replacement, and pre-state drift before commit"
+      ],
+      "16": [
+        "iOS: rejects selector, value, boolean, trailing-byte, summary, and signing-digest substitution",
+        "EntryPoint: consumes failed nonce n and accepts a fresh signed success at n+1 without a second nonce",
+        "EntryPoint: rejects an executing target reentry attempt while preserving the admitted outer action",
+        "Desktop: keeps production sources isolated from public RPC, recovery signers, STWO, generic execution, and runtime-code copying"
+      ],
+      "17": [
+        "EntryPoint: consumes failed nonce n and accepts a fresh signed success at n+1 without a second nonce"
+      ],
+      "18": [
+        "Desktop: exposes only the sanitized four-field status and no request, signature, operation, or journal evidence"
+      ],
+      "19": [
+        "Desktop: exposes no direct account execution path even for a valid approved package",
+        "Desktop: keeps production sources isolated from public RPC, recovery signers, STWO, generic execution, and runtime-code copying"
+      ],
+      "20": [
+        "Desktop: keeps production sources isolated from public RPC, recovery signers, STWO, generic execution, and runtime-code copying",
+        "iOS: does not relabel the disclosed synthetic key as Secure Enclave or user-presence evidence"
+      ]
+    },
+    "independentAcceptance": true
+  },
+  "dependencyVersions": {
+    "accountAbstraction": "0.7.0",
+    "nobleCurves": "1.2.0",
+    "ethers": "6.17.0",
+    "hardhat": "2.28.4",
+    "solc": "0.8.27",
+    "packageLockSha256": "030f8a95dc90b91d939da1c8d7735553320b2b3c3f0a4e0f0fac54c8114dc3ec"
+  },
+  "nonclaims": {
+    "physicalDeviceUsed": false,
+    "secureEnclaveEvidence": false,
+    "userPresenceEvidence": false,
+    "externalNetwork": false,
+    "rpcUsed": false,
+    "publicBundlerUsed": false,
+    "transactionBroadcast": false,
+    "deploymentOutsideEphemeralHardhat": false,
+    "meaningfulAssets": false,
+    "realSecretUsed": false,
+    "productionAuthority": false,
+    "proofBackendSelected": false,
+    "step6C2Complete": false,
+    "finalStep6Complete": false
+  }
+}

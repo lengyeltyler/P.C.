@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+    <title>Phil — Controlled Sepolia Beta</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./monochrome-final.css">
+    <link rel="stylesheet" href="./final-beta-ui.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#view">Skip to your Phil</a>
+    <img id="philenator-background" class="philenator-background" alt="" aria-hidden="true" hidden>
+    <div class="ambient-world" aria-hidden="true">
+      <span class="ambient-world__orb ambient-world__orb--one"></span>
+      <span class="ambient-world__orb ambient-world__orb--two"></span>
+      <span class="ambient-world__orb ambient-world__orb--three"></span>
+      <span class="ambient-world__grain"></span>
+    </div>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="PhilCore navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">P</div>
+          <div>
+            <h1>Phil</h1>
+            <p>Your trustworthy digital identity</p>
+          </div>
+        </div>
+        <nav id="nav" class="nav"></nav>
+        <div class="mode-banner" aria-live="polite">
+          <strong id="mode-label">Controlled Sepolia Beta</strong>
+          <span>Ethereum Sepolia · Test only</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Your Phil</p>
+            <h2 id="page-title">Welcome</h2>
+          </div>
+          <div class="topbar-tools">
+            <div id="presentation-switch" class="mode-switch" aria-label="Page detail mode"></div>
+            <div class="status-strip" aria-label="Current security state">
+              <span id="lock-state" class="status-pill">locked</span>
+              <span id="gate-state" class="status-pill ready">Beta verified</span>
+            </div>
+          </div>
+        </header>
+
+        <section id="view" class="view" tabindex="-1"></section>
+      </main>
+    </div>
+    <div id="world-transition" class="world-transition" aria-hidden="true">
+      <div class="world-transition__horizon">
+        <span class="world-transition__planet world-transition__planet--ethereum">ETH</span>
+        <span class="world-transition__planet world-transition__planet--base">BASE</span>
+        <span class="world-transition__planet world-transition__planet--starknet">STRK</span>
+        <span class="world-transition__planet world-transition__planet--future">+</span>
+      </div>
+      <div class="world-transition__threshold">
+        <span class="world-transition__light"></span>
+        <span class="world-transition__door world-transition__door--left"></span>
+        <span class="world-transition__door world-transition__door--right"></span>
+        <span class="world-transition__key" aria-hidden="true">P</span>
+      </div>
+      <div class="world-transition__copy">
+        <span class="world-transition__companions" aria-hidden="true">
+          <img src="./assets/characters/phil/phil_run_right.png" alt="">
+          <img src="./assets/characters/avastar/avastar_walk_right.png" alt="">
+        </span>
+        <strong>Welcome to your world</strong>
+        <span>Your identity stays with you. Every connection asks permission.</span>
+      </div>
+    </div>
+    <aside id="phil-helper" class="phil-helper" aria-label="Phil contextual helper" hidden></aside>
+    <div id="approval-root"></div>
+    <script src="./startup-guard.js"></script>
+    <script src="./presentation.js"></script>
+    <script src="./philenator-engine.js"></script>
+    <script src="./phil-preview-provider.js"></script>
+    <script src="./external-credential-provider.js"></script>
+    <script src="./ecosystem-discovery.js"></script>
+    <script src="./chain-catalog.js"></script>
+    <script src="./disposable-platform-webauthn.js"></script>
+    <script src="./routine-authorization-ui.cjs"></script>
+    <script src="./sepolia-mint-ui.cjs"></script>
+    <script src="./unlock-transition-policy.cjs"></script>
+    <script src="./phil-helper.cjs"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

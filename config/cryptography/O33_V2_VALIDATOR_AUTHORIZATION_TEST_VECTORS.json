@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "philcore-o33-validator-authorization-vectors-v1",
+  "phase": "O.33",
+  "canonicalPhaseName": "O.33 V2 Validator and Authorization Engine Prototype",
+  "classification": "VALIDATOR_AUTHORIZATION_ENGINE_PROTOTYPE_LOCAL_ONLY",
+  "sourceHeadAtPhaseStart": "5520d660b50e5db5be700061bd3e93ccff87a8a8",
+  "fixtureOnly": true,
+  "publicMutationCount": 0,
+  "implementationBindings": {
+    "o32IntentModuleSha256": "cf9e50f23352a80005a0e18fb65af2a4ef3c414ccdc7d215ae75186a61743975",
+    "o32AuthorizationModuleSha256": "a78d48b607911e345b65c6940cde8f2fb9691a9960e67cfcba8c2485d292dccb",
+    "o32VectorPackageSha256": "c9c5fd6b35c36c1c7a132eabcef81a0f663341943e99bc31430125e64ed7096b",
+    "o33ValidatorModuleSha256": "41f573e148f80b7dc5f3d479bccf6d96fdbecdf5985aa6a0caa3b276fb1f48df",
+    "o33AuthorizationEngineModuleSha256": "6ece1938e9ea708016c44d6e2611058ae2566c3c9ada1d7ca49f18370adac4e6"
+  },
+  "canonicalIdentity": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "label": "My Phil",
+    "validator": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyId": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809"
+  },
+  "o32Compatibility": {
+    "reproducedExactly": true,
+    "intentCoreHash": "0x8ef95ac793b27c1bfe0e3d7666dee66d920083b1914d8dce213318c6268db048",
+    "runtimeAuthorizationDigest": "0xe7576ac375cbec0199667921e019644132dbf2810d157c4be6db647548200361",
+    "authorizedIntentHash": "0x784392f042502d1f6e97c7cda26ef350bbffeb9b266499d0cb405d829316cc7e",
+    "validatorDigest": "0x5f31fe82273f9a850d599156640ec990152b9de6a1e12e0d4591b84db12bddf9",
+    "duplicateHashImplementationIntroduced": false
+  },
+  "validatorModel": {
+    "validatorIsWallet": false,
+    "validatorIsAdministrator": false,
+    "choosesActions": false,
+    "expandsPermissions": false,
+    "acceptsGenericMessages": false,
+    "receivesSignatureBytes": false,
+    "createsSignatures": false,
+    "verifierInterfaceRequired": true,
+    "minimumValidatorEpoch": "1",
+    "ordinaryNonceKey": "0",
+    "maintenanceNonceKey": "1",
+    "recoveryNonceKey": "2"
+  },
+  "failureCodes": [
+    "STATE_INVALID",
+    "INTENT_INVALID",
+    "CHAIN_MISMATCH",
+    "ENTRYPOINT_MISMATCH",
+    "ACCOUNT_MISMATCH",
+    "OWNER_COMMITMENT_MISMATCH",
+    "AUTHORIZATION_NOT_YET_VALID",
+    "AUTHORIZATION_EXPIRED",
+    "VALIDATOR_REVOKED",
+    "VALIDATOR_MISMATCH",
+    "VALIDATOR_KEY_ID_MISMATCH",
+    "VALIDATOR_EPOCH_STALE",
+    "VALIDATOR_EPOCH_FUTURE",
+    "RECOVERY_EPOCH_STALE",
+    "RECOVERY_EPOCH_FUTURE",
+    "RECOVERY_CONFIG_MISMATCH",
+    "ORDINARY_EXECUTION_FROZEN",
+    "MAINTENANCE_FROZEN",
+    "RECOVERY_ACTION_INVALID_FOR_STATE",
+    "INTENT_HASH_MISMATCH",
+    "RUNTIME_INTENT_HASH_MISMATCH",
+    "RUNTIME_AUTHORIZATION_DIGEST_MISMATCH",
+    "AUTHORIZED_INTENT_HASH_MISMATCH",
+    "AUTHORITY_MISSING",
+    "AUTHORITY_KIND_MISMATCH",
+    "RECOVERY_THRESHOLD_NOT_MET",
+    "RECOVERY_FACTOR_BITMAP_INVALID",
+    "AUTHORITY_DIGEST_INVALID",
+    "AUTHORITY_DIGEST_MISMATCH",
+    "AUTHORITY_EVIDENCE_MALFORMED",
+    "AUTHORITY_VERIFIER_UNSAFE",
+    "SIGNATURE_INVALID",
+    "AUTHORIZATION_REPLAY",
+    "NONCE_REPLAY"
+  ],
+  "validAuthorization": {
+    "state": {
+      "chainId": "11155111",
+      "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "account": "0x1000000000000000000000000000000000000001",
+      "ownerCommitment": "0x317588d8a13032ecf27726cc9445714544274544e0aa4a9ebfe2ea8c639b8695",
+      "validator": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+      "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+      "validatorEpoch": "3",
+      "validatorStatus": "active",
+      "recoveryEpoch": "2",
+      "recoveryConfigHash": "0xee95823a53f4cdf5525f7e928c06331c778b75fbe8c20f121d0c410fc005238a",
+      "recoveryState": "normal",
+      "consumedAuthorizationDigests": [],
+      "consumedNonces": []
+    },
+    "authorizationPackage": {
+      "intent": {
+        "header": {
+          "specificationVersion": 1,
+          "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+          "actionType": 2,
+          "actionId": "0x674f7e382f333f009a110ad211aaa21c2275a694635f24f178db9c92f6e6d781",
+          "purpose": "0x6f008219cb0a789f660ed2e1487cd7c5ed3a49a1a17f670fbb9f5f3a3ace2ff9",
+          "ownerCommitment": "0x317588d8a13032ecf27726cc9445714544274544e0aa4a9ebfe2ea8c639b8695",
+          "chainId": "11155111",
+          "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+          "account": "0x1000000000000000000000000000000000000001",
+          "nonceKey": "0",
+          "nonceSequence": "7",
+          "validatorEpoch": "3",
+          "recoveryEpoch": "2",
+          "applicationContextHash": "0xb0b0f4c07c3ccab61f2e2f0e5fff96d68787400a3f5128fd47b03fed5b15a6bd",
+          "fundLifecycleDigest": "0xcde0632817d0f444c748b116594361d10ffaa53c4236cd1d7d4c42267e8148dd",
+          "maxTotalFeeWei": "5000000000000",
+          "validAfter": "1800000000",
+          "validUntil": "1800000300"
+        },
+        "payload": {
+          "kind": "NATIVE_TRANSFER",
+          "recipient": "0x2000000000000000000000000000000000000002",
+          "amountWei": "1234567"
+        }
+      },
+      "declaredIntentCoreHash": "0x8ef95ac793b27c1bfe0e3d7666dee66d920083b1914d8dce213318c6268db048",
+      "runtimeAuthorization": {
+        "intentCoreHash": "0x8ef95ac793b27c1bfe0e3d7666dee66d920083b1914d8dce213318c6268db048",
+        "proofBindingHash": "0xaff6301c798f65b6e44aeadb787b98422cca3f0f4a46d24f24ab5fa119d10461",
+        "policyDecisionHash": "0x468a8a047dcd53308d49388d8640ce4f5f73e2a346764ed1e20f0dd571ecd525",
+        "approvalEvidenceHash": "0x0fd7c10d076631c7d788801c8e7102a8a131bc2d3f8f064c3420ba0e6bc256a9",
+        "userPresenceEvidenceHash": "0x94f506b07c7de4d684aac28a5c0e8f8ab68e401e94f4b75c41411662fe487555"
+      },
+      "declaredRuntimeAuthorizationDigest": "0xe7576ac375cbec0199667921e019644132dbf2810d157c4be6db647548200361",
+      "declaredAuthorizedIntentHash": "0x784392f042502d1f6e97c7cda26ef350bbffeb9b266499d0cb405d829316cc7e",
+      "userOperationHashBinding": "0x47a3dad1035e357642c89ec0327a544eb0502b6e91724b8a0443a2053bd7c69e",
+      "authority": {
+        "authorityKind": "validator_signature",
+        "validator": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+        "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+        "validatorEpoch": "3",
+        "recoveryEpoch": "2",
+        "recoveryConfigHash": "0xee95823a53f4cdf5525f7e928c06331c778b75fbe8c20f121d0c410fc005238a",
+        "evidence": {
+          "format": "philcore-v2-authority-evidence-reference-v1",
+          "authorityKind": "validator_signature",
+          "verificationFormat": "secp256k1-rsv-65-low-s-v1",
+          "evidenceReferenceHash": "0x76f8517a6cf377c5436ca63e60643553fa0bf41c087a1a9e02e7f786426f7806",
+          "signatureBytesPresentToEngine": false,
+          "fixtureOnly": true
+        },
+        "declaredAuthorityDigest": "0x5f31fe82273f9a850d599156640ec990152b9de6a1e12e0d4591b84db12bddf9"
+      }
+    },
+    "result": {
+      "accepted": true,
+      "status": "accepted",
+      "classification": "LOCAL_AUTHORIZATION_ACCEPTED_NON_EXECUTABLE",
+      "intentCoreHash": "0x8ef95ac793b27c1bfe0e3d7666dee66d920083b1914d8dce213318c6268db048",
+      "runtimeAuthorizationDigest": "0xe7576ac375cbec0199667921e019644132dbf2810d157c4be6db647548200361",
+      "authorizedIntentHash": "0x784392f042502d1f6e97c7cda26ef350bbffeb9b266499d0cb405d829316cc7e",
+      "authorityDigest": "0x5f31fe82273f9a850d599156640ec990152b9de6a1e12e0d4591b84db12bddf9",
+      "keyedNonce": "7",
+      "authorityKind": "validator_signature",
+      "verifierId": "o33.fixture.validator",
+      "authorizedStateTransition": "none",
+      "executionPerformed": false,
+      "signatureProduced": false,
+      "userOperationCreated": false,
+      "publicMutationCount": 0
+    }
+  },
+  "invalidAuthorizationVectors": [
+    {
+      "id": "modified_amount",
+      "expectedCode": "INTENT_HASH_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "INTENT_HASH_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_recipient",
+      "expectedCode": "INTENT_HASH_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "INTENT_HASH_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_chain",
+      "expectedCode": "CHAIN_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "CHAIN_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_account",
+      "expectedCode": "ACCOUNT_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "ACCOUNT_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_expiry",
+      "expectedCode": "INTENT_HASH_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "INTENT_HASH_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_nonce",
+      "expectedCode": "INTENT_HASH_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "INTENT_HASH_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "modified_purpose",
+      "expectedCode": "INTENT_HASH_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "INTENT_HASH_MISMATCH",
+        "stage": "intent",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "wrong_validator",
+      "expectedCode": "VALIDATOR_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "VALIDATOR_MISMATCH",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "wrong_validator_key_id",
+      "expectedCode": "VALIDATOR_KEY_ID_MISMATCH",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "VALIDATOR_KEY_ID_MISMATCH",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "old_validator_epoch",
+      "expectedCode": "VALIDATOR_EPOCH_STALE",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "VALIDATOR_EPOCH_STALE",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "old_recovery_epoch",
+      "expectedCode": "RECOVERY_EPOCH_STALE",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "RECOVERY_EPOCH_STALE",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "wrong_authority",
+      "expectedCode": "SIGNATURE_INVALID",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "SIGNATURE_INVALID",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "malformed_authority",
+      "expectedCode": "AUTHORITY_EVIDENCE_MALFORMED",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "AUTHORITY_EVIDENCE_MALFORMED",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "unsafe_verifier",
+      "expectedCode": "AUTHORITY_VERIFIER_UNSAFE",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "AUTHORITY_VERIFIER_UNSAFE",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "missing_authority",
+      "expectedCode": "AUTHORITY_MISSING",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "AUTHORITY_MISSING",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "reused_authority",
+      "expectedCode": "AUTHORIZATION_REPLAY",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "AUTHORIZATION_REPLAY",
+        "stage": "replay",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    {
+      "id": "reused_nonce",
+      "expectedCode": "NONCE_REPLAY",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "NONCE_REPLAY",
+        "stage": "replay",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    }
+  ],
+  "recoveryVectors": {
+    "validTwoOfThree": {
+      "accepted": true,
+      "status": "accepted",
+      "classification": "LOCAL_AUTHORIZATION_ACCEPTED_NON_EXECUTABLE",
+      "intentCoreHash": "0xcf0eabd873fbd4586a76624f52784c985c6f94c066bf6722495d571e56ddb8c3",
+      "runtimeAuthorizationDigest": "0xd94b56ce4be3ed759b68986686e827526a444ee70432201a22700a9da283014c",
+      "authorizedIntentHash": "0x505947cec92d16ca954a4b3d2d213a8910d714a36a325dfca5ac74bba41b9917",
+      "authorityDigest": "0x11e682c502a2669b6b2c2546783501a0155f00ae0618e2c5c434ae87b94279ec",
+      "keyedNonce": "36893488147419103234",
+      "authorityKind": "recovery_threshold",
+      "verifierId": "o33.fixture.recovery",
+      "authorizedStateTransition": "begin_recovery",
+      "executionPerformed": false,
+      "signatureProduced": false,
+      "userOperationCreated": false,
+      "publicMutationCount": 0
+    },
+    "oneFactorOnly": {
+      "expectedCode": "RECOVERY_THRESHOLD_NOT_MET",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "RECOVERY_THRESHOLD_NOT_MET",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    "wrongFactorCombination": {
+      "expectedCode": "RECOVERY_FACTOR_BITMAP_INVALID",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "RECOVERY_FACTOR_BITMAP_INVALID",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    "staleRecoveryEpoch": {
+      "expectedCode": "RECOVERY_EPOCH_STALE",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "RECOVERY_EPOCH_STALE",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    "ordinaryDuringRecoveryFreeze": {
+      "expectedCode": "ORDINARY_EXECUTION_FROZEN",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "ORDINARY_EXECUTION_FROZEN",
+        "stage": "recovery",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    },
+    "revokedValidator": {
+      "expectedCode": "VALIDATOR_REVOKED",
+      "result": {
+        "accepted": false,
+        "status": "rejected",
+        "code": "VALIDATOR_REVOKED",
+        "stage": "authority",
+        "executionPerformed": false,
+        "signatureProduced": false,
+        "userOperationCreated": false,
+        "publicMutationCount": 0
+      }
+    }
+  },
+  "securityBoundary": {
+    "solidityImplemented": false,
+    "deployableBytecodeCreated": false,
+    "factoryImplemented": false,
+    "productionValidatorCreated": false,
+    "credentialEnrolled": false,
+    "privateKeyCreated": false,
+    "signatureCreated": false,
+    "signatureBytesStored": false,
+    "proofGenerated": false,
+    "userOperationCreated": false,
+    "transactionCreated": false,
+    "liveContractCalled": false,
+    "fundsMoved": false,
+    "publicMutationOccurred": false
+  }
+}

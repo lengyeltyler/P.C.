@@ -1,0 +1,12 @@
+File-level notices from the exact selected package source.
+Some functions may be eliminated by the linker; notices are retained conservatively.
+
+Files: src/authorization.rs
+
+/// # Potential improvements
+///
+/// * When generic specialization stabilizes prevent copying from `CString`
+///   arguments.
+/// * `AuthorizationCopyRightsAsync`
+/// * Provide constants for well known item names
+

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "purpose": "Pinned local toolchain reference for Starknet verified-fact publication reproducibility.",
+  "scarb": {
+    "version": "2.15.0",
+    "pinnedBinary": "~/.cache/philcore/toolchains/scarb-v2.15.0/bin/scarb",
+    "evidence": [
+      "Scarb.toml dependencies use starknet = 2.15.0 and cairo_execute = 2.15.0",
+      "Scarb.toml package edition is 2024_07",
+      "historical Starknet/Cairo research commands used Scarb 2.15.0-compatible artifacts"
+    ]
+  },
+  "proofScarb": {
+    "version": "2.14.0",
+    "pinnedBinary": "~/.cache/philcore/toolchains/scarb-v2.14.0/bin/scarb",
+    "evidence": [
+      "Phil V1 Step 3 and Step 4 .tool-versions files pin Scarb 2.14.0",
+      "accepted Step 3 and Step 4 class identities were produced with Scarb 2.14.0"
+    ]
+  },
+  "cairo": {
+    "version": "2.15.0",
+    "pinnedBinaryDirectory": "~/.cache/philcore/toolchains/cairo-v2.15.0/bin",
+    "tools": [
+      "cairo-execute"
+    ]
+  },
+  "starknetFoundry": {
+    "version": "0.53.0",
+    "required": true,
+    "pinnedBinary": "~/.cache/philcore/toolchains/starknet-foundry-v0.53.0/bin/snforge",
+    "reason": "The classified Phil V1 Step 3 and Step 4 Starknet suites execute through snforge."
+  },
+  "universalSierraCompiler": {
+    "version": "2.10.0",
+    "required": true,
+    "pinnedBinary": "~/.cache/philcore/toolchains/universal-sierra-compiler-v2.10.0/bin/universal-sierra-compiler",
+    "reason": "Starknet Foundry compiles the classified Step 3 and Step 4 contract classes through this exact compiler."
+  },
+  "nargo": {
+    "version": "1.0.0-beta.16",
+    "pinnedBinary": "~/.cache/phil-v1-step3/toolchains/nargo-1.0.0-beta.16/nargo"
+  },
+  "barretenberg": {
+    "version": "3.0.0-nightly.20251104",
+    "pinnedBinary": "~/.cache/phil-v1-step3/toolchains/bb-3.0.0-nightly.20251104/bb"
+  },
+  "rust": {
+    "nightlyToolchain": "nightly-2025-07-14",
+    "evidence": [
+      "package.json test:proving uses cargo +nightly-2025-07-14"
+    ]
+  },
+  "node": {
+    "version": "26.0.0",
+    "evidence": [
+      ".node-version and package.json engines.node pin 26.0.0 exactly"
+    ]
+  },
+  "npm": {
+    "version": "11.12.1",
+    "evidence": [
+      "package.json packageManager and engines.npm pin 11.12.1 exactly"
+    ]
+  },
+  "packages": {
+    "productionCandidate": [
+      "starknet_integration"
+    ],
+    "adapterSpike": [
+      "cairo_air_adapter_spike",
+      "starknet_integration_runner"
+    ],
+    "researchOnly": [
+      "starknet_spike",
+      "starknet_adapter_spike",
+      "merkle_parity_spike"
+    ]
+  },
+  "expectedArtifacts": {
+    "starknetIntegrationSierra": "starknet_integration/target/dev/phil_starknet_integration_phil_proof_input_hash_verifier.contract_class.json",
+    "starknetIntegrationCasm": "starknet_integration/target/dev/phil_starknet_integration_phil_proof_input_hash_verifier.compiled_contract_class.json",
+    "starknetIntegrationPackageSierra": "starknet_integration/target/dev/phil_starknet_integration.sierra.json",
+    "starknetIntegrationArtifacts": "starknet_integration/target/dev/phil_starknet_integration.starknet_artifacts.json",
+    "proofInputHashSliceArgs": "proving/out/cairo_air_adapter_spike/proof_input_hash_slice_verify_args.json",
+    "proofInputHashSliceSummary": "proving/out/cairo_air_adapter_spike/summary.json"
+  }
+}

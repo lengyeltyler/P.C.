@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "version": "2.15.0",
+  "proofScarbVersion": "2.14.0",
+  "foundryVersion": "0.53.0",
+  "universalSierraCompilerVersion": "2.10.0",
+  "nargoVersion": "1.0.0-beta.16",
+  "barretenbergVersion": "3.0.0-nightly.20251104",
+  "description": "Official pinned Noir, Barretenberg, Scarb, Cairo, Starknet Foundry, and Universal Sierra Compiler release assets for PhilCore CI provisioning. Checksums are SHA-256 of the official GitHub release assets.",
+  "installRoots": {
+    "scarb": "~/.cache/philcore/toolchains/scarb-v2.15.0",
+    "proofScarb": "~/.cache/philcore/toolchains/scarb-v2.14.0",
+    "cairo": "~/.cache/philcore/toolchains/cairo-v2.15.0",
+    "foundry": "~/.cache/philcore/toolchains/starknet-foundry-v0.53.0",
+    "universalSierraCompiler": "~/.cache/philcore/toolchains/universal-sierra-compiler-v2.10.0",
+    "nargo": "~/.cache/phil-v1-step3/toolchains/nargo-1.0.0-beta.16",
+    "barretenberg": "~/.cache/phil-v1-step3/toolchains/bb-3.0.0-nightly.20251104"
+  },
+  "platforms": {
+    "linux-x86_64": {
+      "runnerHint": "ubuntu-24.04",
+      "scarb": {
+        "url": "https://github.com/software-mansion/scarb/releases/download/v2.15.0/scarb-v2.15.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "119536045813331ab24c8993b3171f26d62e471368fc305d01e4c3a0c4324eba",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "scarb-v2.15.0-x86_64-unknown-linux-gnu/bin/scarb"
+      },
+      "proofScarb": {
+        "url": "https://github.com/software-mansion/scarb/releases/download/v2.14.0/scarb-v2.14.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "46cc07f23cac9e03dedbd6ddc73f56015bbcf3bcc5905ead95dd1c8ca50044c4",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "scarb-v2.14.0-x86_64-unknown-linux-gnu/bin/scarb"
+      },
+      "cairo": {
+        "url": "https://github.com/starkware-libs/cairo/releases/download/v2.15.0/release-x86_64-unknown-linux-musl.tar.gz",
+        "sha256": "1f49ace7c20d229e304243aed5e9bb2c743a2da9c056cae005215d11192aaea7",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "cairo/bin/cairo-execute",
+        "notes": "Official Cairo v2.15.0 Linux release is musl-linked; usable on hosted Ubuntu glibc runners."
+      },
+      "foundry": {
+        "url": "https://github.com/foundry-rs/starknet-foundry/releases/download/v0.53.0/starknet-foundry-v0.53.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "c86303498a104c9e82cb4b9b7141cd596c09e98ddd79cb7ea3f67faa151f64cf",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "starknet-foundry-v0.53.0-x86_64-unknown-linux-gnu/bin/snforge"
+      },
+      "universalSierraCompiler": {
+        "url": "https://github.com/software-mansion/universal-sierra-compiler/releases/download/v2.10.0/universal-sierra-compiler-v2.10.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "eafa433885c32947fbe640937a12543d468a0e2905b62c177f0fd8099285c1b9",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "universal-sierra-compiler-v2.10.0-x86_64-unknown-linux-gnu/bin/universal-sierra-compiler"
+      },
+      "nargo": {
+        "url": "https://github.com/noir-lang/noir/releases/download/v1.0.0-beta.16/nargo-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "246b4fe8a694c085d384c74319301600e2ec5a7c337d51006398393d023eaf11",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "nargo",
+        "installSubdirectory": "."
+      },
+      "barretenberg": {
+        "url": "https://github.com/AztecProtocol/aztec-packages/releases/download/v3.0.0-nightly.20251104/barretenberg-amd64-linux.tar.gz",
+        "sha256": "c6dae1092fed8d1230c2345ffcf4c903a2d787d0e220e9ea8c94b0511ed29c9b",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "bb",
+        "installSubdirectory": "."
+      }
+    },
+    "darwin-arm64": {
+      "runnerHint": "macos-14 (local)",
+      "scarb": {
+        "url": "https://github.com/software-mansion/scarb/releases/download/v2.15.0/scarb-v2.15.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "cb3f9729c13bfd9359e2496d012d7748da2841e3061c47f775ff39892f3bb6ac",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "scarb-v2.15.0-aarch64-apple-darwin/bin/scarb"
+      },
+      "proofScarb": {
+        "url": "https://github.com/software-mansion/scarb/releases/download/v2.14.0/scarb-v2.14.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "3667608675ded9e13322cf5cf1fcda06d6d84b0857e04e846148c6ae8cf5f576",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "scarb-v2.14.0-aarch64-apple-darwin/bin/scarb"
+      },
+      "cairo": {
+        "url": "https://github.com/starkware-libs/cairo/releases/download/v2.15.0/release-aarch64-apple-darwin.tar",
+        "sha256": "08012010c0e4214a27425ab5d7ac036a3e24fb76c6e61d899236985ef6b59dbc",
+        "archiveFormat": "tar",
+        "binaryRelativePath": "cairo/bin/cairo-execute"
+      },
+      "foundry": {
+        "url": "https://github.com/foundry-rs/starknet-foundry/releases/download/v0.53.0/starknet-foundry-v0.53.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "4c3be134ad09c4fb2093dda68272520d5cea595ac2b7a1c1714d39877f77b4b8",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "starknet-foundry-v0.53.0-aarch64-apple-darwin/bin/snforge"
+      },
+      "universalSierraCompiler": {
+        "url": "https://github.com/software-mansion/universal-sierra-compiler/releases/download/v2.10.0/universal-sierra-compiler-v2.10.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "3b7806314732b7cff266b95fcf0c8f0927e4776819e36f94a2c2a2eaff8ad2d0",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "universal-sierra-compiler-v2.10.0-aarch64-apple-darwin/bin/universal-sierra-compiler"
+      },
+      "nargo": {
+        "url": "https://github.com/noir-lang/noir/releases/download/v1.0.0-beta.16/nargo-aarch64-apple-darwin.tar.gz",
+        "sha256": "e21d6d09639831568850b365002e0c60456328155b143296ccf6fb3ca4cec794",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "nargo",
+        "installSubdirectory": "."
+      },
+      "barretenberg": {
+        "url": "https://github.com/AztecProtocol/aztec-packages/releases/download/v3.0.0-nightly.20251104/barretenberg-arm64-darwin.tar.gz",
+        "sha256": "fc30922f8ee2db86a3fb0ddca026f8ab4cf123e6cffbbff17169ede50e513ef4",
+        "archiveFormat": "tar.gz",
+        "binaryRelativePath": "bb",
+        "installSubdirectory": "."
+      }
+    }
+  },
+  "provenance": {
+    "scarbChecksumsUrl": "https://github.com/software-mansion/scarb/releases/download/v2.15.0/checksums.sha256",
+    "cairoReleaseTag": "https://github.com/starkware-libs/cairo/releases/tag/v2.15.0",
+    "cairoChecksumSource": "SHA-256 computed from the official GitHub release asset bytes (Cairo does not publish checksums.sha256 for v2.15.0).",
+    "starknetFoundryReleaseTag": "https://github.com/foundry-rs/starknet-foundry/releases/tag/v0.53.0",
+    "starknetFoundryChecksumSource": "GitHub release asset digest published by the official v0.53.0 release.",
+    "universalSierraCompilerReleaseTag": "https://github.com/software-mansion/universal-sierra-compiler/releases/tag/v2.10.0",
+    "universalSierraCompilerChecksumSource": "GitHub release asset digest published by the official v2.10.0 release.",
+    "nargoReleaseTag": "https://github.com/noir-lang/noir/releases/tag/v1.0.0-beta.16",
+    "barretenbergReleaseTag": "https://github.com/AztecProtocol/aztec-packages/releases/tag/v3.0.0-nightly.20251104"
+  }
+}

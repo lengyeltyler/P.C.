@@ -1,0 +1,45 @@
+{
+  "phase": "O.9",
+  "auditedAt": "2026-07-17T23:02:17.371Z",
+  "platform": {
+    "macOS": "25.5.0",
+    "architecture": "arm64"
+  },
+  "tools": {
+    "codesign": true,
+    "security": true,
+    "notarytool": true,
+    "stapler": true,
+    "spctl": true
+  },
+  "identities": {
+    "validDeveloperIdApplicationCount": 1,
+    "selected": "externally_selected",
+    "selectedMatchCount": 1,
+    "privateKeyAvailability": "represented_by_valid_identity_result",
+    "certificateExpiry": "requires_selected_certificate_inspection",
+    "teamId": null
+  },
+  "signingState": "ready",
+  "notarization": {
+    "credentialMode": "external_keychain_profile",
+    "credentialsConfigured": true,
+    "liveUploadAuthorized": true
+  },
+  "ready": true,
+  "liveMilestones": {
+    "developerIdSigningPerformed": false,
+    "strictDeveloperIdVerificationPassed": false,
+    "notarizationSubmitted": false,
+    "notarizationAccepted": false,
+    "staplingPerformed": false,
+    "stapleValidated": false,
+    "gatekeeperAcceptedWorkingApp": false,
+    "gatekeeperAcceptedExtractedApp": false,
+    "controlledDistributionPackageProduced": false,
+    "distributedToTesters": false,
+    "productionApproved": false
+  },
+  "publicNetworkMutation": false,
+  "baseSepoliaBetaGate": "blocked"
+}

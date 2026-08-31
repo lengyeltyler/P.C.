@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/lengyeltyler/Philenator",
+  "sourceVisibility": "private_at_import",
+  "commit": "f174dedda16a354c592e3252d9b0b5805bab59c4",
+  "tree": "85ba6dcf4c3712e2ec46c60cdf639ba6cc045635",
+  "importedOn": "2026-08-24",
+  "manifestSha256": "2831da85bfccd9b1d674b118d638c6a867580f40b9863bb50a5ba87fc5e90dbc",
+  "svgFileCount": 503,
+  "svgContentsLexicalSha256": "192ce3fc0ee8055d1966c847e44e4b5a1d8172fe1e6e7fef1c77a23dd81196c4",
+  "rights": "Owner supplied and authorized for use and adaptation in Phil and PhilCore.",
+  "runtimeAuthority": "Decorative presentation only; grants no identity, signing, proof, recovery, account, or network authority."
+}

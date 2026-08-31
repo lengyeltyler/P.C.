@@ -1,0 +1,80 @@
+/* Final Beta presentation only. No network, identity or authorization policy. */
+body[data-presentation-mode="user"] { --world-clip: none; }
+body[data-presentation-mode="user"] :is(button, .panel, .user-section, .identity-hero, .chain-hero, .chain-tile, .identity-choice, .creation-form, .info-surface, .featured-item, .account-setup-row, .catalog-search-section, .beta-capability-card) {
+  clip-path: none;
+  border-radius: 3px;
+}
+[hidden] { display: none !important; }
+.standalone-entry:has(.welcome-entry) { width: min(38rem, 100%); padding: 1.2rem 0; }
+.welcome-entry { gap: .8rem; padding: 1rem; }
+.welcome-entry::before, .welcome-entry::after { display: none; }
+.welcome-positioning { max-width: 40rem; font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.65; }
+.welcome-entry .phil-preview-area { min-height: 10rem; width: 13rem; }
+.welcome-entry .phil-preview-area .phil-avatar.hero { width: 10rem; height: 10rem; }
+.welcome-naming { width: min(30rem, 100%); text-align: left; }
+.welcome-naming > input { width: 100%; }
+.welcome-naming .field-help { font-size: .82rem; line-height: 1.55; margin: .65rem 0 0; }
+.beta-footnote { margin: .5rem 0 0; color: var(--muted); font-size: .75rem; }
+.creation-form { padding: 1.4rem; }
+
+body[data-locked="true"] .view { padding: 0 1.2rem; }
+body[data-locked="true"] .philenator-background { filter: blur(12px) brightness(.42); transform: scale(1.04); }
+body[data-locked="true"] .ambient-world { opacity: .15; }
+.lock-space { min-height: 100dvh; display: grid; place-items: center; padding: 2.2rem 0; }
+.lock-space__entry {
+  width: min(27rem, 100%); padding: 2rem; text-align: center;
+  border: 1px solid rgba(255,255,255,.24); border-radius: 3px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,.08), transparent 65%), rgba(7,7,7,.94);
+  box-shadow: 0 24px 100px rgba(0,0,0,.55);
+}
+.lock-space__character { display: grid; place-items: center; margin-bottom: .9rem; }
+.lock-space__character .phil-avatar.hero { width: 12rem; height: 12rem; }
+.lock-space__entry h3 { font-family: var(--font-brand); font-size: 2rem; overflow-wrap: anywhere; margin: .25rem 0; }
+.lock-space__welcome { color: var(--muted); margin: .5rem 0 1.75rem; }
+.lock-space__entry .field { text-align: left; }
+.lock-space__entry .field-help { font-size: .8rem; }
+.lock-space__entry .actions { display: grid; margin-top: 1.2rem; }
+.lock-space__entry .state-callout { text-align: left; }
+/* Authentication has already succeeded before the renderer opens this light. */
+.world-transition__horizon, .world-transition__companions, .world-transition__key { display: none; }
+.world-transition__copy > span:last-child { display: none; }
+.world-transition__copy strong { font-size: 1.3rem; }
+.world-transition.is-opening { animation-duration: .65s; }
+.world-transition__door { border-radius: 0; clip-path: none; }
+
+.phil-helper {
+  position: fixed; z-index: 90; width: max-content; max-width: calc(100vw - 32px);
+  display: flex; flex-direction: column; align-items: flex-end; gap: .6rem;
+}
+.phil-helper__character {
+  width: 84px; height: 104px; padding: 0; border: 0; background: transparent;
+  display: grid; justify-items: center; cursor: grab; touch-action: none; user-select: none;
+  box-shadow: none; clip-path: none;
+}
+.phil-helper__character:active { cursor: grabbing; }
+.phil-helper__character img { width: 76px; height: 80px; object-fit: contain; filter: drop-shadow(0 4px 4px #000); pointer-events: none; }
+.phil-helper__character span { padding: .12rem .45rem; border: 1px solid #bfbfbf; border-radius: 3px; background: #080808; font-size: .7rem; color: #fff; }
+.phil-helper__content { width: min(22rem, calc(100vw - 32px)); max-height: min(24rem, calc(100dvh - 152px)); overflow: auto; padding: 1.2rem; border: 1px solid #bfbfbf; border-radius: 3px; background: #080808; box-shadow: 0 12px 40px #0008; }
+.phil-helper__content h3 { font-family: var(--font-brand); margin: 0 0 .5rem; }
+.phil-helper__content > p { color: var(--muted); font-size: .8rem; margin-bottom: 1rem; }
+.phil-helper__content details, .settings-phil-help details { border-top: 1px solid var(--line); padding: .7rem 0; }
+.phil-helper__content summary, .settings-phil-help summary { cursor: pointer; font-size: .9rem; }
+.phil-helper__content details p, .settings-phil-help details p { color: var(--muted); font-size: .85rem; line-height: 1.55; }
+.phil-helper__content > button { margin-top: .7rem; }
+body:has(#approval-root > *) .phil-helper,
+body:has([aria-modal="true"]) .phil-helper,
+body:has(dialog[open]) .phil-helper,
+body[data-locked="true"] .phil-helper { display: none !important; }
+.settings-phil-help { margin-top: 1.3rem; }
+.settings-phil-help h4 { margin: 1rem 0 .3rem; }
+@media (max-width: 600px) {
+  .welcome-entry { padding-top: 1.5rem; }
+  .lock-space__entry { padding: 1.4rem; }
+  .lock-space__character .phil-avatar.hero { width: 9rem; height: 9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-transition.is-opening { animation: phil-entry-fade .18s linear both; }
+  .world-transition__threshold { display: none; }
+  .phil-helper, .phil-helper *, .lock-space * { animation: none !important; transition: none !important; }
+}
+@keyframes phil-entry-fade { from { opacity: 1; } to { opacity: 0; } }

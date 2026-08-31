@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="393" height="852" viewBox="0 0 393 852">
+  <rect width="393" height="852" rx="46" fill="#f5f7f5"/>
+  <rect x="132" y="11" width="129" height="33" rx="17" fill="#111714"/>
+  <text x="24" y="77" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#557066">O.43 SYNTHETIC TEST STATE</text>
+  <text x="24" y="111" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="29" font-weight="700" fill="#14231d">Device status</text>
+  <rect x="20" y="134" width="353" height="91" rx="22" fill="#e6ecff"/>
+  <rect x="38" y="153" width="54" height="54" rx="15" fill="#294fef"/>
+  <text x="49" y="187" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="19" font-weight="700" fill="#fff">PC</text>
+  <text x="108" y="169" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="17" font-weight="700" fill="#14231d">Disposable credential ready</text>
+  <text x="108" y="194" font-family="SFMono-Regular,Menlo,monospace" font-size="13" fill="#4e625a">7C2A 19D0 4F81 06BC 28E4 9A53</text>
+  <text x="24" y="265" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="18" font-weight="700" fill="#14231d">What this iPhone can do</text>
+  <rect x="20" y="283" width="353" height="154" rx="20" fill="#ffffff" stroke="#dce3df"/>
+  <circle cx="50" cy="319" r="13" fill="#e7edff"/><text x="44" y="325" font-family="sans-serif" font-size="17" fill="#294fef">✓</text>
+  <text x="76" y="325" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" fill="#21332c">Approve one recovery factor</text>
+  <circle cx="50" cy="360" r="13" fill="#e7edff"/><text x="44" y="366" font-family="sans-serif" font-size="17" fill="#294fef">✓</text>
+  <text x="76" y="366" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" fill="#21332c">Keep its private key on device</text>
+  <circle cx="50" cy="401" r="13" fill="#e7edff"/><text x="44" y="407" font-family="sans-serif" font-size="17" fill="#294fef">2</text>
+  <text x="76" y="407" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" fill="#21332c">Require another approved factor</text>
+  <text x="24" y="474" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#52665e">This key cannot approve ordinary Ethereum actions.</text>
+  <text x="24" y="497" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#52665e">Recovery remains exact 2-of-3.</text>
+  <rect x="20" y="523" width="353" height="175" rx="20" fill="#fff" stroke="#dce3df"/>
+  <text x="39" y="559" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Device protection</text>
+  <text x="354" y="559" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#567066">Simulator test mode</text>
+  <line x1="39" y1="579" x2="354" y2="579" stroke="#e3e8e5"/>
+  <text x="39" y="612" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Local approval</text>
+  <text x="354" y="612" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#567066">Face ID / passcode</text>
+  <line x1="39" y1="632" x2="354" y2="632" stroke="#e3e8e5"/>
+  <text x="39" y="665" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" fill="#21332c">Generation</text>
+  <text x="354" y="665" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" fill="#567066">1</text>
+  <rect x="20" y="719" width="353" height="52" rx="15" fill="#294fef"/>
+  <text x="196.5" y="752" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="17" font-weight="700" fill="#fff">Run disposable key test</text>
+  <line x1="0" y1="795" x2="393" y2="795" stroke="#dde4e0"/>
+  <text x="46" y="828" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#294fef">STATUS</text>
+  <text x="141" y="828" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">PAIR</text>
+  <text x="225" y="828" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">RECOVERY</text>
+  <text x="330" y="828" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#65776f">SETTINGS</text>
+</svg>

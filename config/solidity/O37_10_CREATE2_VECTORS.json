@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.10",
+  "accountVersionLabel": "philcore-v2-minimal-account-v3-consumer-recovery",
+  "accountVersionId": "0xa271e70f3c567c6a54a81e455de89f98cc067a931ac70816c6016e9b9ca1fd1f",
+  "factoryVersionLabel": "philcore-v2-minimal-factory-v2",
+  "factoryVersionId": "0x66e130d6512db6801362a672a59d58b9b6c16bb2ba76172808d6b5c21814d671",
+  "creationTupleFieldCount": 20,
+  "accountCreationCodeHash": "0xc14f4967f03ea3486d721a7703d973ca93419589a117989224d23e5c56810002",
+  "sampleExactInitCodeBytes": 15731,
+  "syntheticVectorInputs": {
+    "entryPoint": "0x0000000000000000000000000000000000004337",
+    "deploymentChainId": "31337",
+    "ownerCommitment": "0xda9dffb9a9ba5344a93d5ecd70a4f5eb0616a4bccd662f597630f4cc10dc515a",
+    "factoryBinding": "0x00000000000000000000000000000000000F3710",
+    "confirmationTarget": "0x000000000000000000000000000000000000C0F1",
+    "initialValidator": "0x000000000000000000000000000000000000A110",
+    "validatorVerifierKind": 1,
+    "validatorKeyIdBinding": "0xc47eef7fb0599328499697c6c8f24c76dc8aa47e4bc0b2aff1ef8bd5dc300ffa",
+    "validatorEpoch": 1,
+    "primaryDeviceRecoveryCommitment": "0x782836a1420ba07e8bba985ea23acd65bda83206969ec4f5d885c3a117e79915",
+    "hardwareSecurityKeyCommitment": "0x3ff926bebd440c0e7c3e34777f5ea8d62162281ff0c6b77f74fbcc9c59414721",
+    "independentRecoveryFactorCommitment": "0xf4f9776085dcbf445b51f2d27b1556ca6d33c6a6a3138676aeddf2285a92628a",
+    "recoveryEpoch": 1,
+    "recoveryDelaySeconds": 172800,
+    "recoveryExpirySeconds": 604800,
+    "accountVersionId": "0xa271e70f3c567c6a54a81e455de89f98cc067a931ac70816c6016e9b9ca1fd1f",
+    "securityModelId": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44",
+    "identityBindingCommitment": "0x13ebecc4050e839622373bdffb6887893dd8ea7d8aa6d62622a3769defbc217b",
+    "validatorCommitment": "0xac0d554fa570e490264eb6149758732de84f0e5ff606b9c1240778f50579a8a4",
+    "recoveryConfigurationHash": "0x9d16b2bcbd7182b4372dd3e394451c1a1241f51bc3f09da0bdf8fa6b70931eaa"
+  },
+  "vectors": [
+    {
+      "classification": "DETERMINISTIC_LOCAL_TEST_VECTOR_ONLY",
+      "label": "alpha",
+      "userSalt": "0x6eb413c7a94d833990fa4be6af913ef04d0f91786d494f187c8bd1bd461081de",
+      "deploymentSalt": "0x66f8e054c1495b859364d1cfedd4635ddf124584a626090ce364db6ae81b34de",
+      "accountCreationCodeHash": "0xc14f4967f03ea3486d721a7703d973ca93419589a117989224d23e5c56810002",
+      "syntheticFactoryAddress": "0x00000000000000000000000000000000000F3710",
+      "predictedAddress": "0x9dDBa917546Aed7E76e0C4EF1f5747DB4f7651BE",
+      "canonicalProductionAddress": false
+    },
+    {
+      "classification": "DETERMINISTIC_LOCAL_TEST_VECTOR_ONLY",
+      "label": "beta",
+      "userSalt": "0xf1e4f4b3c7d7694613843887bd1e2b51af355245bf716ea66698baa6b30d2179",
+      "deploymentSalt": "0xbc0c2ccb4b534415f1250c79ebc27149608efeacd98bfce8cd56dfb76e8caec0",
+      "accountCreationCodeHash": "0xc14f4967f03ea3486d721a7703d973ca93419589a117989224d23e5c56810002",
+      "syntheticFactoryAddress": "0x00000000000000000000000000000000000F3710",
+      "predictedAddress": "0x38Ebfa30D40D9C5764735d7A3F62919dd311e29b",
+      "canonicalProductionAddress": false
+    },
+    {
+      "classification": "DETERMINISTIC_LOCAL_TEST_VECTOR_ONLY",
+      "label": "gamma",
+      "userSalt": "0xcfbcc96d69f601492965420ae751ee4280ede660067c45eb8394b60a67abb04f",
+      "deploymentSalt": "0xaffa56520671ea84da8e87eeae806d5468f27c968cc6073a0b5164e0f34d0e4b",
+      "accountCreationCodeHash": "0xc14f4967f03ea3486d721a7703d973ca93419589a117989224d23e5c56810002",
+      "syntheticFactoryAddress": "0x00000000000000000000000000000000000F3710",
+      "predictedAddress": "0x2F1A9ea635D315e178B586898efF5345879115f5",
+      "canonicalProductionAddress": false
+    }
+  ],
+  "productionAddressDeclaredCanonical": false
+}

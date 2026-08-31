@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.10",
+  "compilerSettings": {
+    "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "metadata": {
+      "appendCBOR": true,
+      "bytecodeHash": "ipfs",
+      "useLiteralContent": true
+    }
+  },
+  "contracts": {
+    "verifier": {
+      "runtimeBytes": 14625,
+      "creationBytes": 14651,
+      "runtimeKeccak256": "0xa1936c0e1a5ad05b5e894cb8575d38e264d5f0827098398217b63ad32eab62b6",
+      "creationKeccak256": "0xf1b6d1623520fe24bb66a871167d7be8216521261dc7938c26ef40537bfdc5be",
+      "eip170ReserveBytes": 9951,
+      "accepted": true
+    },
+    "account": {
+      "runtimeBytes": 13279,
+      "creationBytes": 15091,
+      "sampleExactInitCodeBytes": 15731,
+      "runtimeKeccak256": "0x52ecf1069646a3d157e949ff534ea13598dc5e5f6ca5b347fb46f72ab1910505",
+      "creationKeccak256": "0xf78957dc0c23a9d542a33c3f8e06a1a7cebf5aa1dc399366c12ba897e389ba35",
+      "sampleExactInitCodeKeccak256": "0xc14f4967f03ea3486d721a7703d973ca93419589a117989224d23e5c56810002",
+      "preferredRuntimeMaximumBytes": 15360,
+      "reviewedRuntimeMaximumBytes": 20480,
+      "eip170MaximumBytes": 24576,
+      "eip170ReserveBytes": 11297,
+      "eip3860MaximumInitCodeBytes": 49152,
+      "eip3860ReserveBytes": 33421,
+      "accepted": true
+    },
+    "factory": {
+      "runtimeBytes": 17778,
+      "creationBytes": 18153,
+      "constructorArgumentBytes": 160,
+      "exactDeploymentInitCodeBytes": 18313,
+      "runtimeKeccak256": "0xb618bfe69fd8025464235b1272c382e26e3b21c1c98de1a53b3bcb2cbc6e86c1",
+      "creationKeccak256": "0x6c646e2d292e722d689dd1b301a1b30108255f2263923e60a6e5cfc829027a81",
+      "eip170ReserveBytes": 6798,
+      "eip3860ReserveBytes": 30839,
+      "accepted": true
+    }
+  },
+  "contributorAnalysis": {
+    "method": "QUALITATIVE_SECURITY_REVIEW_WITH_EXACT_WHOLE_ARTIFACT_MEASUREMENT",
+    "accountDominantContributors": [
+      "canonical fixed-word ABI decoding and typed O.32 intent hashing",
+      "ERC-4337 sender, hash, keyed nonce, fee, validity, and paymaster checks",
+      "factory verifier-binding and verifier STATICCALL validation",
+      "validator and exact delayed recovery lifecycle transitions",
+      "four aggregate views and two commitment-oriented events"
+    ],
+    "factoryDominantContributors": [
+      "embedded exact account creation code",
+      "canonical 20-field initialization validation",
+      "CREATE2 salt, init-code hash, address prediction, and deployment"
+    ],
+    "securityChecksRemovedForSize": false,
+    "note": "viaIR inlining prevents defensible per-function byte counts; no synthetic byte attribution is claimed"
+  }
+}

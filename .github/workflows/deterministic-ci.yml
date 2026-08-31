@@ -1,0 +1,294 @@
+name: Deterministic CI
+
+on:
+  pull_request:
+    branches:
+      - "main"
+  workflow_dispatch: {}
+
+concurrency:
+  group: deterministic-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "26.0.0"
+  NPM_VERSION: "11.12.1"
+  RUST_NIGHTLY: "nightly-2025-07-14"
+
+jobs:
+  classification-static:
+    name: Classification, typecheck, compile
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Verify merge identity (pull_request only)
+        if: github.event_name == 'pull_request'
+        env:
+          EXPECTED_BASE: ${{ github.event.pull_request.base.sha }}
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          CHECKED_OUT="$(git rev-parse HEAD)"
+          if [ "${CHECKED_OUT}" != "${GITHUB_SHA}" ]; then
+            echo "::error::Checked-out HEAD (${CHECKED_OUT}) does not match GITHUB_SHA (${GITHUB_SHA})"
+            exit 1
+          fi
+          # git show/log's %P is graft-aware and returns an empty parent list
+          # for a commit sitting exactly at a shallow clone's boundary (the
+          # default actions/checkout depth), even though the commit object
+          # itself still carries both raw "parent" header lines. Parse those
+          # header lines directly from the raw object instead, which works
+          # identically at any checkout depth: stop at the first blank line
+          # (the header/message separator), so nothing in the commit message
+          # body can be mistaken for a parent header.
+          RAW_PARENTS="$(git cat-file -p HEAD | awk '/^$/{exit} $1=="parent"{print $2}')"
+          set -- ${RAW_PARENTS}
+          PARENT_COUNT="$#"
+          if [ "${PARENT_COUNT}" != "2" ]; then
+            echo "::error::Expected exactly 2 parents for the checked-out synthetic merge commit, found ${PARENT_COUNT}: ${RAW_PARENTS}"
+            exit 1
+          fi
+          PARENT1="$1"
+          PARENT2="$2"
+          if [ "${PARENT1}" != "${EXPECTED_BASE}" ]; then
+            echo "::error::Parent 1 (${PARENT1}) does not match PR base SHA (${EXPECTED_BASE})"
+            exit 1
+          fi
+          if [ "${PARENT2}" != "${EXPECTED_HEAD}" ]; then
+            echo "::error::Parent 2 (${PARENT2}) does not match PR head SHA (${EXPECTED_HEAD})"
+            exit 1
+          fi
+          TREE="$(git rev-parse HEAD^{tree})"
+          echo "Checked-out synthetic merge commit: ${CHECKED_OUT}"
+          echo "Checked-out tree: ${TREE}"
+          echo "Parent 1 (base): ${PARENT1}"
+          echo "Parent 2 (head): ${PARENT2}"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Pin npm and install lockfile deps
+        run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          node -v
+          npm -v
+          npm ci
+
+      - name: Validate classification completeness
+        run: npm run ci:validate-classification
+
+      - name: Classifier unit tests
+        run: |
+          npx hardhat test --no-compile ./test/unit/ci-classification.test.cjs
+          npx hardhat test --no-compile ./test/unit/ci-starknet-toolchain-installer.test.cjs
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Compile
+        run: npx hardhat compile
+
+      - name: Prove disposable outputs and clean tree
+        run: npm run ci:verify-clean-tree
+
+  product-runtime:
+    name: Product / Runtime + iOS Simulator lane
+    runs-on: macos-26
+    # Cold pinned Rust builds plus the two iOS configurations can exceed 20m.
+    # Keep all checks and durable-result requirements; bound only total runtime.
+    timeout-minutes: 30
+    needs: classification-static
+    env:
+      PHIL_LONGITUDINAL_SOURCE_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          npm ci
+      - name: Use runner rustup with pinned nightly
+        run: |
+          command -v rustup
+          rustup --version
+          rustup toolchain install "${RUST_NIGHTLY}" --profile minimal
+          rustup default "${RUST_NIGHTLY}"
+          rustc +${RUST_NIGHTLY} --version
+          cargo +${RUST_NIGHTLY} --version
+      - name: Build real ACTION_UNLOCK prover/verifier binaries
+        run: |
+          cargo +${RUST_NIGHTLY} build --release --locked --manifest-path ./proving/Cargo.toml --bin generate-unlock-proof-json --bin verify-unlock-proof-json
+      - name: Confirm prover/verifier binaries exist and are executable
+        run: |
+          test -x proving/target/release/generate-unlock-proof-json
+          test -x proving/target/release/verify-unlock-proof-json
+      - name: Export prebuilt prover/verifier binary paths
+        run: |
+          echo "PHILCORE_ACTION_UNLOCK_PROVER_BIN=${GITHUB_WORKSPACE}/proving/target/release/generate-unlock-proof-json" >> "$GITHUB_ENV"
+          echo "PHILCORE_ACTION_UNLOCK_VERIFIER_BIN=${GITHUB_WORKSPACE}/proving/target/release/verify-unlock-proof-json" >> "$GITHUB_ENV"
+      - run: npm run ci:lane:product-runtime
+      - name: Verify durable longitudinal release-gate result
+        run: node scripts/ci/longitudinal-evidence.cjs
+      - name: Upload verified longitudinal release-gate result
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: phil-longitudinal-release-gate
+          path: .local/release-validation/longitudinal-release-gate.json
+          if-no-files-found: error
+          include-hidden-files: true
+          retention-days: 90
+      - run: npm run ci:verify-clean-tree
+
+  solidity-erc4337:
+    name: Solidity / ERC-4337 / ERC-7562 lane
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    needs: classification-static
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          npm ci
+      - name: Install pinned proof toolchain
+        run: npm run ci:install-starknet-toolchain
+      - run: npm run ci:lane:solidity
+      - run: npm run ci:verify-clean-tree
+
+  desktop:
+    name: Desktop lane
+    runs-on: macos-14
+    timeout-minutes: 30
+    needs: classification-static
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          npm ci
+      - name: Install pinned proof toolchain
+        run: npm run ci:install-starknet-toolchain
+      - name: Compile
+        run: npx hardhat compile
+      - name: Bundle sandbox-safe Desktop preload
+        run: npm run desktop:bundle-preload
+      - name: Use runner rustup with pinned nightly
+        run: |
+          command -v rustup
+          rustup --version
+          rustup toolchain install "${RUST_NIGHTLY}" --profile minimal
+          rustup default "${RUST_NIGHTLY}"
+          rustc +${RUST_NIGHTLY} --version
+          cargo +${RUST_NIGHTLY} --version
+      - name: Build real ACTION_UNLOCK prover/verifier binaries
+        run: |
+          cargo +${RUST_NIGHTLY} build --release --locked --manifest-path ./proving/Cargo.toml --bin generate-unlock-proof-json --bin verify-unlock-proof-json
+      - name: Confirm prover/verifier binaries exist and are executable
+        run: |
+          test -x proving/target/release/generate-unlock-proof-json
+          test -x proving/target/release/verify-unlock-proof-json
+      - name: Export prebuilt prover/verifier binary paths
+        run: |
+          echo "PHILCORE_ACTION_UNLOCK_PROVER_BIN=${GITHUB_WORKSPACE}/proving/target/release/generate-unlock-proof-json" >> "$GITHUB_ENV"
+          echo "PHILCORE_ACTION_UNLOCK_VERIFIER_BIN=${GITHUB_WORKSPACE}/proving/target/release/verify-unlock-proof-json" >> "$GITHUB_ENV"
+      - name: Desktop classified file list
+        run: npm run ci:lane:desktop
+      - run: npm run ci:verify-clean-tree
+
+  proving:
+    name: Proving lane
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    needs: classification-static
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - name: Use runner rustup with pinned nightly
+        run: |
+          command -v rustup
+          rustup --version
+          rustup toolchain install "${RUST_NIGHTLY}" --profile minimal
+          rustup default "${RUST_NIGHTLY}"
+          rustc +${RUST_NIGHTLY} --version
+          cargo +${RUST_NIGHTLY} --version
+      - run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          npm ci
+      - name: Install pinned proof toolchain
+        run: npm run ci:install-starknet-toolchain
+      - run: npm run ci:lane:proving
+      - run: npm run ci:verify-clean-tree
+
+  evidence-check:
+    name: Deterministic evidence --check lane
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    needs: classification-static
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - name: Use runner rustup with pinned nightly
+        run: |
+          command -v rustup
+          rustup --version
+          rustup toolchain install "${RUST_NIGHTLY}" --profile minimal
+          rustup default "${RUST_NIGHTLY}"
+          rustc +${RUST_NIGHTLY} --version
+          cargo +${RUST_NIGHTLY} --version
+      - run: |
+          npm install -g npm@${{ env.NPM_VERSION }}
+          npm ci
+      - name: Install pinned Starknet proof toolchain
+        run: npm run ci:install-starknet-toolchain
+      - name: Activate pinned Starknet toolchain PATH
+        run: |
+          # shellcheck disable=SC1091
+          source scripts/starknet/activate-pinned-toolchain.sh
+          echo "$HOME/.cache/philcore/toolchains/scarb-v2.15.0/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.cache/philcore/toolchains/cairo-v2.15.0/bin" >> "$GITHUB_PATH"
+          scarb --version
+          cairo-execute --version
+      - run: npx hardhat compile
+      - run: npm run ci:lane:evidence
+      - name: Exact historical failure identities
+        run: npm run ci:lane:historical-evidence
+      - run: npm run ci:verify-clean-tree

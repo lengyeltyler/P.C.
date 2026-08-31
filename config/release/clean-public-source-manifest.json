@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "kind": "philcore-clean-public-source-export",
+  "releaseIdentity": "P.C. / Phil Controlled Sepolia Beta 0.1.0",
+  "engineeringSource": {
+    "commit": "7fd7ade7b992e9b5b4b6029b3938e1294f372e73",
+    "tree": "7489b116f05d5c44635ea58b45f55824c69941ba"
+  },
+  "historyPolicy": "Brand-new root commit; engineering ancestry, refs, object database and reflogs are not imported. Shared current file contents naturally retain content hashes.",
+  "publicationStatus": "LOCAL_PREPARATION_ONLY_OWNER_TRANSITION_AUTHORITY_REQUIRED",
+  "historicalOnlyNotInFinalTree": [
+    {
+      "name": "bitcoin.svg",
+      "gitBlob": "bbc9605e47893b5199709389a380ebfbe21eda27",
+      "sha256": "a66e6680dc80b6138d2df669f269f82e8ff9f618ad362a8b1b25ea6d093e8bde"
+    },
+    {
+      "name": "ethereum.svg",
+      "gitBlob": "0e2f3ca22ba1c43a3251390a36cf09fa47160fe2",
+      "sha256": "46d7b54f19884cfefc28a3f9d83e61b371f699c0861717ccb847ad863d2137ce"
+    },
+    {
+      "name": "solana.svg",
+      "gitBlob": "242dceb16e9bdfa0da5fb856eb0856d3a9455cf0",
+      "sha256": "ba965b0473450df84f95fb83282482e6481037326f489dc27fbe21f589b81ec8"
+    }
+  ],
+  "excludedTrackedFiles": [
+    {
+      "path": "config/provenance/v2/45c38dec9ba0e3f13db83bcbc943f1e72c64b894-phase5b-secure-enclave-disposable-key-gate.json",
+      "sha256": "cb5e5874b701993a20701d253db6378b60652642aa8d5068f5c6d2adf67fb717",
+      "classification": "PRIVATE_HISTORICAL_PHYSICAL_EVIDENCE",
+      "reason": "Actual owner physical observation and evidence-witness attestation; preserved only in engineering history."
+    }
+  ],
+  "privateNotExported": [
+    ".philcore-local/",
+    "pqREADME.md (no approved public disposition)",
+    "owner-only physical acceptance reports and raw ceremony observations",
+    "credentials, API keys, authenticated endpoint configuration",
+    "Keychain/notary credentials and provisioning material",
+    "Device Vault material, real identity secrets, recovery secrets and private witnesses"
+  ],
+  "localToolingEvidenceNotExported": [
+    "engineering .git directory, old refs and ancestry",
+    "private Codex/session/review reports",
+    "worktree-specific evidence directories",
+    "temporary build/release archives and app bundles",
+    "node_modules, compiler caches and generated local CI output"
+  ],
+  "retainedPublicMaterial": [
+    "LICENSE, THIRD_PARTY_NOTICES.md and complete LICENSES/native notice/source payload",
+    "SECURITY.md and public technical documentation",
+    "sanitized historical artifact/revocation and public testnet-status metadata",
+    "explicitly synthetic test vectors and test-only keys, never owner credentials",
+    "historical public provenance references whose private-history verification is outside required CI"
+  ],
+  "intentionalReleaseMetadataChanges": [
+    {
+      "path": "README.md",
+      "engineeringSha256": "f02b24eb921e81521ce0c8d72ad5147af3f34422f25f12d325ea047f405faf9b",
+      "publicSha256": "63b78b372f806b6284df925c3d812bfe8b1b85351589d2f8d277b7222ec8782c",
+      "classification": "PUBLIC_RELEASE_METADATA",
+      "reason": "P.C. public identity, final accepted source and Desktop artifact binding, and future-only ENS boundary."
+    },
+    {
+      "path": "config/adapters/PHIL_V1_STEP6C2_PRODUCT_WIRING_FIXTURE.json",
+      "engineeringSha256": "ff108dbf31df833790cd77c70cdcafc4165b8ec6798ab080099395383bb4ad7b",
+      "publicSha256": "93d948ee063e7db02def36521d075384d9cb13e42740f14a534b7833caa2efa5",
+      "classification": "DETERMINISTIC_RELEASE_SOURCE_BINDING",
+      "reason": "Canonical generator refresh for final P.C. README and accepted source metadata; product protocol bytes unchanged."
+    },
+    {
+      "path": "config/provenance/v2-registry.json",
+      "engineeringSha256": "b1b9745d56bc068106cd38cef446873d80f7535fd1f233c1bccb6bf8952427ba",
+      "publicSha256": "5922e03652d79d4f9c7244a128118ba7be2ce0617829e1bc5cfea08e0064d3f2",
+      "classification": "PRIVATE_EVIDENCE_EXCLUSION_METADATA",
+      "reason": "Registry excludes the private owner physical-observation record while preserving public provenance entries."
+    },
+    {
+      "path": "config/solidity/O42_1_PLATFORM_WEBAUTHN_COMPATIBILITY_EVIDENCE.json",
+      "engineeringSha256": "d24c9e808cc22f0171e3b4d484869b61dede6c138e584096fd9dae79cdcfbb85",
+      "publicSha256": "61d35e6152085ed1f33c49319f3b165cdd346469ff4359548b0ee04615df8456",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Owner-only local hardware and protected-state observations are withheld."
+    },
+    {
+      "path": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "engineeringSha256": "e942707529050fd0603fd74541c07e39937c7b1e77c7bee66204c6d765fa6323",
+      "publicSha256": "836c7f66f178883e8cc66b4c695c15c66369b8377edc85784c1ef2d6183dc200",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Owner-only local identity and protected-state observations are withheld."
+    },
+    {
+      "path": "docs/PHILCORE_CONTROLLED_SEPOLIA_BETA_FINAL_RELEASE_STATUS.md",
+      "engineeringSha256": "17b0a5e2ef7891945e357401c2acb107b3ffdf802ffedfdad934289c8805fe6e",
+      "publicSha256": "2dbd7ef06f156122e3b2eaa1efce10adfbdd13a95e01d1dc5eb0af3ffe44f049",
+      "classification": "PUBLIC_RELEASE_METADATA",
+      "reason": "Public final status binds the accepted UI engineering source and final Desktop artifact while preserving the exact prior physical-acceptance provenance and zero-runtime-delta basis."
+    },
+    {
+      "path": "docs/reference/ASSET_RIGHTS.md",
+      "engineeringSha256": "fe9d7e18c4ce49b3c60daac6ebcd5bbf235fe70fb500e348e8a541c388ee608f",
+      "publicSha256": "631aa9ad7f0d270d51a2e4e6c1d3c7dcfd09d00e9ebf860943b0e69f72fb7bc8",
+      "classification": "PUBLIC_RELEASE_RIGHTS_METADATA",
+      "reason": "Records historical chain-mark exclusion without claiming rights."
+    },
+    {
+      "path": "docs/reference/HISTORICAL_CHAIN_MARK_PROVENANCE.md",
+      "engineeringSha256": "a218f1f1fcc9b08de5f5d8159458ce562290480e3c5cc526747a9533c83bfa7f",
+      "publicSha256": "323ed65592866722fe86bcca2067895cbb149b6b61bc166842fe9dad208369bf",
+      "classification": "PUBLIC_RELEASE_RIGHTS_METADATA",
+      "reason": "Records historical chain-mark exclusion and provenance limits."
+    },
+    {
+      "path": "docs/reference/O42_1_MACOS_IDENTITY_AND_CERTIFICATE_MIGRATION.md",
+      "engineeringSha256": "e5d5824926c5e9f5a42c8f70f6321790ea0a35650ac8dc4c210363f0b11126f3",
+      "publicSha256": "c829a22625f68e2afd20fa4cefb42f2d3f038f57da35b9bb5fe4fe1d7d8f538b",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Removes owner-only local hardware observation."
+    },
+    {
+      "path": "docs/reference/O42_RECOVERY_ENROLLMENT_PREFLIGHT_REPORT.md",
+      "engineeringSha256": "5368e969419a82e1544d4eadccfc43a8363b77c93189743ce01efde5e9f2b265",
+      "publicSha256": "19a05720cebb81bf9a8632fa814619c9077020e5170dff7244bbf48e11b4a98f",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Removes owner-only local physical preflight observations."
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP3_ARTIFACT_MANIFEST.json",
+      "engineeringSha256": "1b5d5c327b99e6dda9bae12de291f66ab2524c3a8f78f624cb1dc0ec297b3963",
+      "publicSha256": "8a192db0e86ce905e891fd2af646a641f33f16d93479184e0bf21c34461c57e5",
+      "classification": "PUBLIC_RELEASE_METADATA",
+      "reason": "Removes a private absolute engineering source path while retaining hashes."
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C2_ARTIFACT_MANIFEST.json",
+      "engineeringSha256": "7d0efbfa5cd37e863658e687ac023c6bd2b4b6dcffc154cf0115725007318e9f",
+      "publicSha256": "404b9887916563d93e702d7c1021958016ab4e7814003fdcede6d72464cb3366",
+      "classification": "DETERMINISTIC_RELEASE_SOURCE_BINDING",
+      "reason": "Canonical generator refresh for final P.C. README and accepted source metadata; product protocol bytes unchanged."
+    },
+    {
+      "path": "docs/reference/PHIL_V1_STEP6C_ARTIFACT_MANIFEST.json",
+      "engineeringSha256": "b165b986bb1c839b98cb5736dce8d15316cd0f5297b7b47ba4edf1b278e085d6",
+      "publicSha256": "c199fbe3aa6d4aea3b38becfaf1a97a5e6e78a5c7867fc8d1ff3f2ba405b47d4",
+      "classification": "RELEASE_EVIDENCE_PORTABILITY_METADATA",
+      "reason": "Canonical clean-history refresh preserves declared historical Step 6C source binding after exact source checks."
+    },
+    {
+      "path": "proofs/phil-v1-step3-noir/artifacts/phil_v1_step3_root_proof.json",
+      "engineeringSha256": "0f19b2f23fe847bc0ed038fa55ab564a18693bd6b877f2231b1183d60c210aad",
+      "publicSha256": "514dec0c8ee3f34e313d393deef697a5327dfd27abf99b1b707dd0db60e41984",
+      "classification": "PUBLIC_RELEASE_METADATA",
+      "reason": "Removes a private absolute engineering source path while retaining proof metadata."
+    },
+    {
+      "path": "scripts/cryptography/generate-o42-1-platform-webauthn-evidence.cjs",
+      "engineeringSha256": "ed245e25888351d4bec3819a1e7da751875c09ce8994eab09bfb48d01e8dc793",
+      "publicSha256": "efd09c22edfc0d63c2991a040368830c5bbb2cc18ab3a2fc1a3bb6e8b97c0ab5",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Canonical public generator emits approved withheld-owner-observation markers."
+    },
+    {
+      "path": "scripts/cryptography/generate-o42-recovery-enrollment-evidence.cjs",
+      "engineeringSha256": "b458414ea0430bf5f2053cc4da43917e85b7dd310a9072e7a5747032a5540538",
+      "publicSha256": "8604f4b00e1cb9e83e43529e065f034016cb7cd580cf2ae001d9c9e9a88e6a03",
+      "classification": "PUBLIC_RELEASE_PRIVACY_METADATA",
+      "reason": "Canonical public generator emits approved withheld-owner-observation markers."
+    },
+    {
+      "path": "scripts/security/generate-phil-v1-step6c-artifacts.cjs",
+      "engineeringSha256": "b58cce0e0348413365ebb447c4c934aa464c41181e40fb072270397d7b466461",
+      "publicSha256": "de12deed8778d779ee36c4434b58065b22d34e6dc2d5eb091d25492091d057f8",
+      "classification": "RELEASE_EVIDENCE_PORTABILITY_METADATA",
+      "reason": "Clean-history generator accepts declared historical binding only after exact six-file byte and SHA verification."
+    }
+  ],
+  "redactedMetadataFields": [
+    {
+      "jsonPath": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-recovery-enrollment-evidence.cjs",
+      "jsonPointer": "/canonicalIdentity",
+      "replacement": {
+        "publicExportDisposition": "WITHHELD_PRIVATE_OWNER_OBSERVATION"
+      },
+      "generatorLogicChanged": false
+    },
+    {
+      "jsonPath": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-recovery-enrollment-evidence.cjs",
+      "jsonPointer": "/livePhysicalPreflight/date",
+      "replacement": "WITHHELD_PRIVATE_OWNER_OBSERVATION",
+      "generatorLogicChanged": false
+    },
+    {
+      "jsonPath": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-recovery-enrollment-evidence.cjs",
+      "jsonPointer": "/livePhysicalPreflight/primaryIdentityUnlockedLocally",
+      "replacement": "WITHHELD_PRIVATE_OWNER_OBSERVATION",
+      "generatorLogicChanged": false
+    },
+    {
+      "jsonPath": "config/solidity/O42_RECOVERY_ENROLLMENT_CEREMONY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-recovery-enrollment-evidence.cjs",
+      "jsonPointer": "/protectedLocalState",
+      "replacement": {
+        "publicExportDisposition": "WITHHELD_PRIVATE_OWNER_OBSERVATION"
+      },
+      "generatorLogicChanged": false
+    },
+    {
+      "jsonPath": "config/solidity/O42_1_PLATFORM_WEBAUTHN_COMPATIBILITY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-1-platform-webauthn-evidence.cjs",
+      "jsonPointer": "/macosIdentity/model",
+      "replacement": "WITHHELD_PRIVATE_OWNER_OBSERVATION",
+      "generatorLogicChanged": false
+    },
+    {
+      "jsonPath": "config/solidity/O42_1_PLATFORM_WEBAUTHN_COMPATIBILITY_EVIDENCE.json",
+      "generatorPath": "scripts/cryptography/generate-o42-1-platform-webauthn-evidence.cjs",
+      "jsonPointer": "/protectedLocalState",
+      "replacement": {
+        "publicExportDisposition": "WITHHELD_PRIVATE_OWNER_OBSERVATION"
+      },
+      "generatorLogicChanged": false
+    }
+  ],
+  "newPublicMetadataFiles": [],
+  "productRuntimeSourceChanged": false,
+  "proofAbiBytecodeAndVerificationKeyChanged": false,
+  "finalDesktopArtifact": {
+    "engineeringCommit": "7fd7ade7b992e9b5b4b6029b3938e1294f372e73",
+    "archiveSha256": "831f59cf1a0d67e49e69a179cb32e2e579f25f6ea4f778d27e498f6f4ab1883d",
+    "stapledAppTreeSha256": "4f0ea628c257891cb14a10de0662683d850ecf029e59b36a58ca312067b2c634",
+    "notarizationInputSha256": "5991652027584e765b839067a2cca576d6bf82ea08b11e04d4784a4052c8f7c3",
+    "notarizationSubmissionId": "98c467bb-0171-493c-a460-3e3f59efb268",
+    "rebuiltByPublicSourceExport": false,
+    "embeddedEngineeringIdentityUnchanged": true
+  },
+  "rightsDisposition": "The old SVGs are not claimed to be licensed. Their exclusion resolves the clean-history inclusion issue; existing public repository transition remains owner-gated.",
+  "addedNoticeSourceMaterial": [
+    {
+      "path": "LICENSES/native-corresponding-source/vector-map-1.0.2/Cargo.lock",
+      "sha256": "2f93d5642e54fac3f70677c77c1e7109dccb94c13492cbae79a9a1e3834b0e3a",
+      "bytes": 4686,
+      "source": "Exact bytes already present in accepted final Desktop distribution and engineering notice payload; excluded from original Git tree by upstream nested ignore rule.",
+      "classification": "NATIVE_CORRESPONDING_SOURCE_LOCKFILE"
+    }
+  ],
+  "step6CHistoricalSourceBinding": {
+    "sourceCommit": "e596f41e32c86c3fa216c59cb8289c9f02ccafe3",
+    "sourceTree": "df6e90c3a2ee077e20677a978673d022f80bbf71",
+    "meaning": "Preserved historical fixture source identity, not the clean root identity; every bound product source byte was verified equal to both this historical source and the accepted export source. No historical Git objects are required to check these bytes.",
+    "sourceFiles": [
+      {
+        "path": "apps/phil-device-sdk/src/p256SignatureWireV2.ts",
+        "bytes": 7875,
+        "sha256": "4a6d3854cca54546aace5b43843eea2ad50b8e9f44f6cc5594a13a8be378bb81"
+      },
+      {
+        "path": "apps/phil-device-sdk/src/routineAuthorizationV1.ts",
+        "bytes": 82065,
+        "sha256": "b15e11b47958553d9c4355bcdc2d9e461f0c25921561ac69f174b1e327c28b59"
+      },
+      {
+        "path": "apps/phil-device-sdk/src/routineSignatureRegistryV2.ts",
+        "bytes": 3812,
+        "sha256": "4b2283bf2d3c1acc792529f33afc33a0eef3bda3e9739425edf3d639ac78ed6b"
+      },
+      {
+        "path": "apps/phil-device-sdk/src/runtime/routineAuthorizationJournalV1.ts",
+        "bytes": 60467,
+        "sha256": "733a2e7a2070084afa4173dac70d1bdec4425c334062fa3412d9bd39ec713211"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilV1Step6CAccount.sol",
+        "bytes": 36158,
+        "sha256": "d65b95abf9d545ede7228a9c84fbffe93676177bebb1faf66f080ea6a0ba1a7b"
+      },
+      {
+        "path": "contracts/base/erc4337/PhilV1Step6CHarmlessTarget.sol",
+        "bytes": 931,
+        "sha256": "f8c249c8b3f53f5b2fcc074062ce4b4fbd67731e9400bf6965689835dda6aa21"
+      }
+    ]
+  }
+}

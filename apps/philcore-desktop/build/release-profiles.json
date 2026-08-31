@@ -1,0 +1,127 @@
+{
+  "productName": "PhilCore Desktop Local Alpha",
+  "displayName": "Phil — Controlled Sepolia Beta",
+  "executableName": "PhilCore Desktop Local Alpha",
+  "bundleIdentifier": "com.philcore.desktop.localalpha",
+  "teamIdentifier": "B342738S82",
+  "webAuthnKeychainAccessGroup": "B342738S82.com.philcore.desktop.localalpha.webauthn",
+  "version": "0.1.0",
+  "buildNumber": "0.8.0-sepolia-mint-demo",
+  "minimumMacOS": "13.0",
+  "releaseChannel": "local-alpha",
+  "bundleIdentifiers": {
+    "localAlpha": "com.philcore.desktop.localalpha",
+    "releaseCandidate": "com.philcore.desktop.localalpha",
+    "decision": "Keep the local Alpha identifier for O.9 preparation. A notarized trusted-tester artifact must use the controlled O.9 release identifier before distribution."
+  },
+  "targets": {
+    "localAlpha": ["app", "zip"],
+    "localAlphaAdhoc": ["app", "zip"],
+    "signedReleaseCandidate": ["app", "dmg", "zip"],
+    "production": []
+  },
+  "profiles": {
+    "local_alpha_unsigned": {
+      "packaged": true,
+      "devTools": false,
+      "signed": false,
+      "notarized": false,
+      "publicNetworkMutation": false,
+      "nativeUserPresence": "required",
+      "fixtureAuthentication": false,
+      "distribution": "local_testing_only"
+    },
+    "local_alpha_adhoc": {
+      "packaged": true,
+      "devTools": false,
+      "signed": "ad_hoc",
+      "notarized": false,
+      "publicNetworkMutation": false,
+      "nativeUserPresence": "required",
+      "fixtureAuthentication": false,
+      "distribution": "same_machine_testing_only"
+    },
+    "release_candidate_signed": {
+      "packaged": true,
+      "devTools": false,
+      "signed": "developer_id_required",
+      "hardenedRuntime": true,
+      "notarized": false,
+      "publicNetworkMutation": false,
+      "nativeUserPresence": "required",
+      "developerMode": false,
+      "credentialsRequiredExternally": true
+    },
+    "release_candidate_notarized": {
+      "packaged": true,
+      "devTools": false,
+      "signed": "developer_id_required",
+      "hardenedRuntime": true,
+      "notarized": true,
+      "publicNetworkMutation": false,
+      "nativeUserPresence": "required",
+      "credentialsRequiredExternally": true
+    },
+    "trusted_tester_release_candidate": {
+      "releaseIdentifier": "philcore-desktop-o9-trusted-tester-rc1",
+      "packaged": false,
+      "productionApproved": false,
+      "requiresDeveloperId": true,
+      "requiresNotarization": true,
+      "requiresStaple": true,
+      "requiresGatekeeperAfterExtraction": true,
+      "distributionCohort": "not_created",
+      "publicNetworkMutation": false
+    },
+    "development": {
+      "packaged": false,
+      "devTools": true,
+      "signed": false,
+      "notarized": false,
+      "publicNetworkMutation": false
+    },
+    "localAlpha": {
+      "packaged": true,
+      "devTools": false,
+      "signed": false,
+      "notarized": false,
+      "publicNetworkMutation": false,
+      "publicBundler": false,
+      "paymaster": false,
+      "baseSepoliaBetaGate": "blocked"
+    },
+    "signedReleaseCandidate": {
+      "packaged": true,
+      "hardenedRuntime": true,
+      "credentialsRequiredExternally": true,
+      "notarizationCapable": true,
+      "publicNetworkMutation": false
+    },
+    "production": {
+      "enabled": false
+    }
+  },
+  "entitlements": {
+    "hardenedRuntime": true,
+    "applicationSandbox": false,
+    "networkClient": false,
+    "networkServer": false,
+    "keychainAccessGroups": [
+      "B342738S82.com.philcore.desktop.localalpha.webauthn"
+    ],
+    "userSelectedFiles": false,
+    "downloads": false,
+    "allowJit": {
+      "required": true,
+      "reason": "Electron/Chromium runtime compatibility"
+    },
+    "allowUnsignedExecutableMemory": {
+      "required": true,
+      "reason": "Electron/Chromium runtime compatibility"
+    },
+    "disableLibraryValidation": {
+      "required": true,
+      "reason": "Electron native module/runtime compatibility review item"
+    }
+  }
+}

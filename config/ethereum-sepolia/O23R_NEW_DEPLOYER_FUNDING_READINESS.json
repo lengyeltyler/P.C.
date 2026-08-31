@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "philcore-o23r-new-deployer-funding-readiness-v1",
+  "phase": "O.23R",
+  "status": "proposed_estimates_only",
+  "accepted": false,
+  "fundingApproved": false,
+  "fundingPerformed": false,
+  "gasReference": {
+    "gasPrice": {
+      "wei": "1134929053",
+      "gwei": "1.134929053",
+      "eth": "0.000000001134929053"
+    },
+    "approvedTargetMaxFeePerGas": {
+      "wei": "10000000000",
+      "gwei": "10.0",
+      "eth": "0.00000001"
+    },
+    "approvedTargetMaxPriorityFeePerGas": {
+      "wei": "1500000",
+      "gwei": "0.0015",
+      "eth": "0.0000000000015"
+    },
+    "safetyBufferBasisPoints": 2500
+  },
+  "deploymentWallet": {
+    "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+    "purpose": "target deployment now; factory only after separate approval",
+    "balance": {
+      "wei": "271564356172676490",
+      "gwei": "271564356.17267649",
+      "eth": "0.27156435617267649"
+    },
+    "targetEstimatedGas": "307816",
+    "factoryEstimatedGas": "1050089",
+    "combinedEstimatedGas": "1357905",
+    "combinedBufferedGas": "1697381",
+    "estimatedMinimum": {
+      "wei": "1541125835713965",
+      "gwei": "1541125.835713965",
+      "eth": "0.001541125835713965"
+    },
+    "recommendedTestAmount": {
+      "wei": "16973810000000000",
+      "gwei": "16973810.0",
+      "eth": "0.01697381"
+    },
+    "targetMaximumApprovedCost": {
+      "wei": "3847700000000000",
+      "gwei": "3847700.0",
+      "eth": "0.0038477"
+    }
+  },
+  "futurePrefundingWallet": {
+    "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+    "purpose": "future counterfactual account funding only",
+    "balance": {
+      "wei": "92576112524973299",
+      "gwei": "92576112.524973299",
+      "eth": "0.092576112524973299"
+    },
+    "useApprovedInO23R": false,
+    "transactionSigningApprovedInO23R": false
+  },
+  "counterfactualSmartAccount": {
+    "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "currentBalance": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "estimatedMinimum": {
+      "wei": "1145014032564958",
+      "gwei": "1145014.032564958",
+      "eth": "0.001145014032564958"
+    },
+    "fundingApproved": false,
+    "fundingPerformed": false
+  },
+  "publicMutationOccurred": false
+}

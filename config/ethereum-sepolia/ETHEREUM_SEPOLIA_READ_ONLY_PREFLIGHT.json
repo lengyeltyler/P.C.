@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "philcore-local-proof-gated-preparation-v1",
+  "status": "READ_ONLY_PREFLIGHT_PASSED",
+  "checkedAt": "2026-07-26T03:02:28.648Z",
+  "rpcClassification": "https://eth-sepolia.g.alchemy.com/<redacted>",
+  "chainId": 11155111,
+  "blockNumber": "11351915",
+  "entryPoint": {
+    "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "codePresent": true,
+    "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+    "entryPointBalance": "11226280553540151884339",
+    "getNonceCallSupported": true
+  },
+  "proposedAddresses": {
+    "confirmationTarget": {
+      "address": "0x7e26405275C84c541e9f9aB68D1C6F7234a16345",
+      "codeStatus": "empty",
+      "balanceWei": "0"
+    },
+    "accountFactory": {
+      "address": "0x7096565D191e664390b7041cCf297F443793e266",
+      "codeStatus": "empty",
+      "balanceWei": "0"
+    },
+    "firstAccount": {
+      "address": "0x30283Bfd6D65472d9f3b0A173382675b947C69d1",
+      "codeStatus": "empty",
+      "balanceWei": "0"
+    }
+  },
+  "deployer": {
+    "address": "0x17f2F9f2e0aaf90768c0f26579fba5043Ef0C903",
+    "configuredPendingNonce": "37",
+    "observedPendingNonce": "37",
+    "nonceMatched": true,
+    "balanceWei": "192724712126032299"
+  },
+  "validator": {
+    "address": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "codePresent": false,
+    "balanceWei": "0"
+  },
+  "feeData": {
+    "gasPriceWei": "1116416838",
+    "source": "rpc"
+  },
+  "mutationMethodsExposed": false,
+  "mutationAttempted": false,
+  "publicMutationOccurred": false,
+  "errors": []
+}

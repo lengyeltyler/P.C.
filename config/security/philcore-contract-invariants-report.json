@@ -1,0 +1,231 @@
+{
+  "phase": "O.19",
+  "status": "passed",
+  "generatedAt": "2026-08-26T02:12:54.926Z",
+  "scope": [
+    "contracts/base/erc4337/PhilCore4337Account.sol",
+    "contracts/base/erc4337/PhilCore4337AccountFactory.sol",
+    "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+    "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+    "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+    "contracts/base/erc4337/PhilSepoliaMintAccountV1.sol",
+    "contracts/base/erc4337/PhilSepoliaMintAccountFactoryV1.sol",
+    "contracts/base/PhilSepoliaLocalComposedActionGateV1.sol",
+    "contracts/base/PhilSepoliaMintPassConsumerV1.sol",
+    "contracts/base/PhilBaseActionGate.sol",
+    "contracts/base/PhilBaseProofInputHashMirror.sol",
+    "contracts/base/PhilBaseMirroredFactUnlockProofVerifier.sol",
+    "contracts/base/PhilMintPassConsumer.sol",
+    "contracts/l1/PhilL1ProofInputHashAnchor.sol",
+    "contracts/l1/PhilL1ToBaseProofInputHashMessenger.sol"
+  ],
+  "checks": [
+    {
+      "id": "N6-INV-001",
+      "description": "PhilCore4337Account.execute remains EntryPoint-only.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-002",
+      "description": "PhilCore4337Account.execute restricts target to immutable approvedActionGate.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-003",
+      "description": "PhilCore4337Account.execute restricts calldata to the two reviewed ActionGate selectors.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-004",
+      "description": "Account-self cannot bypass execution restrictions.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-005",
+      "description": "No delegatecall exists in the account/factory path.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-006",
+      "description": "No generic batch execution exists in the account/factory path.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-007",
+      "description": "No upgrade/proxy entry point exists in the account/factory path.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-008",
+      "description": "Recovery authority cannot invoke ordinary execution.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-009",
+      "description": "Recovery functions do not change EntryPoint, ActionGate, or ownerCommitment.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-010",
+      "description": "Factory and account share exact ActionGate binding.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-011",
+      "description": "CREATE2 derivation includes initialization-critical fields.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-012",
+      "description": "Paymasters are explicitly rejected and no session-key or aggregator behavior exists.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-013",
+      "description": "Base mirror remains messenger-only.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-014",
+      "description": "Base mirror validates authorized L1 remote sender.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-015",
+      "description": "ActionGate nullifier handling remains atomic with consumer execution.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-016",
+      "description": "No raw private-key-shaped constants or test secrets appear in production Solidity source.",
+      "passed": true
+    },
+    {
+      "id": "N6-INV-017",
+      "description": "Recovery and execution selectors remain separated.",
+      "passed": true
+    },
+    {
+      "id": "N7-INV-018",
+      "description": "PhilMintPassConsumer cannot retain unauthorized ETH because nonzero msg.value is rejected before mint state changes.",
+      "passed": true
+    },
+    {
+      "id": "N8-INV-019",
+      "description": "Recovery authority rotation stores exactly one pending authority and only activates it on completion.",
+      "passed": true
+    },
+    {
+      "id": "N8-INV-020",
+      "description": "Recovery authority rotation cannot change execution owner, EntryPoint, ActionGate, or ownerCommitment.",
+      "passed": true
+    },
+    {
+      "id": "N8-INV-021",
+      "description": "Recovery authority rotation performs no external calls or value transfers.",
+      "passed": true
+    },
+    {
+      "id": "N8-INV-022",
+      "description": "Initial recovery authority remains part of factory CREATE2 derivation while post-deployment account rotation preserves address stability.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-035",
+      "description": "Beta ordinary ActionGate execution is explicitly zero-value.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-036",
+      "description": "Beta account validation rejects every paymaster payload on chain.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-037",
+      "description": "Disposable fund release is EntryPoint-only, freeze-aware, and fixed to the current owner.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-038",
+      "description": "The account rejects a zero owner commitment during construction.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-039",
+      "description": "The reusable factory registers deployed accounts for the composed Sepolia ActionGate.",
+      "passed": true
+    },
+    {
+      "id": "O18-INV-023",
+      "description": "The local-proof account has one fixed execution function and no generic, batch, delegatecall, or upgrade path.",
+      "passed": true
+    },
+    {
+      "id": "O18-INV-024",
+      "description": "The local-proof account validates exact calldata, rejects paymasters, and binds version, model, expiry, and validator key.",
+      "passed": true
+    },
+    {
+      "id": "O18-INV-025",
+      "description": "The local-proof account calls only the immutable confirmation target with no value.",
+      "passed": true
+    },
+    {
+      "id": "O18-INV-026",
+      "description": "Local-proof CREATE2 derivation binds all public initialization fields without secret material.",
+      "passed": true
+    },
+    {
+      "id": "O18-INV-027",
+      "description": "The local-proof confirmation target validates account model, target, chain, and exact evidence.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-028",
+      "description": "The Sepolia mint account is EntryPoint-only, zero-value, gate-only, and selector-restricted.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-029",
+      "description": "Malformed execution signatures fail validation without a reverting recover path.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-030",
+      "description": "The Sepolia mint account and factory contain no generic batch, delegatecall, proxy, or upgrade path.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-031",
+      "description": "Sepolia mint CREATE2 derivation binds EntryPoint, execution owner, owner commitment, gate, salt, and factory.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-032",
+      "description": "The ActionGate enforces chain, registered account, expiry, and atomic three-dimensional replay consumption before mint.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-033",
+      "description": "The harmless pass is gate-only, non-transferable, non-payable, and independently replay protected.",
+      "passed": true
+    },
+    {
+      "id": "SEPOLIA-MINT-INV-034",
+      "description": "The on-chain boundary explicitly disclaims Noir and P-256 verification and contains no alternate verifier or attestation path.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-040",
+      "description": "The composed ActionGate admits only its one immutable counterfactual Beta account.",
+      "passed": true
+    },
+    {
+      "id": "BETA-INV-041",
+      "description": "The composed ActionGate mints only to the authorized account's current execution owner.",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "betaGateImpact": "custom_invariants_passing"
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.8",
+  "canonicalPhaseName": "O.37.8 V2 Minimal Account Core Implementation",
+  "classification": "LOCAL_ONLY_SOLIDITY_IMPLEMENTATION",
+  "result": "STOPPED_FAIL_CLOSED_BEFORE_ACCOUNT_RETENTION",
+  "sourceHeadAtPhaseStart": "21ca442c881198351b111c5f146e0d20cb1cef07",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repository": "PhilCore",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "o37_4AbiFreezeSha256": "442a7f0c3f9bfcbdea2b9d2da4daebaf5c8fadd14dac1005acc2327c27a527a4",
+    "o37_4AuthorityTransportSha256": "f594dd2912b92e90cf7ec91d0bd8cf992dd930473094bad01486b31c07594e0e",
+    "o37_4FixtureSha256": "b9e0c3b4ab483a6e54b6533dedaddbb2690749f4f9cb68f8332f8f0235d91867",
+    "o37_6ArchitectureEvidenceSha256": "ff920e3445459f93ee8d4ca42c62132e20fb3dea33e60a817bc38347be8a9791",
+    "o37_7VerifierEvidenceSha256": "9ba76478847e9d69c0e3e913375d2fadf7a59e53940335c7995c575ee6a33812"
+  },
+  "toolchain": {
+    "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "openZeppelinContracts": "5.6.1",
+    "accountAbstractionContracts": "0.7.0",
+    "hardhat": "2.28.4",
+    "hardhatEthers": "3.0.8",
+    "ethers": "6.17.0",
+    "node": "26.0.0",
+    "npm": "11.12.1"
+  },
+  "sizeGate": {
+    "accountRuntimeMaximumBytes": 15360,
+    "accountCreationMaximumBytes": 18432,
+    "eip170MaximumRuntimeBytes": 24576,
+    "warningPolicy": "ANY_O37_6_BUDGET_EXCESS_STOPS_IMPLEMENTATION"
+  },
+  "measuredCandidates": [
+    {
+      "name": "COMPLETE_DIRECT_IMPLEMENTATION",
+      "classification": "TRANSIENT_UNRETAINED_BUILD",
+      "runtimeBytes": 20845,
+      "creationBytes": 23146,
+      "runtimeKeccak256": "0xb684918bf929280f2f3b3ad21c2c1aea0483c48e973d886c8842d457d32f9399",
+      "runtimeBudgetExcessBytes": 5485,
+      "creationBudgetExcessBytes": 4714
+    },
+    {
+      "name": "BEST_SECURITY_PRESERVING_DEDUPLICATION",
+      "classification": "TRANSIENT_UNRETAINED_BUILD",
+      "runtimeBytes": 19454,
+      "creationBytes": 21755,
+      "runtimeKeccak256": "0xb7694928eac7de99d1d2557e51b0e91777356c314872c386726610b67b4b1147",
+      "runtimeBudgetExcessBytes": 4094,
+      "creationBudgetExcessBytes": 3323,
+      "eip170ReserveBytes": 5122
+    },
+    {
+      "name": "MANUAL_CANONICAL_WORD_DECODER_EXPLORATION",
+      "classification": "TRANSIENT_UNRETAINED_BUILD",
+      "runtimeBytes": 19591,
+      "creationBytes": 21892,
+      "runtimeKeccak256": "0xb5bd23471ef59186ae649aeb959830028e02eb74d0f7c89faa5a04099b1b4cd2",
+      "runtimeBudgetExcessBytes": 4231,
+      "creationBudgetExcessBytes": 3460,
+      "finding": "MANUAL_STATIC_WORD_DECODING_INCREASED_RUNTIME_BY_137_BYTES"
+    }
+  ],
+  "bestCandidateContributors": [
+    {
+      "name": "typed action ABI dispatch and canonical action-specific intent hashing",
+      "classification": "REQUIRED_FROZEN_SECURITY_BOUNDARY"
+    },
+    {
+      "name": "EntryPoint sender nonce lane fee validity paymaster and prefund checks",
+      "classification": "REQUIRED_FROZEN_SECURITY_BOUNDARY"
+    },
+    {
+      "name": "validator and recovery lifecycle state transitions",
+      "classification": "REQUIRED_FROZEN_SECURITY_BOUNDARY"
+    },
+    {
+      "name": "immutable and current-state verifier request derivation plus code-hash-pinned STATICCALL",
+      "classification": "REQUIRED_FROZEN_SECURITY_BOUNDARY"
+    },
+    {
+      "name": "closed view and permissionless completion surface",
+      "classification": "REQUIRED_FROZEN_INTERFACE_BOUNDARY"
+    }
+  ],
+  "architectureDiscrepancy": {
+    "present": true,
+    "currentPhasePrompt": "ACCOUNT_IMMUTABLE_VERIFIER_ADDRESS_AND_CODE_HASH",
+    "o37_6FrozenModel": "ACCOUNT_READS_FACTORY_IMMUTABLE_VERIFIER_BINDING_BY_STATICCALL_WITH_EXACT_20_FIELD_CONSTRUCTOR",
+    "resolution": "NO_ARCHITECTURE_CHANGE_RETAINED",
+    "securityEffect": "FAIL_CLOSED"
+  },
+  "retainedState": {
+    "v2AccountContract": false,
+    "v2AccountInterface": false,
+    "v2AccountBuildConfiguration": false,
+    "v2AccountAbi": false,
+    "v2AccountStorageLayout": false,
+    "v2AccountBytecode": false,
+    "partialOversizedImplementation": false,
+    "factoryContract": false,
+    "deploymentScript": false
+  },
+  "validation": {
+    "o37_2FixturePackageCurrent": true,
+    "o37_4AuthorityTransportPackageCurrent": true,
+    "o37_7VerifierTestsPassing": 11,
+    "compilerBuildsSucceeded": 3,
+    "compilerWarnings": 0
+  },
+  "phaseBoundary": {
+    "accountCreated": false,
+    "factoryCreated": false,
+    "deploymentPerformed": false,
+    "blockchainInteractionPerformed": false,
+    "rpcUsed": false,
+    "sepoliaUsed": false,
+    "localSepoliaEnvironmentRead": false,
+    "fundsMoved": false,
+    "credentialCreated": false,
+    "signatureCreated": false,
+    "userOperationCreated": false,
+    "userOperationSubmitted": false,
+    "pushPerformed": false
+  }
+}

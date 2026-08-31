@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "philcore-o26-1-remote-userop-gas-estimate-v1",
+  "phase": "O.26.1",
+  "status": "BUNDLER_ESTIMATION_SUCCEEDED",
+  "generatedAt": "2026-07-28T18:59:21.329Z",
+  "sourceHead": "466b2ffbfb890ce7dc33712e420dde30e449c1da",
+  "network": {
+    "name": "ethereum_sepolia",
+    "chainId": 11155111,
+    "blockNumber": "11370487",
+    "blockHash": "0x0326c4fd02280224f287bdc2abfb4c58bbb91ae0d75598b29b1a9524ec3e8166",
+    "observedAt": "2026-07-28T18:59:12.000Z",
+    "expiresAt": "2026-07-28T19:14:12.000Z"
+  },
+  "infrastructure": {
+    "bindingDigest": "0xa8aa270fe21becad2f4b4c4368f2c0fed640106ef0a05f807373cb6c55965de2",
+    "target": {
+      "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "runtimeCodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+      "matched": true
+    },
+    "factory": {
+      "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+      "runtimeCodeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+      "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+      "expectedChainId": 11155111,
+      "matched": true
+    },
+    "entryPoint": {
+      "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "runtimeCodeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+      "version": "0.7",
+      "matched": true
+    }
+  },
+  "canonicalIdentity": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+    "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "preserved": true
+  },
+  "counterfactualAccount": {
+    "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "localDerivation": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "factoryGetAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "code": "0x",
+    "balance": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "entryPointDeposit": {
+      "wei": "0",
+      "gwei": "0.0",
+      "eth": "0.0"
+    },
+    "entryPointNonce": "0",
+    "latestNonce": "0",
+    "pendingNonce": "0",
+    "unchanged": true
+  },
+  "accounts": {
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "3",
+      "pendingNonce": "3",
+      "balance": {
+        "wei": "270073390298140959",
+        "gwei": "270073390.298140959",
+        "eth": "0.270073390298140959"
+      },
+      "signingUsed": false
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "0",
+      "pendingNonce": "0",
+      "balance": {
+        "wei": "92576112524973299",
+        "gwei": "92576112.524973299",
+        "eth": "0.092576112524973299"
+      },
+      "signingUsed": false
+    },
+    "keyBindingsVerified": true
+  },
+  "estimationOnlyUserOperation": {
+    "schemaVersion": "philcore-o26-estimation-only-unpacked-user-operation-v1",
+    "phase": "O.26",
+    "status": "estimation_only",
+    "securityModel": "local-proof-gated-v1",
+    "chainId": 11155111,
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "factory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+    "factoryMethod": "createAccount(address,bytes32,bytes32,uint256)",
+    "factoryData": "0x3e89ceab0000000000000000000000001b41145742566cf69621da7e1d6f29609a8b1bdaabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1b7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809c4e4bffa51db9fb7994df7e4ce5ef52f7e1dfa68d01deab7d0dd05a768575a2e",
+    "factoryDataHash": "0xb5cc56dbb283e6e595a7ba2ac9f67ab8716c15ee6396b7ef8dde610f0483f20d",
+    "sender": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "expectedSender": "0xF7212776373B51c1514Dd9C4490048270056C150",
+    "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+    "targetMethod": "confirmPhilCoreAction(bytes32,bytes32)",
+    "valueWei": "0",
+    "rpcV07Representation": {
+      "sender": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "nonce": "0x0",
+      "factory": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+      "factoryData": "0x3e89ceab0000000000000000000000001b41145742566cf69621da7e1d6f29609a8b1bdaabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1b7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809c4e4bffa51db9fb7994df7e4ce5ef52f7e1dfa68d01deab7d0dd05a768575a2e",
+      "callData": "0x44413cabe91b30eaf4cae1d7771415f99df955ad87e86c6da6696d5e1edba278b369ab850cdb806e4a2efc825790f063d3541d2ba1f02c9069dcddd8ca5a64ede41bd236000000000000000000000000000000000000000000000000000000006a68fe58",
+      "verificationGasLimit": "0x16e360",
+      "callGasLimit": "0x0493e0",
+      "preVerificationGas": "0x030d40",
+      "maxFeePerGas": "0x98b8bb18",
+      "maxPriorityFeePerGas": "0x1c9c38",
+      "paymaster": null,
+      "signature": "0x000000000000000000000000000000000000000000000000000000000000000123dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4ce91b30eaf4cae1d7771415f99df955ad87e86c6da6696d5e1edba278b369ab850cdb806e4a2efc825790f063d3541d2ba1f02c9069dcddd8ca5a64ede41bd236000000000000000000000000000000000000000000000000000000006a68fe58b7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b80900000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001b"
+    },
+    "packedUserOperation": {
+      "sender": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "nonce": "0",
+      "initCode": "0x6a9905bc18620d9689e6a3214c43ec10b99b824e3e89ceab0000000000000000000000001b41145742566cf69621da7e1d6f29609a8b1bdaabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1b7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809c4e4bffa51db9fb7994df7e4ce5ef52f7e1dfa68d01deab7d0dd05a768575a2e",
+      "callData": "0x44413cabe91b30eaf4cae1d7771415f99df955ad87e86c6da6696d5e1edba278b369ab850cdb806e4a2efc825790f063d3541d2ba1f02c9069dcddd8ca5a64ede41bd236000000000000000000000000000000000000000000000000000000006a68fe58",
+      "accountGasLimits": "0x0000000000000000000000000016e360000000000000000000000000000493e0",
+      "preVerificationGas": "200000",
+      "gasFees": "0x000000000000000000000000001c9c3800000000000000000000000098b8bb18",
+      "paymasterAndData": "0x",
+      "signature": "0x000000000000000000000000000000000000000000000000000000000000000123dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4ce91b30eaf4cae1d7771415f99df955ad87e86c6da6696d5e1edba278b369ab850cdb806e4a2efc825790f063d3541d2ba1f02c9069dcddd8ca5a64ede41bd236000000000000000000000000000000000000000000000000000000006a68fe58b7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b80900000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001b"
+    },
+    "placeholders": {
+      "actionId": "0xe91b30eaf4cae1d7771415f99df955ad87e86c6da6696d5e1edba278b369ab85",
+      "authorizationDigest": "0x0cdb806e4a2efc825790f063d3541d2ba1f02c9069dcddd8ca5a64ede41bd236",
+      "expiry": "1785265752",
+      "signatureKind": "decoder_correct_cryptographically_invalid_estimation_envelope",
+      "signatureLengthBytes": 288,
+      "cryptographicAuthority": false
+    },
+    "estimationOnly": true,
+    "submissionReady": false,
+    "proofGenerated": false,
+    "authorizationGenerated": false,
+    "userApprovalGenerated": false,
+    "freshPresenceGenerated": false,
+    "deviceVaultSignatureGenerated": false,
+    "userOperationSigned": false,
+    "userOperationSubmitted": false,
+    "paymasterEnabled": false,
+    "tokenMovement": false,
+    "batchEnabled": false,
+    "delegatecallEnabled": false,
+    "publicMutationAuthorized": false,
+    "publicMutationOccurred": false,
+    "limitations": [
+      "Placeholder fields are not Runtime authority.",
+      "The zero-byte signature is deliberately invalid.",
+      "A bundler estimate cannot make this artifact submission-ready.",
+      "Any field change requires a fresh proof, authorization, approval, presence event, and Device Vault signature."
+    ],
+    "realProofGenerated": false,
+    "realAuthorizationGenerated": false,
+    "realApprovalGenerated": false,
+    "freshPresenceRecorded": false,
+    "accountFunded": false,
+    "artifactDigest": "0xa976144341da34616da3e7c5c758b661e81e5cc9eaaeafb557972dab57b6f0d0"
+  },
+  "estimationEnvelope": {
+    "lengthBytes": 288,
+    "digest": "0xae52ad40634c1d79bee8985caae1c474117ec6c60c159eca66b05e3401cfdd4d",
+    "decoderCorrect": true,
+    "cryptographicallyValid": false,
+    "submissionAuthority": false,
+    "localInvalidityVerified": true
+  },
+  "request": {
+    "method": "eth_estimateUserOperationGas",
+    "digest": "0x2f5797b8645387a2884243ebca4ee143e4f5f5c08226df314661f575686dd5a5",
+    "objectDigestBefore": "0x3369c9cc2e12669fc5c8c1f3fd0a66037f602412f58ec60f812a8a13cbe1a250",
+    "objectDigestAfter": "0x3369c9cc2e12669fc5c8c1f3fd0a66037f602412f58ec60f812a8a13cbe1a250",
+    "mutated": false,
+    "sentOnce": true,
+    "retryPerformed": false
+  },
+  "response": {
+    "provider": "alchemy",
+    "receivedAt": "2026-07-28T18:59:20.478Z",
+    "requestId": null,
+    "digest": "0xcc46a5c549d281805c3ae928c1b7c0fee8f6e0bfb83c8c8f49c72debbbc68550",
+    "gas": {
+      "preVerificationGas": "0x30d40",
+      "verificationGasLimit": "0x16e360",
+      "callGasLimit": "0x493e0"
+    },
+    "paymasterFieldsReturned": false,
+    "error": null
+  },
+  "localSimulation": {
+    "schemaVersion": "philcore-o25-local-entrypoint-simulation-v1",
+    "source": "isolated_local_hardhat_entrypoint_v0_7",
+    "evidenceClassification": "local_fixture",
+    "fixtureSignatureOnly": true,
+    "realUserSignatureGenerated": false,
+    "protectedIdentityMaterialAccessed": false,
+    "publicNetworkContacted": false,
+    "fixtureMutationOnly": true,
+    "transactionSubmittedToPublicNetwork": false,
+    "accountCreation": {
+      "atomicWithFirstOperation": true,
+      "codeBefore": "0x",
+      "codeAfterPresent": true,
+      "directFactoryCreationGasUsed": "645542",
+      "approximateFirstOperationCreationGasComponent": "690770"
+    },
+    "operation": {
+      "declaredVerificationGasLimit": "1500000",
+      "declaredCallGasLimit": "300000",
+      "declaredPreVerificationGas": "200000",
+      "declaredTotalGas": "2000000",
+      "maxFeePerGasWei": "2500000000",
+      "exactRequiredPrefundWei": "5000000000000000",
+      "handleOpsTransactionEstimate": "1059768",
+      "handleOpsTransactionGasUsed": "869553",
+      "userOperationActualGasUsed": "1034770",
+      "userOperationActualGasCostWei": "608115332692340",
+      "validationGasEstimate": "19880",
+      "executionGasEstimate": "50694",
+      "componentEstimationMethod": "isolated eth_estimateGas calls from the local EntryPoint address with 21000 transaction intrinsic gas removed",
+      "decompositionLimitation": "The component estimates isolate account validation and execution but do not apportion EntryPoint orchestration overhead; the EntryPoint event reports only aggregate actualGasUsed."
+    },
+    "state": {
+      "nonceBefore": "0",
+      "nonceAfter": "1",
+      "depositBeforeWei": "0",
+      "depositAfterWei": "4391884667307660",
+      "targetConfirmationCount": "2",
+      "confirmationSucceeded": true
+    },
+    "rollbackAndFailureChecks": {
+      "insufficientPrefund": true,
+      "modifiedFactoryData": true,
+      "wrongAccountSalt": true,
+      "wrongValidator": true,
+      "wrongTargetOrCall": true,
+      "nonzeroValueUnavailable": true,
+      "staleExpiry": true,
+      "invalidPlaceholderSignature": true,
+      "paymasterIntroduction": true,
+      "gasCeilingViolationRejectedByO25Validator": true
+    },
+    "allFailureChecksPassed": true
+  },
+  "localGas": {
+    "approximateFirstOperationCreationGasComponent": "690770",
+    "validationGasEstimate": "19880",
+    "executionGasEstimate": "50694",
+    "declaredPreVerificationGas": "200000",
+    "actualGasUsed": "1034770",
+    "handleOpsEstimate": "1059768"
+  },
+  "reconciliation": {
+    "status": "RECONCILED_WITHOUT_TIGHTENING",
+    "components": {
+      "verificationGasLimit": {
+        "localBasis": "710650",
+        "remote": "1500000",
+        "absoluteDifference": "789350",
+        "percentageDifference": 111.0743,
+        "selected": "1500000",
+        "marginOverLocalBasis": "789350",
+        "justification": "Alchemy returned the existing reviewed ceiling; no tighter remote value was established."
+      },
+      "callGasLimit": {
+        "localBasis": "50694",
+        "remote": "300000",
+        "absoluteDifference": "249306",
+        "percentageDifference": 491.786,
+        "selected": "300000",
+        "marginOverLocalBasis": "249306",
+        "justification": "Alchemy returned the existing reviewed ceiling; no tighter remote value was established."
+      },
+      "preVerificationGas": {
+        "localBasis": "200000",
+        "remote": "200000",
+        "absoluteDifference": "0",
+        "percentageDifference": 0,
+        "selected": "200000",
+        "marginOverLocalBasis": "0",
+        "justification": "Local declared and Alchemy returned values match."
+      }
+    },
+    "selected": {
+      "verificationGasLimit": "1500000",
+      "callGasLimit": "300000",
+      "preVerificationGas": "200000",
+      "paymasterVerificationGasLimit": "0",
+      "paymasterPostOpGasLimit": "0",
+      "totalDeclaredGas": "2000000"
+    },
+    "localActualGasUsed": "1034770",
+    "localHandleOpsEstimate": "1059768",
+    "remoteTotalDeclaredGas": "2000000",
+    "remoteVsLocalActualDifference": "965230",
+    "remoteVsLocalActualPercentage": 93.2796
+  },
+  "authority": {
+    "accountFunded": false,
+    "realProofGenerated": false,
+    "realAuthorizationGenerated": false,
+    "realApprovalGenerated": false,
+    "freshPresenceRecorded": false,
+    "deviceVaultSignatureGenerated": false,
+    "userOperationSubmitted": false,
+    "publicMutationOccurred": false
+  }
+}

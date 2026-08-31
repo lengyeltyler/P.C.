@@ -1,0 +1,337 @@
+{
+  "schemaVersion": "philcore-o28-recovery-aware-readiness-v1",
+  "phase": "O.28",
+  "canonicalPhaseName": "O.28 Recovery-Aware Live-Operation Readiness",
+  "classification": "PREFUNDED_ADDRESS_INCOMPATIBLE_WITH_RECOVERY",
+  "generatedAt": "2026-07-28T19:34:48.053Z",
+  "sourceHead": "b039a1502537f51b5cfa42e5cd609402e72d8acf",
+  "branch": "codex/device-identity-v1",
+  "canonicalIdentity": {
+    "identityId": "identity_abab9766da60_24afd015",
+    "label": "My Phil",
+    "ownerCommitment": "0xabab9766da60e39c0c69fc6ecd7e0f31d116c626c8ea36c6401e331d99f4a9b1",
+    "validatorAddress": "0x1b41145742566Cf69621DA7e1D6F29609a8b1BDa",
+    "validatorKeyId": "validator_key_3c5b2ebebc4f3f3b",
+    "validatorKeyIdBinding": "0xb7bd562b139c95ebf020f445e6a3b3be82dfacf9e319d773b074da96e2b7b809",
+    "coherent": true
+  },
+  "keyBindings": {
+    "account1": true,
+    "account2": true,
+    "canonicalValidatorPreserved": true
+  },
+  "liveState": {
+    "snapshotBlock": {
+      "number": "11370661",
+      "hash": "0x85652f100abb319ec18b1a55394d34634f8a9e284526f778f6cbf245ebc88011",
+      "timestamp": 1785267276
+    },
+    "infrastructure": {
+      "chainId": 11155111,
+      "entryPoint": {
+        "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58"
+      },
+      "target": {
+        "address": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "codeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+        "securityModelId": "0x23dfc212b869b8ab99a124b1577adcd22a72f948ffc53efe44b5b37ae5647c4c",
+        "deploymentTransactionHash": "0xb832191373d189cd7da208a3012b018dfba2cf44ac539f18dd88f561f5d43453",
+        "deploymentBlockNumber": "11365970",
+        "deploymentBlockHash": "0x9c12b5880d50e8d4c7ce04b63dfdbf739b2d8b778142eda4432471b153f3f735",
+        "deployedContractAddress": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "deploymentStatus": 1
+      },
+      "factory": {
+        "address": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "codeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+        "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+        "target": "0x334577B0feB9e1f49d4ca4ff6dAcc6f8732594D7",
+        "expectedChainId": 11155111,
+        "deploymentTransactionHash": "0xb909b23c4bd2e6b59347b460b4bb994f120cd0d06ad6efbf5707757c8bab6ccf",
+        "deploymentBlockNumber": "11366062",
+        "deploymentBlockHash": "0x0f910a19e2fbe5784a68ad2a5216e45a3646b8bfc6c0b020a58227d908292879",
+        "deployedContractAddress": "0x6a9905Bc18620d9689e6a3214C43eC10B99b824e",
+        "deploymentStatus": 1
+      },
+      "bindingDigest": "0x36ff9bd100d478441e7f2e7db83844b2c2bd899e375a22d3cf218c4caa864879"
+    },
+    "counterfactualAccount": {
+      "address": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "locallyDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "factoryDerivedAddress": "0xF7212776373B51c1514Dd9C4490048270056C150",
+      "codeStatus": "empty",
+      "codeHash": null,
+      "balanceWei": "5124486704000000",
+      "latestTransactionCount": "0",
+      "pendingTransactionCount": "0",
+      "entryPointNonce": "0",
+      "entryPointDepositWei": "0"
+    },
+    "account1": {
+      "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+      "latestNonce": "3",
+      "pendingNonce": "3",
+      "balanceWei": "270073390298140959"
+    },
+    "account2": {
+      "address": "0xaDef2F2fdA57e92b593943f367D37d8Ce6B2F598",
+      "latestNonce": "1",
+      "pendingNonce": "1",
+      "balanceWei": "87428401148173299"
+    },
+    "o27Transaction": {
+      "hash": "0x37d191d70cf45cc6a4eaa83c9518a980a6d9a575e211ea70796e28143e51431d",
+      "from": "0xadef2f2fda57e92b593943f367d37d8ce6b2f598",
+      "to": "0xf7212776373b51c1514dd9c4490048270056c150",
+      "nonce": "0",
+      "valueWei": "5124486704000000",
+      "calldata": "0x",
+      "receiptStatus": 1,
+      "receiptBlockNumber": "11370545",
+      "receiptBlockHash": "0xa699465c8c2db37a571bc95f592c17253c151f856943d23b7ca8fd6f10954dc0"
+    }
+  },
+  "sourceAndDeploymentBinding": {
+    "artifacts": [
+      {
+        "id": "confirmationTarget",
+        "contract": "PhilCoreLocalProofConfirmationTargetV1",
+        "source": "contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol",
+        "artifact": "artifacts/contracts/base/PhilCoreLocalProofConfirmationTargetV1.sol/PhilCoreLocalProofConfirmationTargetV1.json",
+        "sourceSha256": "a93206a095fbf07a8f5f18febd63f35d1e780bd442012f3cbf1f1b1e03311bf6",
+        "abiSha256": "a877274627b040611a898dc28dd678bdf02f0542de71458958ceb0cf71126ee9",
+        "creationBytecodeHash": "0x2d6acc0d004e51fed77a473beaba524a60a0a617667be36f064fbe3c4aea2127",
+        "deployedBytecodeHash": "0x33dedb191e724449780bd2ef2abbd77a2692bb154525553fcdebf11a915327ad",
+        "creationBytecodeSize": 1189,
+        "deployedBytecodeSize": 1161
+      },
+      {
+        "id": "accountFactory",
+        "contract": "PhilCore4337LocalProofAccountFactoryV1",
+        "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol",
+        "artifact": "artifacts/contracts/base/erc4337/PhilCore4337LocalProofAccountFactoryV1.sol/PhilCore4337LocalProofAccountFactoryV1.json",
+        "sourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+        "abiSha256": "5630e705f060f5f42bccf27f0d4816e3c3e3dd255df2ea202b8294db93e8f944",
+        "creationBytecodeHash": "0x1bd6d5d0f49474af2dbc2630b25316cf0856c4ea4d1aee869efdce0fcd03e147",
+        "deployedBytecodeHash": "0x8a62bef9a075d1638a8ebed8030d39928f31adaf86cf11d850a16ed815dba5a0",
+        "creationBytecodeSize": 4875,
+        "deployedBytecodeSize": 4581
+      },
+      {
+        "id": "account",
+        "contract": "PhilCore4337LocalProofAccountV1",
+        "source": "contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol",
+        "artifact": "artifacts/contracts/base/erc4337/PhilCore4337LocalProofAccountV1.sol/PhilCore4337LocalProofAccountV1.json",
+        "sourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+        "abiSha256": "e7a46da1ab952a175683f71eee7147764a9637e5956724923c1c6b093fe726a1",
+        "creationBytecodeHash": "0xdfe8c94b7fa228961f3048c068a171778672e94650c1404eb8c345c1e5926881",
+        "deployedBytecodeHash": "0xbec05380e8225faa3f15b4b7894c90bc9e591a555839057ab71ceed5922ab76c",
+        "creationBytecodeSize": 3394,
+        "deployedBytecodeSize": 2840
+      }
+    ],
+    "currentFactoryImmutableRuntimeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "liveFactoryRuntimeHash": "0x8a356af155426d2de17da0762d29c4c0a7956e3bc4e4b6811d1b819da789722f",
+    "matched": true,
+    "factoryEmbedsV1CreationCode": true,
+    "alternateAccountImplementationSelectable": false
+  },
+  "currentRecoverySurface": {
+    "receiveAvailable": true,
+    "genericExecuteAvailable": false,
+    "nativeSweepAvailable": false,
+    "nativeWithdrawalAvailable": false,
+    "entryPointDepositWithdrawalAvailable": false,
+    "tokenTransferRouteAvailable": false,
+    "upgradeAvailable": false,
+    "delegatecallAvailable": false,
+    "selfdestructAvailable": false,
+    "onlyExecutionSelector": "0x44413cab",
+    "executionRequiresEntryPoint": true,
+    "validationRequiresExactSelector": true,
+    "validationRequiresCanonicalOwner": true,
+    "chainBound": true,
+    "accountBound": true,
+    "replayProtectedByEntryPointNonce": true,
+    "liveFactoryEmbedsExactCreationCode": true,
+    "liveFactoryAllowsAlternateCreationCode": false,
+    "nativeValuePaths": [
+      {
+        "path": "receive()",
+        "direction": "inbound_only",
+        "authorization": "unrestricted_receive",
+        "canReleaseFunds": false
+      },
+      {
+        "path": "BaseAccount._payPrefund(missingAccountFunds)",
+        "direction": "account_to_entrypoint_only",
+        "authorization": "during_entrypoint_validation",
+        "canReleaseFundsToApprovedRecipient": false
+      },
+      {
+        "path": "executeLocalProofAuthorization(...)",
+        "direction": "zero_value_fixed_target_call",
+        "authorization": "entrypoint_and_canonical_validator",
+        "canReleaseFunds": false
+      }
+    ]
+  },
+  "localSimulation": {
+    "schemaVersion": "philcore-o28-local-recovery-readiness-simulation-v1",
+    "source": "isolated_local_hardhat_entrypoint_v0_7",
+    "evidenceClassification": "local_fixture_only",
+    "fixtureSignatureOnly": true,
+    "protectedIdentityMaterialAccessed": false,
+    "publicNetworkContacted": false,
+    "publicMutationOccurred": false,
+    "lifecycle": {
+      "counterfactualFundingSimulated": true,
+      "fundedBalanceWei": "5124486704000000",
+      "codeBefore": "0x",
+      "accountDeploymentSimulated": true,
+      "confirmationTargetCallSimulated": true,
+      "userOperationNonceBefore": "0",
+      "userOperationNonceAfter": "1",
+      "nativeBalanceBeforeWei": "5124486704000000",
+      "entryPointDepositBeforeWei": "0",
+      "nativeBalanceAfterConfirmationWei": "124486704000000",
+      "entryPointDepositAfterConfirmationWei": "4391884667307660",
+      "totalResidualAfterConfirmationWei": "4516371371307660",
+      "intendedResidualRecipient": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+      "exactResidualSweepSimulated": true,
+      "exactResidualSweepSucceeded": false,
+      "finalNativeBalanceWei": "124486704000000",
+      "finalEntryPointDepositWei": "4391884667307660",
+      "finalTotalResidualWei": "4516371371307660",
+      "residualUnchangedByRejectedSweepAttempts": true,
+      "userOperationActualGasCostWei": "608115332692340",
+      "userOperationActualGasUsed": "1034770"
+    },
+    "recoveryCapability": {
+      "nativeReceiveAvailable": true,
+      "genericExecuteAvailable": false,
+      "namedWithdrawalAvailable": false,
+      "namedSweepAvailable": false,
+      "entryPointDepositWithdrawalAvailable": false,
+      "secureReleaseRouteAvailable": false
+    },
+    "failureChecks": {
+      "unsupportedSweepSelector": true,
+      "wrongRecipient": true,
+      "wrongAmount": true,
+      "modifiedCalldata": true,
+      "wrongSigner": true,
+      "wrongValidator": true,
+      "wrongChain": true,
+      "wrongAccount": true,
+      "staleNonce": true,
+      "replay": true,
+      "oldAuthorityReuse": true,
+      "directExternalConfirmationCall": true,
+      "directExternalSweepCall": true,
+      "account1PrivilegedWithdrawal": true,
+      "account2PrivilegedWithdrawal": true
+    },
+    "allFailureChecksPassed": true,
+    "create2Compatibility": {
+      "formulaBindsCreationCodeHash": true,
+      "originalInitCodeHash": "0x215e4dfb00254413c3ccd20ea73e27e4ec62d333e6a782620f652fba904ff6d3",
+      "changedInitCodeHash": "0xf714468f6ffaacf2e76b7b0c393e2c5d7305a315ac782d682a97330e4ef21a4c",
+      "initCodeHashChanged": true,
+      "originalAddress": "0x31d49a4A8cbf59A1Ff168C40309a2CC64743a1f7",
+      "changedAddress": "0xd27F6e63606Cecb067BB600ACe69E9B4c484BfB5",
+      "addressChanged": true,
+      "liveFactoryCanSelectAlternateCreationCode": false
+    },
+    "classification": "PREFUNDED_ADDRESS_INCOMPATIBLE_WITH_RECOVERY"
+  },
+  "oldAuthority": {
+    "artifactPhase": "O.21.3",
+    "eligibleForReuse": false,
+    "rejectionReasons": [
+      "O.21.3 explicitly denies public submission authority",
+      "the artifact predates live target, factory, account, fee, and prefund state",
+      "its proof, approval, presence, Runtime authorization, and signature are one-time",
+      "it contains no recovery-specific recipient or amount binding"
+    ]
+  },
+  "testFundReleasePolicy": {
+    "policyVersion": "philcore-test-fund-release-v1",
+    "active": true,
+    "coveredAssetKinds": [
+      "native currency",
+      "tokens",
+      "EntryPoint deposits",
+      "paymaster deposits",
+      "escrow and contract balances"
+    ],
+    "currentO27WouldPassNewPolicy": false,
+    "currentO27PolicyRejection": "test_fund_release_route_pretest_required",
+    "futureVerifiedRouteGuard": {
+      "mode": "verified_release_route",
+      "intendedResidualRecipient": "0x1111111111111111111111111111111111111111",
+      "maximumFundingWei": "1000000",
+      "maximumResidualWei": "1000000",
+      "approvedForFunding": true
+    },
+    "disposableStatusAloneAccepted": false
+  },
+  "fundsAtRisk": {
+    "currentBalanceWei": "5124486704000000",
+    "securelyRecoverableThroughCurrentImplementation": false,
+    "maximumAmountThatCouldRemainStrandedWei": "5124486704000000",
+    "deployingOriginalV1CreatesReleaseRoute": false,
+    "originalV1MayConsumeSomeBalanceAsAuthorizedOperationGas": true,
+    "gasConsumptionIsFundRecovery": false,
+    "entryPointDepositWouldBeWithdrawableThroughV1": false
+  },
+  "compatibilityDecision": {
+    "addingSecureReleaseChangesAccountCreationCode": true,
+    "create2InitCodeHashWouldChange": true,
+    "counterfactualAddressWouldChange": true,
+    "liveFactoryCanDeployChangedAccountCode": false,
+    "newFactoryRequired": true,
+    "newCounterfactualAccountRequired": true,
+    "currentPrefundMovesAutomaticallyToNewAddress": false,
+    "currentInfrastructureBindingWouldChange": true
+  },
+  "correctiveOptions": [
+    {
+      "id": "abandon-current-v1-prefund",
+      "safeForCurrentInfrastructure": true,
+      "recoversCurrentFunds": false,
+      "consequence": "Leave the undeployed V1 address untouched and treat the full balance as stranded."
+    },
+    {
+      "id": "deploy-current-v1-and-run-confirmation",
+      "safeForRecoveryObjective": false,
+      "recoversCurrentFunds": false,
+      "consequence": "Consumes some ETH as operation gas but leaves native balance and/or EntryPoint deposit without a release route."
+    },
+    {
+      "id": "design-v2-recovery-account-and-new-factory",
+      "recommendedForFutureTesting": true,
+      "recoversCurrentFunds": false,
+      "consequence": "Requires local design, audit, fork simulation, a new factory deployment, a new counterfactual address, and new funding approval."
+    }
+  ],
+  "recommendedNextAction": "Stop before deployment. Obtain a user decision on accepting the current full-balance loss versus designing a recovery-capable V2/new factory for future testing.",
+  "securityBoundary": {
+    "smartAccountDeployed": false,
+    "factoryCalled": false,
+    "proofGenerated": false,
+    "runtimeAuthorizationGenerated": false,
+    "userPresenceRequested": false,
+    "deviceVaultSigningUsed": false,
+    "userOperationConstructedForSubmission": false,
+    "userOperationSubmitted": false,
+    "entryPointDepositCreated": false,
+    "paymasterUsed": false,
+    "tokenMovementOccurred": false,
+    "nativeValueMoved": false,
+    "account1TransactionSent": false,
+    "account2TransactionSent": false,
+    "publicMutationOccurred": false
+  }
+}

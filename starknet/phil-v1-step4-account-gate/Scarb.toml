@@ -1,0 +1,31 @@
+[package]
+name = "phil_v1_step4_account_gate"
+version = "0.1.0"
+edition = "2024_07"
+
+[dependencies]
+phil_v1_step3_verifier = { path = "vendor/phil-v1-step3-verifier" }
+starknet = "2.14.0"
+
+[dev-dependencies]
+snforge_std = "0.53.0"
+assert_macros = "2.14.0"
+
+[cairo]
+sierra-replace-ids = false
+inlining-strategy = 2
+
+[tool.scarb]
+allow-prebuilt-plugins = ["snforge_std"]
+
+[target-defaults.test]
+build-external-contracts = [
+  "phil_v1_step3_verifier::honk_verifier::UltraKeccakZKHonkVerifier",
+]
+
+[[target.starknet-contract]]
+casm = true
+casm-add-pythonic-hints = true
+build-external-contracts = [
+  "phil_v1_step3_verifier::honk_verifier::UltraKeccakZKHonkVerifier",
+]

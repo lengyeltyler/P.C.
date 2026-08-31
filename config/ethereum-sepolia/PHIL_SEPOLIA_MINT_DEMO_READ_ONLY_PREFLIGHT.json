@@ -1,0 +1,45 @@
+{
+  "format": "phil-sepolia-mint-read-only-preflight-v1",
+  "version": 1,
+  "status": "READ_ONLY_PREFLIGHT_PASSED_PUBLIC_MUTATION_NOT_AUTHORIZED",
+  "generatedAt": "2026-08-24T23:14:33.535Z",
+  "rpc": "https://eth-sepolia.g.alchemy.com/<redacted>",
+  "bundler": "https://eth-sepolia.g.alchemy.com/<redacted>",
+  "chainId": "11155111",
+  "latestBlockNumber": "11560193",
+  "latestBlockHash": "0xc11cae6fd2821076bb1e76fe703a856535027b59f0611a92a49ddcbc607ad99e",
+  "entryPoint": {
+    "address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+    "codeHash": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+    "bundlerSupported": true
+  },
+  "deployer": {
+    "address": "0x549A5C770085b00B60F6D729DB99f8Bffb72eE12",
+    "pendingNonce": "3",
+    "latestNonce": "3",
+    "balanceWei": "270073390298140959"
+  },
+  "predictedInfrastructure": {
+    "factory": "0xee49bdFeA3535D8d68edBE3b91c8AA8734A2B48A",
+    "actionGate": "0xCbd3b73C257Fbe4ac4a1084163Aa4cA63ddE8AFA",
+    "mintConsumer": "0xb453815C2804BBB85fd6B10579b80b2E7Dc4fB32"
+  },
+  "predictedAddressesUnoccupied": true,
+  "deploymentGasEstimates": {
+    "factory": "777850",
+    "actionGate": "356272",
+    "mintConsumer": "257995"
+  },
+  "bytecodeHashes": {
+    "factoryCreationCode": "0x96eeed33f70eb997420de167636a3c1479c73264829a1ade36cdfda8a1fbf3ca",
+    "accountCreationCode": "0xaa24c826dce2b3f4a15dc0a7a168d7ad44afb1f09b95680b459b81fdb664f9b0",
+    "actionGateCreationCode": "0x507f8f482fa8629fba78d92ab4a04c12cbcdc7982cb2b82c0377b30a9ea493e7",
+    "mintConsumerCreationCode": "0x853a205f7a07aca72a196863bebba9ce96feb70e1fc2c5fb295e5a9162ca5ed2"
+  },
+  "approvals": {
+    "deployment": false,
+    "funding": false,
+    "mintSubmission": false
+  },
+  "publicMutationOccurred": false
+}

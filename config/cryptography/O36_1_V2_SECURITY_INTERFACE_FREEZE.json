@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "philcore-o36-1-v2-security-interface-freeze-v1",
+  "phase": "O.36.1",
+  "canonicalPhaseName": "O.36.1 V2 Security Gate Resolution and Cryptographic Interface Finalization",
+  "classification": "COMPLETE_LOCAL_INTERFACE_FREEZE",
+  "sourceHeadAtPhaseStart": "402b48710eddc8c183dd7ebdc5bba6dc86f5c640",
+  "publicMutationCount": 0,
+  "accountVersion": {
+    "label": "philcore-v2-account-v1",
+    "id": "0x21fa156a27ec1e135fd05d69d2e37b6243327f63e37eac2f40783ba9a652fbb7"
+  },
+  "securityModel": {
+    "label": "philcore-v2-typed-intent-local-proof-gated-v1",
+    "id": "0xbfded32375d70119930c009b80e9a3774335bb0ae2fc4d3b7133fd8713753f44"
+  },
+  "recovery": {
+    "configurationVersion": 1,
+    "threshold": 2,
+    "delaySeconds": 172800,
+    "expirySeconds": 604800,
+    "roles": [
+      {
+        "id": 0,
+        "name": "PRIMARY_DEVICE",
+        "verifierKind": 1,
+        "verifier": "WEBAUTHN_P256",
+        "userVerificationPolicy": 2
+      },
+      {
+        "id": 1,
+        "name": "HARDWARE_SECURITY_KEY",
+        "verifierKind": 1,
+        "verifier": "WEBAUTHN_P256",
+        "userVerificationPolicy": 2
+      },
+      {
+        "id": 2,
+        "name": "RECOVERY_FACTOR",
+        "verifierKind": 2,
+        "verifier": "PURPOSE_BOUND_SECP256K1",
+        "userVerificationPolicy": 0
+      }
+    ],
+    "validBitmaps": [3, 5, 6],
+    "requestAuthority": "EXACT_TWO_CURRENT_RECOVERY_FACTORS",
+    "cancelAuthority": "EXACT_TWO_CURRENT_RECOVERY_FACTORS",
+    "configRotationRequestAuthority": "CURRENT_VALIDATOR_AND_EXACT_TWO_CURRENT_RECOVERY_FACTORS",
+    "configRotationCancelAuthority": "EXACT_TWO_CURRENT_RECOVERY_FACTORS",
+    "validatorCountsAsFactor": false,
+    "combinedValidatorOneFactorAccepted": false,
+    "recoveryCanMoveAssets": false,
+    "recoveryCanCallExternalContracts": false,
+    "webAuthnBounds": {
+      "authenticatorDataMinBytes": 37,
+      "authenticatorDataMaxBytes": 1024,
+      "clientDataJsonMinBytes": 1,
+      "clientDataJsonMaxBytes": 2048
+    }
+  },
+  "typeBindings": {
+    "identityBinding": {
+      "typeString": "PhilCoreV2IdentityBinding(uint8 bindingVersion,bytes32 ownerCommitment,bytes32 ownerCommitmentSchemeId)",
+      "typeHash": "0x57f4660c20a425b4f07312eeeab81e83fc44cba5db3e7cc2fb8e1ef5d2d7afd8",
+      "bindingVersion": 1,
+      "ownerCommitmentSchemeLabel": "PHIL_OWNER_COMMITMENT_CANONICAL_V1",
+      "ownerCommitmentSchemeId": "0xb891af6798d5e37aec3e66cdefd59ef16f633d0c539efd12ebfcf30d3cad6c4e",
+      "chainIndependent": true,
+      "accountIndependent": true,
+      "recoveryIndependent": true
+    },
+    "webAuthnPublicMaterial": {
+      "typeString": "PhilCoreV2WebAuthnPublicMaterial(bytes32 qx,bytes32 qy)",
+      "typeHash": "0x8f1a81381ef4fe36ecdda52c6bc3f1bb90fc29f65b0b37dab428d6305efb652a"
+    },
+    "secp256k1PublicMaterial": {
+      "typeString": "PhilCoreV2Secp256k1PublicMaterial(address signer)",
+      "typeHash": "0x1e5e55542aedb138fa8097a3c94b28889aaf732d705f981b3189abcdb139000d"
+    },
+    "validatorAuthorization": {
+      "typeString": "PhilCoreV2Authorization(bytes32 authorizedIntentHash,bytes32 userOpHash,address validator,bytes32 validatorKeyIdBinding,uint64 validatorEpoch,uint64 recoveryEpoch)",
+      "typeHash": "0x4de5ac14016b9cf6e415570fe0045e4de05799d405ef7668f1981648541970e4"
+    },
+    "recoveryFactor": {
+      "typeString": "PhilCoreV2RecoveryFactor(bytes32 accountVersionId,bytes32 securityModelId,uint8 role,uint8 verifierKind,bytes32 publicVerificationMaterialHash,bytes32 rpIdHash,bytes32 originPolicyHash,uint8 userVerificationPolicy,uint64 credentialGeneration)",
+      "typeHash": "0x5494d0c979bfa0b77dfaf60f6068888c9d045ce08b19c16d1d2ee6706735347e"
+    },
+    "recoveryAuthorization": {
+      "typeString": "PhilCoreV2RecoveryAuthorization(bytes32 authorizedIntentHash,bytes32 userOpHash,bytes32 recoveryConfigHash,uint64 recoveryEpoch,uint8 factorBitmap)",
+      "typeHash": "0xa6e0f90b0ec32cc4e51f2f55f4514ad10634037b453529a573b1e97de8128e91"
+    },
+    "retiredCombinedCancellation": {
+      "typeString": "PhilCoreV2CombinedCancellation(bytes32 authorizedIntentHash,bytes32 userOpHash,address validator,uint64 validatorEpoch,bytes32 recoveryConfigHash,uint64 recoveryEpoch,uint8 factorBitmap)",
+      "typeHash": "0x251624bd528c57829f847cb73518f8089f057f252df1461f79149c6c62ba9eb2",
+      "acceptedByV2Account": false
+    }
+  },
+  "validatorEnvelope": {
+    "version": 1,
+    "authorityKind": 1,
+    "verifierKind": 1,
+    "encoding": "ABI_STATIC",
+    "exactBytes": 320,
+    "fields": [
+      "uint8 envelopeVersion",
+      "uint8 authorityKind",
+      "uint8 verifierKind",
+      "address validator",
+      "bytes32 validatorKeyIdBinding",
+      "uint64 validatorEpoch",
+      "uint64 recoveryEpoch",
+      "bytes32 r",
+      "bytes32 s",
+      "uint8 v"
+    ],
+    "lowSRequired": true,
+    "canonicalV": [27, 28],
+    "personalSignAccepted": false,
+    "genericMessageAccepted": false
+  },
+  "identity": {
+    "privateIdentityInputsOnchain": false,
+    "ownerCommitmentStored": true,
+    "identityBindingStored": true,
+    "bindingMutable": false,
+    "sameOwnerSameBindingAcrossVersionsAndChains": true,
+    "differentOwnerOrSchemeRequiresNewAccount": true
+  },
+  "solidityFreeze": {
+    "solidity": "0.8.27",
+    "openzeppelinContracts": "5.6.1",
+    "accountAbstractionContracts": "0.7.0",
+    "hardhat": "2.28.4",
+    "hardhatEthers": "3.0.8",
+    "ethers": "6.17.0",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "evmVersion": "cancun",
+    "metadataBytecodeHash": "ipfs",
+    "metadataAppendCBOR": true,
+    "metadataUseLiteralContent": true,
+    "v1CompilerRemains": "0.8.24",
+    "floatingDependencyRangesAllowed": false
+  },
+  "abi": {
+    "requiredAccountFunctions": [
+      "validateUserOp",
+      "confirmIntent",
+      "transferNative",
+      "transferERC20",
+      "safeTransferERC721",
+      "safeTransferERC1155",
+      "withdrawEntryPointDeposit",
+      "rotateValidator",
+      "requestRecovery",
+      "cancelRecovery",
+      "completeRecovery",
+      "expireRecovery",
+      "requestRecoveryConfigRotation",
+      "cancelRecoveryConfigRotation",
+      "completeRecoveryConfigRotation",
+      "expireRecoveryConfigRotation"
+    ],
+    "requiredFactoryFunctions": [
+      "createAccount",
+      "getAddress",
+      "deploymentSalt",
+      "accountCreationCodeHash"
+    ],
+    "forbiddenFunctions": [
+      "execute",
+      "executeBatch",
+      "multicall",
+      "delegatecall",
+      "upgradeTo",
+      "upgradeToAndCall",
+      "installModule",
+      "setImplementation",
+      "setOwner",
+      "setAdmin",
+      "sweep",
+      "withdrawAll",
+      "approve",
+      "setAllowance",
+      "setRecoveryThreshold",
+      "setRecoveryDelay",
+      "setVerifier"
+    ],
+    "fallbackReverts": true,
+    "constructorOnlyInitialization": true,
+    "accountInitializationFieldCount": 20
+  },
+  "storage": {
+    "entryPointOwnsNonceSequences": true,
+    "duplicateNonceMappingAllowed": false,
+    "storageGapAllowed": false,
+    "implementationSlotAllowed": false,
+    "administratorSlotAllowed": false,
+    "moduleRegistryAllowed": false,
+    "allowanceTableAllowed": false,
+    "generalReplayMappingAllowed": false,
+    "compilerStorageLayoutEvidenceRequired": true
+  },
+  "lifecycle": {
+    "counterfactualFundingAllowed": false,
+    "fundingBeforeIndependentDeploymentVerificationAllowed": false,
+    "completeInitializationRequired": true,
+    "verifiedReleasePathRequiredBeforeFunding": true,
+    "localFullLifecycleRequired": true,
+    "separateFutureDeploymentApprovalRequired": true
+  },
+  "phaseBoundary": {
+    "solidityCreated": false,
+    "bytecodeCreated": false,
+    "deploymentPerformed": false,
+    "accountCreated": false,
+    "fundsMoved": false,
+    "credentialEnrolled": false,
+    "signatureCreated": false,
+    "userOperationCreated": false,
+    "rpcUsed": false,
+    "publicMutationCount": 0
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-08-31",
+  "packageLockSha256": "030f8a95dc90b91d939da1c8d7735553320b2b3c3f0a4e0f0fac54c8114dc3ec",
+  "scope": "Controlled owner-operated Beta fixed local runtime only; not arbitrary projects, hosted compilation, general signing, remote RPC or production custody",
+  "packages": {
+    "@ethersproject/abi": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@ethersproject/abstract-provider": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@ethersproject/abstract-signer": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@ethersproject/hash": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@ethersproject/signing-key": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@ethersproject/transactions": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.8.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "@sentry/node": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "5.30.0"
+      ],
+      "fixedVersion": "Upgrade/remove the inherited dependency chain; see underlying advisory",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "adm-zip": {
+      "advisoryIds": [
+        "GHSA-xcpc-8h2w-3j85"
+      ],
+      "reviewedVersions": [
+        "0.4.16"
+      ],
+      "fixedVersion": "0.6.0",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "brace-expansion": {
+      "advisoryIds": [
+        "GHSA-3jxr-9vmj-r5cp",
+        "GHSA-mh99-v99m-4gvg",
+        "GHSA-rgw5-rvv9-x895"
+      ],
+      "reviewedVersions": [
+        "2.0.3"
+      ],
+      "fixedVersion": "2.1.4",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "cookie": {
+      "advisoryIds": [
+        "GHSA-pxg6-pf52-xh8x"
+      ],
+      "reviewedVersions": [
+        "0.4.2"
+      ],
+      "fixedVersion": "0.7.0",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "elliptic": {
+      "advisoryIds": [
+        "GHSA-848j-6mx2-7j84"
+      ],
+      "reviewedVersions": [
+        "6.6.1"
+      ],
+      "fixedVersion": "No published patch for GHSA-848j-6mx2-7j84",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat ABI/utility dependency chain is retained. Phil real custody uses ethers 6 and the existing device providers, not ethers-v5 generic signing. No attacker-controlled signing-key or noncanonical elliptic signature sink is exposed by the fixed local product action. This is bounded source reachability review, not general cryptographic approval."
+    },
+    "hardhat": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "2.28.4"
+      ],
+      "fixedVersion": "No standalone advisory; remove affected task dependencies or separately validate Hardhat 3 migration",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Hardhat is an executed local runtime, not dev-only. Product checks hardhat/31337, no forking, precompiled artifacts, fixed harmless actions and fresh framework accounts. Build/test/CLI/analytics/Sentry/fork modules are removed. Inherited advisories are dispositioned separately; no arbitrary compiler, YAML, ZIP, test serializer or remote-network API is exposed."
+    },
+    "immutable": {
+      "advisoryIds": [
+        "GHSA-v56q-mh7h-f735",
+        "GHSA-xvcm-6775-5m9r"
+      ],
+      "reviewedVersions": [
+        "4.3.8"
+      ],
+      "fixedVersion": "4.3.9",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "js-yaml": {
+      "advisoryIds": [
+        "GHSA-5p4m-2wfm-xmqj"
+      ],
+      "reviewedVersions": [
+        "4.3.0"
+      ],
+      "fixedVersion": "4.3.1",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "mocha": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "10.8.2"
+      ],
+      "fixedVersion": "Remove test runner; inherited serialize-javascript advisories",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "serialize-javascript": {
+      "advisoryIds": [
+        "GHSA-5c6j-r48x-rmvq",
+        "GHSA-qj8w-gfj5-8c6v"
+      ],
+      "reviewedVersions": [
+        "6.0.2"
+      ],
+      "fixedVersion": "7.0.5",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "solc": {
+      "advisoryIds": [],
+      "reviewedVersions": [
+        "0.8.26",
+        "0.8.27"
+      ],
+      "fixedVersion": "Remove compiler; inherited tmp advisory, do not downgrade Solidity",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "tmp": {
+      "advisoryIds": [
+        "GHSA-52f5-9888-hmc6",
+        "GHSA-ph9p-34f9-6g65"
+      ],
+      "reviewedVersions": [
+        "0.0.33"
+      ],
+      "fixedVersion": "0.2.6",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    },
+    "undici": {
+      "advisoryIds": [
+        "GHSA-2mjp-6q6p-2qxm",
+        "GHSA-35p6-xmwp-9g52",
+        "GHSA-4992-7rv2-5pvq",
+        "GHSA-8xcm-r25x-g524",
+        "GHSA-g8m3-5g58-fq7m",
+        "GHSA-g9mf-h72j-4rw9",
+        "GHSA-m8rv-5g2x-5cg5",
+        "GHSA-p88m-4jfj-68fv",
+        "GHSA-v3r7-h72x-cjcm",
+        "GHSA-v9p9-hfj2-hcw8",
+        "GHSA-vrm6-8vpv-qv8q",
+        "GHSA-vxpw-j846-p89q"
+      ],
+      "reviewedVersions": [
+        "5.29.0"
+      ],
+      "fixedVersion": "6.28.0 or 7.29.0; major migration from installed 5.x",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Retained Hardhat HTTP/provider utility dependency. The in-process product provider imports HTTP error helpers but never constructs a remote HttpProvider; hardhat/31337 and no-fork checks reject external networks. The phone transport uses the existing Node HTTP host, not Undici WebSockets or a user-selected URL. No affected HTTP/WebSocket sink receives attacker input in this Beta scope."
+    },
+    "uuid": {
+      "advisoryIds": [
+        "GHSA-w5hq-g745-h8pq"
+      ],
+      "reviewedVersions": [
+        "8.3.2"
+      ],
+      "fixedVersion": "11.1.1",
+      "vulnerableSinkReachable": false,
+      "runtimeRationale": "Removed tooling dependency; not part of release runtime selection."
+    }
+  }
+}

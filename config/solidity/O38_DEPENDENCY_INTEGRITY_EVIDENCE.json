@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.38",
+  "node": {
+    "declared": "26.0.0",
+    "installed": "26.0.0",
+    "nodeVersionFile": "26.0.0"
+  },
+  "npm": {
+    "declared": "11.12.1",
+    "installed": "11.12.1",
+    "lockfileVersion": 3,
+    "packageLockSha256": "15b016355beb706f7e0ca5e88946b50b4b31563bb167fdd3711024c545ea340d"
+  },
+  "v2BuildDependencies": [
+    {
+      "package": "@account-abstraction/contracts",
+      "declared": "0.7.0",
+      "installed": "0.7.0",
+      "integrity": "sha512-Bt/66ilu3u8I9+vFZ9fTd+cWs55fdb9J5YKfrhsrFafH1drkzwuCSL/xEot1GGyXXNJLQuXbMRztQPyelNbY1A==",
+      "directlyUsedByV2Compilation": true
+    },
+    {
+      "package": "@nomicfoundation/hardhat-ethers",
+      "declared": "3.0.8",
+      "installed": "3.0.8",
+      "integrity": "sha512-zhOZ4hdRORls31DTOqg+GmEZM0ujly8GGIuRY7t7szEk2zW/arY1qDug/py8AEktT00v5K+b6RvbVog+va51IA==",
+      "directlyUsedByV2Compilation": true
+    },
+    {
+      "package": "@openzeppelin/contracts",
+      "declared": "5.6.1",
+      "installed": "5.6.1",
+      "integrity": "sha512-Ly6SlsVJ3mj+b18W3R8gNufB7dTICT105fJhodGAGgyC2oqnBAhqSiNDJ8V8DLY05cCz81GLI0CU5vNYA1EC/w==",
+      "directlyUsedByV2Compilation": true
+    },
+    {
+      "package": "ethers",
+      "declared": "6.17.0",
+      "installed": "6.17.0",
+      "integrity": "sha512-BpyrpIPJ3ydEVow8zGaz1DuPS7YU8DcWxuBnY9a0UA/lvAPwrMr+EPXsfrul628SRaekPNeIM4UFh/91GWZang==",
+      "directlyUsedByV2Compilation": false
+    },
+    {
+      "package": "hardhat",
+      "declared": "2.28.4",
+      "installed": "2.28.4",
+      "integrity": "sha512-iQC4WNWjWMz7cVVFqzEBNisUQ/EEEJrWysJ2hRAMTnfXJx6Y11UXdmtz4dHIzvGL0z27XCCaJrcApDPH0KaZEg==",
+      "directlyUsedByV2Compilation": true
+    },
+    {
+      "package": "solc",
+      "declared": "0.8.27",
+      "installed": "0.8.27",
+      "integrity": "sha512-BNxMol2tUAbkH7HKlXBcBqrGi2aqgv+uMHz26mJyTtlVgWmBA4ktiw0qVKHfkjf2oaHbwtbtaSeE2dhn/gTAKw==",
+      "directlyUsedByV2Compilation": true
+    }
+  ],
+  "floatingDeclarations": [
+    {
+      "package": "electron",
+      "declared": "^39.8.10",
+      "v2CompilationReachable": false,
+      "lockfilePinned": true,
+      "impact": "NONE_ON_CANONICAL_V2_BUILD"
+    }
+  ],
+  "transitiveResolution": "npm ci used the exact lockfile graph and integrity entries",
+  "unpinnedInputCanAffectCanonicalV2Build": false,
+  "result": "PASS"
+}

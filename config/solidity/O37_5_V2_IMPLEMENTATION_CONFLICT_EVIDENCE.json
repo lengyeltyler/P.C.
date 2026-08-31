@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "phase": "O.37.5",
+  "canonicalPhaseName": "O.37.5 V2 Solidity Account and Factory Implementation",
+  "classification": "LOCAL_ONLY_SOLIDITY_IMPLEMENTATION",
+  "result": "STOPPED_FAIL_CLOSED_BEFORE_SOLIDITY_RETENTION",
+  "sourceHeadAtPhaseStart": "910b5f6f3be1637d1b05ad04ae209e5f232ca3aa",
+  "publicMutationCount": 0,
+  "baseline": {
+    "repository": "PhilCore",
+    "branch": "codex/device-identity-v1",
+    "trackedWorktreeClean": true,
+    "v1AccountSourceSha256": "39b512caf34bfec0d68436960087917519b4b1136bd18d55a7101f609c574a0a",
+    "v1FactorySourceSha256": "59d372df9087f0f5ffdfb80c9b4b17ff027f237680fec112a77f58252ae165f9",
+    "v2SolidityPresentAtEntry": false
+  },
+  "frozenBuild": {
+    "solidity": "0.8.27+commit.40a35a09.Emscripten.clang",
+    "evmVersion": "cancun",
+    "optimizerEnabled": true,
+    "optimizerRuns": 200,
+    "viaIR": true,
+    "metadataBytecodeHash": "ipfs",
+    "metadataAppendCBOR": true,
+    "metadataUseLiteralContent": true,
+    "openZeppelinContracts": "5.6.1",
+    "accountAbstractionContracts": "0.7.0",
+    "hardhat": "2.28.4",
+    "hardhatEthers": "3.0.8",
+    "ethers": "6.17.0",
+    "node": "26.0.0",
+    "npm": "11.12.1"
+  },
+  "eip170": {
+    "maximumRuntimeBytes": 24576,
+    "frozenDirectOpenZeppelinAttempt": {
+      "accountRuntimeBytes": 35099,
+      "accountExcessBytes": 10523,
+      "factoryRuntimeBytes": 43013,
+      "factoryExcessBytes": 18437,
+      "accepted": false
+    },
+    "rejectedNativeP256Exploration": {
+      "reason": "UNFROZEN_NATIVE_PRECOMPILE_DEPENDENCY_AND_STILL_OVERSIZED",
+      "accountCreationBytes": 34933,
+      "accountRuntimeBytes": 32796,
+      "accountRuntimeKeccak256": "0xaab6e7a386ba356b5c1d0ba5364577c15a3616677e2041cb1b987f1c13b326d7",
+      "factoryCreationBytes": 41124,
+      "factoryRuntimeBytes": 40710,
+      "factoryRuntimeKeccak256": "0x87a3c3fdac9b758004ac78cca4528ed2e9f1cdd32002284fd734490a61dd38e3",
+      "accepted": false
+    }
+  },
+  "blockedAlternatives": [
+    "external_authority_verifier",
+    "linked_delegatecall_library",
+    "proxy_or_minimal_proxy",
+    "reduced_or_changed_frozen_abi",
+    "mutable_verifier_registry",
+    "alternate_factory_creation_path",
+    "native_p256_precompile_dependency_without_architecture_review"
+  ],
+  "retainedState": {
+    "v2SoliditySource": false,
+    "v2CompilerConfiguration": false,
+    "dependencyPinChanges": false,
+    "v2Abi": false,
+    "v2StorageLayout": false,
+    "v2Bytecode": false,
+    "create2Vectors": false,
+    "partialImplementation": false
+  },
+  "securityBoundary": {
+    "rpcUsed": false,
+    "sepoliaUsed": false,
+    "localSepoliaEnvironmentRead": false,
+    "blockchainAccountCreated": false,
+    "contractDeployed": false,
+    "fundsMoved": false,
+    "credentialCreated": false,
+    "productionSignatureCreated": false,
+    "userOperationCreated": false,
+    "userOperationEstimated": false,
+    "userOperationSubmitted": false,
+    "pushPerformed": false
+  }
+}
